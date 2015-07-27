@@ -1,2 +1,2 @@
-To update the website, copy the WWW folder contained here in place of 
-/var/WWW on the server
+To update the website, copy the 'www' folder contained here in place of 
+/var/'www' (or whatever) on the server
