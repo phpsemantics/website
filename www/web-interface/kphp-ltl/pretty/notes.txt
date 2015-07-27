@@ -1,0 +1,12 @@
+our notes:
+
+- nondeterminism across invocations (all memeory in mem!)
+- in extended, show 2|array  
+  - for object fields, do like in basic verison, but showing also loc
+    ["x" | protected | 19]
+
+not said
+- options work fine, would be nice to be able to ignore them, and to provide also input/output file names
+- all array gets orange if isref (should we ignore)?
+  - why refcount is 2 in extended output? we should have fixed in semantics
+(hide refocunt)

@@ -1,0 +1,114 @@
+set show command off .
+red setCounter(0) .
+erewrite <_>_</_>(generatedTop, <_>_</_>(kphp, (<_>_</_>(script, (<_>_</_>(declarations, .K, declarations)) (<_>_</_>(commands, .K, commands)) (<_>_</_>(k, _~>_(_`(_`)('buildInitState, .KList), 'Document(
+  'ListWrap(
+    .KList
+  ),,
+  'FullOpenTag(
+    .KList
+  ),,
+  'ListWrap(
+    'FunctionDecl(
+      # "sayHello"(.KList),,
+      'ListWrap(
+        'ParamDefault(
+          'Variable(
+            'Simple(
+              # "name"(.KList)
+            )
+          ),,
+          'ConstantEncapsedString(
+            'DoubleQuoted(
+              'DQContent(
+                'Some(
+                  'Literal(
+                    # "World"(.KList)
+                  )
+                )
+              )
+            )
+          )
+        )
+      ),,
+      'ListWrap(
+        'Return(
+          'Some(
+            'ConstantEncapsedString(
+              'DoubleQuoted(
+                'DQContent(
+                  'Some(
+                    'Literal(
+                      # "Hello "(.KList)
+                    )
+                  ),,
+                  'DQContent(
+                    'Variable(
+                      'Simple(
+                        # "name"(.KList)
+                      )
+                    ),,
+                    'None(
+                      .KList
+                    ),,
+                    'Escape(
+                      # 110(.KList)
+                    )
+                  ),,
+                  'None(
+                    .KList
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    ),,
+    'Echo(
+      'ListWrap(
+        'FunctionCall(
+          'FunctionName(
+            # "sayHello"(.KList)
+          ),,
+          'ListWrap(
+            .KList
+          )
+        )
+      )
+    ),,
+    'Echo(
+      'ListWrap(
+        'FunctionCall(
+          'FunctionName(
+            # "sayHello"(.KList)
+          ),,
+          'ListWrap(
+            'Param(
+              'ConstantEncapsedString(
+                'DoubleQuoted(
+                  'DQContent(
+                    'Some(
+                      'Literal(
+                        # "User"(.KList)
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  ),,
+  'CloseTag(
+    .KList
+  ),,
+  'ListWrap(
+    'Literal(
+      # "\n"(.KList)
+    )
+  )
+)
+), k)) , script)) (<_>_</_>(tables, (<_>_</_>(functions, .Map, functions)) (<_>_</_>(classes, .Map, classes)) (<_>_</_>(constants, .Map, constants)) (<_>_</_>(classInstanceCounters, .Map, classInstanceCounters)) , tables)) (<_>_</_>(scopes, (<_>_</_>(currentScope, .K, currentScope)) (<_>_</_>(globalScope, .K, globalScope)) (<_>_</_>(globalStaticScope, .K, globalStaticScope)) (<_>_</_>(superGlobalScope, .K, superGlobalScope)) , scopes)) (<_>_</_>(heap, .Map, heap)) (<_>_</_>(control, (<_>_</_>(functionStack, .List, functionStack)) (<_>_</_>(exceptionStack, .List, exceptionStack)) (<_>_</_>(loopStack, .List, loopStack)) (<_>_</_>(context, (<_>_</_>(currentForeachItem, .K, currentForeachItem)) (<_>_</_>(object, .K, object)) (<_>_</_>(class, .K, class)) (<_>_</_>(function, .K, function)) , context)) (<_>_</_>(functionArgumentsDeclaration, .K, functionArgumentsDeclaration)) (<_>_</_>(processedFunBody, .K, processedFunBody)) (<_>_</_>(processedStaticDeclarations, .K, processedStaticDeclarations)) , control)) (<_>_</_>(IO, (<_>_</_>(in, __(ListItem(_`(_`)(#buffer, _`(_`)(#_(""), .KList))), .List, ListItem(_`(_`)('#istream`(_`), _`(_`)(#_(0), .KList)))), in)) (<_>_</_>(out, __(ListItem(_`(_`)('#ostream`(_`), _`(_`)(#_(1), .KList))), .List, ListItem(_`(_`)(#buffer, _`(_`)(#_(""), .KList)))), out)) (<_>_</_>(exitStatus, _`(_`)(#_(0), .KList), exitStatus)) (<_>_</_>(errorManagement, _`(_`)(#_(0), .KList), errorManagement)) (<_>_</_>(varDumpLevel, _`(_`)(#_(0), .KList), varDumpLevel)) , IO)) (<_>_</_>(instrumentation, (<_>_</_>(cleanTraceOnTermination, _`(_`)(#_(true), .KList), cleanTraceOnTermination)) (<_>_</_>(isTerminated, _`(_`)(#_(false), .KList), isTerminated)) (<_>_</_>(label, _`(_`)(#_("@"), .KList), label)) , instrumentation)) (<_>_</_>(gc, (<_>_</_>(locationsToCollect, .List, locationsToCollect)) (<_>_</_>(gcEnabled, _`(_`)(#_(false), .KList), gcEnabled)) , gc)) (<_>_</_>(trace, .List, trace)) , kphp), generatedTop) .
+red counter .

@@ -1,0 +1,720 @@
+Hello world!
+<T>
+    <globScope>
+        #symLoc(3)
+    </globScope>
+    <superGlobalScope>
+        #symLoc(2)
+    </superGlobalScope>
+    <globStaticScope>
+        #symLoc(1)
+    </globStaticScope>
+    <errorManagement>
+        0
+    </errorManagement>
+    <crntScope>
+        #symLoc(3)
+    </crntScope>
+    <gc>
+        <gc-enabled>
+            false
+        </gc-enabled>
+        <collectMe>
+            .List
+        </collectMe>
+    </gc>
+    <instrumentation>
+        <isTerminated>
+            true
+        </isTerminated>
+        <trace>
+            ListItem("built-init-state")
+            ListItem("init-scopes")
+            ListItem("init-builtin-classes")
+            ListItem("make-exception")
+            ListItem("class-no-extends")
+            ListItem("class")
+            ListItem("create-empty-class")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("init-class-cons")
+            ListItem("init-class-member-decl-static")
+            ListItem("write-class-instance-members-no-default")
+            ListItem("write-class-instance-members")
+            ListItem("write-class-instance-members-nil")
+            ListItem("init-class-cons")
+            ListItem("init-class-member-decl-meth-no-modifiers")
+            ListItem("init-class-member-decl-meth")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("make-static-decls")
+            ListItem("init-class-cons")
+            ListItem("init-class-member-decl-meth-no-modifiers")
+            ListItem("init-class-member-decl-meth")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("make-static-decls")
+            ListItem("init-class-nil")
+            ListItem("make-stdClass")
+            ListItem("class-stdClass")
+            ListItem("class")
+            ListItem("create-empty-class")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("init-class-nil")
+            ListItem("init-superglobals")
+            ListItem("array-literal")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-array-literal")
+            ListItem("make-array-literal")
+            ListItem("array-create-empty")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("array-init-props-nil")
+            ListItem("expr")
+            ListItem("array-literal")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-array-literal")
+            ListItem("make-array-literal")
+            ListItem("array-create-empty")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("array-init-props-nil")
+            ListItem("expr")
+            ListItem("array-literal")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-array-literal")
+            ListItem("make-array-literal")
+            ListItem("array-create-empty")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("array-init-props-nil")
+            ListItem("expr")
+            ListItem("ref-assign-fresh-array-elem")
+            ListItem("array-update-elem-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("expr")
+            ListItem("build-array-compare")
+            ListItem("function-decl-ret-value")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("make-static-decls")
+            ListItem("make-function")
+            ListItem("document-3")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-cons-fun")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-cons-no-fun")
+            ListItem("refactor-nil-no-fun")
+            ListItem("run")
+            ListItem("detect-zebra")
+            ListItem("make-static-decls")
+            ListItem("make-static-decl-2")
+            ListItem("make-static-decl-cons-1")
+            ListItem("literal-int")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("expr")
+            ListItem("make-static-decl-1")
+            ListItem("make-static-decl-2")
+            ListItem("make-static-decl-2")
+            ListItem("function-decl-ret-value")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("make-static-decls")
+            ListItem("make-static-decl-cons-1")
+            ListItem("dq-content-empty")
+            ListItem("double-quoted")
+            ListItem("constant-encapsed-string")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("expr")
+            ListItem("make-static-decl-1")
+            ListItem("make-function")
+            ListItem("seq-empty")
+            ListItem("var2Id")
+            ListItem("cond-false")
+            ListItem("literal-int")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("expr")
+            ListItem("make-static-decl")
+            ListItem("ref-assign-RHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-found-array")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("ref-assign-fresh-array-elem")
+            ListItem("array-update-elem-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-2")
+            ListItem("zval-write-refCount")
+            ListItem("expr")
+            ListItem("var2Id")
+            ListItem("cond-false")
+            ListItem("array-literal")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-array-literal")
+            ListItem("literal-int")
+            ListItem("literal-int")
+            ListItem("literal-int")
+            ListItem("make-array-literal")
+            ListItem("array-create-empty")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("array-init-props-cons")
+            ListItem("array-init-prop-def-key")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("expr")
+            ListItem("array-init-props-cons")
+            ListItem("array-init-prop-def-key")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("expr")
+            ListItem("array-init-props-cons")
+            ListItem("array-init-prop-def-key")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("expr")
+            ListItem("array-init-props-nil")
+            ListItem("expr")
+            ListItem("func-call")
+            ListItem("run-function")
+            ListItem("cond-false")
+            ListItem("process-fun-args-empty")
+            ListItem("push-stack-frame")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("set-crtn-scope")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("set-crnt-class")
+            ListItem("cond-false")
+            ListItem("get-fun-decls")
+            ListItem("seq-cons")
+            ListItem("make-static-decl")
+            ListItem("ref-assign-RHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-found-array")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("ref-assign-fresh-array-elem")
+            ListItem("array-update-elem-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-2")
+            ListItem("zval-write-refCount")
+            ListItem("expr")
+            ListItem("seq-cons")
+            ListItem("literal-string")
+            ListItem("dq-content")
+            ListItem("double-quoted")
+            ListItem("constant-encapsed-string")
+            ListItem("echo-cons")
+            ListItem("toString-string")
+            ListItem("internal-print")
+            ListItem("seq-empty")
+            ListItem("return")
+            ListItem("cond-false")
+            ListItem("set-crtn-scope")
+            ListItem("set-crnt-class")
+            ListItem("set-crnt-obj")
+            ListItem("dec-refCount-2")
+            ListItem("zval-write-refCount")
+            ListItem("cond-true")
+            ListItem("dec-refCount-compound-array")
+            ListItem("dec-refCount-array-elems-cons")
+            ListItem("dec-refCount-2")
+            ListItem("zval-write-refCount")
+            ListItem("dec-refCount-array-elems-nil")
+            ListItem("pop-stack-frame")
+            ListItem("expr")
+            ListItem("class-no-extends")
+            ListItem("class")
+            ListItem("create-empty-class")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("init-class-cons")
+            ListItem("literal-string")
+            ListItem("single-quoted")
+            ListItem("constant-encapsed-string")
+            ListItem("write-class-static-members")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem-update-crnt")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("write-class-static-members")
+            ListItem("init-class-cons")
+            ListItem("init-class-member-decl-meth")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("make-static-decls")
+            ListItem("write-class-method-if-visited")
+            ListItem("init-class-nil")
+            ListItem("class")
+            ListItem("create-empty-class")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("init-class-cons")
+            ListItem("init-class-member-decl-meth")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("make-static-decls")
+            ListItem("write-class-method-if-visited")
+            ListItem("init-class-nil")
+            ListItem("var2Id")
+            ListItem("cond-false")
+            ListItem("obj-creation-className2Id")
+            ListItem("obj-creation")
+            ListItem("assign-LHS2Loc")
+            ListItem("lget-default")
+            ListItem("lget-not-found-init-null")
+            ListItem("alloc-value")
+            ListItem("copy-value-to-loc-scalar")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("array-create-elem")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("rget-default")
+            ListItem("rget-array-prop")
+            ListItem("assign")
+            ListItem("copy-value-to-loc-object-literal")
+            ListItem("make-new-obj")
+            ListItem("array-create-empty")
+            ListItem("write-loc-undef")
+            ListItem("zval-create")
+            ListItem("inc-refCount-1")
+            ListItem("zval-write-refCount")
+            ListItem("obj-init")
+            ListItem("built-obj-prop-list-parent")
+            ListItem("built-obj-prop-list-parent")
+            ListItem("built-obj-prop-list-root")
+            ListItem("copy-value-to-loc-obj")
+            ListItem("detectForeachItemChange-false-2")
+            ListItem("inc-refCount-2")
+            ListItem("zval-write-refCount")
+            ListItem("write-loc-exists")
+            ListItem("zval-write-value")
+            ListItem("zval-write-type")
+            ListItem("run-constructor-none")
+            ListItem("expr")
+            ListItem("literal-string")
+            ListItem("echo-cons")
+            ListItem("toString-string")
+            ListItem("internal-print")
+        </trace>
+    </instrumentation>
+    <config>
+        <varDumpLevel>
+            0
+        </varDumpLevel>
+    </config>
+    <declarations>
+        <classes>
+            Bar |-> class ( Foo , .List , "fooStatic" |-> method ( (f ( 
+              'ListWrap(.KList) , 'ListWrap('Return('Some('ClassConstant(
+              "parent",, 'Variable('Simple("my_static")))))) , @byValue , 
+              #symLoc(27) )) , none , false ) , #symLoc(26) )
+            Exception |-> class ( stdClass , ListItem(prop ( "errorMsg" , none
+               , NULL )) , "Exception" |-> method ( (f ( 'ListWrap('Param(
+              'Variable('Simple("msg")))) , 'ListWrap('Expr('Assign(
+              'ObjectAccess('Variable('Simple("this")),, 'ObjectProperty(
+              'Simple("errorMsg"))),, 'Variable('Simple("msg"))))) , @byValue 
+              , #symLoc(6) )) , none , false ) "getMessage" |-> method ( (f ( 
+              'ListWrap(.KList) , 'ListWrap('Return('Some('ObjectAccess(
+              'Variable('Simple("this")),, 'ObjectProperty('Simple("errorMsg")
+              ))))) , @byValue , #symLoc(7) )) , none , false ) , #symLoc(5) )
+            Foo |-> class ( stdClass , .List , "staticValue" |-> method ( (f (
+               'ListWrap(.KList) , 'ListWrap('Return('Some('ClassConstant(
+              "self",, 'Variable('Simple("my_static")))))) , @byValue , 
+              #symLoc(25) )) , none , false ) , #symLoc(23) )
+            stdClass |-> class ( ROOT , .List , .Map , #symLoc(8) )
+        </classes>
+        <functions>
+            "array_key_exists" |-> f ( 'ListWrap('Param('Variable('Simple(
+              "k"))),, 'ParamRef('Variable('Simple("x")))) , 'ListWrap('Return
+              (array_key_exists ( 'Variable('Simple("k")) , 'Variable('Simple(
+              "x")) ))) , @byValue , #symLoc(4) )
+            "count" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(count ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "current" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(#current ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "define" |-> f ( 'ListWrap('Param('Variable('Simple("name"))),, 
+              'Param('Variable('Simple("value")))) , 'ListWrap('Return(#define
+               ( 'Variable('Simple("name")) , 'Variable('Simple("value")) ))) 
+              , @byValue , #symLoc(4) )
+            "defined" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(#defined ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "each" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(#each ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "gettype" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(#gettype ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "isEqualArray" |-> f ( 'ListWrap('Param('Variable('Simple("op1")))
+              ,, 'Param('Variable('Simple("op2")))) , 'ListWrap('If('Less(
+              'FunctionCall('FunctionName("count"),, 'ListWrap('Param(
+              'Variable('Simple("op1"))))),, 'FunctionCall('FunctionName(
+              "count"),, 'ListWrap('Param('Variable('Simple("op2")))))),, 
+              'Block('ListWrap('Return('Some('Negative('LNumber('Deci("1")))))
+              )),, 'ListWrap('ElseIf('Greater('FunctionCall('FunctionName(
+              "count"),, 'ListWrap('Param('Variable('Simple("op1"))))),, 
+              'FunctionCall('FunctionName("count"),, 'ListWrap('Param(
+              'Variable('Simple("op2")))))),, 'Block('ListWrap('Return('Some(
+              'LNumber('Deci("1"))))))))),, 'ForEach('Variable('Simple("op1"))
+              ,, 'Pattern('Some('Key('Variable('Simple("key")))),, 'Variable(
+              'Simple("val"))),, 'Block('ListWrap('If('Not('FunctionCall(
+              'FunctionName("array_key_exists"),, 'ListWrap('Param('Variable(
+              'Simple("key"))),, 'Param('Variable('Simple("op2")))))),, 'Block
+              ('ListWrap('Return('Some('Null(.KList))))),, 'ListWrap('ElseIf(
+              'Less('Variable('Simple("val")),, 'ArrayAccess('Variable('Simple
+              ("op2")),, 'Some('Variable('Simple("key"))))),, 'Block('ListWrap
+              ('Return('Some('Negative('LNumber('Deci("1")))))))),, 'ElseIf(
+              'Greater('Variable('Simple("val")),, 'ArrayAccess('Variable(
+              'Simple("op2")),, 'Some('Variable('Simple("key"))))),, 'Block(
+              'ListWrap('Return('Some('LNumber('Deci("1")))))))))))),, 'Return
+              ('Some('LNumber('Deci("0"))))) , @byValue , #symLoc(12) )
+            "is_float" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(#is_float ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "key" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(#key ( 'Variable('Simple("x")) ))) , @byRef , 
+              #symLoc(4) )
+            "next" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(#next ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "print_r" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap(#print_r ( 'Variable('Simple("x")) )) , @byValue , 
+              #symLoc(4) )
+            "reset" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(#reset ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "strlen" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(#strlen ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "var_dump" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap(#var_dump ( 'Variable('Simple("x")) )) , @byValue , 
+              #symLoc(4) )
+            "writeMsg" |-> f ( 'ListWrap(.KList) , 'ListWrap(#makeStaticDecl (
+               "t" , #symLoc(14) ),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("Hello world!")))))))) ,
+               @byValue , #symLoc(14) )
+        </functions>
+        <consts>
+            .Map
+        </consts>
+    </declarations>
+    <control>
+        <procStaticDecls>
+            .K
+        </procStaticDecls>
+        <processedFunBody>
+            .K
+        </processedFunBody>
+        <funInit>
+            .K
+        </funInit>
+        <loopStack>
+            .List
+        </loopStack>
+        <functionStack>
+            .List
+        </functionStack>
+        <xStack>
+            .List
+        </xStack>
+        <context>
+            <object>
+                .K
+            </object>
+            <function>
+                #symLoc(27)
+            </function>
+            <cnrtForeachItem>
+                .K
+            </cnrtForeachItem>
+            <class>
+                .K
+            </class>
+        </context>
+    </control>
+    <IO>
+        <exitStatus>
+            0
+        </exitStatus>
+        <in>
+            ListItem(#buffer ( "" ))
+            ListItem(#istream ( 0 ))
+        </in>
+        <out>
+            ListItem(#ostream ( 1 ))
+            ListItem(#buffer ( "" ))
+        </out>
+    </IO>
+    <script>
+        <k>
+            .K
+        </k>
+        <commands>
+            .K
+        </commands>
+        <decl>
+            .K
+        </decl>
+    </script>
+    <mem>
+        #symLoc(1) |-> zval ( (Array ( ([ "y" , none , #symLoc(13) ]) , 
+          ListItem([ "y" , none , #symLoc(13) ]) )) , array , 1 , false )
+        #symLoc(2) |-> zval ( (Array ( ([ "_GET" , none , #symLoc(9) ]) , 
+          ListItem([ "_GET" , none , #symLoc(9) ]) ListItem([ "_COOKIE" , none
+           , #symLoc(10) ]) ListItem([ "_POST" , none , #symLoc(11) ]) 
+          ListItem([ "GLOBALS" , none , #symLoc(3) ]) )) , array , 1 , false )
+        #symLoc(3) |-> zval ( (Array ( ([ "x" , none , #symLoc(16) ]) , 
+          ListItem([ "x" , none , #symLoc(16) ]) ListItem([ "y" , none , 
+          #symLoc(13) ]) ListItem([ "z" , none , #symLoc(17) ]) ListItem([ "o"
+           , none , #symLoc(28) ]) )) , array , 1 , false )
+        #symLoc(4) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(5) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(6) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(7) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(8) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(9) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(10) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(11) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(12) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(13) |-> zval ( 3 , int , 2 , true )
+        #symLoc(14) |-> zval ( (Array ( ([ "t" , none , #symLoc(15) ]) , 
+          ListItem([ "t" , none , #symLoc(15) ]) )) , array , 1 , false )
+        #symLoc(15) |-> zval ( "" , string , 1 , false )
+        #symLoc(16) |-> zval ( 2 , int , 1 , false )
+        #symLoc(17) |-> zval ( (Array ( ([ 0 , none , #symLoc(18) ]) , 
+          ListItem([ 0 , none , #symLoc(18) ]) ListItem([ 1 , none , #symLoc(
+          19) ]) ListItem([ 2 , none , #symLoc(20) ]) )) , array , 1 , false )
+        #symLoc(18) |-> zval ( 1 , int , 1 , false )
+        #symLoc(19) |-> zval ( 2 , int , 1 , false )
+        #symLoc(20) |-> zval ( 3 , int , 1 , false )
+        #symLoc(21) |-> zval ( (Array ( ([ "t" , none , #symLoc(15) ]) , 
+          ListItem([ "t" , none , #symLoc(15) ]) )) , array , 0 , false )
+        #symLoc(23) |-> zval ( (Array ( ([ "my_static" , none , #symLoc(24) ])
+           , ListItem([ "my_static" , none , #symLoc(24) ]) )) , array , 1 , 
+          false )
+        #symLoc(24) |-> zval ( "foo" , string , 1 , false )
+        #symLoc(25) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(26) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(27) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(28) |-> zval ( (OID ( #symLoc(29) , Bar , 0 )) , object , 1 , 
+          false )
+        #symLoc(29) |-> zval ( (Array ( none , .List )) , array , 2 , true )
+          
+    </mem>
+    <classInstanceCounters>
+        Bar |-> 0
+        Exception |-> 0
+        Foo |-> 0
+        stdClass |-> 0
+    </classInstanceCounters>
+</T>

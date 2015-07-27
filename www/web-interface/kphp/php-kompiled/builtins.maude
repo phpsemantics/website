@@ -1,0 +1,65 @@
+mod PHP-BUILTINS is
+ including PHP-BASE .
+ eq 'SMTCall`(_`)(_`(_`)(#_(GeneratedFreshVar34:#String), .KList) ) = _`(_`)(#_(#smtCall_(GeneratedFreshVar34:#String )), .KList) .
+eq 'String2K (_`(_`) (#_ (GeneratedFreshVar260:#String), .KList)) = string2k (GeneratedFreshVar260:#String) .
+eq String2Bag(_`(_`) (#_ (GeneratedFreshVar261:#String), .KList)) = string2bag (GeneratedFreshVar261:#String) .
+eq 'K2String(GeneratedFreshVar262:K) = _`(_`)(# k2string(GeneratedFreshVar262:K ), .KList) .
+eq 'Bag2String(Bag2KLabel GeneratedFreshVar263:Bag(.KList)) = _`(_`)(# bag2string(GeneratedFreshVar263:Bag ), .KList) .
+ eq 'notBool_(_`(_`)(#_(GeneratedFreshVar117:#Bool), .KList) ) = _`(_`)(#_(notBool_(GeneratedFreshVar117:#Bool )), .KList) .
+ eq '_andBool_(_`(_`)(#_(GeneratedFreshVar118:#Bool), .KList) ,, _`(_`)(#_(GeneratedFreshVar119:#Bool), .KList) ) = _`(_`)(#_(_andBool_(GeneratedFreshVar118:#Bool , GeneratedFreshVar119:#Bool )), .KList) .
+ eq '_xorBool_(_`(_`)(#_(GeneratedFreshVar120:#Bool), .KList) ,, _`(_`)(#_(GeneratedFreshVar121:#Bool), .KList) ) = _`(_`)(#_(_xorBool_(GeneratedFreshVar120:#Bool , GeneratedFreshVar121:#Bool )), .KList) .
+ eq '_orBool_(_`(_`)(#_(GeneratedFreshVar122:#Bool), .KList) ,, _`(_`)(#_(GeneratedFreshVar123:#Bool), .KList) ) = _`(_`)(#_(_orBool_(GeneratedFreshVar122:#Bool , GeneratedFreshVar123:#Bool )), .KList) .
+ eq '_impliesBool_(_`(_`)(#_(GeneratedFreshVar124:#Bool), .KList) ,, _`(_`)(#_(GeneratedFreshVar125:#Bool), .KList) ) = _`(_`)(#_(_impliesBool_(GeneratedFreshVar124:#Bool , GeneratedFreshVar125:#Bool )), .KList) .
+ eq '_==Bool_(_`(_`)(#_(GeneratedFreshVar126:#Bool), .KList) ,, _`(_`)(#_(GeneratedFreshVar127:#Bool), .KList) ) = _`(_`)(#_(_==Bool_(GeneratedFreshVar126:#Bool , GeneratedFreshVar127:#Bool )), .KList) .
+ eq '~Int_(_`(_`)(#_(GeneratedFreshVar132:#Int), .KList) ) = _`(_`)(#_(~Int_(GeneratedFreshVar132:#Int )), .KList) .
+eq '_^Int_(_`(_`)(#_(GeneratedFreshVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar31:#Nat), .KList) ) = _`(_`)(# _^Int_(GeneratedFreshVar30:#Int , GeneratedFreshVar31:#Nat ), .KList) .
+ eq '_*Int_(_`(_`)(#_(GeneratedFreshVar133:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar134:#Int), .KList) ) = _`(_`)(#_(_*Int_(GeneratedFreshVar133:#Int , GeneratedFreshVar134:#Int )), .KList) .
+eq '_/Int_(_`(_`)(#_(GeneratedFreshVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar31:#NzInt), .KList) ) = _`(_`)(# _/Int_(GeneratedFreshVar30:#Int , GeneratedFreshVar31:#NzInt ), .KList) .
+eq '_%Int_(_`(_`)(#_(GeneratedFreshVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar31:#NzInt), .KList) ) = _`(_`)(# _%Int_(GeneratedFreshVar30:#Int , GeneratedFreshVar31:#NzInt ), .KList) .
+ eq '_+Int_(_`(_`)(#_(GeneratedFreshVar135:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar136:#Int), .KList) ) = _`(_`)(#_(_+Int_(GeneratedFreshVar135:#Int , GeneratedFreshVar136:#Int )), .KList) .
+ eq '_-Int_(_`(_`)(#_(GeneratedFreshVar137:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar138:#Int), .KList) ) = _`(_`)(#_(_-Int_(GeneratedFreshVar137:#Int , GeneratedFreshVar138:#Int )), .KList) .
+eq '_>>Int_(_`(_`)(#_(GeneratedFreshVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar31:#Nat), .KList) ) = _`(_`)(# _>>Int_(GeneratedFreshVar30:#Int , GeneratedFreshVar31:#Nat ), .KList) .
+eq '_<<Int_(_`(_`)(#_(GeneratedFreshVar30:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar31:#Nat), .KList) ) = _`(_`)(# _<<Int_(GeneratedFreshVar30:#Int , GeneratedFreshVar31:#Nat ), .KList) .
+ eq '_&Int_(_`(_`)(#_(GeneratedFreshVar139:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar140:#Int), .KList) ) = _`(_`)(#_(_&Int_(GeneratedFreshVar139:#Int , GeneratedFreshVar140:#Int )), .KList) .
+ eq '_xorInt_(_`(_`)(#_(GeneratedFreshVar141:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar142:#Int), .KList) ) = _`(_`)(#_(_xorInt_(GeneratedFreshVar141:#Int , GeneratedFreshVar142:#Int )), .KList) .
+ eq '_|Int_(_`(_`)(#_(GeneratedFreshVar143:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar144:#Int), .KList) ) = _`(_`)(#_(_|Int_(GeneratedFreshVar143:#Int , GeneratedFreshVar144:#Int )), .KList) .
+ eq absInt(_`(_`)(#_(GeneratedFreshVar145:#Int), .KList) ) = _`(_`)(#_(absInt(GeneratedFreshVar145:#Int )), .KList) .
+ eq '_<=Int_(_`(_`)(#_(GeneratedFreshVar147:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar148:#Int), .KList) ) = _`(_`)(#_(_<=Int_(GeneratedFreshVar147:#Int , GeneratedFreshVar148:#Int )), .KList) .
+ eq '_<Int_(_`(_`)(#_(GeneratedFreshVar149:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar150:#Int), .KList) ) = _`(_`)(#_(_<Int_(GeneratedFreshVar149:#Int , GeneratedFreshVar150:#Int )), .KList) .
+ eq '_>=Int_(_`(_`)(#_(GeneratedFreshVar151:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar152:#Int), .KList) ) = _`(_`)(#_(_>=Int_(GeneratedFreshVar151:#Int , GeneratedFreshVar152:#Int )), .KList) .
+ eq '_>Int_(_`(_`)(#_(GeneratedFreshVar153:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar154:#Int), .KList) ) = _`(_`)(#_(_>Int_(GeneratedFreshVar153:#Int , GeneratedFreshVar154:#Int )), .KList) .
+ eq '_==Int_(_`(_`)(#_(GeneratedFreshVar155:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar156:#Int), .KList) ) = _`(_`)(#_(_==Int_(GeneratedFreshVar155:#Int , GeneratedFreshVar156:#Int )), .KList) .
+ eq '_=Int_(_`(_`)(#_(GeneratedFreshVar157:#Int), .KList) ,, _`(_`)(#_(GeneratedFreshVar158:#Int), .KList) ) = _`(_`)(#_(_==Int_(GeneratedFreshVar157:#Int , GeneratedFreshVar158:#Int )), .KList) .
+ceq '_^Float_(_`(_`)(#_(GeneratedFreshVar46:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar47:#Float), .KList) ) = _`(_`)(# _^Float_(GeneratedFreshVar46:#Float , GeneratedFreshVar47:#Float ), .KList) if GeneratedFreshVar46:#Float =/=Universal 0.0 or-else GeneratedFreshVar47:#Float >=Float 0.0 .
+ eq '_*Float_(_`(_`)(#_(GeneratedFreshVar163:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar164:#Float), .KList) ) = _`(_`)(#_(_*Float_(GeneratedFreshVar163:#Float , GeneratedFreshVar164:#Float )), .KList) .
+ceq '_/Float_(_`(_`)(#_(GeneratedFreshVar44:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar45:#Float), .KList) ) = _`(_`)(# _/Float_(GeneratedFreshVar44:#Float , GeneratedFreshVar45:#Float ), .KList) if GeneratedFreshVar45:#Float ==Float 0.0 = false .
+ceq '_%Float_(_`(_`)(#_(GeneratedFreshVar46:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar47:#Float), .KList) ) = _`(_`)(# _%Float_(GeneratedFreshVar46:#Float , GeneratedFreshVar47:#Float ), .KList) if GeneratedFreshVar47:#Float ==Float 0.0 = false .
+ eq '_+Float_(_`(_`)(#_(GeneratedFreshVar165:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar166:#Float), .KList) ) = _`(_`)(#_(_+Float_(GeneratedFreshVar165:#Float , GeneratedFreshVar166:#Float )), .KList) .
+ eq '_-Float_(_`(_`)(#_(GeneratedFreshVar167:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar168:#Float), .KList) ) = _`(_`)(#_(_-Float_(GeneratedFreshVar167:#Float , GeneratedFreshVar168:#Float )), .KList) .
+ eq '_<=Float_(_`(_`)(#_(GeneratedFreshVar170:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar171:#Float), .KList) ) = _`(_`)(#_(_<=Float_(GeneratedFreshVar170:#Float , GeneratedFreshVar171:#Float )), .KList) .
+ eq '_<Float_(_`(_`)(#_(GeneratedFreshVar172:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar173:#Float), .KList) ) = _`(_`)(#_(_<Float_(GeneratedFreshVar172:#Float , GeneratedFreshVar173:#Float )), .KList) .
+ eq '_>=Float_(_`(_`)(#_(GeneratedFreshVar174:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar175:#Float), .KList) ) = _`(_`)(#_(_>=Float_(GeneratedFreshVar174:#Float , GeneratedFreshVar175:#Float )), .KList) .
+ eq '_>Float_(_`(_`)(#_(GeneratedFreshVar176:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar177:#Float), .KList) ) = _`(_`)(#_(_>Float_(GeneratedFreshVar176:#Float , GeneratedFreshVar177:#Float )), .KList) .
+ eq '_==Float_(_`(_`)(#_(GeneratedFreshVar178:#Float), .KList) ,, _`(_`)(#_(GeneratedFreshVar179:#Float), .KList) ) = _`(_`)(#_(_==Float_(GeneratedFreshVar178:#Float , GeneratedFreshVar179:#Float )), .KList) .
+ eq Int2Float(_`(_`)(#_(GeneratedFreshVar181:#Int), .KList) ) = _`(_`)(#_(int2Float(GeneratedFreshVar181:#Int )), .KList) .
+ eq Float2Int(_`(_`)(#_(GeneratedFreshVar183:#Float), .KList) ) = _`(_`)(#_(float2Int(GeneratedFreshVar183:#Float )), .KList) .
+ eq '_+String_(_`(_`)(#_(GeneratedFreshVar187:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar188:#String), .KList) ) = _`(_`)(#_(_+String_(GeneratedFreshVar187:#String , GeneratedFreshVar188:#String )), .KList) .
+ eq '_==String_(_`(_`)(#_(GeneratedFreshVar190:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar191:#String), .KList) ) = _`(_`)(#_(_==String_(GeneratedFreshVar190:#String , GeneratedFreshVar191:#String )), .KList) .
+ eq lengthString(_`(_`)(#_(GeneratedFreshVar193:#String), .KList) ) = _`(_`)(#_(lengthString(GeneratedFreshVar193:#String )), .KList) .
+ceq chrChar(_`(_`)(#_(GeneratedFreshVar86:#Nat), .KList) ) = _`(_`)(# chrChar(GeneratedFreshVar86:#Nat ), .KList) if GeneratedFreshVar86:#Nat <=Int 255 .
+eq ordChar(_`(_`)(#_(GeneratedFreshVar88:#Char), .KList) ) = _`(_`)(# ordChar(GeneratedFreshVar88:#Char ), .KList) .
+eq substrString(_`(_`)(#_(GeneratedFreshVar90:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar91:#Nat), .KList) ,, _`(_`)(#_(GeneratedFreshVar92:#Nat), .KList) ) = _`(_`)(# substrString(GeneratedFreshVar90:#String , GeneratedFreshVar91:#Nat , GeneratedFreshVar92:#Nat ), .KList) .
+eq findString(_`(_`)(#_(GeneratedFreshVar94:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar95:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar96:#Nat), .KList) ) = _`(_`)(# findString(GeneratedFreshVar94:#String , GeneratedFreshVar95:#String , GeneratedFreshVar96:#Nat ), .KList) .
+eq rfindString(_`(_`)(#_(GeneratedFreshVar98:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar99:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar100:#Nat), .KList) ) = _`(_`)(# rfindString(GeneratedFreshVar98:#String , GeneratedFreshVar99:#String , GeneratedFreshVar100:#Nat ), .KList) .
+ eq Float2String(_`(_`)(#_(GeneratedFreshVar202:#Float), .KList) ) = _`(_`)(#_(float2String(GeneratedFreshVar202:#Float )), .KList) .
+ceq String2Float(_`(_`)(#_(GeneratedFreshVar85:#String), .KList) ) = _`(_`)(# GeneratedFreshVar86:#Float, .KList) if GeneratedFreshVar86:#Float := string2Float(GeneratedFreshVar85:#String) .
+ceq String2Int(_`(_`)(#_(GeneratedFreshVar85:#String), .KList) ) = _`(_`)(# GeneratedFreshVar86:#Int, .KList) if GeneratedFreshVar86:#Int := string2int(GeneratedFreshVar85:#String) .
+ eq Int2String(_`(_`)(#_(GeneratedFreshVar206:#Int), .KList) ) = _`(_`)(#_(int2string(GeneratedFreshVar206:#Int )), .KList) .
+ eq '_<String_(_`(_`)(#_(GeneratedFreshVar218:#String), .KList) ,, _`(_`)(#_(GeneratedFreshVar219:#String), .KList) ) = _`(_`)(#_(_<String_(GeneratedFreshVar218:#String , GeneratedFreshVar219:#String )), .KList) .
+ eq ##tcpRequest(_`(_`)(#_(GeneratedFreshVar236:#String), .KList) ) = _`(_`)(#_(#tcpRequest(GeneratedFreshVar236:#String )), .KList) .
+ eq #retrieveTCPError(_`(_`)(#_(GeneratedFreshVar237:#String), .KList) ) = _`(_`)(#_(#retrieveTCPError(GeneratedFreshVar237:#String )), .KList) .
+ eq #isTCPError(_`(_`)(#_(GeneratedFreshVar239:#String), .KList) ) = _`(_`)(#_(#isTCPError(GeneratedFreshVar239:#String )), .KList) .
+eq randomRandom(_`(_`)(#_(GeneratedFreshVar135:#Nat), .KList) ) = _`(_`)(# randomRandom(GeneratedFreshVar135:#Nat ), .KList) .
+ eq '#distinctCounter(_`(_`)(#_(GeneratedFreshVar242:#Int), .KList) ) = _`(_`)(#_(distinctCounter(GeneratedFreshVar242:#Int )), .KList) .
+eq '_==K_(GeneratedFreshVar132:K,, GeneratedFreshVar133:K)  = _`(_`)(# _==K_(GeneratedFreshVar132:K , GeneratedFreshVar133:K ), .KList) .
+endm

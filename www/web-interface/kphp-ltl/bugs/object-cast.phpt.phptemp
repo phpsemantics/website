@@ -1,0 +1,5 @@
+<?php
+	$x = 123;
+	$y = (object) $x;
+	var_dump($y);
+?>

@@ -1,0 +1,2273 @@
+<kphp>
+    <trace>
+        ListItem("built-init-state")
+        ListItem("init-scopes")
+        ListItem("init-builtin-functions")
+        ListItem("init-builtin-classes")
+        ListItem("make-exception")
+        ListItem("class-no-extends")
+        ListItem("class")
+        ListItem("create-empty-class")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("init-class-cons")
+        ListItem("init-class-member-decl-static")
+        ListItem("write-class-instance-members-no-default")
+        ListItem("write-class-instance-members")
+        ListItem("write-class-instance-members-nil")
+        ListItem("init-class-cons")
+        ListItem("init-class-member-decl-meth-no-modifiers")
+        ListItem("init-class-member-decl-meth")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("write-class-method")
+        ListItem("init-class-cons")
+        ListItem("init-class-member-decl-meth-no-modifiers")
+        ListItem("init-class-member-decl-meth")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("write-class-method")
+        ListItem("init-class-nil")
+        ListItem("make-stdClass")
+        ListItem("class-stdClass")
+        ListItem("class")
+        ListItem("create-empty-class")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("init-class-nil")
+        ListItem("init-superglobals")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem-update-crnt")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("ref-assign-fresh-array-elem")
+        ListItem("array-update-elem-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("expr")
+        ListItem("build-array-compare")
+        ListItem("function-decl-ret-value")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("make-function")
+        ListItem("document-3")
+        ListItem("echo-nil")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-nil")
+        ListItem("run")
+        ListItem("detect-deprecated")
+        ListItem("make-static-decls")
+        ListItem("for")
+        ListItem("push-loop-cntx")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem-update-crnt")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("while-spec")
+        ListItem("less")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("isEqual-LHS2Loc")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("isEqual-LHS2LangValue")
+        ListItem("comparison-less-scalar")
+        ListItem("less-int")
+        ListItem("if-true-1")
+        ListItem("seq-cons")
+        ListItem("seq-cons")
+        ListItem("seq-cons")
+        ListItem("block")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("literal-string")
+        ListItem("literal-string")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var-braced-arg2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("var-braced")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("array-access-nested")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-propagate")
+        ListItem("lget-not-found-init-array")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-array")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("copyArrayMembers-nil")
+        ListItem("array-init-n")
+        ListItem("array-write-current-some")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem-update-crnt")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("escape-110")
+        ListItem("dq-content-arg2LangValue-1")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("dq-content-arg-none-2")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("dq-content-arg-none-1")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-access-nested")
+        ListItem("concat-LHS2LangValue-1")
+        ListItem("rget-default")
+        ListItem("rget-propagate")
+        ListItem("rget-array-prop")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-1")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("concat-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("plus")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-plus-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("plus")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-plus-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("min")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-min-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("min")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-min-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mul")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mul-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mul")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mul-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mod")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mod-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mod")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mod-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-float")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-float")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("plus")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-plus-float")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("plus")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-plus-float")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("min")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-min-float")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("min")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-min-float")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mul")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mul-float")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mul")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mul-float")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mod")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mod-args2Int")
+        ListItem("toInteger-float")
+        ListItem("toInteger-float")
+        ListItem("binop-mod-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("mod")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("binop-RHS2LangValue-2")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-mod-args2Int")
+        ListItem("toInteger-float")
+        ListItem("toInteger-float")
+        ListItem("binop-mod-int")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("toString-int")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("isEqual")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("string2Number-char-digit")
+        ListItem("isEqual-LHS2Loc")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("isEqual-LHS2LangValue")
+        ListItem("comparison-equal-scalar")
+        ListItem("isEqual-int")
+        ListItem("if-false-elseIf-1")
+        ListItem("isEqual")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("string2Number-char-digit")
+        ListItem("isEqual-LHS2Loc")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("isEqual-LHS2LangValue")
+        ListItem("comparison-equal-scalar")
+        ListItem("isEqual-int")
+        ListItem("if-true-1")
+        ListItem("block")
+        ListItem("seq-cons")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("literal-string")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("concat-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("isEqual")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("comparison-equal-scalar")
+        ListItem("isEqual-string")
+        ListItem("if-true-1")
+        ListItem("block")
+        ListItem("seq-cons")
+        ListItem("literal-string")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-empty")
+        ListItem("seq-cons")
+        ListItem("isEqual")
+        ListItem("literal-int")
+        ListItem("literal-int")
+        ListItem("comparison-equal-scalar")
+        ListItem("isEqual-int")
+        ListItem("if-false")
+        ListItem("block")
+        ListItem("seq-cons")
+        ListItem("literal-string")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-empty")
+        ListItem("seq-empty")
+        ListItem("seq-cons")
+        ListItem("inline-html")
+        ListItem("literal-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("literal-string")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("literal-int")
+        ListItem("if-guard2Bool")
+        ListItem("bool-cast")
+        ListItem("toBoolean-int-zero")
+        ListItem("if-false-elseIf-1")
+        ListItem("min")
+        ListItem("literal-int")
+        ListItem("literal-int")
+        ListItem("binop-min-int")
+        ListItem("if-guard2Bool")
+        ListItem("bool-cast")
+        ListItem("toBoolean-int-zero")
+        ListItem("if-false")
+        ListItem("block")
+        ListItem("seq-cons")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("postIncArg2Loc")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("postInc")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("literal-string")
+        ListItem("escape-36")
+        ListItem("literal-string")
+        ListItem("escape-36")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("literal-string")
+        ListItem("escape-36")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("literal-string")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("dq-content-arg2LangValue-3")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-int")
+        ListItem("concat-string")
+        ListItem("literal-string")
+        ListItem("escape-36")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("literal-string")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("dq-content-arg2LangValue-3")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-int")
+        ListItem("concat-string")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-2")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("seq-cons")
+        ListItem("literal-int")
+        ListItem("if-guard2Bool")
+        ListItem("bool-cast")
+        ListItem("toBoolean-int")
+        ListItem("if-true-1")
+        ListItem("block")
+        ListItem("seq-cons")
+        ListItem("plus-assign")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("plus")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("preInc-arg2Loc")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("preInc")
+        ListItem("binop-LHS2LangValue")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("binop-plus-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("seq-cons")
+        ListItem("literal-int")
+        ListItem("if-guard2Bool")
+        ListItem("bool-cast")
+        ListItem("toBoolean-int-zero")
+        ListItem("if-false")
+        ListItem("literal-int")
+        ListItem("if-no-else")
+        ListItem("if-guard2Bool")
+        ListItem("bool-cast")
+        ListItem("toBoolean-int")
+        ListItem("if-true-1")
+        ListItem("block")
+        ListItem("seq-cons")
+    </trace>
+    <gc>
+        <gcEnabled>
+            false
+        </gcEnabled>
+        <locationsToCollect>
+            .List
+        </locationsToCollect>
+    </gc>
+    <instrumentation>
+        <isTerminated>
+            false
+        </isTerminated>
+        <cleanTraceOnTermination>
+            false
+        </cleanTraceOnTermination>
+        <label>
+            "@"
+        </label>
+    </instrumentation>
+    <scopes>
+        <superGlobalScope>
+            #symLoc(1)
+        </superGlobalScope>
+        <globalStaticScope>
+            #symLoc(2)
+        </globalStaticScope>
+        <currentScope>
+            #symLoc(3)
+        </currentScope>
+        <globalScope>
+            #symLoc(3)
+        </globalScope>
+    </scopes>
+    <control>
+        <functionArgumentsDeclaration>
+            .K
+        </functionArgumentsDeclaration>
+        <processedStaticDeclarations>
+            .K
+        </processedStaticDeclarations>
+        <processedFunBody>
+            .K
+        </processedFunBody>
+        <loopStack>
+            ListItem(loopFrame ( 'Echo('ListWrap('Literal("\n"))) , none ))
+        </loopStack>
+        <functionStack>
+            .List
+        </functionStack>
+        <exceptionStack>
+            .List
+        </exceptionStack>
+        <context>
+            <object>
+                .K
+            </object>
+            <function>
+                #symLoc(2)
+            </function>
+            <currentForeachItem>
+                .K
+            </currentForeachItem>
+            <class>
+                .K
+            </class>
+        </context>
+    </control>
+    <IO>
+        <exitStatus>
+            0
+        </exitStatus>
+        <errorManagement>
+            0
+        </errorManagement>
+        <varDumpLevel>
+            0
+        </varDumpLevel>
+        <in>
+            ListItem(#buffer ( "" ))
+            ListItem(#istream ( 0 ))
+        </in>
+        <out>
+            ListItem(#ostream ( 1 ))
+            ListItem(#buffer ( "" ))
+        </out>
+    </IO>
+    <script>
+        <k>
+            'MulAssign('Variable('Simple("j")),, 'Variable('Simple("i"))) ~> 
+              'Expr(HOLE) ~> 'ListWrap('Echo('ListWrap('ConstantEncapsedString
+              ('DoubleQuoted('DQContent('Some('Literal(
+              "this is supposed to be displayed. should be:  ")),, 'DQContent(
+              'DQContent('DQContent('DQContent('DQContent('DQContent('Escape(
+              36),, 'Some('Literal("i=2, ")),, 'Escape(36)),, 'Some('Literal(
+              "j=4.  is:  ")),, 'Escape(36)),, 'Some('Literal("i=")),, 
+              'Variable('Simple("i"))),, 'Some('Literal(", ")),, 'Escape(36))
+              ,, 'Some('Literal("j=")),, 'Variable('Simple("j"))),, 'None(
+              .KList),, 'Escape(110)),, 'None(.KList)))))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "3 loop iterations should follow:")),, 'Escape(110),, 'None(
+              .KList)))))),, 'While('LessEqual('Variable('Simple("i")),, 
+              'Variable('Simple("j"))),, 'Block('ListWrap('Echo('ListWrap(
+              'Concat('PostInc('Variable('Simple("i"))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              " ")),, 'DQContent('Variable('Simple("j")),, 'None(.KList),, 
+              'Escape(110)),, 'None(.KList))))))))))) ~> 'ListWrap(.KList) ~> 
+              'ListWrap('Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("**********************************"))
+              ,, 'Escape(110),, 'None(.KList))))))) ~> 'ListWrap('InlineHTML(
+              'CloseTag(.KList),, 'ListWrap('Literal(
+              "\n\n*** C-style else-if's ***\n")),, 'FullOpenTag(.KList)),, 
+              'If('Assign('Variable('Simple("a")),, 'LNumber('Deci("0"))),, 
+              'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "This shouldn't be displayed")),, 'Escape(110),, 'None(.KList)))
+              ))))),, 'ListWrap(.KList),, 'If('PostInc('Variable('Simple("a"))
+              ),, 'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "This shouldn't be displayed either")),, 'Escape(110),, 'None(
+              .KList)))))))),, 'ListWrap(.KList),, 'If('PreDec('Variable(
+              'Simple("a"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "No, this neither")),, 'Escape(110),, 'None(.KList)))))))),, 
+              'ListWrap(.KList),, 'If('PreInc('Variable('Simple("a"))),, 
+              'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "This should be displayed")),, 'Escape(110),, 'None(.KList))))))
+              )),, 'ListWrap(.KList),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "This shouldn't be displayed at all")),, 'Escape(110),, 'None(
+              .KList)))))))))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n*************************\n\n*** WHILE tests ***\n")
+              ),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i")
+              ),, 'LNumber('Deci("0")))),, 'Expr('Assign('Variable('Simple("j"
+              )),, 'LNumber('Deci("20")))),, 'While('Less('Variable('Simple(
+              "i")),, 'Mul('LNumber('Deci("2")),, 'Variable('Simple("j")))),, 
+              'Block('ListWrap('If('Greater('Variable('Simple("i")),, 
+              'Variable('Simple("j"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('DQContent('Variable('Simple("i")),, 'Some(
+              'Literal(" is greater than ")),, 'Variable('Simple("j"))),, 
+              'None(.KList),, 'Escape(110)),, 'None(.KList)))))))),, 'ListWrap
+              (.KList),, 'If('IsEqual('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('DQContent('Variable('Simple("i")),, 'Some(
+              'Literal(" equals ")),, 'Variable('Simple("j"))),, 'None(.KList)
+              ,, 'Escape(110)),, 'None(.KList)))))))),, 'ListWrap(.KList),, 
+              'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('DQContent(
+              'Variable('Simple("i")),, 'Some('Literal(" is smaller than "))
+              ,, 'Variable('Simple("j"))),, 'None(.KList),, 'Escape(110)),, 
+              'None(.KList)))))))))),, 'Expr('PostInc('Variable('Simple("i")))
+              )))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap('Literal(
+              "\n*******************\n\n\n*** Nested WHILEs ***\n")),, 
+              'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple(
+              "arr_len")),, 'LNumber('Deci("3")))),, 'Expr('Assign('Variable(
+              'Simple("i")),, 'LNumber('Deci("0")))),, 'While('Less('Variable(
+              'Simple("i")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Expr('Assign('Variable('Simple("j")),, 'LNumber('Deci
+              ("0")))),, 'While('Less('Variable('Simple("j")),, 'Variable(
+              'Simple("arr_len"))),, 'Block('ListWrap('Expr('Assign('Variable(
+              'Simple("k")),, 'LNumber('Deci("0")))),, 'While('Less('Variable(
+              'Simple("k")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Expr('Assign('ArrayAccess('Variable('Braced(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "test")),, 'DQContent('Variable('Simple("i")),, 'None(.KList),, 
+              'Variable('Simple("j"))),, 'None(.KList)))))),, 'Some('Variable(
+              'Simple("k")))),, 'Plus('Plus('Variable('Simple("i")),, 
+              'Variable('Simple("j"))),, 'Variable('Simple("k"))))),, 'Expr(
+              'PostInc('Variable('Simple("k"))))))),, 'Expr('PostInc('Variable
+              ('Simple("j"))))))),, 'Expr('PostInc('Variable('Simple("i"))))))
+              ),, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal(
+              "Each array variable should be equal to the sum of its indices:"
+              )),, 'Escape(110),, 'None(.KList)))))),, 'Expr('Assign('Variable
+              ('Simple("i")),, 'LNumber('Deci("0")))),, 'While('Less('Variable
+              ('Simple("i")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Expr('Assign('Variable('Simple("j")),, 'LNumber('Deci
+              ("0")))),, 'While('Less('Variable('Simple("j")),, 'Variable(
+              'Simple("arr_len"))),, 'Block('ListWrap('Expr('Assign('Variable(
+              'Simple("k")),, 'LNumber('Deci("0")))),, 'While('Less('Variable(
+              'Simple("k")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Echo('ListWrap('Concat('Concat(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('DQContent('DQContent('Escape(36),, 'Some('Literal
+              ("{test")),, 'Variable('Simple("i"))),, 'None(.KList),, 
+              'Variable('Simple("j"))),, 'Some('Literal("}[")),, 'Variable(
+              'Simple("k"))),, 'Some('Literal("] = "))))),, 'ArrayAccess(
+              'Variable('Braced('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("test")),, 'DQContent('Variable(
+              'Simple("i")),, 'None(.KList),, 'Variable('Simple("j"))),, 'None
+              (.KList)))))),, 'Some('Variable('Simple("k"))))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'Escape(110),, 'None(.KList))))))),, 'Expr('PostInc('Variable
+              ('Simple("k"))))))),, 'Expr('PostInc('Variable('Simple("j"))))))
+              ),, 'Expr('PostInc('Variable('Simple("i"))))))),, 'InlineHTML(
+              'CloseTag(.KList),, 'ListWrap('Literal(
+              "\n*********************\n\n*** hash test... ***\n")),, 
+              'FullOpenTag(.KList)),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("commented out..."))))))
+              ),, 'InlineHTML('CloseTag(.KList),, 'ListWrap('Literal(
+              "\n\n**************************\n\n*** Hash resizing test ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'LNumber('Deci("10")))),, 'Expr('Assign('Variable('Simple(
+              "a")),, 'ConstantEncapsedString('DoubleQuoted('DQContent('Some(
+              'Literal("b"))))))),, 'While('Greater('Variable('Simple("i")),, 
+              'LNumber('Deci("0"))),, 'Block('ListWrap('Expr('Assign('Variable
+              ('Simple("a")),, 'Concat('Variable('Simple("a")),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "a")))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('Variable(
+              'Simple("a")),, 'None(.KList),, 'Escape(110)),, 'None(.KList))))
+              )),, 'Expr('Assign('ArrayAccess('Variable('Simple("resize")),, 
+              'Some('Variable('Simple("a")))),, 'Variable('Simple("i")))),, 
+              'Expr('PostDec('Variable('Simple("i"))))))),, 'Expr('Assign(
+              'Variable('Simple("i")),, 'LNumber('Deci("10")))),, 'Expr(
+              'Assign('Variable('Simple("a")),, 'ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("b"))))))),, 'While(
+              'Greater('Variable('Simple("i")),, 'LNumber('Deci("0"))),, 
+              'Block('ListWrap('Expr('Assign('Variable('Simple("a")),, 'Concat
+              ('Variable('Simple("a")),, 'ConstantEncapsedString('DoubleQuoted
+              ('DQContent('Some('Literal("a")))))))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('Variable('Simple("a")),, 'None(.KList),, 'Escape(
+              110)),, 'None(.KList)))))),, 'Echo('ListWrap('Concat(
+              'ArrayAccess('Variable('Simple("resize")),, 'Some('Variable(
+              'Simple("a")))),, 'ConstantEncapsedString('DoubleQuoted(
+              'DQContent('None(.KList),, 'Escape(110),, 'None(.KList))))))),, 
+              'Expr('PostDec('Variable('Simple("i"))))))),, 'InlineHTML(
+              'CloseTag(.KList),, 'ListWrap('Literal(
+              "\n**************************\n\n\n*** break/continue test ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'LNumber('Deci("0")))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('Escape(36),, 'Some('Literal(
+              "i should go from 0 to 2")),, 'Escape(110)),, 'None(.KList))))))
+              ,, 'While('Less('Variable('Simple("i")),, 'LNumber('Deci("5")))
+              ,, 'Block('ListWrap('If('Greater('Variable('Simple("i")),, 
+              'LNumber('Deci("2"))),, 'Block('ListWrap('Break('None(.KList))))
+              ),, 'Expr('Assign('Variable('Simple("j")),, 'LNumber('Deci("0"))
+              )),, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('None(.KList),, 'DQContent('DQContent('Escape(36),, 
+              'Some('Literal("j should go from 3 to 4, and ")),, 'Escape(36))
+              ,, 'Some('Literal("q should go from 3 to 4")),, 'Escape(110)),, 
+              'None(.KList)))))),, 'While('Less('Variable('Simple("j")),, 
+              'LNumber('Deci("5"))),, 'Block('ListWrap('If('LessEqual(
+              'Variable('Simple("j")),, 'LNumber('Deci("2"))),, 'Block(
+              'ListWrap('Expr('PostInc('Variable('Simple("j")))),, 'Continue(
+              'None(.KList))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("  ")),, 'DQContent(
+              'DQContent('Escape(36),, 'Some('Literal("j=")),, 'Variable(
+              'Simple("j"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))
+              ))),, 'For('ListWrap('Assign('Variable('Simple("q")),, 'LNumber(
+              'Deci("0")))),, 'ListWrap('LessEqual('Variable('Simple("q")),, 
+              'LNumber('Deci("10")))),, 'ListWrap('PostInc('Variable('Simple(
+              "q")))),, 'Block('ListWrap('If('Less('Variable('Simple("q")),, 
+              'LNumber('Deci("3"))),, 'Block('ListWrap('Continue('None(.KList)
+              )))),, 'If('Greater('Variable('Simple("q")),, 'LNumber('Deci("4"
+              ))),, 'Block('ListWrap('Break('None(.KList))))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("    ")),, 'DQContent('DQContent('Escape(36),, 'Some(
+              'Literal("q=")),, 'Variable('Simple("q"))),, 'None(.KList),, 
+              'Escape(110)),, 'None(.KList))))))))),, 'Expr('PostInc('Variable
+              ('Simple("j"))))))),, 'Expr('Assign('Variable('Simple("j")),, 
+              'LNumber('Deci("0")))),, 'Echo('ListWrap('ConstantEncapsedString
+              ('DoubleQuoted('DQContent('None(.KList),, 'DQContent('Escape(36)
+              ,, 'Some('Literal("j should go from 0 to 2")),, 'Escape(110)),, 
+              'None(.KList)))))),, 'While('Less('Variable('Simple("j")),, 
+              'LNumber('Deci("5"))),, 'Block('ListWrap('If('Greater('Variable(
+              'Simple("j")),, 'LNumber('Deci("2"))),, 'Block('ListWrap('Expr(
+              'Assign('Variable('Simple("k")),, 'LNumber('Deci("0")))),, 'Echo
+              ('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent(
+              'None(.KList),, 'DQContent('Escape(36),, 'Some('Literal(
+              "k should go from 0 to 2")),, 'Escape(110)),, 'None(.KList))))))
+              ,, 'While('Less('Variable('Simple("k")),, 'LNumber('Deci("5")))
+              ,, 'Block('ListWrap('If('Greater('Variable('Simple("k")),, 
+              'LNumber('Deci("2"))),, 'Block('ListWrap('Break('Some('LNumber(
+              'Deci("2"))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("    ")),, 'DQContent(
+              'DQContent('Escape(36),, 'Some('Literal("k=")),, 'Variable(
+              'Simple("k"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))
+              ))),, 'Expr('PostInc('Variable('Simple("k")))))))))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("  ")),, 'DQContent('DQContent('Escape(36),, 'Some(
+              'Literal("j=")),, 'Variable('Simple("j"))),, 'None(.KList),, 
+              'Escape(110)),, 'None(.KList)))))),, 'Expr('PostInc('Variable(
+              'Simple("j"))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('DQContent(
+              'Escape(36),, 'Some('Literal("i=")),, 'Variable('Simple("i")))
+              ,, 'None(.KList),, 'Escape(110)),, 'None(.KList)))))),, 'Expr(
+              'PostInc('Variable('Simple("i"))))))),, 'InlineHTML('CloseTag(
+              .KList),, 'ListWrap('Literal(
+              "\n***********************\n\n*** Nested file include test ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('InternalFunction('Include(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "023-2.inc")))))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n********************************\n\n")),, 
+              'FullOpenTag(.KList)),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "Tests completed.")),, 'Escape(110),, 'None(.KList))))))))) ~> 
+              'ListWrap(.KList) ~> 'ListWrap(.KList) ~> makeForInit ( 
+              'ListWrap('PostInc('Variable('Simple("jdk")))) ) ~> 'ListWrap(
+              while ( 'Less('Variable('Simple("jdk")),, 'LNumber('Deci("50")))
+               , 'ListWrap('ListWrap('Block('ListWrap('InlineHTML('CloseTag(
+              .KList),, 'ListWrap('Literal("<h"),, 'Literal("tml>\n"),, 
+              'Literal("<h"),, 'Literal("ead>\n")),, 'FullOpenTag(.KList)),, 
+              'InlineHTML('CloseTag(.KList),, 'ListWrap('Literal(
+              "\n*** Testing assignments and variable aliasing: ***\n")),, 
+              'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("a")),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "b"))))))),, 'Expr('Assign('IndirectReference('Variable('Simple(
+              "a"))),, 'ConstantEncapsedString('DoubleQuoted('DQContent('Some(
+              'Literal("test"))))))),, 'Expr('Assign('IndirectReference(
+              'IndirectReference('Variable('Simple("a")))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "blah"))))))),, 'Expr('Assign('ArrayAccess('Variable('Braced(
+              'IndirectReference('IndirectReference('Variable('Simple("a")))))
+              ),, 'Some('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("associative arrays work too"))))))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "this is nifty"))))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\nThis should read \"blah\": ")),, 
+              'FullOpenTag(.KList)),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('Variable(
+              'Simple("test")),, 'None(.KList),, 'Escape(110)),, 'None(.KList)
+              ))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap('Literal(
+              "\nThis should read \"this is nifty\": ")),, 'FullOpenTag(.KList
+              )),, 'Echo('ListWrap('Concat('ArrayAccess('Variable('Simple(
+              "blah")),, 'Some('Assign('Variable('Simple("test")),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "associative arrays work too")))))))),, 'ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'Escape(110),, 'None(
+              .KList))))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal(
+              "\n*************************************************\n\n*** Testing integer operators ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'LNumber('Deci("5")))),, 'Expr('Assign('Variable('Simple(
+              "j")),, 'LNumber('Deci("3")))),, 'InlineHTML('CloseTag(.KList)
+              ,, 'ListWrap('Literal("\nCorrect result - 8:  ")),, 'FullOpenTag
+              (.KList)),, 'Echo('ListWrap('Plus('Variable('Simple("i")),, 
+              'Variable('Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - 8:  ")),, 'FullOpenTag(
+              .KList)),, 'Echo('ListWrap('Plus('Variable('Simple("i")),, 
+              'Variable('Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - 2:  ")),, 'FullOpenTag(
+              .KList)),, 'Echo('ListWrap('Min('Variable('Simple("i")),, 
+              'Variable('Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - -2:  ")),, 'FullOpenTag
+              (.KList)),, 'Echo('ListWrap('Min('Variable('Simple("j")),, 
+              'Variable('Simple("i"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - 15:  ")),, 'FullOpenTag
+              (.KList)),, 'Echo('ListWrap('Mul('Variable('Simple("i")),, 
+              'Variable('Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - 15:  ")),, 'FullOpenTag
+              (.KList)),, 'Echo('ListWrap('Mul('Variable('Simple("j")),, 
+              'Variable('Simple("i"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - 2:  ")),, 'FullOpenTag(
+              .KList)),, 'Echo('ListWrap('Mod('Variable('Simple("i")),, 
+              'Variable('Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal("\n\nCorrect result - 3:  ")),, 'FullOpenTag(
+              .KList)),, 'Echo('ListWrap('Mod('Variable('Simple("j")),, 
+              'Variable('Simple("i"))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal(
+              "\n\n*********************************\n\n*** Testing real operators ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'DNumber("5.0"))),, 'Expr('Assign('Variable('Simple("j"))
+              ,, 'DNumber("3.0"))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap
+              ('Literal("\nCorrect result - 8:  ")),, 'FullOpenTag(.KList)),, 
+              'Echo('ListWrap('Plus('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - 8:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Plus('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - 2:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Min('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - -2:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Min('Variable('Simple("j")),, 'Variable(
+              'Simple("i"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - 15:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Mul('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - 15:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Mul('Variable('Simple("j")),, 'Variable(
+              'Simple("i"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - 2:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Mod('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\nCorrect result - 3:  ")),, 'FullOpenTag(.KList))
+              ,, 'Echo('ListWrap('Mod('Variable('Simple("j")),, 'Variable(
+              'Simple("i"))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal(
+              "\n\n*********************************\n\n*** Testing if/elseif/else control ***\n\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("a"
+              )),, 'LNumber('Deci("5")))),, 'If('IsEqual('Variable('Simple("a"
+              )),, 'ConstantEncapsedString('DoubleQuoted('DQContent('Some(
+              'Literal("4")))))),, 'Block('ListWrap('Echo('ListWrap('Concat(
+              'Concat('Concat('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("This "))))),, 'ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(" does ")))))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "  not ")))))),, 'ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal(" work")),, 'Escape(110),, 'None(
+              .KList))))))))),, 'ListWrap('ElseIf('IsEqual('Variable('Simple(
+              "a")),, 'ConstantEncapsedString('DoubleQuoted('DQContent('Some(
+              'Literal("5")))))),, 'Block('ListWrap('Echo('ListWrap('Concat(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "This "))))),, 'ConstantEncapsedString('DoubleQuoted('DQContent(
+              'Some('Literal(" works")),, 'Escape(110),, 'None(.KList)))))))
+              ,, 'Expr('Assign('Variable('Simple("a")),, 'LNumber('Deci("6")))
+              ),, 'If('IsEqual('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("andi"))))),, 'Assign('Variable(
+              'Simple("test")),, 'ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("andi"))))))),, 'Block('ListWrap('Echo
+              ('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent(
+              'Some('Literal("this_still_works")),, 'Escape(110),, 'None(
+              .KList)))))))),, 'ListWrap('ElseIf('LNumber('Deci("1")),, 'Block
+              ('ListWrap('Echo('ListWrap('ConstantEncapsedString('DoubleQuoted
+              ('DQContent('Some('Literal("should_not_print")),, 'Escape(110)
+              ,, 'None(.KList)))))))))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "should_not_print")),, 'Escape(110),, 'None(.KList))))))))),, 
+              'If('IsEqual('LNumber('Deci("44")),, 'LNumber('Deci("43"))),, 
+              'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("should_not_print")),, 
+              'Escape(110),, 'None(.KList)))))))),, 'ListWrap(.KList),, 'Block
+              ('ListWrap('Echo('ListWrap('ConstantEncapsedString('DoubleQuoted
+              ('DQContent('Some('Literal("should_print")),, 'Escape(110),, 
+              'None(.KList)))))))))))),, 'ElseIf('IsEqual('Variable('Simple(
+              "a")),, 'LNumber('Deci("6"))),, 'Block('ListWrap('Echo('ListWrap
+              ('Concat('ConstantEncapsedString('DoubleQuoted('DQContent('Some(
+              'Literal("this "))))),, 'ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("broken")),, 'Escape(110),, 'None(
+              .KList))))))),, 'If('LNumber('Deci("0")),, 'Block('ListWrap(
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("this_should_not_print")),, 'Escape(110),, 'None
+              (.KList)))))))),, 'ListWrap(.KList),, 'Block('ListWrap('Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("TestingDanglingElse_This_Should_not_print")),, 
+              'Escape(110),, 'None(.KList))))))))))))),, 'Block('ListWrap(
+              'Echo('ListWrap('Concat('Concat('Concat('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("This "))))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "does ")))))),, 'ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal(" not")))))),, 'ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(" work")),, 'Escape(110)
+              ,, 'None(.KList)))))))))),, 'InlineHTML('CloseTag(.KList),, 
+              'ListWrap('Literal(
+              "\n\n\n*** Seriously nested if's test ***\n** spelling correction by kluzz **\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'Assign('Variable('Simple("j")),, 'LNumber('Deci("0")))))
+              ,, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal(
+              "Only two lines of text should follow:")),, 'Escape(110),, 'None
+              (.KList)))))),, 'If('LNumber('Deci("0")),, 'Block('ListWrap(
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("hmm, this shouldn't be displayed #1")),, 
+              'Escape(110),, 'None(.KList)))))),, 'Expr('PostInc('Variable(
+              'Simple("j")))),, 'If('LNumber('Deci("1")),, 'Block('ListWrap(
+              'Expr('PlusAssign('Variable('Simple("i")),, 'Variable('Simple(
+              "j")))),, 'If('LNumber('Deci("0")),, 'Block('ListWrap('Expr(
+              'Assign('Variable('Simple("j")),, 'PreInc('Variable('Simple("i")
+              )))),, 'If('LNumber('Deci("1")),, 'Block('ListWrap('Expr(
+              'MulAssign('Variable('Simple("j")),, 'Variable('Simple("i"))))
+              ,, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("damn, this shouldn't be displayed"))
+              ,, 'Escape(110),, 'None(.KList)))))))),, 'ListWrap(.KList),, 
+              'Block('ListWrap('Expr('DivAssign('Variable('Simple("j")),, 
+              'Variable('Simple("i")))),, 'Expr('PreInc('Variable('Simple("j")
+              ))),, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("this shouldn't be displayed either"))
+              ,, 'Escape(110),, 'None(.KList))))))))))),, 'ListWrap('ElseIf(
+              'LNumber('Deci("1")),, 'Block('ListWrap('Expr('PostInc('Variable
+              ('Simple("i")))),, 'Expr('PostInc('Variable('Simple("j")))),, 
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("this isn't supposed to be displayed")),, 
+              'Escape(110),, 'None(.KList))))))))))))),, 'ListWrap('ElseIf(
+              'LNumber('Deci("0")),, 'Block('ListWrap('Expr('PostInc('Variable
+              ('Simple("i")))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "this definitely shouldn't be displayed")),, 'Escape(110),, 
+              'None(.KList)))))))))),, 'Block('ListWrap('Expr('PreDec(
+              'Variable('Simple("j")))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "and this too shouldn't be displayed")),, 'Escape(110),, 'None(
+              .KList)))))),, 'While('Greater('Variable('Simple("j")),, 
+              'LNumber('Deci("0"))),, 'Block('ListWrap('Expr('PostDec(
+              'Variable('Simple("j")))))))))))),, 'ListWrap('ElseIf('Min(
+              'LNumber('Deci("2")),, 'LNumber('Deci("2"))),, 'Block('ListWrap(
+              'Expr('Assign('Variable('Simple("i")),, 'PreInc('Variable(
+              'Simple("j"))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "hmm, this shouldn't be displayed #2")),, 'Escape(110),, 'None(
+              .KList)))))),, 'If('LNumber('Deci("1")),, 'Block('ListWrap('Expr
+              ('Assign('Variable('Simple("j")),, 'PreInc('Variable('Simple("i"
+              ))))),, 'If('LNumber('Deci("0")),, 'Block('ListWrap('Expr(
+              'Assign('Variable('Simple("j")),, 'Plus('Mul('Variable('Simple(
+              "i")),, 'LNumber('Deci("2"))),, 'Mul('Variable('Simple("j")),, 
+              'PostInc('Variable('Simple("i"))))))),, 'If('LNumber('Deci("1"))
+              ,, 'Block('ListWrap('Expr('PostInc('Variable('Simple("i")))),, 
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("damn, this shouldn't be displayed")),, 'Escape(
+              110),, 'None(.KList)))))))),, 'ListWrap(.KList),, 'Block(
+              'ListWrap('Expr('PostInc('Variable('Simple("j")))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("this shouldn't be displayed either")),, 'Escape(110)
+              ,, 'None(.KList))))))))))),, 'ListWrap(.KList),, 'If('LNumber(
+              'Deci("1")),, 'Block('ListWrap('Expr('PreInc('Variable('Simple(
+              "j")))),, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("this isn't supposed to be displayed")
+              ),, 'Escape(110),, 'None(.KList)))))))))))),, 'ListWrap('ElseIf(
+              'LNumber('Deci("0")),, 'Block('ListWrap('Expr('PostInc('Variable
+              ('Simple("j")))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "this definitely shouldn't be displayed")),, 'Escape(110),, 
+              'None(.KList)))))))))),, 'Block('ListWrap('Expr('PostInc(
+              'Variable('Simple("i")))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "and this too shouldn't be displayed")),, 'Escape(110),, 'None(
+              .KList))))))))))))),, 'Block('ListWrap('Expr('Assign('Variable(
+              'Simple("j")),, 'PostInc('Variable('Simple("i"))))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("this should be displayed. should be:  ")),, 
+              'DQContent('DQContent('DQContent('DQContent('DQContent(
+              'DQContent('Escape(36),, 'Some('Literal("i=1, ")),, 'Escape(36))
+              ,, 'Some('Literal("j=0.  is:  ")),, 'Escape(36)),, 'Some(
+              'Literal("i=")),, 'Variable('Simple("i"))),, 'Some('Literal(", "
+              )),, 'Escape(36)),, 'Some('Literal("j=")),, 'Variable('Simple(
+              "j"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))))),, 
+              'If('LNumber('Deci("1")),, 'Block('ListWrap('Expr('PlusAssign(
+              'Variable('Simple("j")),, 'PreInc('Variable('Simple("i"))))),, 
+              'If('LNumber('Deci("0")),, 'Block('ListWrap('Expr('PlusAssign(
+              'Variable('Simple("j")),, 'LNumber('Deci("40")))),, 'If('LNumber
+              ('Deci("1")),, 'Block('ListWrap('Expr('PlusAssign('Variable(
+              'Simple("i")),, 'LNumber('Deci("50")))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "damn, this shouldn't be displayed")),, 'Escape(110),, 'None(
+              .KList)))))))),, 'ListWrap(.KList),, 'Block('ListWrap('Expr(
+              'PlusAssign('Variable('Simple("j")),, 'LNumber('Deci("20")))),, 
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("this shouldn't be displayed either")),, 'Escape
+              (110),, 'None(.KList))))))))))),, 'ListWrap(.KList),, 'If(
+              'LNumber('Deci("1")),, 'Block('ListWrap('Expr('MulAssign(
+              'Variable('Simple("j")),, 'Variable('Simple("i")))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("this is supposed to be displayed. should be:  ")),, 
+              'DQContent('DQContent('DQContent('DQContent('DQContent(
+              'DQContent('Escape(36),, 'Some('Literal("i=2, ")),, 'Escape(36))
+              ,, 'Some('Literal("j=4.  is:  ")),, 'Escape(36)),, 'Some(
+              'Literal("i=")),, 'Variable('Simple("i"))),, 'Some('Literal(", "
+              )),, 'Escape(36)),, 'Some('Literal("j=")),, 'Variable('Simple(
+              "j"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))))),, 
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("3 loop iterations should follow:")),, 'Escape(
+              110),, 'None(.KList)))))),, 'While('LessEqual('Variable('Simple(
+              "i")),, 'Variable('Simple("j"))),, 'Block('ListWrap('Echo(
+              'ListWrap('Concat('PostInc('Variable('Simple("i"))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              " ")),, 'DQContent('Variable('Simple("j")),, 'None(.KList),, 
+              'Escape(110)),, 'None(.KList)))))))))))))))),, 'ListWrap('ElseIf
+              ('LNumber('Deci("0")),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "this definitely shouldn't be displayed")),, 'Escape(110),, 
+              'None(.KList)))))))))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "and this too shouldn't be displayed")),, 'Escape(110),, 'None(
+              .KList))))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "**********************************")),, 'Escape(110),, 'None(
+              .KList))))))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n\n*** C-style else-if's ***\n")),, 'FullOpenTag(
+              .KList)),, 'If('Assign('Variable('Simple("a")),, 'LNumber('Deci(
+              "0"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "This shouldn't be displayed")),, 'Escape(110),, 'None(.KList)))
+              ))))),, 'ListWrap(.KList),, 'If('PostInc('Variable('Simple("a"))
+              ),, 'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "This shouldn't be displayed either")),, 'Escape(110),, 'None(
+              .KList)))))))),, 'ListWrap(.KList),, 'If('PreDec('Variable(
+              'Simple("a"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "No, this neither")),, 'Escape(110),, 'None(.KList)))))))),, 
+              'ListWrap(.KList),, 'If('PreInc('Variable('Simple("a"))),, 
+              'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal(
+              "This should be displayed")),, 'Escape(110),, 'None(.KList))))))
+              )),, 'ListWrap(.KList),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "This shouldn't be displayed at all")),, 'Escape(110),, 'None(
+              .KList)))))))))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n*************************\n\n*** WHILE tests ***\n")
+              ),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i")
+              ),, 'LNumber('Deci("0")))),, 'Expr('Assign('Variable('Simple("j"
+              )),, 'LNumber('Deci("20")))),, 'While('Less('Variable('Simple(
+              "i")),, 'Mul('LNumber('Deci("2")),, 'Variable('Simple("j")))),, 
+              'Block('ListWrap('If('Greater('Variable('Simple("i")),, 
+              'Variable('Simple("j"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('DQContent('Variable('Simple("i")),, 'Some(
+              'Literal(" is greater than ")),, 'Variable('Simple("j"))),, 
+              'None(.KList),, 'Escape(110)),, 'None(.KList)))))))),, 'ListWrap
+              (.KList),, 'If('IsEqual('Variable('Simple("i")),, 'Variable(
+              'Simple("j"))),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('DQContent('Variable('Simple("i")),, 'Some(
+              'Literal(" equals ")),, 'Variable('Simple("j"))),, 'None(.KList)
+              ,, 'Escape(110)),, 'None(.KList)))))))),, 'ListWrap(.KList),, 
+              'Block('ListWrap('Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('DQContent(
+              'Variable('Simple("i")),, 'Some('Literal(" is smaller than "))
+              ,, 'Variable('Simple("j"))),, 'None(.KList),, 'Escape(110)),, 
+              'None(.KList)))))))))),, 'Expr('PostInc('Variable('Simple("i")))
+              )))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap('Literal(
+              "\n*******************\n\n\n*** Nested WHILEs ***\n")),, 
+              'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple(
+              "arr_len")),, 'LNumber('Deci("3")))),, 'Expr('Assign('Variable(
+              'Simple("i")),, 'LNumber('Deci("0")))),, 'While('Less('Variable(
+              'Simple("i")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Expr('Assign('Variable('Simple("j")),, 'LNumber('Deci
+              ("0")))),, 'While('Less('Variable('Simple("j")),, 'Variable(
+              'Simple("arr_len"))),, 'Block('ListWrap('Expr('Assign('Variable(
+              'Simple("k")),, 'LNumber('Deci("0")))),, 'While('Less('Variable(
+              'Simple("k")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Expr('Assign('ArrayAccess('Variable('Braced(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "test")),, 'DQContent('Variable('Simple("i")),, 'None(.KList),, 
+              'Variable('Simple("j"))),, 'None(.KList)))))),, 'Some('Variable(
+              'Simple("k")))),, 'Plus('Plus('Variable('Simple("i")),, 
+              'Variable('Simple("j"))),, 'Variable('Simple("k"))))),, 'Expr(
+              'PostInc('Variable('Simple("k"))))))),, 'Expr('PostInc('Variable
+              ('Simple("j"))))))),, 'Expr('PostInc('Variable('Simple("i"))))))
+              ),, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal(
+              "Each array variable should be equal to the sum of its indices:"
+              )),, 'Escape(110),, 'None(.KList)))))),, 'Expr('Assign('Variable
+              ('Simple("i")),, 'LNumber('Deci("0")))),, 'While('Less('Variable
+              ('Simple("i")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Expr('Assign('Variable('Simple("j")),, 'LNumber('Deci
+              ("0")))),, 'While('Less('Variable('Simple("j")),, 'Variable(
+              'Simple("arr_len"))),, 'Block('ListWrap('Expr('Assign('Variable(
+              'Simple("k")),, 'LNumber('Deci("0")))),, 'While('Less('Variable(
+              'Simple("k")),, 'Variable('Simple("arr_len"))),, 'Block(
+              'ListWrap('Echo('ListWrap('Concat('Concat(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('DQContent('DQContent('Escape(36),, 'Some('Literal
+              ("{test")),, 'Variable('Simple("i"))),, 'None(.KList),, 
+              'Variable('Simple("j"))),, 'Some('Literal("}[")),, 'Variable(
+              'Simple("k"))),, 'Some('Literal("] = "))))),, 'ArrayAccess(
+              'Variable('Braced('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("test")),, 'DQContent('Variable(
+              'Simple("i")),, 'None(.KList),, 'Variable('Simple("j"))),, 'None
+              (.KList)))))),, 'Some('Variable('Simple("k"))))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'Escape(110),, 'None(.KList))))))),, 'Expr('PostInc('Variable
+              ('Simple("k"))))))),, 'Expr('PostInc('Variable('Simple("j"))))))
+              ),, 'Expr('PostInc('Variable('Simple("i"))))))),, 'InlineHTML(
+              'CloseTag(.KList),, 'ListWrap('Literal(
+              "\n*********************\n\n*** hash test... ***\n")),, 
+              'FullOpenTag(.KList)),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("commented out..."))))))
+              ),, 'InlineHTML('CloseTag(.KList),, 'ListWrap('Literal(
+              "\n\n**************************\n\n*** Hash resizing test ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'LNumber('Deci("10")))),, 'Expr('Assign('Variable('Simple(
+              "a")),, 'ConstantEncapsedString('DoubleQuoted('DQContent('Some(
+              'Literal("b"))))))),, 'While('Greater('Variable('Simple("i")),, 
+              'LNumber('Deci("0"))),, 'Block('ListWrap('Expr('Assign('Variable
+              ('Simple("a")),, 'Concat('Variable('Simple("a")),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "a")))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('Variable(
+              'Simple("a")),, 'None(.KList),, 'Escape(110)),, 'None(.KList))))
+              )),, 'Expr('Assign('ArrayAccess('Variable('Simple("resize")),, 
+              'Some('Variable('Simple("a")))),, 'Variable('Simple("i")))),, 
+              'Expr('PostDec('Variable('Simple("i"))))))),, 'Expr('Assign(
+              'Variable('Simple("i")),, 'LNumber('Deci("10")))),, 'Expr(
+              'Assign('Variable('Simple("a")),, 'ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("b"))))))),, 'While(
+              'Greater('Variable('Simple("i")),, 'LNumber('Deci("0"))),, 
+              'Block('ListWrap('Expr('Assign('Variable('Simple("a")),, 'Concat
+              ('Variable('Simple("a")),, 'ConstantEncapsedString('DoubleQuoted
+              ('DQContent('Some('Literal("a")))))))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('Variable('Simple("a")),, 'None(.KList),, 'Escape(
+              110)),, 'None(.KList)))))),, 'Echo('ListWrap('Concat(
+              'ArrayAccess('Variable('Simple("resize")),, 'Some('Variable(
+              'Simple("a")))),, 'ConstantEncapsedString('DoubleQuoted(
+              'DQContent('None(.KList),, 'Escape(110),, 'None(.KList))))))),, 
+              'Expr('PostDec('Variable('Simple("i"))))))),, 'InlineHTML(
+              'CloseTag(.KList),, 'ListWrap('Literal(
+              "\n**************************\n\n\n*** break/continue test ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('Assign('Variable('Simple("i"
+              )),, 'LNumber('Deci("0")))),, 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('None(.KList)
+              ,, 'DQContent('Escape(36),, 'Some('Literal(
+              "i should go from 0 to 2")),, 'Escape(110)),, 'None(.KList))))))
+              ,, 'While('Less('Variable('Simple("i")),, 'LNumber('Deci("5")))
+              ,, 'Block('ListWrap('If('Greater('Variable('Simple("i")),, 
+              'LNumber('Deci("2"))),, 'Block('ListWrap('Break('None(.KList))))
+              ),, 'Expr('Assign('Variable('Simple("j")),, 'LNumber('Deci("0"))
+              )),, 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('None(.KList),, 'DQContent('DQContent('Escape(36),, 
+              'Some('Literal("j should go from 3 to 4, and ")),, 'Escape(36))
+              ,, 'Some('Literal("q should go from 3 to 4")),, 'Escape(110)),, 
+              'None(.KList)))))),, 'While('Less('Variable('Simple("j")),, 
+              'LNumber('Deci("5"))),, 'Block('ListWrap('If('LessEqual(
+              'Variable('Simple("j")),, 'LNumber('Deci("2"))),, 'Block(
+              'ListWrap('Expr('PostInc('Variable('Simple("j")))),, 'Continue(
+              'None(.KList))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("  ")),, 'DQContent(
+              'DQContent('Escape(36),, 'Some('Literal("j=")),, 'Variable(
+              'Simple("j"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))
+              ))),, 'For('ListWrap('Assign('Variable('Simple("q")),, 'LNumber(
+              'Deci("0")))),, 'ListWrap('LessEqual('Variable('Simple("q")),, 
+              'LNumber('Deci("10")))),, 'ListWrap('PostInc('Variable('Simple(
+              "q")))),, 'Block('ListWrap('If('Less('Variable('Simple("q")),, 
+              'LNumber('Deci("3"))),, 'Block('ListWrap('Continue('None(.KList)
+              )))),, 'If('Greater('Variable('Simple("q")),, 'LNumber('Deci("4"
+              ))),, 'Block('ListWrap('Break('None(.KList))))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("    ")),, 'DQContent('DQContent('Escape(36),, 'Some(
+              'Literal("q=")),, 'Variable('Simple("q"))),, 'None(.KList),, 
+              'Escape(110)),, 'None(.KList))))))))),, 'Expr('PostInc('Variable
+              ('Simple("j"))))))),, 'Expr('Assign('Variable('Simple("j")),, 
+              'LNumber('Deci("0")))),, 'Echo('ListWrap('ConstantEncapsedString
+              ('DoubleQuoted('DQContent('None(.KList),, 'DQContent('Escape(36)
+              ,, 'Some('Literal("j should go from 0 to 2")),, 'Escape(110)),, 
+              'None(.KList)))))),, 'While('Less('Variable('Simple("j")),, 
+              'LNumber('Deci("5"))),, 'Block('ListWrap('If('Greater('Variable(
+              'Simple("j")),, 'LNumber('Deci("2"))),, 'Block('ListWrap('Expr(
+              'Assign('Variable('Simple("k")),, 'LNumber('Deci("0")))),, 'Echo
+              ('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent(
+              'None(.KList),, 'DQContent('Escape(36),, 'Some('Literal(
+              "k should go from 0 to 2")),, 'Escape(110)),, 'None(.KList))))))
+              ,, 'While('Less('Variable('Simple("k")),, 'LNumber('Deci("5")))
+              ,, 'Block('ListWrap('If('Greater('Variable('Simple("k")),, 
+              'LNumber('Deci("2"))),, 'Block('ListWrap('Break('Some('LNumber(
+              'Deci("2"))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('Some('Literal("    ")),, 'DQContent(
+              'DQContent('Escape(36),, 'Some('Literal("k=")),, 'Variable(
+              'Simple("k"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))
+              ))),, 'Expr('PostInc('Variable('Simple("k")))))))))),, 'Echo(
+              'ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent('Some
+              ('Literal("  ")),, 'DQContent('DQContent('Escape(36),, 'Some(
+              'Literal("j=")),, 'Variable('Simple("j"))),, 'None(.KList),, 
+              'Escape(110)),, 'None(.KList)))))),, 'Expr('PostInc('Variable(
+              'Simple("j"))))))),, 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('DQContent(
+              'Escape(36),, 'Some('Literal("i=")),, 'Variable('Simple("i")))
+              ,, 'None(.KList),, 'Escape(110)),, 'None(.KList)))))),, 'Expr(
+              'PostInc('Variable('Simple("i"))))))),, 'InlineHTML('CloseTag(
+              .KList),, 'ListWrap('Literal(
+              "\n***********************\n\n*** Nested file include test ***\n"
+              )),, 'FullOpenTag(.KList)),, 'Expr('InternalFunction('Include(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "023-2.inc")))))))),, 'InlineHTML('CloseTag(.KList),, 'ListWrap(
+              'Literal("\n********************************\n\n")),, 
+              'FullOpenTag(.KList)),, 'Block('ListWrap('Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "Tests completed.")),, 'Escape(110),, 'None(.KList))))))))))))
+               ~> makeForInit ( 'ListWrap('PostInc('Variable('Simple("jdk"))))
+               ) )) ~> 'ListWrap(.KList) ~> popLoopContext
+        </k>
+        <commands>
+            .K
+        </commands>
+        <declarations>
+            .K
+        </declarations>
+    </script>
+    <tables>
+        <classes>
+            Exception |-> class ( stdClass , ListItem(prop ( "errorMsg" , 
+              public , NULL )) , "Exception" |-> method ( (f ( 'ListWrap(
+              'Param('Variable('Simple("msg")))) , 'ListWrap('Expr('Assign(
+              'ObjectAccess('Variable('Simple("this")),, 'ObjectProperty(
+              'Simple("errorMsg"))),, 'Variable('Simple("msg"))))) , @byValue 
+              , #symLoc(6) )) , public , false ) "getMessage" |-> method ( (f 
+              ( 'ListWrap(.KList) , 'ListWrap('Return('Some('ObjectAccess(
+              'Variable('Simple("this")),, 'ObjectProperty('Simple("errorMsg")
+              ))))) , @byValue , #symLoc(7) )) , public , false ) , #symLoc(5)
+               )
+            stdClass |-> class ( ROOT , .List , .Map , #symLoc(8) )
+        </classes>
+        <functions>
+            "array_key_exists" |-> f ( 'ListWrap('Param('Variable('Simple("k")
+              )),, 'ParamRef('Variable('Simple("x")))) , 'ListWrap('Return(
+              array_key_exists ( 'Variable('Simple("k")) , 'Variable('Simple(
+              "x")) ))) , @byValue , #symLoc(4) )
+            "count" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(count ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "current" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(current ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "define" |-> f ( 'ListWrap('Param('Variable('Simple("name"))),, 
+              'Param('Variable('Simple("value")))) , 'ListWrap('Return(define 
+              ( 'Variable('Simple("name")) , 'Variable('Simple("value")) ))) ,
+               @byValue , #symLoc(4) )
+            "defined" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(defined ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "each" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(each ( 'Variable('Simple("x")) ))) , @byValue 
+              , #symLoc(4) )
+            "gettype" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(gettype ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "isEqualArray" |-> f ( 'ListWrap('Param('Variable('Simple("op1")))
+              ,, 'Param('Variable('Simple("op2")))) , 'ListWrap('If('Less(
+              'FunctionCall('FunctionName("count"),, 'ListWrap('Param(
+              'Variable('Simple("op1"))))),, 'FunctionCall('FunctionName(
+              "count"),, 'ListWrap('Param('Variable('Simple("op2")))))),, 
+              'Block('ListWrap('Return('Some('Negative('LNumber('Deci("1")))))
+              )),, 'ListWrap('ElseIf('Greater('FunctionCall('FunctionName(
+              "count"),, 'ListWrap('Param('Variable('Simple("op1"))))),, 
+              'FunctionCall('FunctionName("count"),, 'ListWrap('Param(
+              'Variable('Simple("op2")))))),, 'Block('ListWrap('Return('Some(
+              'LNumber('Deci("1"))))))))),, 'ForEach('Variable('Simple("op1"))
+              ,, 'Pattern('Some('Key('Variable('Simple("key")))),, 'Variable(
+              'Simple("val"))),, 'Block('ListWrap('If('Not('FunctionCall(
+              'FunctionName("array_key_exists"),, 'ListWrap('Param('Variable(
+              'Simple("key"))),, 'Param('Variable('Simple("op2")))))),, 'Block
+              ('ListWrap('Return('Some('Null(.KList))))),, 'ListWrap('ElseIf(
+              'Less('Variable('Simple("val")),, 'ArrayAccess('Variable('Simple
+              ("op2")),, 'Some('Variable('Simple("key"))))),, 'Block('ListWrap
+              ('Return('Some('Negative('LNumber('Deci("1")))))))),, 'ElseIf(
+              'Greater('Variable('Simple("val")),, 'ArrayAccess('Variable(
+              'Simple("op2")),, 'Some('Variable('Simple("key"))))),, 'Block(
+              'ListWrap('Return('Some('LNumber('Deci("1")))))))))))),, 'Return
+              ('Some('LNumber('Deci("0"))))) , @byValue , #symLoc(12) )
+            "is_array" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_array ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_float" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_float ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_numeric" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_numeric ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_scalar" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_scalar ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_string" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_string ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "key" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(key ( 'Variable('Simple("x")) ))) , @byValue ,
+               #symLoc(4) )
+            "label" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(label ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "next" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(next ( 'Variable('Simple("x")) ))) , @byValue 
+              , #symLoc(4) )
+            "print_r" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap(print_r ( 'Variable('Simple("x")) )) , @byValue , 
+              #symLoc(4) )
+            "reset" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(reset ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "strlen" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(strlen ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "substr" |-> f ( 'ListWrap('Param('Variable('Simple("str"))),, 
+              'Param('Variable('Simple("start"))),, 'ParamDefault('Variable(
+              'Simple("len")),, 999)) , 'ListWrap('Return(substr ( 'Variable(
+              'Simple("str")) , 'Variable('Simple("start")) , 'Variable(
+              'Simple("len")) ))) , @byValue , #symLoc(4) )
+            "user_input" |-> f ( 'ListWrap(.KList) , 'ListWrap('Return(
+              user_input)) , @byValue , #symLoc(4) )
+            "var_dump" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap(var_dump ( 'Variable('Simple("x")) )) , @byValue , 
+              #symLoc(4) )
+        </functions>
+        <constants>
+            .Map
+        </constants>
+        <classInstanceCounters>
+            Exception |-> 0
+            stdClass |-> 0
+        </classInstanceCounters>
+    </tables>
+    <heap>
+        #symLoc(1) |-> zval ( (Array ( ([ "_GET" , public ]) , ListItem([ 
+          "_GET" , public , #symLoc(9) ]) ListItem([ "_COOKIE" , public , 
+          #symLoc(10) ]) ListItem([ "_POST" , public , #symLoc(11) ]) 
+          ListItem([ "GLOBALS" , public , #symLoc(3) ]) )) , array , 1 , false
+           )
+        #symLoc(2) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(3) |-> zval ( (Array ( ([ "jdk" , public ]) , ListItem([ "jdk"
+           , public , #symLoc(13) ]) ListItem([ "a" , public , #symLoc(19) ]) 
+          ListItem([ "b" , public , #symLoc(20) ]) ListItem([ "test" , public 
+          , #symLoc(21) ]) ListItem([ "blah" , public , #symLoc(22) ]) 
+          ListItem([ "i" , public , #symLoc(29) ]) ListItem([ "j" , public , 
+          #symLoc(30) ]) )) , array , 1 , false )
+        #symLoc(4) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(5) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(6) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(7) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(8) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(9) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(10) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(11) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(12) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(13) |-> zval ( 0 , int , 1 , false )
+        #symLoc(19) |-> zval ( 6 , int , 1 , false )
+        #symLoc(20) |-> zval ( "test" , string , 1 , false )
+        #symLoc(21) |-> zval ( "andi" , string , 1 , false )
+        #symLoc(22) |-> zval ( (Array ( ([ "associative arrays work too" , 
+          public ]) , ListItem([ "associative arrays work too" , public , 
+          #symLoc(23) ]) )) , array , 1 , false )
+        #symLoc(23) |-> zval ( "this is nifty" , string , 1 , false )
+        #symLoc(29) |-> zval ( 2 , int , 1 , false )
+        #symLoc(30) |-> zval ( 2 , int , 1 , false )
+    </heap>
+</kphp>

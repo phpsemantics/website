@@ -1,0 +1,2412 @@
+module Integration
+
+imports Common
+imports KTechnique
+imports KBuiltinsBasic
+
+imports Variables
+
+exports
+
+context-free syntax
+context-free priorities
+{
+    K "|->" K -> MyMap {cons("MyMap1220Syn")}
+} > {
+    MyMap "," MyMap -> MyMap {left, cons("MyMap1208Syn")}
+}
+
+context-free priorities
+{
+    "notBool" Bool -> Bool {cons("Bool1252Syn")}
+} > {
+    Bool "andBool" Bool -> Bool {left, cons("Bool1253Syn")}
+    Bool "andThenBool" Bool -> Bool {left, cons("Bool1254Syn")}
+} > {
+    Bool "xorBool" Bool -> Bool {left, cons("Bool1255Syn")}
+} > {
+    Bool "orBool" Bool -> Bool {left, cons("Bool1256Syn")}
+    Bool "orElseBool" Bool -> Bool {left, cons("Bool1257Syn")}
+} > {
+    Bool "impliesBool" Bool -> Bool {left, cons("Bool1258Syn")}
+} > { left:
+    Bool "==Bool" Bool -> Bool {left, cons("Bool1259Syn")}
+    Bool "=/=Bool" Bool -> Bool {left, cons("Bool1260Syn")}
+}
+
+context-free priorities
+{
+    "~Int" Int -> Int {cons("Int1262Syn")}
+} > { left:
+    Int "^Int" Int -> Int {left, cons("Int1263Syn")}
+} > { left:
+    Int "*Int" Int -> Int {left, cons("Int1264Syn")}
+    Int "/Int" Int -> Int {left, cons("Int1265Syn")}
+    Int "%Int" Int -> Int {left, cons("Int1266Syn")}
+    Int "divInt" Int -> Int {left, cons("Int1267Syn")}
+    Int "modInt" Int -> Int {left, cons("Int1268Syn")}
+} > { left:
+    Int "+Int" Int -> Int {left, cons("Int1PlusSyn")}
+    Int "-Int" Int -> Int {left, cons("Int1269Syn")}
+} > { left:
+    Int ">>Int" Int -> Int {left, cons("Int1270Syn")}
+    Int "<<Int" Int -> Int {left, cons("Int1272Syn")}
+} > { left:
+    Int "&Int" Int -> Int {left, cons("Int1273Syn")}
+} > { left:
+    Int "xorInt" Int -> Int {left, cons("Int1274Syn")}
+} > { left:
+    Int "|Int" Int -> Int {left, cons("Int1275Syn")}
+}
+
+context-free priorities
+{
+    "--Float" Float -> Float {cons("Float1288Syn")}
+} > {
+    Float "^Float" Float -> Float {left, cons("Float1289Syn")}
+} > { left:
+    Float "*Float" Float -> Float {left, cons("Float1290Syn")}
+    Float "/Float" Float -> Float {left, cons("Float1292Syn")}
+    Float "%Float" Float -> Float {left, cons("Float1293Syn")}
+} > { left:
+    Float "+Float" Float -> Float {left, cons("Float1294Syn")}
+    Float "-Float" Float -> Float {left, cons("Float1295Syn")}
+}
+
+context-free priorities
+{ left:
+    Float "<=Float" Float -> Bool {left, cons("Bool1296Syn")}
+    Float "<Float" Float -> Bool {left, cons("Bool1297Syn")}
+    Float ">=Float" Float -> Bool {left, cons("Bool1298Syn")}
+    Float ">Float" Float -> Bool {left, cons("Bool1299Syn")}
+    Float "==Float" Float -> Bool {left, cons("Bool1300Syn")}
+    Float "=/=Float" Float -> Bool {left, cons("Bool1302Syn")}
+} > {
+    Float "<=Float" InsertDzFloat "<=Float" Float -> Bool {cons("Bool1303Syn")}
+}
+
+context-free priorities
+{ left:
+    K "==K" K -> Bool {left, cons("Bool1427Syn")}
+    K "=/=K" K -> Bool {left, cons("Bool1428Syn")}
+}
+
+context-free priorities
+{
+    K "==K" K -> Bool {left, cons("Bool1427Syn")}
+    K "=/=K" K -> Bool {left, cons("Bool1428Syn")}
+} > {
+    "notBool" Bool -> Bool {cons("Bool1252Syn")}
+    Bool "impliesBool" Bool -> Bool {left, cons("Bool1258Syn")}
+    Bool "andThenBool" Bool -> Bool {left, cons("Bool1254Syn")}
+    Bool "orBool" Bool -> Bool {left, cons("Bool1256Syn")}
+    Bool "xorBool" Bool -> Bool {left, cons("Bool1255Syn")}
+    Bool "orElseBool" Bool -> Bool {left, cons("Bool1257Syn")}
+    Bool "andBool" Bool -> Bool {left, cons("Bool1253Syn")}
+}
+
+context-free priorities
+{
+    K "visitedL(~>)" K -> K {cons("K1458Syn")}
+} > {
+    K "visitedL(,,)" K -> K {cons("K1459Syn")}
+}
+
+context-free priorities
+{
+    "~Ltl" LtlFormula -> LtlFormula {cons("LtlFormula1727Syn")}
+    "OLtl" LtlFormula -> LtlFormula {cons("LtlFormula1728Syn")}
+    "<>Ltl" LtlFormula -> LtlFormula {cons("LtlFormula1729Syn")}
+    "[]Ltl" LtlFormula -> LtlFormula {cons("LtlFormula1730Syn")}
+} > {
+    LtlFormula "/\\Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1732Syn")}
+} > {
+    LtlFormula "\\/Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1733Syn")}
+} > { left:
+    LtlFormula "ULtl" LtlFormula -> LtlFormula {left, cons("LtlFormula1734Syn")}
+    LtlFormula "RLtl" LtlFormula -> LtlFormula {left, cons("LtlFormula1735Syn")}
+    LtlFormula "WLtl" LtlFormula -> LtlFormula {left, cons("LtlFormula1736Syn")}
+    LtlFormula "|->Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1737Syn")}
+} > { left:
+    LtlFormula "->Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1738Syn")}
+    LtlFormula "<->Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1739Syn")}
+    LtlFormula "=>Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1740Syn")}
+    LtlFormula "<=>Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1742Syn")}
+}
+
+%% subsorts 1
+context-free priorities
+{
+    Key -> K
+    CompoundValue -> K
+    DzLtlFormula -> K
+    NonStrictComparisonOp -> K
+    LtlFormula -> K
+    Array -> K
+    TCPError -> K
+    ClassProp -> K
+    ArrayItemVisibility -> K
+    DzFloat -> K
+    TCPAnswer -> K
+    DzString -> K
+    BasicRef -> K
+    Prop -> K
+    DzModelCheckerState -> K
+    OptionId -> K
+    KeyList -> K
+    Internal -> K
+    MyMap -> K
+    DzModelCheckResult -> K
+    Int -> K
+    DzBool -> K
+    DzProp -> K
+    OptionArrayCrntElem -> K
+    ModelCheckerState -> K
+    ArrayItem -> K
+    Value -> K
+    Variable -> K
+    ConvertibleToLoc -> K
+    Char -> K
+    OptionConversionMode -> K
+    MyBag -> K
+    SpecialValue -> K
+    ConvertibleToLanguageValue -> K
+    String -> K
+    Stream -> K
+    Returnable -> K
+    MyList -> K
+    Id -> K
+    RefType -> K
+    ScalarValue -> K
+    LiteralValue -> K
+    Null -> K
+    OptionForeachArrayPair -> K
+    ForeachArrayPair -> K
+    Bool -> K
+    Type -> K
+    ModelCheckResult -> K
+    ComparisonOp -> K
+    ThisTag -> K
+    Exp -> K
+    DzInt -> K
+    StrictComparisonOp -> K
+    ZvalField -> K
+    OptionArrayItem -> K
+    OptionLoc -> K
+    Loc -> K
+    OptionString -> K
+    ArrayCrntElem -> K
+    MySet -> K
+    None -> K
+    OptionInt -> K
+    LanguageValue -> K
+    BinaryOp -> K
+    Object -> K
+    ClassMethod -> K
+    Float -> K
+    Ref -> K
+    Nat -> K
+    LanguageValueOrType -> K
+    Zval -> K
+    ClassDdef -> K
+    LRef -> K
+    StackFrame -> K
+    BoolOrNull -> K
+    ThisOrLiteral -> K
+    SemanticValue -> K
+    FunReturnType -> K
+    ConversionMode -> K
+    Var -> K
+    FunDdef -> K
+    PlainLanguageValue -> K
+    LoopFrame -> K
+} .> {
+    Prop -> LtlFormula
+    String -> TCPAnswer
+    Null -> SpecialValue
+    DzFloat -> Float
+    DzModelCheckResult -> ModelCheckResult
+    Array -> CompoundValue
+    SpecialValue -> PlainLanguageValue
+    BoolOrNull -> LanguageValue
+    StrictComparisonOp -> ComparisonOp
+    Loc -> SemanticValue
+    DzModelCheckerState -> ModelCheckerState
+    Ref -> ConvertibleToLoc
+    LiteralValue -> ThisOrLiteral
+    None -> OptionId
+    BasicRef -> Ref
+    LRef -> Ref
+    ConversionMode -> OptionConversionMode
+    None -> OptionInt
+    None -> OptionConversionMode
+    LanguageValue -> LanguageValueOrType
+    String -> ScalarValue
+    ThisTag -> ThisOrLiteral
+    DzString -> String
+    None -> OptionForeachArrayPair
+    Key -> KeyList
+    PlainLanguageValue -> LanguageValue
+    Bool -> BoolOrNull
+    CompoundValue -> PlainLanguageValue
+    Loc -> OptionLoc
+    ThisOrLiteral -> ConvertibleToLoc
+    Int -> ScalarValue
+    Int -> Key
+    SpecialValue -> Key
+    NonStrictComparisonOp -> ComparisonOp
+    ConvertibleToLoc -> ConvertibleToLanguageValue
+    LiteralValue -> LanguageValue
+    LanguageValue -> Returnable
+    TCPError -> TCPAnswer
+    ArrayCrntElem -> OptionArrayCrntElem
+    None -> OptionLoc
+    Loc -> ConvertibleToLanguageValue
+    LiteralValue -> ConvertibleToLoc
+    None -> OptionArrayCrntElem
+    DzBool -> Bool
+    Int -> OptionInt
+    ForeachArrayPair -> OptionForeachArrayPair
+    ScalarValue -> PlainLanguageValue
+    None -> OptionArrayItem
+    Id -> OptionId
+    ThisTag -> ConvertibleToLoc
+    String -> OptionString
+    Object -> CompoundValue
+    LanguageValue -> Value
+    DzLtlFormula -> LtlFormula
+    Float -> ScalarValue
+    DzInt -> Int
+    DzProp -> Prop
+    Bool -> ScalarValue
+    Loc -> Returnable
+    None -> OptionString
+    Type -> LanguageValueOrType
+    ArrayItem -> OptionArrayItem
+    Null -> BoolOrNull
+    SemanticValue -> Value
+    String -> Key
+    Ref -> SemanticValue
+} .> {
+    K -> Key
+    K -> CompoundValue
+    K -> DzLtlFormula
+    K -> NonStrictComparisonOp
+    K -> LtlFormula
+    K -> Array
+    K -> TCPError
+    K -> ClassProp
+    K -> ArrayItemVisibility
+    K -> DzFloat
+    K -> TCPAnswer
+    K -> DzString
+    K -> BasicRef
+    K -> Prop
+    K -> DzModelCheckerState
+    K -> OptionId
+    K -> KeyList
+    K -> Internal
+    K -> MyMap
+    K -> DzModelCheckResult
+    K -> Int
+    K -> DzBool
+    K -> DzProp
+    K -> OptionArrayCrntElem
+    K -> ModelCheckerState
+    K -> ArrayItem
+    K -> Value
+    K -> Variable
+    K -> ConvertibleToLoc
+    K -> Char
+    K -> OptionConversionMode
+    K -> MyBag
+    K -> SpecialValue
+    K -> ConvertibleToLanguageValue
+    K -> String
+    K -> Stream
+    K -> Returnable
+    K -> MyList
+    K -> Id
+    K -> RefType
+    K -> ScalarValue
+    K -> LiteralValue
+    K -> Null
+    K -> OptionForeachArrayPair
+    K -> ForeachArrayPair
+    K -> Bool
+    K -> Type
+    K -> ModelCheckResult
+    K -> ComparisonOp
+    K -> ThisTag
+    K -> Exp
+    K -> DzInt
+    K -> StrictComparisonOp
+    K -> ZvalField
+    K -> OptionArrayItem
+    K -> OptionLoc
+    K -> Loc
+    K -> OptionString
+    K -> ArrayCrntElem
+    K -> MySet
+    K -> None
+    K -> OptionInt
+    K -> LanguageValue
+    K -> BinaryOp
+    K -> Object
+    K -> ClassMethod
+    K -> Float
+    K -> Ref
+    K -> Nat
+    K -> LanguageValueOrType
+    K -> Zval
+    K -> ClassDdef
+    K -> LRef
+    K -> StackFrame
+    K -> BoolOrNull
+    K -> ThisOrLiteral
+    K -> SemanticValue
+    K -> FunReturnType
+    K -> ConversionMode
+    K -> Var
+    K -> FunDdef
+    K -> PlainLanguageValue
+    K -> LoopFrame
+}
+
+%% subsorts 1a
+context-free priorities
+{
+    Key -> K
+    CompoundValue -> K
+    DzLtlFormula -> K
+    NonStrictComparisonOp -> K
+    LtlFormula -> K
+    Array -> K
+    TCPError -> K
+    ClassProp -> K
+    ArrayItemVisibility -> K
+    DzFloat -> K
+    TCPAnswer -> K
+    DzString -> K
+    BasicRef -> K
+    Prop -> K
+    DzModelCheckerState -> K
+    OptionId -> K
+    KeyList -> K
+    Internal -> K
+    MyMap -> K
+    DzModelCheckResult -> K
+    Int -> K
+    DzBool -> K
+    DzProp -> K
+    OptionArrayCrntElem -> K
+    ModelCheckerState -> K
+    ArrayItem -> K
+    Value -> K
+    Variable -> K
+    ConvertibleToLoc -> K
+    Char -> K
+    OptionConversionMode -> K
+    MyBag -> K
+    SpecialValue -> K
+    ConvertibleToLanguageValue -> K
+    String -> K
+    Stream -> K
+    Returnable -> K
+    MyList -> K
+    Id -> K
+    RefType -> K
+    ScalarValue -> K
+    LiteralValue -> K
+    Null -> K
+    OptionForeachArrayPair -> K
+    ForeachArrayPair -> K
+    Bool -> K
+    Type -> K
+    ModelCheckResult -> K
+    ComparisonOp -> K
+    ThisTag -> K
+    Exp -> K
+    DzInt -> K
+    StrictComparisonOp -> K
+    ZvalField -> K
+    OptionArrayItem -> K
+    OptionLoc -> K
+    Loc -> K
+    OptionString -> K
+    ArrayCrntElem -> K
+    MySet -> K
+    None -> K
+    OptionInt -> K
+    LanguageValue -> K
+    BinaryOp -> K
+    Object -> K
+    ClassMethod -> K
+    Float -> K
+    Ref -> K
+    Nat -> K
+    LanguageValueOrType -> K
+    Zval -> K
+    ClassDdef -> K
+    LRef -> K
+    StackFrame -> K
+    BoolOrNull -> K
+    ThisOrLiteral -> K
+    SemanticValue -> K
+    FunReturnType -> K
+    ConversionMode -> K
+    Var -> K
+    FunDdef -> K
+    PlainLanguageValue -> K
+    LoopFrame -> K
+} .> {
+    K -> Key
+    K -> CompoundValue
+    K -> DzLtlFormula
+    K -> NonStrictComparisonOp
+    K -> LtlFormula
+    K -> Array
+    K -> TCPError
+    K -> ClassProp
+    K -> ArrayItemVisibility
+    K -> DzFloat
+    K -> TCPAnswer
+    K -> DzString
+    K -> BasicRef
+    K -> Prop
+    K -> DzModelCheckerState
+    K -> OptionId
+    K -> KeyList
+    K -> Internal
+    K -> MyMap
+    K -> DzModelCheckResult
+    K -> Int
+    K -> DzBool
+    K -> DzProp
+    K -> OptionArrayCrntElem
+    K -> ModelCheckerState
+    K -> ArrayItem
+    K -> Value
+    K -> Variable
+    K -> ConvertibleToLoc
+    K -> Char
+    K -> OptionConversionMode
+    K -> MyBag
+    K -> SpecialValue
+    K -> ConvertibleToLanguageValue
+    K -> String
+    K -> Stream
+    K -> Returnable
+    K -> MyList
+    K -> Id
+    K -> RefType
+    K -> ScalarValue
+    K -> LiteralValue
+    K -> Null
+    K -> OptionForeachArrayPair
+    K -> ForeachArrayPair
+    K -> Bool
+    K -> Type
+    K -> ModelCheckResult
+    K -> ComparisonOp
+    K -> ThisTag
+    K -> Exp
+    K -> DzInt
+    K -> StrictComparisonOp
+    K -> ZvalField
+    K -> OptionArrayItem
+    K -> OptionLoc
+    K -> Loc
+    K -> OptionString
+    K -> ArrayCrntElem
+    K -> MySet
+    K -> None
+    K -> OptionInt
+    K -> LanguageValue
+    K -> BinaryOp
+    K -> Object
+    K -> ClassMethod
+    K -> Float
+    K -> Ref
+    K -> Nat
+    K -> LanguageValueOrType
+    K -> Zval
+    K -> ClassDdef
+    K -> LRef
+    K -> StackFrame
+    K -> BoolOrNull
+    K -> ThisOrLiteral
+    K -> SemanticValue
+    K -> FunReturnType
+    K -> ConversionMode
+    K -> Var
+    K -> FunDdef
+    K -> PlainLanguageValue
+    K -> LoopFrame
+}
+
+%% subsorts 2
+context-free priorities
+{
+    K -> Key
+    K -> CompoundValue
+    K -> DzLtlFormula
+    K -> NonStrictComparisonOp
+    K -> LtlFormula
+    K -> Array
+    K -> TCPError
+    K -> ClassProp
+    K -> ArrayItemVisibility
+    K -> DzFloat
+    K -> TCPAnswer
+    K -> DzString
+    K -> BasicRef
+    K -> Prop
+    K -> DzModelCheckerState
+    K -> OptionId
+    K -> KeyList
+    K -> Internal
+    K -> MyMap
+    K -> DzModelCheckResult
+    K -> Int
+    K -> DzBool
+    K -> DzProp
+    K -> OptionArrayCrntElem
+    K -> ModelCheckerState
+    K -> ArrayItem
+    K -> Value
+    K -> Variable
+    K -> ConvertibleToLoc
+    K -> Char
+    K -> OptionConversionMode
+    K -> MyBag
+    K -> SpecialValue
+    K -> ConvertibleToLanguageValue
+    K -> String
+    K -> Stream
+    K -> Returnable
+    K -> MyList
+    K -> Id
+    K -> RefType
+    K -> ScalarValue
+    K -> LiteralValue
+    K -> Null
+    K -> OptionForeachArrayPair
+    K -> ForeachArrayPair
+    K -> Bool
+    K -> Type
+    K -> ModelCheckResult
+    K -> ComparisonOp
+    K -> ThisTag
+    K -> Exp
+    K -> DzInt
+    K -> StrictComparisonOp
+    K -> ZvalField
+    K -> OptionArrayItem
+    K -> OptionLoc
+    K -> Loc
+    K -> OptionString
+    K -> ArrayCrntElem
+    K -> MySet
+    K -> None
+    K -> OptionInt
+    K -> LanguageValue
+    K -> BinaryOp
+    K -> Object
+    K -> ClassMethod
+    K -> Float
+    K -> Ref
+    K -> Nat
+    K -> LanguageValueOrType
+    K -> Zval
+    K -> ClassDdef
+    K -> LRef
+    K -> StackFrame
+    K -> BoolOrNull
+    K -> ThisOrLiteral
+    K -> SemanticValue
+    K -> FunReturnType
+    K -> ConversionMode
+    K -> Var
+    K -> FunDdef
+    K -> PlainLanguageValue
+    K -> LoopFrame
+} .> {
+    Key -> K
+    CompoundValue -> K
+    DzLtlFormula -> K
+    NonStrictComparisonOp -> K
+    LtlFormula -> K
+    Array -> K
+    TCPError -> K
+    ClassProp -> K
+    ArrayItemVisibility -> K
+    DzFloat -> K
+    TCPAnswer -> K
+    DzString -> K
+    BasicRef -> K
+    Prop -> K
+    DzModelCheckerState -> K
+    OptionId -> K
+    KeyList -> K
+    Internal -> K
+    MyMap -> K
+    DzModelCheckResult -> K
+    Int -> K
+    DzBool -> K
+    DzProp -> K
+    OptionArrayCrntElem -> K
+    ModelCheckerState -> K
+    ArrayItem -> K
+    Value -> K
+    Variable -> K
+    ConvertibleToLoc -> K
+    Char -> K
+    OptionConversionMode -> K
+    MyBag -> K
+    SpecialValue -> K
+    ConvertibleToLanguageValue -> K
+    String -> K
+    Stream -> K
+    Returnable -> K
+    MyList -> K
+    Id -> K
+    RefType -> K
+    ScalarValue -> K
+    LiteralValue -> K
+    Null -> K
+    OptionForeachArrayPair -> K
+    ForeachArrayPair -> K
+    Bool -> K
+    Type -> K
+    ModelCheckResult -> K
+    ComparisonOp -> K
+    ThisTag -> K
+    Exp -> K
+    DzInt -> K
+    StrictComparisonOp -> K
+    ZvalField -> K
+    OptionArrayItem -> K
+    OptionLoc -> K
+    Loc -> K
+    OptionString -> K
+    ArrayCrntElem -> K
+    MySet -> K
+    None -> K
+    OptionInt -> K
+    LanguageValue -> K
+    BinaryOp -> K
+    Object -> K
+    ClassMethod -> K
+    Float -> K
+    Ref -> K
+    Nat -> K
+    LanguageValueOrType -> K
+    Zval -> K
+    ClassDdef -> K
+    LRef -> K
+    StackFrame -> K
+    BoolOrNull -> K
+    ThisOrLiteral -> K
+    SemanticValue -> K
+    FunReturnType -> K
+    ConversionMode -> K
+    Var -> K
+    FunDdef -> K
+    PlainLanguageValue -> K
+    LoopFrame -> K
+}
+context-free syntax
+    "#parse" "(" InsertDzString "," InsertDzString ")" -> KItem {cons("KItem179Syn")}
+    "#" K -> KLabel {cons("KLabel1423Syn")}
+    "#string2Int" "(" InsertDzK ")" -> K {cons("K186Syn")}
+    Map "=/=Map" Map -> Bool {cons("Bool1439Syn")}
+    K "inVars" K -> Bool {cons("Bool123Syn")}
+    "switch" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1800Syn")}
+    "greater" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1785Syn")}
+    "decRefCountCompound" "(" InsertDzLoc ")" -> K {cons("K1679Syn")}
+    "#putc" "(" InsertDzInt "," InsertDzInt ")" -> K {cons("K173Syn")}
+    "#isTCPError" "(" InsertDzString ")" -> Bool {cons("Bool1375Syn")}
+    "declareGlobal" "(" InsertDzK ")" -> K {cons("K1562Syn")}
+    "print_r_array" "(" InsertDzLoc "," InsertDzInt ")" -> K {cons("K1497Syn")}
+    "array" -> Type {cons("Type1647Syn")}
+    "lengthString" "(" InsertDzString ")" -> Int {cons("Int1308Syn")}
+    LiteralValue -> ThisOrLiteral {}
+    "#stdout" -> Int {cons("Int184Syn")}
+    None -> OptionInt {}
+    None -> OptionConversionMode {}
+    "isNumericString" "(" InsertDzString ")" -> Bool {cons("Bool1534Syn")}
+    "Set2KTerm" "(" InsertDzSet ")" -> K {cons("K1400Syn")}
+    "nul" -> RefType {cons("RefType1632Syn")}
+    "deprecatedIdiomFound" "(" InsertDzK ")" -> Bool {cons("Bool1473Syn")}
+    "isRetValueLoc" "(" InsertDzReturnable ")" -> Bool {cons("Bool1560Syn")}
+    "hasType" "(" InsertDzExp "," InsertDzType ")" -> Prop {cons("Prop1756Syn")}
+    "isset" "(" InsertDzK ")" -> K {cons("K1529Syn")}
+    "thisTag" "(" InsertDzK ")" -> ThisTag {cons("ThisTag1240Syn")}
+    "#if" InsertDzBool "#then" InsertDzK "#else" InsertDzK "#fi" -> K {cons("K1429Syn")}
+    "is_numeric" "(" InsertDzK ")" -> K {cons("K1505Syn")}
+    "#freeVars" "(" InsertDzKList "," InsertDzSet "," InsertDzSet ")" -> K {cons("K134Syn")}
+    "#write" "(" InsertDzInt "," InsertDzString ")" -> K {cons("K174Syn")}
+    KLabel "=KLabel" KLabel -> Bool {cons("Bool1455Syn")}
+    "ArrayInitProp" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1608Syn")}
+    "Set2KLabel" Set -> KLabel {cons("KLabel1408Syn")}
+    "@Value" -> ZvalField {cons("ZvalField1668Syn")}
+    Loc -> OptionLoc {}
+    "##tcpRequest" "(" InsertDzString ")" -> String {cons("String1373Syn")}
+    ThisOrLiteral -> ConvertibleToLoc {}
+    Map "=Map" Map -> Bool {cons("Bool1453Syn")}
+    MyMap "[" InsertDzK "]" -> K {cons("K1223Syn")}
+    "#string2klist" "(" InsertDzString ")" -> KList {cons("KList187Syn")}
+    "var" "(" InsertDzId ")" -> Var {cons("Var1525Syn")}
+    "String2Char" "(" InsertDzString ")" -> Char {cons("Char1349Syn")}
+    "inFun" "(" InsertDzString ")" -> Prop {cons("Prop1759Syn")}
+    "#binderSplit2" "(" InsertDzKLabel "," InsertDzInt "," InsertDzKList "," InsertDzKList "," InsertDzKList "," InsertDzSet "," InsertDzK ")" -> K {cons("K128Syn")}
+    "isLiteral" "(" InsertDzConvertibleToLoc ")" -> Bool {cons("Bool1663Syn")}
+    DzBool -> Bool {}
+    "toBasicRef" "(" InsertDzLRef ")" -> BasicRef {cons("BasicRef1245Syn")}
+    "KList2KLabel" KList -> KLabel {cons("KLabel1406Syn")}
+    ".MyBag" -> MyBag {cons("MyBag196Syn")}
+    "#eval" Map -> Bag {cons("Bag1EvalSyn")}
+    "mod" -> BinaryOp {cons("BinaryOp1779Syn")}
+    "#isMapInK" "(" InsertDzK ")" -> Bool {cons("Bool1392Syn")}
+    "Map" "(" InsertDzKList "|->" InsertDzKList ")" -> Map {cons("Map1384Syn")}
+    MyMap "[" InsertDzK "<-" "undef" "]" -> MyMap {cons("MyMap1226Syn")}
+    "#open" "(" InsertDzString "," InsertDzString ")" -> KItem {cons("KItem166Syn")}
+    "setCrntScope" "(" InsertDzLoc ")" -> K {cons("K1563Syn")}
+    "typeOf" "(" InsertDzValue ")" -> Type {cons("Type1657Syn")}
+    "SMTCall" "(" InsertDzString ")" -> String {cons("String146Syn")}
+    Int ">=Int" Int -> Bool {left, cons("Bool1282Syn")}
+    "fv" "(" InsertDzString "," InsertDzVariable ")" -> Exp {cons("Exp1746Syn")}
+    "expEvalLoc" "(" InsertDzBag "," InsertDzExp ")" -> Loc {cons("Loc1765Syn")}
+    "array" "(" InsertDzKeyList ")" -> Variable {cons("Variable1750Syn")}
+    KLabel "==KLabel" KLabel -> Bool {cons("Bool1444Syn")}
+    "convertToLanguageValue" "(" InsertDzConvertibleToLanguageValue ")" -> LanguageValue {cons("LanguageValue1247Syn")}
+    "isBound" "(" InsertDzKLabel "," InsertDzInt ")" -> Bool {cons("Bool19Syn")}
+    Int "<=Int" Int -> Bool {left, cons("Bool1279Syn")}
+    "size" "(" InsertDzMySet ")" -> Int {cons("Int1207Syn")}
+    "#tcpError" "(" InsertDzString ")" -> TCPError {cons("TCPError1358Syn")}
+    "quotedCode" "(" InsertDzK ")" -> K {cons("K1470Syn")}
+    K "in" Set -> Bool {cons("Bool1395Syn")}
+    "min" -> BinaryOp {cons("BinaryOp1776Syn")}
+    "isEmptySet" "(" InsertDzSet ")" -> Bool {cons("Bool1399Syn")}
+    "ArrayWriteCrnt" "(" InsertDzLoc "," InsertDzOptionArrayCrntElem ")" -> K {cons("K1689Syn")}
+    "#parseToken" "(" InsertDzString "," InsertDzString ")" -> K {cons("K1353Syn")}
+    DzFloat -> Float {}
+    Bag "|=Ltl" K -> Bool {cons("Bool1743Syn")}
+    "object" -> Type {cons("Type1648Syn")}
+    "String2Bool" "(" InsertDzTCPAnswer ")" -> Bool {cons("Bool182Syn")}
+    "#freshSymSort" "(" InsertDzString ")" -> K {cons("K162Syn")}
+    Loc -> SemanticValue {}
+    LanguageValue -> LanguageValueOrType {}
+    ThisTag -> ThisOrLiteral {}
+    "refactor" "(" InsertDzK ")" -> K {cons("K1468Syn")}
+    "#ESPIPE" -> TCPError {cons("TCPError1367Syn")}
+    "[" InsertDzKey "," InsertDzArrayItemVisibility "," InsertDzLoc "]" -> ArrayItem {cons("ArrayItem1623Syn")}
+    "String2K" "(" InsertDzString ")" -> K {cons("K190Syn")}
+    List "==List" List -> Bool {cons("Bool1446Syn")}
+    Set "=Set" Set -> Bool {cons("Bool1450Syn")}
+    "ArrayGetElemAtIndex" "(" InsertDzInt "," InsertDzList ")" -> OptionArrayCrntElem {cons("OptionArrayCrntElem1686Syn")}
+    PlainLanguageValue -> LanguageValue {}
+    "class" "(" InsertDzId "," InsertDzList "," InsertDzMap "," InsertDzLoc ")" -> ClassDdef {cons("ClassDdef1576Syn")}
+    "fresh" "(" InsertDzK ")" -> Bool {cons("Bool1FreshSyn")}
+    "#noparse" -> TCPError {cons("TCPError1359Syn")}
+    "*toInteger" "(" InsertDzLanguageValue ")" -> K {cons("K1533Syn")}
+    Int -> ScalarValue {}
+    "#getVars1" "(" InsertDzKList "," InsertDzSet ")" -> K {cons("K15Syn")}
+    "lessEqual" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1784Syn")}
+    Map "==Map" Map -> Bool {cons("Bool1438Syn")}
+    KList "=/=KList" KList -> Bool {cons("Bool1443Syn")}
+    "#EISDIR" -> TCPError {cons("TCPError1368Syn")}
+    "keys" Map -> Set {cons("Set1386Syn")}
+    "greater" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1794Syn")}
+    "isVisible" "(" InsertDzK "," InsertDzK "," InsertDzArrayItemVisibility ")" -> K {cons("K1602Syn")}
+    "print" "(" InsertDzK ")" -> K {cons("K1548Syn")}
+    "#freshSymN" "(" InsertDzK "," InsertDzInt ")" -> K {cons("K163Syn")}
+    LiteralValue -> LanguageValue {}
+    "#ELOOP" -> TCPError {cons("TCPError1364Syn")}
+    "#evalHelper" Map -> Bag {cons("Bag1EvalHelperSyn")}
+    "stdClass" -> Id {cons("Id1574Syn")}
+    "lab" "(" InsertDzString ")" -> Prop {cons("Prop1754Syn")}
+    "BinOp" "(" InsertDzBinaryOp "," InsertDzK "," InsertDzK ")" -> K {cons("K1780Syn")}
+    "createEmptyClass" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1582Syn")}
+    "#freshVar" "(" InsertDzK "," InsertDzSet ")" -> K {cons("K16Syn")}
+    "intersectSet" "(" InsertDzSet "," InsertDzSet ")" -> Set {cons("Set1398Syn")}
+    "#ENOENT" -> TCPError {cons("TCPError1360Syn")}
+    "NOT-SUPPORTED" "(" InsertDzString ")" -> K {cons("K1554Syn")}
+    "isKLabelConstant" "(" InsertDzKLabel ")" -> Bool {cons("Bool153Syn")}
+    "each" "(" InsertDzK ")" -> K {cons("K1484Syn")}
+    "MyListItem" "(" InsertDzK ")" -> MyList {cons("MyList1233Syn")}
+    "ArrayInitCrnt" "(" InsertDzLoc "," InsertDzInt ")" -> K {cons("K1688Syn")}
+    "copyArrayMembers" "(" InsertDzLoc "," InsertDzList ")" -> K {cons("K1702Syn")}
+    "makeExceptionClass" -> K {cons("K1725Syn")}
+    "for" "(" InsertDzK "," InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1798Syn")}
+    "buildArrayCompareFun" -> K {cons("K1726Syn")}
+    "#freeVarsBinder2" "(" InsertDzK "," InsertDzK ")" -> K {cons("K138Syn")}
+    "bool" -> Type {cons("Type1640Syn")}
+    ThisTag -> ConvertibleToLoc {}
+    "variable" "(" InsertDzKey ")" -> Variable {cons("Variable1749Syn")}
+    "#getVarsFromK" "(" InsertDzK ")" -> Set {cons("Set12Syn")}
+    "isStrictComparison" "(" InsertDzComparisonOp ")" -> Bool {cons("Bool1788Syn")}
+    DzLtlFormula -> LtlFormula {}
+    "String2Id" "(" InsertDzString ")" -> Id {cons("Id1356Syn")}
+    "makeStaticDecl" "(" InsertDzString "," InsertDzLoc ")" -> K {cons("K1467Syn")}
+    "div" -> BinaryOp {cons("BinaryOp1778Syn")}
+    "lessEqual" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1795Syn")}
+    DzProp -> Prop {}
+    "mark" "(" InsertDzMap ")" -> K {cons("K1828Syn")}
+    "RgetRef" "(" InsertDzRef "," InsertDzRefType ")" -> K {cons("K1704Syn")}
+    Type -> LanguageValueOrType {}
+    "isSubclass" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1604Syn")}
+    "#EOF" -> TCPError {cons("TCPError1357Syn")}
+    "MakeDeprecatedWarning" "(" InsertDzK ")" -> K {cons("K1474Syn")}
+    "type" "(" InsertDzLanguageValue ")" -> Type {cons("Type1752Syn")}
+    "myStrlen" "(" InsertDzBag "," InsertDzLoc ")" -> Int {cons("Int1764Syn")}
+    Bag "=Bag" Bag -> Bool {cons("Bool1452Syn")}
+    "setCrntObj" "(" InsertDzK ")" -> K {cons("K1564Syn")}
+    "@Type" -> ZvalField {cons("ZvalField1669Syn")}
+    "#EACCES" -> TCPError {cons("TCPError1363Syn")}
+    "*toFloat" "(" InsertDzLanguageValue ")" -> K {cons("K1532Syn")}
+    "#parseInput" "(" InsertDzString "," InsertDzString ")" -> Stream {cons("Stream1ParseSyn")}
+    "visit" InsertDzKList "applying" InsertDzKLabel "if" KLabel -> K {cons("K1456Syn")}
+    "is_type" "(" InsertDzK "," InsertDzString ")" -> K {cons("K1506Syn")}
+    "mul" -> BinaryOp {cons("BinaryOp1777Syn")}
+    "Set2KTermAcc" "(" InsertDzSet "," InsertDzK ")" -> K {cons("K1402Syn")}
+    Map "[" "undef" "/" InsertDzKList "]" -> Map {cons("Map1383Syn")}
+    "WARNING" "(" InsertDzString ")" -> K {cons("K1549Syn")}
+    Array -> CompoundValue {}
+    "locsHoldSameCompound" "(" InsertDzMap "," InsertDzLoc "," InsertDzLoc ")" -> Bool {cons("Bool1666Syn")}
+    SpecialValue -> PlainLanguageValue {}
+    "zvalCreate" "(" InsertDzLoc "," InsertDzValue "," InsertDzType "," InsertDzInt "," InsertDzBool ")" -> K {cons("K1675Syn")}
+    K "in" MyList -> Bool {cons("Bool1234Syn")}
+    "sf" "(" InsertDzString "," InsertDzK "," InsertDzLoc "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzK ")" -> StackFrame {cons("StackFrame1558Syn")}
+    BasicRef -> Ref {}
+    "allocValue" "(" InsertDzValue ")" -> K {cons("K1699Syn")}
+    "#getc" "(" InsertDzInt ")" -> KItem {cons("KItem168Syn")}
+    "#freeVarsBinder" "(" InsertDzK "," InsertDzSet ")" -> K {cons("K136Syn")}
+    "makeArrayLiteral" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1606Syn")}
+    "K2String" "(" InsertDzK ")" -> String {cons("String193Syn")}
+    "isSymbolicSet" "(" InsertDzSet ")" -> K {cons("K156Syn")}
+    "var_dump" "(" InsertDzK ")" -> K {cons("K1486Syn")}
+    "emptyArray" -> Array {cons("Array1682Syn")}
+    "float" -> Type {cons("Type1643Syn")}
+    "List2KLabel" List -> KLabel {cons("KLabel1409Syn")}
+    "indentDec" -> K {cons("K1490Syn")}
+    "protected" -> ArrayItemVisibility {cons("ArrayItemVisibility1626Syn")}
+    "Rget" "(" InsertDzRef ")" -> K {cons("K1703Syn")}
+    "CellLabel2KLabel" CellLabel -> KLabel {cons("KLabel1405Syn")}
+    "myCurrent" "(" InsertDzK ")" -> K {cons("K1478Syn")}
+    "#if" InsertDzBool "#then" InsertDzKList "#else" InsertDzKList "#fi" -> KList {cons("KList1432Syn")}
+    "makeObjectFromArray" "(" InsertDzArray ")" -> K {cons("K1542Syn")}
+    "rfindChar" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1326Syn")}
+    "#freezer" K -> KLabel {cons("KLabel1424Syn")}
+    "DEPRECATED" "(" InsertDzString ")" -> K {cons("K1550Syn")}
+    "syncArrayCurrent" "(" InsertDzLoc "," InsertDzOptionLoc ")" -> K {cons("K1809Syn")}
+    SpecialValue -> Key {}
+    NonStrictComparisonOp -> ComparisonOp {}
+    "hasSameType" "(" InsertDzValue "," InsertDzValue ")" -> Bool {cons("Bool1662Syn")}
+    "size" "(" InsertDzMyBag ")" -> Int {cons("Int199Syn")}
+    "hasNoDecimalPart" "(" InsertDzFloat ")" -> Bool {cons("Bool1547Syn")}
+    ArrayCrntElem -> OptionArrayCrntElem {}
+    "print_r_indent" "(" InsertDzInt ")" -> K {cons("K1496Syn")}
+    "getKLabel" K -> KLabel {cons("KLabel1422Syn")}
+    "writeClassStaticMembers" "(" InsertDzId "," InsertDzK "," InsertDzArrayItemVisibility ")" -> K {cons("K1587Syn")}
+    "readBasicRef" "(" InsertDzLRef ")" -> BasicRef {cons("BasicRef1246Syn")}
+    Set "<=Set" Set -> Bool {cons("Bool1434Syn")}
+    "Float2Int" "(" InsertDzFloat ")" -> Int {cons("Int1305Syn")}
+    "initIterationVars" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1805Syn")}
+    "this" -> Id {cons("Id1573Syn")}
+    "*Cond" "(" InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1238Syn")}
+    "Bag2String" "(" InsertDzBag ")" -> String {cons("String194Syn")}
+    "categoryChar" "(" InsertDzString ")" -> String {cons("String1346Syn")}
+    Float -> ScalarValue {}
+    "extractIntSubstring" "(" InsertDzString "," InsertDzString "," InsertDzInt "," InsertDzType ")" -> K {cons("K1538Syn")}
+    "ArrayCreateElem" "(" InsertDzLoc "," InsertDzKey "," InsertDzArrayItemVisibility "," InsertDzLoc ")" -> K {cons("K1684Syn")}
+    "ROOT" -> Id {cons("Id1575Syn")}
+    "comparison" "(" InsertDzComparisonOp "," InsertDzK "," InsertDzK ")" -> K {cons("K1789Syn")}
+    "count" "(" InsertDzK ")" -> K {cons("K1476Syn")}
+    Int "dividesInt" Int -> Bool {cons("Bool1287Syn")}
+    "intersectSet" "(" InsertDzMySet "," InsertDzMySet ")" -> MySet {cons("MySet1205Syn")}
+    List "hasPrivateProperty" InsertDzK "for" K -> Bool {cons("Bool1692Syn")}
+    None -> OptionString {}
+    "#ENOTDIR" -> TCPError {cons("TCPError1362Syn")}
+    MyList "," MyList -> MyList {left, cons("MyList1230Syn")}
+    K "in" MySet -> Bool {cons("Bool1206Syn")}
+    "#retrieveTCPError" "(" InsertDzString ")" -> String {cons("String1374Syn")}
+    "#read" "(" InsertDzInt "," InsertDzInt ")" -> KItem {cons("KItem169Syn")}
+    "#checkTCPAnswer" "(" InsertDzString ")" -> TCPAnswer {cons("TCPAnswer1372Syn")}
+    "size" "(" InsertDzMyList ")" -> Int {cons("Int1235Syn")}
+    "isBoolType" "(" InsertDzValue ")" -> Bool {cons("Bool1654Syn")}
+    "OID" "(" InsertDzLoc "," InsertDzId "," InsertDzInt ")" -> Object {cons("Object1620Syn")}
+    "runFunction" "(" InsertDzString "," InsertDzFunDdef "," InsertDzK "," InsertDzOptionId "," InsertDzOptionLoc "," InsertDzBool ")" -> K {cons("K1570Syn")}
+    String -> TCPAnswer {}
+    String "<String" String -> Bool {cons("Bool1342Syn")}
+    "MethodNotFound" -> K {cons("K1596Syn")}
+    "#isDigit" "(" InsertDzString ")" -> Bool {cons("Bool1352Syn")}
+    DzModelCheckResult -> ModelCheckResult {}
+    "NOTICE" "(" InsertDzString ")" -> K {cons("K1552Syn")}
+    "isFloatString" "(" InsertDzString ")" -> Bool {cons("Bool1536Syn")}
+    "key" "(" InsertDzK ")" -> K {cons("K1479Syn")}
+    "initBuiltinClasses" -> Internal {cons("Internal1722Syn")}
+    "label" "(" InsertDzK ")" -> K {cons("K1508Syn")}
+    BoolOrNull -> LanguageValue {}
+    "ltrim" "(" InsertDzString ")" -> String {cons("String1338Syn")}
+    "keys" "(" InsertDzMyMap ")" -> MySet {cons("MySet1227Syn")}
+    "#freeVars1" "(" InsertDzKList "," InsertDzK "," InsertDzSet "," InsertDzSet ")" -> K {cons("K135Syn")}
+    "initClass" "(" InsertDzId "," InsertDzK ")" -> K {cons("K1583Syn")}
+    String "<=String" String -> Bool {cons("Bool1343Syn")}
+    "countAllOccurences" "(" InsertDzString "," InsertDzString ")" -> Int {cons("Int1336Syn")}
+    KList "=KList" KList -> Bool {cons("Bool1454Syn")}
+    "makeForInit" "(" InsertDzK ")" -> K {cons("K1799Syn")}
+    "dummy" "(" InsertDzKList ")" -> K {cons("K1442Syn")}
+    "Lget" "(" InsertDzRef ")" -> K {cons("K1705Syn")}
+    "#tokenToString" "(" InsertDzK ")" -> String {cons("String1354Syn")}
+    LRef -> Ref {}
+    String ">=String" String -> Bool {cons("Bool1345Syn")}
+    "array_key_exists" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1475Syn")}
+    "(" InsertDzId "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzBag ")" -> K {cons("K1823Syn")}
+    "ordChar" "(" InsertDzString ")" -> Int {cons("Int1320Syn")}
+    "randomRandom" "(" InsertDzInt ")" -> Int {cons("Int1376Syn")}
+    "lvalue" "(" InsertDzBag "," InsertDzLoc "," InsertDzVariable ")" -> Loc {cons("Loc1772Syn")}
+    "KLabel2KLabel" KLabel -> KLabel {cons("KLabel1404Syn")}
+    "dump_content" "(" InsertDzList ")" -> K {cons("K1487Syn")}
+    "ref" "(" InsertDzLoc "," InsertDzKey ")" -> BasicRef {cons("BasicRef1634Syn")}
+    "zvalWrite" "(" InsertDzLoc "," InsertDzZvalField "," InsertDzLanguageValueOrType ")" -> K {cons("K1674Syn")}
+    "user_input" -> K {cons("K1507Syn")}
+    "len" "(" InsertDzExp ")" -> Exp {cons("Exp1748Syn")}
+    "locHoldsArray" "(" InsertDzMap "," InsertDzLoc ")" -> Bool {cons("Bool1664Syn")}
+    CompoundValue -> PlainLanguageValue {}
+    "LError" -> Loc {cons("Loc1707Syn")}
+    "write" "(" InsertDzValue "," InsertDzLoc ")" -> K {cons("K1698Syn")}
+    "String2Float" "(" InsertDzString ")" -> Float {cons("Float1328Syn")}
+    "visitedL" "(" InsertDzKLabel ")" -> KLabel {cons("KLabel1462Syn")}
+    "string2Number" "(" InsertDzString ")" -> K {cons("K1537Syn")}
+    "equal" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1782Syn")}
+    ConvertibleToLoc -> ConvertibleToLanguageValue {}
+    "isEqualScalar" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1248Syn")}
+    "update" "(" InsertDzMyMap "," InsertDzMyMap ")" -> MyMap {cons("MyMap1225Syn")}
+    SetItem "in" Set -> Bool {cons("Bool1396Syn")}
+    ".MyList" -> MyList {cons("MyList1232Syn")}
+    "popLoopContext" -> K {cons("K1808Syn")}
+    Map "[" InsertDzKList "/" InsertDzKList "]" -> Map {cons("Map1385Syn")}
+    KResult -> K {}
+    ScalarValue -> PlainLanguageValue {}
+    "@byRef" -> FunReturnType {cons("FunReturnType1556Syn")}
+    "replace" "(" InsertDzString "," InsertDzString "," InsertDzString "," InsertDzInt ")" -> String {cons("String1334Syn")}
+    "String2Bag" "(" InsertDzString ")" -> Bag {cons("Bag192Syn")}
+    "KLabel2String" "(" InsertDzKLabel ")" -> String {cons("String1332Syn")}
+    "initClassMemberDecl" "(" InsertDzId "," InsertDzK ")" -> K {cons("K1584Syn")}
+    "strlen" "(" InsertDzK ")" -> K {cons("K1485Syn")}
+    "foreachArrayPair" "(" InsertDzLoc "," InsertDzOptionLoc ")" -> ForeachArrayPair {cons("ForeachArrayPair1237Syn")}
+    "getVisibility" "(" InsertDzK "," InsertDzId ")" -> ArrayItemVisibility {cons("ArrayItemVisibility1580Syn")}
+    "makeArrayFromScalar" "(" InsertDzScalarValue "," InsertDzKey ")" -> K {cons("K1543Syn")}
+    "gc" -> K {cons("K1827Syn")}
+    "methExecute" "(" InsertDzId "," InsertDzString "," InsertDzK "," InsertDzOptionLoc ")" -> K {cons("K1599Syn")}
+    "ArrayIndexOf" "(" InsertDzOptionArrayCrntElem "," InsertDzList ")" -> Int {cons("Int1687Syn")}
+    "allocCrntObj" "(" InsertDzOptionLoc ")" -> K {cons("K1565Syn")}
+    "#binderSplit" "(" InsertDzK ")" -> K {cons("K126Syn")}
+    "#stdin" -> Int {cons("Int183Syn")}
+    "methodInfo" "(" InsertDzId "," InsertDzString "," InsertDzK "," InsertDzBool ")" -> K {cons("K1595Syn")}
+    "rtrim" "(" InsertDzString ")" -> String {cons("String1339Syn")}
+    "isSuperGlobal" "(" InsertDzId ")" -> Bool {cons("Bool1526Syn")}
+    "f" "(" InsertDzK "," InsertDzK "," InsertDzFunReturnType "," InsertDzLoc ")" -> FunDdef {cons("FunDdef1557Syn")}
+    "while" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1797Syn")}
+    "real" -> Type {cons("Type1645Syn")}
+    "String2Int" "(" InsertDzString ")" -> Int {cons("Int1329Syn")}
+    Int "=/=Int" Int -> Bool {left, cons("Bool1285Syn")}
+    "read" "(" InsertDzK ")" -> K {cons("K1697Syn")}
+    String ">String" String -> Bool {cons("Bool1344Syn")}
+    "initStatic" -> K {cons("K1523Syn")}
+    "MyMapOf" "(" InsertDzKList "," InsertDzKList ")" -> MyMap {cons("MyMap1222Syn")}
+    "processFunArgs" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1569Syn")}
+    "isArrayType" "(" InsertDzValue ")" -> Bool {cons("Bool1650Syn")}
+    "run" -> K {cons("K1469Syn")}
+    "foreach" "(" InsertDzLoc "," InsertDzK "," InsertDzK ")" -> K {cons("K1803Syn")}
+    "leqVal" "(" InsertDzLanguageValue "," InsertDzLanguageValue ")" -> Bool {cons("Bool1762Syn")}
+    "loopFrame" "(" InsertDzK "," InsertDzOptionForeachArrayPair ")" -> LoopFrame {cons("LoopFrame1236Syn")}
+    "getVariables" "(" InsertDzK ")" -> Set {cons("Set13Syn")}
+    "endVisit" K -> K {cons("K1463Syn")}
+    "size" "(" InsertDzMyMap ")" -> Int {cons("Int1229Syn")}
+    "initSuperGlobals" -> Internal {cons("Internal1723Syn")}
+    "isVariable" "(" InsertDzMap ")" -> Bool {cons("Bool152Syn")}
+    "arr" -> RefType {cons("RefType1629Syn")}
+    String "==String" String -> Bool {left, cons("Bool1307Syn")}
+    "#splitedBinder" "(" InsertDzKList "," InsertDzKList "," InsertDzSet ")" -> K {cons("K122Syn")}
+    "*toBoolean" "(" InsertDzLanguageValue ")" -> K {cons("K1530Syn")}
+    "detectDeprecated" -> K {cons("K1522Syn")}
+    "#tell" "(" InsertDzInt ")" -> KItem {cons("KItem167Syn")}
+    None -> OptionForeachArrayPair {}
+    "is_array" "(" InsertDzK ")" -> K {cons("K1503Syn")}
+    "isCrntVisib" "(" InsertDzLoc ")" -> K {cons("K1820Syn")}
+    "isVariable" "(" InsertDzBag ")" -> Bool {cons("Bool150Syn")}
+    "buildInitState" -> Internal {cons("Internal1708Syn")}
+    "print_r" "(" InsertDzK ")" -> K {cons("K1494Syn")}
+    "less" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1783Syn")}
+    "lookup_fun" "(" InsertDzBag "," InsertDzString "," InsertDzVariable ")" -> Loc {cons("Loc1767Syn")}
+    "#tcpRequest" "(" InsertDzString ")" -> TCPAnswer {cons("TCPAnswer1370Syn")}
+    "#boundVars1" "(" InsertDzK ")" -> K {cons("K125Syn")}
+    "#buffer" "(" InsertDzK ")" -> Stream {cons("Stream1IOBufferSyn")}
+    "MySetItem" "(" InsertDzK ")" -> MySet {cons("MySet1203Syn")}
+    "vars" "(" InsertDzSet ")" -> K {cons("K10Syn")}
+    "@byValue" -> FunReturnType {cons("FunReturnType1555Syn")}
+    Int "==Int" Int -> Bool {left, cons("Bool1284Syn")}
+    "#EINVAL" -> TCPError {cons("TCPError1369Syn")}
+    "expEval" "(" InsertDzBag "," InsertDzExp ")" -> LanguageValue {cons("LanguageValue1763Syn")}
+    None -> OptionLoc {}
+    "reset" "(" InsertDzK ")" -> K {cons("K1483Syn")}
+    "exists" InsertDzSet "." Bool -> Bool {cons("Bool140Syn")}
+    ".MyMap" -> MyMap {cons("MyMap1209Syn")}
+    List "hasMember" K -> Bool {cons("Bool1585Syn")}
+    "minInt" "(" InsertDzInt "," InsertDzInt ")" -> Int {cons("Int1276Syn")}
+    "Int2String" "(" InsertDzInt ")" -> String {cons("String1330Syn")}
+    "@IsRef" -> ZvalField {cons("ZvalField1672Syn")}
+    "stdclass" -> Id {cons("Id1589Syn")}
+    "ERROR" "(" InsertDzString ")" -> K {cons("K1553Syn")}
+    "makeNewObject" "(" InsertDzLoc "," InsertDzId "," InsertDzK ")" -> K {cons("K1590Syn")}
+    "#freshSym" "(" InsertDzK ")" -> K {cons("K164Syn")}
+    Key "," KeyList -> KeyList {cons("KeyList1ListSyn")}
+    ".KeyList" -> KeyList {cons("KeyList1Empty")}
+    "makeFunction" "(" InsertDzString "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzLoc ")" -> K {cons("K1559Syn")}
+    "isBuiltin" "(" InsertDzK ")" -> Bool {cons("Bool1426Syn")}
+    "getGlobalScope" "(" InsertDzBag ")" -> Loc {cons("Loc1768Syn")}
+    Id -> OptionId {}
+    "convertToLoc" "(" InsertDzConvertibleToLoc "," InsertDzOptionConversionMode ")" -> Loc {cons("Loc1244Syn")}
+    "rfindString" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1324Syn")}
+    LanguageValue -> Value {}
+    "checkSat" "(" InsertDzBool ")" -> String {cons("String147Syn")}
+    Loc -> Returnable {}
+    "MyBagItem" "(" InsertDzK ")" -> MyBag {cons("MyBag197Syn")}
+    "*toArray" "(" InsertDzLanguageValue ")" -> K {cons("K1545Syn")}
+    "decRefCount" "(" InsertDzLoc ")" -> K {cons("K1678Syn")}
+    "K2SMTLib" "(" InsertDzK ")" -> String {cons("String142Syn")}
+    List "=/=List" List -> Bool {cons("Bool1447Syn")}
+    "lengthList" List -> Int {cons("Int1403Syn")}
+    "geqVal" "(" InsertDzLanguageValue "," InsertDzLanguageValue ")" -> Bool {cons("Bool1760Syn")}
+    "less" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1793Syn")}
+    "greaterEqual" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1796Syn")}
+    Prop -> LtlFormula {}
+    Null -> SpecialValue {}
+    Int "<Int" Int -> Bool {left, cons("Bool1280Syn")}
+    K "in" MyBag -> Bool {cons("Bool198Syn")}
+    "isFloatType" "(" InsertDzValue ")" -> Bool {cons("Bool1652Syn")}
+    "isEqual" "(" InsertDzValue "," InsertDzValue ")" -> K {cons("K1790Syn")}
+    "getFunScope" "(" InsertDzBag "," InsertDzString ")" -> Loc {cons("Loc1769Syn")}
+    "alias" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1755Syn")}
+    Map "(" InsertDzK ")" -> K {cons("K1382Syn")}
+    "get_config_label" "(" InsertDzBag ")" -> String {cons("String1774Syn")}
+    "myNext" "(" InsertDzK ")" -> K {cons("K1482Syn")}
+    StrictComparisonOp -> ComparisonOp {}
+    "obj" -> RefType {cons("RefType1630Syn")}
+    "#ioError" "(" InsertDzString ")" -> K {cons("K175Syn")}
+    "#isWhiteSpace" "(" InsertDzString ")" -> Bool {cons("Bool1350Syn")}
+    "String2DotK" "(" InsertDzTCPAnswer ")" -> K {cons("K180Syn")}
+    "public" -> ArrayItemVisibility {cons("ArrayItemVisibility1625Syn")}
+    "is_string" "(" InsertDzK ")" -> K {cons("K1502Syn")}
+    "isIdentical" "(" InsertDzValue "," InsertDzValue ")" -> K {cons("K1792Syn")}
+    "isSymbolicList" "(" InsertDzList ")" -> K {cons("K155Syn")}
+    "writeClassInstanceMembers" "(" InsertDzId "," InsertDzK "," InsertDzArrayItemVisibility ")" -> K {cons("K1586Syn")}
+    MyMap "," MyMap -> MyMap {left, cons("MyMap1208Syn")}
+    "print_r_content" "(" InsertDzList ")" -> K {cons("K1495Syn")}
+    "#freeVarsBinder1" "(" InsertDzK "," InsertDzSet ")" -> K {cons("K137Syn")}
+    K "=K" K -> Bool {cons("Bool1448Syn")}
+    "initScopes" -> Internal {cons("Internal1709Syn")}
+    Set "=/=Set" Set -> Bool {cons("Bool1436Syn")}
+    "incRefCount" "(" InsertDzLoc ")" -> K {cons("K1677Syn")}
+    "@RefCount" -> ZvalField {cons("ZvalField1670Syn")}
+    "absInt" "(" InsertDzInt ")" -> Int {cons("Int1278Syn")}
+    "detectDeprecated" "(" InsertDzK ")" -> K {cons("K1472Syn")}
+    "ArrayInitProps" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1607Syn")}
+    "Array" "(" InsertDzOptionArrayCrntElem "," InsertDzList ")" -> Array {cons("Array1622Syn")}
+    "#if" InsertDzBool "#then" InsertDzInt "#else" InsertDzInt "#fi" -> Int {cons("Int1433Syn")}
+    K "#inKList" KList -> Bool {cons("Bool1380Syn")}
+    List "=List" List -> Bool {cons("Bool1449Syn")}
+    Int -> Key {}
+    "read" "(" InsertDzBag "," InsertDzLoc ")" -> LanguageValue {cons("LanguageValue1773Syn")}
+    "ArrayUpdateElem" "(" InsertDzLoc "," InsertDzKey "," InsertDzLoc ")" -> K {cons("K1685Syn")}
+    "findChar" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1325Syn")}
+    "objectInit" "(" InsertDzLoc "," InsertDzId ")" -> K {cons("K1592Syn")}
+    "locHoldsObject" "(" InsertDzMap "," InsertDzLoc ")" -> Bool {cons("Bool1665Syn")}
+    "directionalityChar" "(" InsertDzString ")" -> String {cons("String1347Syn")}
+    "lookup_glob" "(" InsertDzBag "," InsertDzVariable ")" -> Loc {cons("Loc1766Syn")}
+    "Vars2SMTLib" "(" InsertDzSet ")" -> String {cons("String143Syn")}
+    "runScript" "(" InsertDzK ")" -> K {cons("K1520Syn")}
+    Loc -> ConvertibleToLanguageValue {}
+    LiteralValue -> ConvertibleToLoc {}
+    "defined" "(" InsertDzK ")" -> K {cons("K1499Syn")}
+    "substr" "(" InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1509Syn")}
+    Int -> OptionInt {}
+    ForeachArrayPair -> OptionForeachArrayPair {}
+    "K2Sort" "(" InsertDzK ")" -> String {cons("String154Syn")}
+    "isLocalFreshVar" "(" InsertDzK ")" -> Bool {cons("Bool18Syn")}
+    "Int2Float" "(" InsertDzInt ")" -> Float {cons("Float1304Syn")}
+    ".MySet" -> MySet {cons("MySet1202Syn")}
+    "normalizeFloat" "(" InsertDzFloat ")" -> K {cons("K1546Syn")}
+    "isVariable" "(" InsertDzSet ")" -> Bool {cons("Bool149Syn")}
+    "geq" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1757Syn")}
+    MyMap "[" InsertDzK "<-" InsertDzK "]" -> MyMap {cons("MyMap1224Syn")}
+    "chrChar" "(" InsertDzInt ")" -> String {cons("String1309Syn")}
+    "[" InsertDzKey "," InsertDzArrayItemVisibility "]" -> ArrayCrntElem {cons("ArrayCrntElem1624Syn")}
+    "String2KLabel" "(" InsertDzString ")" -> KLabel {cons("KLabel1String2KLabelSyn")}
+    "isSuperclass" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1605Syn")}
+    Object -> CompoundValue {}
+    "#stderr" -> Int {cons("Int185Syn")}
+    "assignSeqOfIds" "(" InsertDzK "," InsertDzLoc "," InsertDzInt ")" -> K {cons("K1528Syn")}
+    "modelCheck" "(" InsertDzModelCheckerState "," InsertDzLtlFormula ")" -> ModelCheckResult {cons("ModelCheckResult1744Syn")}
+    "#getSymLabel" "(" InsertDzString ")" -> K {cons("K159Syn")}
+    "define" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1493Syn")}
+    Set "==Set" Set -> Bool {cons("Bool1435Syn")}
+    MySet "-MySet" MySet -> MySet {cons("MySet1204Syn")}
+    "Float2String" "(" InsertDzFloat ")" -> String {cons("String1327Syn")}
+    "isStringType" "(" InsertDzValue ")" -> Bool {cons("Bool1655Syn")}
+    "get_crnt_fun" "(" InsertDzBag ")" -> String {cons("String1770Syn")}
+    ArrayItem -> OptionArrayItem {}
+    "zvalDestroy" "(" InsertDzLoc ")" -> K {cons("K1676Syn")}
+    "isIntType" "(" InsertDzValue ")" -> Bool {cons("Bool1653Syn")}
+    "Char2String" "(" InsertDzChar ")" -> String {cons("String1348Syn")}
+    "Map2KLabel" Map -> KLabel {cons("KLabel1420Syn")}
+    "leq" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1758Syn")}
+    Value "isCompoundValue" -> Bool {cons("Bool1659Syn")}
+    Ref -> SemanticValue {}
+    "makeStaticDecls" "(" InsertDzK "," InsertDzLoc ")" -> K {cons("K1464Syn")}
+    "isStatic" "(" InsertDzK ")" -> Bool {cons("Bool1579Syn")}
+    "is_float" "(" InsertDzK ")" -> K {cons("K1500Syn")}
+    "isToken" "(" InsertDzK ")" -> Bool {cons("Bool1425Syn")}
+    "decRefCountArrayElems" "(" InsertDzLoc "," InsertDzList ")" -> K {cons("K1680Syn")}
+    "Consts2SMTLib" "(" InsertDzSet ")" -> String {cons("String144Syn")}
+    "isSymbolicBag" "(" InsertDzBag ")" -> K {cons("K157Syn")}
+    "greaterEqual" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1786Syn")}
+    "makeStdClass" -> K {cons("K1724Syn")}
+    MyBag "," MyBag -> MyBag {cons("MyBag195Syn")}
+    "l" -> ConversionMode {cons("ConversionMode1242Syn")}
+    "private" "(" InsertDzId ")" -> ArrayItemVisibility {cons("ArrayItemVisibility1627Syn")}
+    String "+String" String -> String {left, cons("String1306Syn")}
+    "isInPath" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1603Syn")}
+    "#boundVars" "(" InsertDzK ")" -> K {cons("K124Syn")}
+    "Bag2KLabel" Bag -> KLabel {cons("KLabel1407Syn")}
+    "lref" "(" InsertDzRef "," InsertDzKey "," InsertDzRefType ")" -> LRef {cons("LRef1635Syn")}
+    Int ">Int" Int -> Bool {left, cons("Bool1283Syn")}
+    "r" -> ConversionMode {cons("ConversionMode1243Syn")}
+    "len" "(" InsertDzList ")" -> Int {cons("Int1694Syn")}
+    "#lstat" "(" InsertDzString ")" -> KList {cons("KList177Syn")}
+    "cleanTrace" -> K {cons("K1826Syn")}
+    "#statTypes" "(" InsertDzKList ")" -> KList {cons("KList188Syn")}
+    "method" "(" InsertDzFunDdef "," InsertDzArrayItemVisibility "," InsertDzBool ")" -> ClassMethod {cons("ClassMethod1578Syn")}
+    ConversionMode -> OptionConversionMode {}
+    "#EBADF" -> TCPError {cons("TCPError1366Syn")}
+    DzString -> String {}
+    K "|->" K -> MyMap {cons("MyMap1220Syn")}
+    "val" "(" InsertDzLanguageValue ")" -> Exp {cons("Exp1747Syn")}
+    "popStackFrame" -> K {cons("K1568Syn")}
+    "unset" -> Type {cons("Type1649Syn")}
+    "is_scalar" "(" InsertDzK ")" -> K {cons("K1504Syn")}
+    "#binderSplit1" "(" InsertDzKLabel "," InsertDzInt "," InsertDzKList "," InsertDzKList "," InsertDzKList "," InsertDzSet ")" -> K {cons("K127Syn")}
+    "SMTLibQuery" "(" InsertDzBool ")" -> String {cons("String145Syn")}
+    "isVariable" "(" InsertDzList ")" -> Bool {cons("Bool148Syn")}
+    "#open" "(" InsertDzString ")" -> KItem {cons("KItem165Syn")}
+    "makeAccess2NonDefinedClassMethodErrorMsg" "(" InsertDzId "," InsertDzString ")" -> String {cons("String1597Syn")}
+    "#counter" -> Int {cons("Int1378Syn")}
+    "#hasMapping" "(" InsertDzMap "," InsertDzK ")" -> Bool {cons("Bool1389Syn")}
+    Key "isStringKey" -> Bool {cons("Bool1488Syn")}
+    "terminated" -> K {cons("K1825Syn")}
+    "visiting" InsertDzKList "applying" InsertDzKLabel "if" KLabel -> K {cons("K1457Syn")}
+    MySet "," MySet -> MySet {left, cons("MySet1200Syn")}
+    Map "<=Map" Map -> Bool {cons("Bool1437Syn")}
+    "max" "(" InsertDzInt "," InsertDzInt ")" -> Int {cons("Int1696Syn")}
+    "identical" -> StrictComparisonOp {cons("StrictComparisonOp1787Syn")}
+    "#seek" "(" InsertDzInt "," InsertDzInt ")" -> K {cons("K172Syn")}
+    "isBounding" "(" InsertDzKLabel "," InsertDzInt ")" -> Bool {cons("Bool120Syn")}
+    "eqTo" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1753Syn")}
+    "forall" InsertDzSet "." Bool -> Bool {cons("Bool139Syn")}
+    "popx" -> K {cons("K1824Syn")}
+    "boolean" -> Type {cons("Type1642Syn")}
+    None -> OptionArrayCrntElem {}
+    "substrString" "(" InsertDzString "," InsertDzInt "," InsertDzInt ")" -> String {cons("String1322Syn")}
+    "visibility2String" "(" InsertDzArrayItemVisibility ")" -> String {cons("String1250Syn")}
+    "double" -> Type {cons("Type1644Syn")}
+    "gv" "(" InsertDzVariable ")" -> Exp {cons("Exp1745Syn")}
+    "values" "(" InsertDzMyMap ")" -> MyBag {cons("MyBag1228Syn")}
+    None -> OptionArrayItem {}
+    "maxInt" "(" InsertDzInt "," InsertDzInt ")" -> Int {cons("Int1277Syn")}
+    "CopyFunctionArgs" -> K {cons("K1572Syn")}
+    "ArrayCrnt2None" "(" InsertDzLoc ")" -> K {cons("K1804Syn")}
+    "#ostream" "(" InsertDzInt ")" -> Stream {cons("Stream1OutputStreamSyn")}
+    Set "-Set" Set -> Set {cons("Set1394Syn")}
+    "isSpecialVar" "(" InsertDzId ")" -> Bool {cons("Bool1527Syn")}
+    "NULL" -> Null {cons("Null1609Syn")}
+    "staticDeclFound" "(" InsertDzK ")" -> Bool {cons("Bool1465Syn")}
+    "sweep" -> K {cons("K1829Syn")}
+    DzInt -> Int {}
+    "#getVars" "(" InsertDzK ")" -> K {cons("K14Syn")}
+    "integer" -> Type {cons("Type1639Syn")}
+    Bool -> ScalarValue {}
+    "runRemainingSwitchClauses" "(" InsertDzK ")" -> K {cons("K1802Syn")}
+    "head" "(" InsertDzList ")" -> OptionArrayCrntElem {cons("OptionArrayCrntElem1693Syn")}
+    "freeVariables" "(" InsertDzKList ")" -> Set {cons("Set129Syn")}
+    "copyValueToLoc" "(" InsertDzValue "," InsertDzLoc ")" -> K {cons("K1700Syn")}
+    "*or" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1239Syn")}
+    "current" "(" InsertDzK ")" -> K {cons("K1477Syn")}
+    String "=/=String" String -> Bool {left, cons("Bool1340Syn")}
+    "arrayCurrentOverflow" "(" InsertDzArray ")" -> Bool {cons("Bool1544Syn")}
+    Null -> BoolOrNull {}
+    "methodLookup" "(" InsertDzId "," InsertDzString ")" -> K {cons("K1594Syn")}
+    "int" -> Type {cons("Type1638Syn")}
+    SemanticValue -> Value {}
+    String -> Key {}
+    "writeClassMethod" "(" InsertDzId "," InsertDzString "," InsertDzK "," InsertDzK "," InsertDzArrayItemVisibility "," InsertDzBool "," InsertDzK "," InsertDzLoc ")" -> K {cons("K1588Syn")}
+    "#if" InsertDzBool "#then" InsertDzKItem "#else" InsertDzKItem "#fi" -> KItem {cons("KItem1430Syn")}
+    "next" "(" InsertDzK ")" -> K {cons("K1480Syn")}
+    "Id2String" "(" InsertDzId ")" -> String {cons("String1355Syn")}
+    "#distinctCounter" "(" InsertDzInt ")" -> Int {cons("Int1377Syn")}
+    "#freshSymSortN" "(" InsertDzString "," InsertDzInt ")" -> K {cons("K160Syn")}
+    "*toObject" "(" InsertDzLanguageValue ")" -> K {cons("K1540Syn")}
+    "initBuiltinFunctions" -> Internal {cons("Internal1720Syn")}
+    "zval" "(" InsertDzValue "," InsertDzType "," InsertDzInt "," InsertDzBool ")" -> Zval {cons("Zval1667Syn")}
+    "#freeVars" "(" InsertDzKList ")" -> K {cons("K133Syn")}
+    "pushStackFrame" "(" InsertDzString "," InsertDzK "," InsertDzLoc "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1567Syn")}
+    "string" -> Type {cons("Type1646Syn")}
+    "refNull" -> Ref {cons("Ref1633Syn")}
+    "zvalRead" "(" InsertDzLoc "," InsertDzZvalField ")" -> K {cons("K1673Syn")}
+    "methRunIfVisible" "(" InsertDzK "," InsertDzK "," InsertDzOptionLoc ")" -> K {cons("K1598Syn")}
+    "#istream" "(" InsertDzInt ")" -> Stream {cons("Stream1InputStreamSyn")}
+    "pushLoopContext" "(" InsertDzK ")" -> K {cons("K1807Syn")}
+    DzModelCheckerState -> ModelCheckerState {}
+    Ref -> ConvertibleToLoc {}
+    None -> OptionId {}
+    "replaceFirst" "(" InsertDzString "," InsertDzString "," InsertDzString ")" -> String {cons("String1335Syn")}
+    "buildObjElemList" "(" InsertDzLoc "," InsertDzId "," InsertDzList ")" -> K {cons("K1593Syn")}
+    KLabel "=/=KLabel" KLabel -> Bool {cons("Bool1445Syn")}
+    "trim" "(" InsertDzString ")" -> String {cons("String1337Syn")}
+    String -> ScalarValue {}
+    "#getMapFromK" "(" InsertDzK ")" -> Map {cons("Map1393Syn")}
+    "visitedK" "(" InsertDzKList ")" -> KResult {cons("KResult1460Syn")}
+    "#map" "(" InsertDzMap ")" -> K {cons("K1390Syn")}
+    "*toString" "(" InsertDzLanguageValue ")" -> K {cons("K1539Syn")}
+    "freeVariables" "(" InsertDzSet ")" -> Set {cons("Set130Syn")}
+    "#freeVarsSet" "(" InsertDzSet ")" -> K {cons("K132Syn")}
+    Bool -> BoolOrNull {}
+    "ArrayCreateEmpty" "(" InsertDzLoc ")" -> K {cons("K1683Syn")}
+    "#close" "(" InsertDzInt ")" -> K {cons("K170Syn")}
+    Map "[" InsertDzMap "]" -> Map {cons("Map1UpdateMapWithMapSyn")}
+    LtlFormula -> K {}
+    "allocAndRunConstructor" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1600Syn")}
+    "makeAccess2NonVisibleClassConstantErrorMsg" "(" InsertDzId "," InsertDzString "," InsertDzArrayItemVisibility ")" -> String {cons("String1822Syn")}
+    "var_dump_indent" "(" InsertDzInt ")" -> K {cons("K1492Syn")}
+    "none" -> None {cons("None1637Syn")}
+    "isIntString" "(" InsertDzString ")" -> Bool {cons("Bool1535Syn")}
+    "biggestIntKey" "(" InsertDzList ")" -> Int {cons("Int1695Syn")}
+    "Literal" "(" InsertDzK ")" -> LiteralValue {cons("LiteralValue1636Syn")}
+    TCPError -> TCPAnswer {}
+    "gettype" "(" InsertDzK ")" -> K {cons("K1498Syn")}
+    LanguageValue -> Returnable {}
+    "#stat" "(" InsertDzString ")" -> KList {cons("KList176Syn")}
+    Int "=Int" Int -> Bool {cons("Bool1286Syn")}
+    "#freshVar1" "(" InsertDzSet "," InsertDzK ")" -> K {cons("K17Syn")}
+    "currentOverflow" "(" InsertDzMap "," InsertDzLoc ")" -> Bool {cons("Bool1249Syn")}
+    "#opendir" "(" InsertDzString ")" -> KList {cons("KList178Syn")}
+    "values" Map -> Set {cons("Set1387Syn")}
+    Value "isScalar" -> Bool {cons("Bool1660Syn")}
+    "#noIO" -> Stream {cons("Stream189Syn")}
+    List "hasProperty" K -> Bool {cons("Bool1690Syn")}
+    "LgetRef" "(" InsertDzRef "," InsertDzRefType ")" -> K {cons("K1706Syn")}
+    "locHoldsCompoundValue" "(" InsertDzLoc ")" -> K {cons("K1806Syn")}
+    "locNull" -> Loc {cons("Loc1628Syn")}
+    KList "==KList" KList -> Bool {cons("Bool1440Syn")}
+    String -> OptionString {}
+    "prop" "(" InsertDzString "," InsertDzArrayItemVisibility "," InsertDzK ")" -> ClassProp {cons("ClassProp1577Syn")}
+    "MakeStaticDecl" "(" InsertDzK ")" -> K {cons("K1466Syn")}
+    K "#inSet" Set -> Bool {cons("Bool1397Syn")}
+    "#ENAMETOOLONG" -> TCPError {cons("TCPError1365Syn")}
+    Value "isNumeric" -> Bool {cons("Bool1658Syn")}
+    "replaceAll" "(" InsertDzString "," InsertDzString "," InsertDzString ")" -> String {cons("String1333Syn")}
+    "plus" -> BinaryOp {cons("BinaryOp1775Syn")}
+    K "inKList" KList -> Bool {cons("Bool1379Syn")}
+    "start" -> K {cons("K1524Syn")}
+    "setCrntClass" "(" InsertDzOptionId ")" -> K {cons("K1566Syn")}
+    "isObjectType" "(" InsertDzValue ")" -> Bool {cons("Bool1656Syn")}
+    "findString" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1323Syn")}
+    "isSymbolicMap" "(" InsertDzMap ")" -> K {cons("K158Syn")}
+    "indentInc" -> K {cons("K1489Syn")}
+    "$hasMapping" "(" InsertDzMap "," InsertDzK ")" -> Bool {cons("Bool1388Syn")}
+    Bag    -> InsertDzBag
+    Bool    -> InsertDzBool
+    Key    -> InsertDzKey
+    Type    -> InsertDzType
+    LtlFormula    -> InsertDzLtlFormula
+    Array    -> InsertDzArray
+    ComparisonOp    -> InsertDzComparisonOp
+    ArrayItemVisibility    -> InsertDzArrayItemVisibility
+    K    -> InsertDzK
+    TCPAnswer    -> InsertDzTCPAnswer
+    Exp    -> InsertDzExp
+    ZvalField    -> InsertDzZvalField
+    OptionLoc    -> InsertDzOptionLoc
+    Loc    -> InsertDzLoc
+    OptionId    -> InsertDzOptionId
+    KeyList    -> InsertDzKeyList
+    MySet    -> InsertDzMySet
+    MyMap    -> InsertDzMyMap
+    Set    -> InsertDzSet
+    LanguageValue    -> InsertDzLanguageValue
+    List    -> InsertDzList
+    Int    -> InsertDzInt
+    BinaryOp    -> InsertDzBinaryOp
+    OptionArrayCrntElem    -> InsertDzOptionArrayCrntElem
+    ModelCheckerState    -> InsertDzModelCheckerState
+    Float    -> InsertDzFloat
+    Ref    -> InsertDzRef
+    LanguageValueOrType    -> InsertDzLanguageValueOrType
+    Value    -> InsertDzValue
+    KList    -> InsertDzKList
+    Variable    -> InsertDzVariable
+    Map    -> InsertDzMap
+    ConvertibleToLoc    -> InsertDzConvertibleToLoc
+    Char    -> InsertDzChar
+    OptionConversionMode    -> InsertDzOptionConversionMode
+    LRef    -> InsertDzLRef
+    MyBag    -> InsertDzMyBag
+    KItem    -> InsertDzKItem
+    ConvertibleToLanguageValue    -> InsertDzConvertibleToLanguageValue
+    String    -> InsertDzString
+    KLabel    -> InsertDzKLabel
+    FunReturnType    -> InsertDzFunReturnType
+    Returnable    -> InsertDzReturnable
+    MyList    -> InsertDzMyList
+    Id    -> InsertDzId
+    ScalarValue    -> InsertDzScalarValue
+    RefType    -> InsertDzRefType
+    FunDdef    -> InsertDzFunDdef
+    OptionForeachArrayPair    -> InsertDzOptionForeachArrayPair
+
+
+    VARID  ":Key"        -> KeyDzVar            {cons("Key12Var")}
+    VARID  ":CompoundValue"        -> CompoundValueDzVar            {cons("CompoundValue12Var")}
+    VARID  ":#LtlFormula"        -> DzLtlFormulaDzVar            {cons("DzLtlFormula12Var")}
+    VARID  ":NonStrictComparisonOp"        -> NonStrictComparisonOpDzVar            {cons("NonStrictComparisonOp12Var")}
+    VARID  ":LtlFormula"        -> LtlFormulaDzVar            {cons("LtlFormula12Var")}
+    VARID  ":Array"        -> ArrayDzVar            {cons("Array12Var")}
+    VARID  ":TCPError"        -> TCPErrorDzVar            {cons("TCPError12Var")}
+    VARID  ":ClassProp"        -> ClassPropDzVar            {cons("ClassProp12Var")}
+    VARID  ":ArrayItemVisibility"        -> ArrayItemVisibilityDzVar            {cons("ArrayItemVisibility12Var")}
+    VARID  ":#Float"        -> DzFloatDzVar            {cons("DzFloat12Var")}
+    VARID  ":TCPAnswer"        -> TCPAnswerDzVar            {cons("TCPAnswer12Var")}
+    VARID  ":#String"        -> DzStringDzVar            {cons("DzString12Var")}
+    VARID  ":BasicRef"        -> BasicRefDzVar            {cons("BasicRef12Var")}
+    VARID  ":Prop"        -> PropDzVar            {cons("Prop12Var")}
+    VARID  ":#ModelCheckerState"        -> DzModelCheckerStateDzVar            {cons("DzModelCheckerState12Var")}
+    VARID  ":OptionId"        -> OptionIdDzVar            {cons("OptionId12Var")}
+    VARID  ":KeyList"        -> KeyListDzVar            {cons("KeyList12Var")}
+    VARID  ":Internal"        -> InternalDzVar            {cons("Internal12Var")}
+    VARID  ":MyMap"        -> MyMapDzVar            {cons("MyMap12Var")}
+    VARID  ":#ModelCheckResult"        -> DzModelCheckResultDzVar            {cons("DzModelCheckResult12Var")}
+    VARID  ":Int"        -> IntDzVar            {cons("Int12Var")}
+    VARID  ":#Bool"        -> DzBoolDzVar            {cons("DzBool12Var")}
+    VARID  ":#Prop"        -> DzPropDzVar            {cons("DzProp12Var")}
+    VARID  ":OptionArrayCrntElem"        -> OptionArrayCrntElemDzVar            {cons("OptionArrayCrntElem12Var")}
+    VARID  ":ModelCheckerState"        -> ModelCheckerStateDzVar            {cons("ModelCheckerState12Var")}
+    VARID  ":ArrayItem"        -> ArrayItemDzVar            {cons("ArrayItem12Var")}
+    VARID  ":Value"        -> ValueDzVar            {cons("Value12Var")}
+    VARID  ":Variable"        -> VariableDzVar            {cons("Variable12Var")}
+    VARID  ":ConvertibleToLoc"        -> ConvertibleToLocDzVar            {cons("ConvertibleToLoc12Var")}
+    VARID  ":Char"        -> CharDzVar            {cons("Char12Var")}
+    VARID  ":OptionConversionMode"        -> OptionConversionModeDzVar            {cons("OptionConversionMode12Var")}
+    VARID  ":MyBag"        -> MyBagDzVar            {cons("MyBag12Var")}
+    VARID  ":SpecialValue"        -> SpecialValueDzVar            {cons("SpecialValue12Var")}
+    VARID  ":ConvertibleToLanguageValue"        -> ConvertibleToLanguageValueDzVar            {cons("ConvertibleToLanguageValue12Var")}
+    VARID  ":String"        -> StringDzVar            {cons("String12Var")}
+    VARID  ":Stream"        -> StreamDzVar            {cons("Stream12Var")}
+    VARID  ":Returnable"        -> ReturnableDzVar            {cons("Returnable12Var")}
+    VARID  ":MyList"        -> MyListDzVar            {cons("MyList12Var")}
+    VARID  ":Id"        -> IdDzVar            {cons("Id12Var")}
+    VARID  ":RefType"        -> RefTypeDzVar            {cons("RefType12Var")}
+    VARID  ":ScalarValue"        -> ScalarValueDzVar            {cons("ScalarValue12Var")}
+    VARID  ":LiteralValue"        -> LiteralValueDzVar            {cons("LiteralValue12Var")}
+    VARID  ":Null"        -> NullDzVar            {cons("Null12Var")}
+    VARID  ":OptionForeachArrayPair"        -> OptionForeachArrayPairDzVar            {cons("OptionForeachArrayPair12Var")}
+    VARID  ":ForeachArrayPair"        -> ForeachArrayPairDzVar            {cons("ForeachArrayPair12Var")}
+    VARID  ":Bool"        -> BoolDzVar            {cons("Bool12Var")}
+    VARID  ":Type"        -> TypeDzVar            {cons("Type12Var")}
+    VARID  ":ModelCheckResult"        -> ModelCheckResultDzVar            {cons("ModelCheckResult12Var")}
+    VARID  ":ComparisonOp"        -> ComparisonOpDzVar            {cons("ComparisonOp12Var")}
+    VARID  ":ThisTag"        -> ThisTagDzVar            {cons("ThisTag12Var")}
+    VARID  ":Exp"        -> ExpDzVar            {cons("Exp12Var")}
+    VARID  ":#Int"        -> DzIntDzVar            {cons("DzInt12Var")}
+    VARID  ":StrictComparisonOp"        -> StrictComparisonOpDzVar            {cons("StrictComparisonOp12Var")}
+    VARID  ":ZvalField"        -> ZvalFieldDzVar            {cons("ZvalField12Var")}
+    VARID  ":OptionArrayItem"        -> OptionArrayItemDzVar            {cons("OptionArrayItem12Var")}
+    VARID  ":OptionLoc"        -> OptionLocDzVar            {cons("OptionLoc12Var")}
+    VARID  ":Loc"        -> LocDzVar            {cons("Loc12Var")}
+    VARID  ":OptionString"        -> OptionStringDzVar            {cons("OptionString12Var")}
+    VARID  ":ArrayCrntElem"        -> ArrayCrntElemDzVar            {cons("ArrayCrntElem12Var")}
+    VARID  ":MySet"        -> MySetDzVar            {cons("MySet12Var")}
+    VARID  ":None"        -> NoneDzVar            {cons("None12Var")}
+    VARID  ":OptionInt"        -> OptionIntDzVar            {cons("OptionInt12Var")}
+    VARID  ":LanguageValue"        -> LanguageValueDzVar            {cons("LanguageValue12Var")}
+    VARID  ":BinaryOp"        -> BinaryOpDzVar            {cons("BinaryOp12Var")}
+    VARID  ":Object"        -> ObjectDzVar            {cons("Object12Var")}
+    VARID  ":ClassMethod"        -> ClassMethodDzVar            {cons("ClassMethod12Var")}
+    VARID  ":Float"        -> FloatDzVar            {cons("Float12Var")}
+    VARID  ":Ref"        -> RefDzVar            {cons("Ref12Var")}
+    VARID  ":Nat"        -> NatDzVar            {cons("Nat12Var")}
+    VARID  ":LanguageValueOrType"        -> LanguageValueOrTypeDzVar            {cons("LanguageValueOrType12Var")}
+    VARID  ":Zval"        -> ZvalDzVar            {cons("Zval12Var")}
+    VARID  ":ClassDef"        -> ClassDdefDzVar            {cons("ClassDdef12Var")}
+    VARID  ":LRef"        -> LRefDzVar            {cons("LRef12Var")}
+    VARID  ":StackFrame"        -> StackFrameDzVar            {cons("StackFrame12Var")}
+    VARID  ":BoolOrNull"        -> BoolOrNullDzVar            {cons("BoolOrNull12Var")}
+    VARID  ":ThisOrLiteral"        -> ThisOrLiteralDzVar            {cons("ThisOrLiteral12Var")}
+    VARID  ":SemanticValue"        -> SemanticValueDzVar            {cons("SemanticValue12Var")}
+    VARID  ":FunReturnType"        -> FunReturnTypeDzVar            {cons("FunReturnType12Var")}
+    VARID  ":ConversionMode"        -> ConversionModeDzVar            {cons("ConversionMode12Var")}
+    VARID  ":Var"        -> VarDzVar            {cons("Var12Var")}
+    VARID  ":FunDef"        -> FunDdefDzVar            {cons("FunDdef12Var")}
+    VARID  ":PlainLanguageValue"        -> PlainLanguageValueDzVar            {cons("PlainLanguageValue12Var")}
+    VARID  ":LoopFrame"        -> LoopFrameDzVar            {cons("LoopFrame12Var")}
+
+     K CastTypeDz "Key"    -> KeyDzVar    {cons("Key1Cast")}
+     K CastTypeDz "CompoundValue"    -> CompoundValueDzVar    {cons("CompoundValue1Cast")}
+     K CastTypeDz "#LtlFormula"    -> DzLtlFormulaDzVar    {cons("DzLtlFormula1Cast")}
+     K CastTypeDz "NonStrictComparisonOp"    -> NonStrictComparisonOpDzVar    {cons("NonStrictComparisonOp1Cast")}
+     K CastTypeDz "LtlFormula"    -> LtlFormulaDzVar    {cons("LtlFormula1Cast")}
+     K CastTypeDz "Array"    -> ArrayDzVar    {cons("Array1Cast")}
+     K CastTypeDz "TCPError"    -> TCPErrorDzVar    {cons("TCPError1Cast")}
+     K CastTypeDz "ClassProp"    -> ClassPropDzVar    {cons("ClassProp1Cast")}
+     K CastTypeDz "ArrayItemVisibility"    -> ArrayItemVisibilityDzVar    {cons("ArrayItemVisibility1Cast")}
+     K CastTypeDz "#Float"    -> DzFloatDzVar    {cons("DzFloat1Cast")}
+     K CastTypeDz "TCPAnswer"    -> TCPAnswerDzVar    {cons("TCPAnswer1Cast")}
+     K CastTypeDz "#String"    -> DzStringDzVar    {cons("DzString1Cast")}
+     K CastTypeDz "BasicRef"    -> BasicRefDzVar    {cons("BasicRef1Cast")}
+     K CastTypeDz "Prop"    -> PropDzVar    {cons("Prop1Cast")}
+     K CastTypeDz "#ModelCheckerState"    -> DzModelCheckerStateDzVar    {cons("DzModelCheckerState1Cast")}
+     K CastTypeDz "OptionId"    -> OptionIdDzVar    {cons("OptionId1Cast")}
+     K CastTypeDz "KeyList"    -> KeyListDzVar    {cons("KeyList1Cast")}
+     K CastTypeDz "Internal"    -> InternalDzVar    {cons("Internal1Cast")}
+     K CastTypeDz "MyMap"    -> MyMapDzVar    {cons("MyMap1Cast")}
+     K CastTypeDz "#ModelCheckResult"    -> DzModelCheckResultDzVar    {cons("DzModelCheckResult1Cast")}
+     K CastTypeDz "Int"    -> IntDzVar    {cons("Int1Cast")}
+     K CastTypeDz "#Bool"    -> DzBoolDzVar    {cons("DzBool1Cast")}
+     K CastTypeDz "#Prop"    -> DzPropDzVar    {cons("DzProp1Cast")}
+     K CastTypeDz "OptionArrayCrntElem"    -> OptionArrayCrntElemDzVar    {cons("OptionArrayCrntElem1Cast")}
+     K CastTypeDz "ModelCheckerState"    -> ModelCheckerStateDzVar    {cons("ModelCheckerState1Cast")}
+     K CastTypeDz "ArrayItem"    -> ArrayItemDzVar    {cons("ArrayItem1Cast")}
+     K CastTypeDz "Value"    -> ValueDzVar    {cons("Value1Cast")}
+     K CastTypeDz "Variable"    -> VariableDzVar    {cons("Variable1Cast")}
+     K CastTypeDz "ConvertibleToLoc"    -> ConvertibleToLocDzVar    {cons("ConvertibleToLoc1Cast")}
+     K CastTypeDz "Char"    -> CharDzVar    {cons("Char1Cast")}
+     K CastTypeDz "OptionConversionMode"    -> OptionConversionModeDzVar    {cons("OptionConversionMode1Cast")}
+     K CastTypeDz "MyBag"    -> MyBagDzVar    {cons("MyBag1Cast")}
+     K CastTypeDz "SpecialValue"    -> SpecialValueDzVar    {cons("SpecialValue1Cast")}
+     K CastTypeDz "ConvertibleToLanguageValue"    -> ConvertibleToLanguageValueDzVar    {cons("ConvertibleToLanguageValue1Cast")}
+     K CastTypeDz "String"    -> StringDzVar    {cons("String1Cast")}
+     K CastTypeDz "Stream"    -> StreamDzVar    {cons("Stream1Cast")}
+     K CastTypeDz "Returnable"    -> ReturnableDzVar    {cons("Returnable1Cast")}
+     K CastTypeDz "MyList"    -> MyListDzVar    {cons("MyList1Cast")}
+     K CastTypeDz "Id"    -> IdDzVar    {cons("Id1Cast")}
+     K CastTypeDz "RefType"    -> RefTypeDzVar    {cons("RefType1Cast")}
+     K CastTypeDz "ScalarValue"    -> ScalarValueDzVar    {cons("ScalarValue1Cast")}
+     K CastTypeDz "LiteralValue"    -> LiteralValueDzVar    {cons("LiteralValue1Cast")}
+     K CastTypeDz "Null"    -> NullDzVar    {cons("Null1Cast")}
+     K CastTypeDz "OptionForeachArrayPair"    -> OptionForeachArrayPairDzVar    {cons("OptionForeachArrayPair1Cast")}
+     K CastTypeDz "ForeachArrayPair"    -> ForeachArrayPairDzVar    {cons("ForeachArrayPair1Cast")}
+     K CastTypeDz "Bool"    -> BoolDzVar    {cons("Bool1Cast")}
+     K CastTypeDz "Type"    -> TypeDzVar    {cons("Type1Cast")}
+     K CastTypeDz "ModelCheckResult"    -> ModelCheckResultDzVar    {cons("ModelCheckResult1Cast")}
+     K CastTypeDz "ComparisonOp"    -> ComparisonOpDzVar    {cons("ComparisonOp1Cast")}
+     K CastTypeDz "ThisTag"    -> ThisTagDzVar    {cons("ThisTag1Cast")}
+     K CastTypeDz "Exp"    -> ExpDzVar    {cons("Exp1Cast")}
+     K CastTypeDz "#Int"    -> DzIntDzVar    {cons("DzInt1Cast")}
+     K CastTypeDz "StrictComparisonOp"    -> StrictComparisonOpDzVar    {cons("StrictComparisonOp1Cast")}
+     K CastTypeDz "ZvalField"    -> ZvalFieldDzVar    {cons("ZvalField1Cast")}
+     K CastTypeDz "OptionArrayItem"    -> OptionArrayItemDzVar    {cons("OptionArrayItem1Cast")}
+     K CastTypeDz "OptionLoc"    -> OptionLocDzVar    {cons("OptionLoc1Cast")}
+     K CastTypeDz "Loc"    -> LocDzVar    {cons("Loc1Cast")}
+     K CastTypeDz "OptionString"    -> OptionStringDzVar    {cons("OptionString1Cast")}
+     K CastTypeDz "ArrayCrntElem"    -> ArrayCrntElemDzVar    {cons("ArrayCrntElem1Cast")}
+     K CastTypeDz "MySet"    -> MySetDzVar    {cons("MySet1Cast")}
+     K CastTypeDz "None"    -> NoneDzVar    {cons("None1Cast")}
+     K CastTypeDz "OptionInt"    -> OptionIntDzVar    {cons("OptionInt1Cast")}
+     K CastTypeDz "LanguageValue"    -> LanguageValueDzVar    {cons("LanguageValue1Cast")}
+     K CastTypeDz "BinaryOp"    -> BinaryOpDzVar    {cons("BinaryOp1Cast")}
+     K CastTypeDz "Object"    -> ObjectDzVar    {cons("Object1Cast")}
+     K CastTypeDz "ClassMethod"    -> ClassMethodDzVar    {cons("ClassMethod1Cast")}
+     K CastTypeDz "Float"    -> FloatDzVar    {cons("Float1Cast")}
+     K CastTypeDz "Ref"    -> RefDzVar    {cons("Ref1Cast")}
+     K CastTypeDz "Nat"    -> NatDzVar    {cons("Nat1Cast")}
+     K CastTypeDz "LanguageValueOrType"    -> LanguageValueOrTypeDzVar    {cons("LanguageValueOrType1Cast")}
+     K CastTypeDz "Zval"    -> ZvalDzVar    {cons("Zval1Cast")}
+     K CastTypeDz "ClassDef"    -> ClassDdefDzVar    {cons("ClassDdef1Cast")}
+     K CastTypeDz "LRef"    -> LRefDzVar    {cons("LRef1Cast")}
+     K CastTypeDz "StackFrame"    -> StackFrameDzVar    {cons("StackFrame1Cast")}
+     K CastTypeDz "BoolOrNull"    -> BoolOrNullDzVar    {cons("BoolOrNull1Cast")}
+     K CastTypeDz "ThisOrLiteral"    -> ThisOrLiteralDzVar    {cons("ThisOrLiteral1Cast")}
+     K CastTypeDz "SemanticValue"    -> SemanticValueDzVar    {cons("SemanticValue1Cast")}
+     K CastTypeDz "FunReturnType"    -> FunReturnTypeDzVar    {cons("FunReturnType1Cast")}
+     K CastTypeDz "ConversionMode"    -> ConversionModeDzVar    {cons("ConversionMode1Cast")}
+     K CastTypeDz "Var"    -> VarDzVar    {cons("Var1Cast")}
+     K CastTypeDz "FunDef"    -> FunDdefDzVar    {cons("FunDdef1Cast")}
+     K CastTypeDz "PlainLanguageValue"    -> PlainLanguageValueDzVar    {cons("PlainLanguageValue1Cast")}
+     K CastTypeDz "LoopFrame"    -> LoopFrameDzVar    {cons("LoopFrame1Cast")}
+     KeyDzVar   -> Key
+     CompoundValueDzVar   -> CompoundValue
+     DzLtlFormulaDzVar   -> DzLtlFormula
+     NonStrictComparisonOpDzVar   -> NonStrictComparisonOp
+     LtlFormulaDzVar   -> LtlFormula
+     ArrayDzVar   -> Array
+     TCPErrorDzVar   -> TCPError
+     ClassPropDzVar   -> ClassProp
+     ArrayItemVisibilityDzVar   -> ArrayItemVisibility
+     DzFloatDzVar   -> DzFloat
+     TCPAnswerDzVar   -> TCPAnswer
+     DzStringDzVar   -> DzString
+     BasicRefDzVar   -> BasicRef
+     PropDzVar   -> Prop
+     DzModelCheckerStateDzVar   -> DzModelCheckerState
+     OptionIdDzVar   -> OptionId
+     KeyListDzVar   -> KeyList
+     InternalDzVar   -> Internal
+     MyMapDzVar   -> MyMap
+     DzModelCheckResultDzVar   -> DzModelCheckResult
+     IntDzVar   -> Int
+     DzBoolDzVar   -> DzBool
+     DzPropDzVar   -> DzProp
+     OptionArrayCrntElemDzVar   -> OptionArrayCrntElem
+     ModelCheckerStateDzVar   -> ModelCheckerState
+     ArrayItemDzVar   -> ArrayItem
+     ValueDzVar   -> Value
+     VariableDzVar   -> Variable
+     ConvertibleToLocDzVar   -> ConvertibleToLoc
+     CharDzVar   -> Char
+     OptionConversionModeDzVar   -> OptionConversionMode
+     MyBagDzVar   -> MyBag
+     SpecialValueDzVar   -> SpecialValue
+     ConvertibleToLanguageValueDzVar   -> ConvertibleToLanguageValue
+     StringDzVar   -> String
+     StreamDzVar   -> Stream
+     ReturnableDzVar   -> Returnable
+     MyListDzVar   -> MyList
+     IdDzVar   -> Id
+     RefTypeDzVar   -> RefType
+     ScalarValueDzVar   -> ScalarValue
+     LiteralValueDzVar   -> LiteralValue
+     NullDzVar   -> Null
+     OptionForeachArrayPairDzVar   -> OptionForeachArrayPair
+     ForeachArrayPairDzVar   -> ForeachArrayPair
+     BoolDzVar   -> Bool
+     TypeDzVar   -> Type
+     ModelCheckResultDzVar   -> ModelCheckResult
+     ComparisonOpDzVar   -> ComparisonOp
+     ThisTagDzVar   -> ThisTag
+     ExpDzVar   -> Exp
+     DzIntDzVar   -> DzInt
+     StrictComparisonOpDzVar   -> StrictComparisonOp
+     ZvalFieldDzVar   -> ZvalField
+     OptionArrayItemDzVar   -> OptionArrayItem
+     OptionLocDzVar   -> OptionLoc
+     LocDzVar   -> Loc
+     OptionStringDzVar   -> OptionString
+     ArrayCrntElemDzVar   -> ArrayCrntElem
+     MySetDzVar   -> MySet
+     NoneDzVar   -> None
+     OptionIntDzVar   -> OptionInt
+     LanguageValueDzVar   -> LanguageValue
+     BinaryOpDzVar   -> BinaryOp
+     ObjectDzVar   -> Object
+     ClassMethodDzVar   -> ClassMethod
+     FloatDzVar   -> Float
+     RefDzVar   -> Ref
+     NatDzVar   -> Nat
+     LanguageValueOrTypeDzVar   -> LanguageValueOrType
+     ZvalDzVar   -> Zval
+     ClassDdefDzVar   -> ClassDdef
+     LRefDzVar   -> LRef
+     StackFrameDzVar   -> StackFrame
+     BoolOrNullDzVar   -> BoolOrNull
+     ThisOrLiteralDzVar   -> ThisOrLiteral
+     SemanticValueDzVar   -> SemanticValue
+     FunReturnTypeDzVar   -> FunReturnType
+     ConversionModeDzVar   -> ConversionMode
+     VarDzVar   -> Var
+     FunDdefDzVar   -> FunDdef
+     PlainLanguageValueDzVar   -> PlainLanguageValue
+     LoopFrameDzVar   -> LoopFrame
+     K CastTypeDz "K"        -> VariableDz    {cons("K1Cast")}
+     K CastTypeDz "KItem"    -> VariableDz    {cons("KItem1Cast")}
+
+    VariableDz -> K
+
+
+    DzDzString        -> DzString    {cons("DzString1Const")}
+    DzDzInt        -> DzInt    {cons("DzInt1Const")}
+    DzDzLtlFormula        -> DzLtlFormula    {cons("DzLtlFormula1Const")}
+    DzDzId        -> DzId    {cons("DzId1Const")}
+    DzKLabel        -> KLabel    {cons("KLabel1Const")}
+    DzDzBool        -> DzBool    {cons("DzBool1Const")}
+    DzDzFloat        -> DzFloat    {cons("DzFloat1Const")}
+
+    DzDzINT        -> DzDzInt
+    DzDzSTRING    -> DzDzString
+    DzDzFLOAT    -> DzDzFloat
+
+context-free restrictions
+    KeyDzVar -/- [a-zA-Z0-9]
+    CompoundValueDzVar -/- [a-zA-Z0-9]
+    DzLtlFormulaDzVar -/- [a-zA-Z0-9]
+    NonStrictComparisonOpDzVar -/- [a-zA-Z0-9]
+    LtlFormulaDzVar -/- [a-zA-Z0-9]
+    ArrayDzVar -/- [a-zA-Z0-9]
+    TCPErrorDzVar -/- [a-zA-Z0-9]
+    ClassPropDzVar -/- [a-zA-Z0-9]
+    ArrayItemVisibilityDzVar -/- [a-zA-Z0-9]
+    DzFloatDzVar -/- [a-zA-Z0-9]
+    TCPAnswerDzVar -/- [a-zA-Z0-9]
+    DzStringDzVar -/- [a-zA-Z0-9]
+    BasicRefDzVar -/- [a-zA-Z0-9]
+    PropDzVar -/- [a-zA-Z0-9]
+    DzModelCheckerStateDzVar -/- [a-zA-Z0-9]
+    OptionIdDzVar -/- [a-zA-Z0-9]
+    KeyListDzVar -/- [a-zA-Z0-9]
+    InternalDzVar -/- [a-zA-Z0-9]
+    MyMapDzVar -/- [a-zA-Z0-9]
+    DzModelCheckResultDzVar -/- [a-zA-Z0-9]
+    IntDzVar -/- [a-zA-Z0-9]
+    DzBoolDzVar -/- [a-zA-Z0-9]
+    DzPropDzVar -/- [a-zA-Z0-9]
+    OptionArrayCrntElemDzVar -/- [a-zA-Z0-9]
+    ModelCheckerStateDzVar -/- [a-zA-Z0-9]
+    ArrayItemDzVar -/- [a-zA-Z0-9]
+    ValueDzVar -/- [a-zA-Z0-9]
+    VariableDzVar -/- [a-zA-Z0-9]
+    ConvertibleToLocDzVar -/- [a-zA-Z0-9]
+    CharDzVar -/- [a-zA-Z0-9]
+    OptionConversionModeDzVar -/- [a-zA-Z0-9]
+    MyBagDzVar -/- [a-zA-Z0-9]
+    SpecialValueDzVar -/- [a-zA-Z0-9]
+    ConvertibleToLanguageValueDzVar -/- [a-zA-Z0-9]
+    StringDzVar -/- [a-zA-Z0-9]
+    StreamDzVar -/- [a-zA-Z0-9]
+    ReturnableDzVar -/- [a-zA-Z0-9]
+    MyListDzVar -/- [a-zA-Z0-9]
+    IdDzVar -/- [a-zA-Z0-9]
+    RefTypeDzVar -/- [a-zA-Z0-9]
+    ScalarValueDzVar -/- [a-zA-Z0-9]
+    LiteralValueDzVar -/- [a-zA-Z0-9]
+    NullDzVar -/- [a-zA-Z0-9]
+    OptionForeachArrayPairDzVar -/- [a-zA-Z0-9]
+    ForeachArrayPairDzVar -/- [a-zA-Z0-9]
+    BoolDzVar -/- [a-zA-Z0-9]
+    TypeDzVar -/- [a-zA-Z0-9]
+    ModelCheckResultDzVar -/- [a-zA-Z0-9]
+    ComparisonOpDzVar -/- [a-zA-Z0-9]
+    ThisTagDzVar -/- [a-zA-Z0-9]
+    ExpDzVar -/- [a-zA-Z0-9]
+    DzIntDzVar -/- [a-zA-Z0-9]
+    StrictComparisonOpDzVar -/- [a-zA-Z0-9]
+    ZvalFieldDzVar -/- [a-zA-Z0-9]
+    OptionArrayItemDzVar -/- [a-zA-Z0-9]
+    OptionLocDzVar -/- [a-zA-Z0-9]
+    LocDzVar -/- [a-zA-Z0-9]
+    OptionStringDzVar -/- [a-zA-Z0-9]
+    ArrayCrntElemDzVar -/- [a-zA-Z0-9]
+    MySetDzVar -/- [a-zA-Z0-9]
+    NoneDzVar -/- [a-zA-Z0-9]
+    OptionIntDzVar -/- [a-zA-Z0-9]
+    LanguageValueDzVar -/- [a-zA-Z0-9]
+    BinaryOpDzVar -/- [a-zA-Z0-9]
+    ObjectDzVar -/- [a-zA-Z0-9]
+    ClassMethodDzVar -/- [a-zA-Z0-9]
+    FloatDzVar -/- [a-zA-Z0-9]
+    RefDzVar -/- [a-zA-Z0-9]
+    NatDzVar -/- [a-zA-Z0-9]
+    LanguageValueOrTypeDzVar -/- [a-zA-Z0-9]
+    ZvalDzVar -/- [a-zA-Z0-9]
+    ClassDdefDzVar -/- [a-zA-Z0-9]
+    LRefDzVar -/- [a-zA-Z0-9]
+    StackFrameDzVar -/- [a-zA-Z0-9]
+    BoolOrNullDzVar -/- [a-zA-Z0-9]
+    ThisOrLiteralDzVar -/- [a-zA-Z0-9]
+    SemanticValueDzVar -/- [a-zA-Z0-9]
+    FunReturnTypeDzVar -/- [a-zA-Z0-9]
+    ConversionModeDzVar -/- [a-zA-Z0-9]
+    VarDzVar -/- [a-zA-Z0-9]
+    FunDdefDzVar -/- [a-zA-Z0-9]
+    PlainLanguageValueDzVar -/- [a-zA-Z0-9]
+    LoopFrameDzVar -/- [a-zA-Z0-9]
+    VariableDz -/- [a-zA-Z0-9]
+lexical syntax
+    "'Positive" -> DzKLabel
+    "'XorAssign" -> DzKLabel
+    "'IsIdentical" -> DzKLabel
+    "'#andBool" -> DzKLabel
+    "'Block" -> DzKLabel
+    "'InterfaceExtends" -> DzKLabel
+    "'FullOpenTag" -> DzKLabel
+    "'Concat" -> DzKLabel
+    "'LOr" -> DzKLabel
+    "'Pattern" -> DzKLabel
+    "'ASPCloseTag" -> DzKLabel
+    "'HereDocStart" -> DzKLabel
+    "'InlineHTML" -> DzKLabel
+    "'ShellCommand" -> DzKLabel
+    "true" -> DzDzBool
+    "'InterfaceFunction" -> DzKLabel
+    "'ObjectAccess" -> DzKLabel
+    "heated" -> DzKLabel
+    "'SRAssign" -> DzKLabel
+    "'EmbeddedArrayVariable" -> DzKLabel
+    "cool" -> DzKLabel
+    "'IsNotIdentical" -> DzKLabel
+    "#token" -> DzKLabel
+    "'Unset" -> DzKLabel
+    "'Mul" -> DzKLabel
+    "'Implements" -> DzKLabel
+    "'Pair" -> DzKLabel
+    "'ModAssign" -> DzKLabel
+    "'Body" -> DzKLabel
+    "FalseLtl" -> DzDzLtlFormula
+    "'FunctionDeclRef" -> DzKLabel
+    "'While" -> DzKLabel
+    "'PostDec" -> DzKLabel
+    "'ObjectCast" -> DzKLabel
+    "'PlusAssign" -> DzKLabel
+    "'True" -> DzKLabel
+    "'ObjectProperty" -> DzKLabel
+    "'DQContent" -> DzKLabel
+    "'Variable" -> DzKLabel
+    "'PreDec" -> DzKLabel
+    "'LessEqual" -> DzKLabel
+    "'ASPOpenTag" -> DzKLabel
+    "'SLAssign" -> DzKLabel
+    "redex" -> DzKLabel
+    "'Expr" -> DzKLabel
+    "'FinalClass" -> DzKLabel
+    "'ConstantVariable" -> DzKLabel
+    "'ObjectCreation" -> DzKLabel
+    "'Modifiers" -> DzKLabel
+    "'Echo" -> DzKLabel
+    "'BoolCast" -> DzKLabel
+    "'AltWhile" -> DzKLabel
+    "TrueLtl" -> DzDzLtlFormula
+    "wrap-with" -> DzKLabel
+    "'HereDocContent" -> DzKLabel
+    "'OrAssign" -> DzKLabel
+    "'AbstractClass" -> DzKLabel
+    "'ConcatAssign" -> DzKLabel
+    "'ForEach" -> DzKLabel
+    "'Ternary" -> DzKLabel
+    "'And" -> DzKLabel
+    "'AbstractMethodBody" -> DzKLabel
+    "'InterfaceFunctionRef" -> DzKLabel
+    "'Private" -> DzKLabel
+    "'LNumber" -> DzKLabel
+    "'InternalFunction" -> DzKLabel
+    "'ParamRef" -> DzKLabel
+    "'BracedArrayAccess" -> DzKLabel
+    "'HexaChar" -> DzKLabel
+    "'ClassConstant" -> DzKLabel
+    "'OctaChar" -> DzKLabel
+    "'Return" -> DzKLabel
+    "'ListAssign" -> DzKLabel
+    "'DoWhile" -> DzKLabel
+    "'Not" -> DzKLabel
+    "'StaticFunctionCall" -> DzKLabel
+    "'MulAssign" -> DzKLabel
+    "'ReferenceAssign" -> DzKLabel
+    "'List" -> DzKLabel
+    "'AltSwitch" -> DzKLabel
+    "'Ref" -> DzKLabel
+    "'FunctionCall" -> DzKLabel
+    "'DeclareStatic" -> DzKLabel
+    "'TemplateDocument" -> DzKLabel
+    "'Break" -> DzKLabel
+    "'Final" -> DzKLabel
+    "false" -> DzDzBool
+    "'FloatCast" -> DzKLabel
+    "'For" -> DzKLabel
+    "'Document" -> DzKLabel
+    "'Less" -> DzKLabel
+    "'AltElseIf" -> DzKLabel
+    "isBinder" -> DzKLabel
+    "'IsEqual" -> DzKLabel
+    "'Normal" -> DzKLabel
+    "'IncludeOnce" -> DzKLabel
+    "'Eval" -> DzKLabel
+    "'DNumber" -> DzKLabel
+    "'Or" -> DzKLabel
+    "'ClassName" -> DzKLabel
+    "'ClassConstantDeclList" -> DzKLabel
+    "'AndAssign" -> DzKLabel
+    "'False" -> DzKLabel
+    "'AltFor" -> DzKLabel
+    "'VariableBraced" -> DzKLabel
+    "'MethodBody" -> DzKLabel
+    "'Key" -> DzKLabel
+    "'ErrorFree" -> DzKLabel
+    "isSet" -> DzKLabel
+    "'Isset" -> DzKLabel
+    "'OldFunctionDecl" -> DzKLabel
+    "'IndirectReference" -> DzKLabel
+    "'IsNotEqual" -> DzKLabel
+    "'Throw" -> DzKLabel
+    "'Protected" -> DzKLabel
+    "'Public" -> DzKLabel
+    "'Extends" -> DzKLabel
+    "'InlineEcho" -> DzKLabel
+    "'InstanceVariable" -> DzKLabel
+    "'Deci" -> DzKLabel
+    "'DoubleQuoted" -> DzKLabel
+    "'Continue" -> DzKLabel
+    "'Neg" -> DzKLabel
+    "isKResult" -> DzKLabel
+    "'GreaterEqual" -> DzKLabel
+    "'Assign" -> DzKLabel
+    "'DefaultCase" -> DzKLabel
+    "#symEqualitySort" -> DzKLabel
+    "'MagicConstant" -> DzKLabel
+    "'InterfaceDecl" -> DzKLabel
+    "'LAnd" -> DzKLabel
+    "'PreInc" -> DzKLabel
+    "'DivAssign" -> DzKLabel
+    "'HereDoc" -> DzKLabel
+    "'Require" -> DzKLabel
+    "'Param" -> DzKLabel
+    "'None" -> DzKLabel
+    "'Directive" -> DzKLabel
+    "'Mod" -> DzKLabel
+    "'ShortOpenTag" -> DzKLabel
+    "'Abstract" -> DzKLabel
+    "'EchoOpenTag" -> DzKLabel
+    "'ClassConstantDecl" -> DzKLabel
+    "'Try" -> DzKLabel
+    "'ListWrap" -> DzKLabel
+    "'NullCast" -> DzKLabel
+    "heat" -> DzKLabel
+    "'Name" -> DzKLabel
+    "'AltForEach" -> DzKLabel
+    "'Die" -> DzKLabel
+    "'Clone" -> DzKLabel
+    "'Null" -> DzKLabel
+    "'Case" -> DzKLabel
+    "'RefValue" -> DzKLabel
+    "'Literal" -> DzKLabel
+    "'ParamDefault" -> DzKLabel
+    "'AltIf" -> DzKLabel
+    "'RequireOnce" -> DzKLabel
+    "'SingleQuoted" -> DzKLabel
+    "'Div" -> DzKLabel
+    "'IntCast" -> DzKLabel
+    "'Octa" -> DzKLabel
+    "'StringAccess" -> DzKLabel
+    "'EmbeddedString" -> DzKLabel
+    "#set" -> DzKLabel
+    "'DeclareGlobal" -> DzKLabel
+    "'Catch" -> DzKLabel
+    "'CloseTag" -> DzKLabel
+    "'FunctionDecl" -> DzKLabel
+    "'ArrayAccess" -> DzKLabel
+    "'MinAssign" -> DzKLabel
+    "'Min" -> DzKLabel
+    "'FunctionName" -> DzKLabel
+    "'Print" -> DzKLabel
+    "'Array" -> DzKLabel
+    "'StringCast" -> DzKLabel
+    "'StaticVariable" -> DzKLabel
+    "'Hexa" -> DzKLabel
+    "'Braced" -> DzKLabel
+    "'ConstantEncapsedString" -> DzKLabel
+    "'Some" -> DzKLabel
+    "'PostInc" -> DzKLabel
+    "'Include" -> DzKLabel
+    "'Static" -> DzKLabel
+    "'Switch" -> DzKLabel
+    "'If" -> DzKLabel
+    "'OldFunctionDeclRef" -> DzKLabel
+    "'Empty" -> DzKLabel
+    "'ArrayCast" -> DzKLabel
+    "'BinAnd" -> DzKLabel
+    "'Negative" -> DzKLabel
+    "'Value" -> DzKLabel
+    "'Escape" -> DzKLabel
+    "'Exit" -> DzKLabel
+    "'Simple" -> DzKLabel
+    "'Declare" -> DzKLabel
+    "'Plus" -> DzKLabel
+    "'Class" -> DzKLabel
+    "'ElseIf" -> DzKLabel
+    "'LXor" -> DzKLabel
+    "'Default" -> DzKLabel
+    "'ParamConstant" -> DzKLabel
+    "'Greater" -> DzKLabel
+
+
+%% sort predicates
+    "isKey"      -> DzKLabel
+    "isSymbolicKey"      -> DzKLabel
+    "#symKey"      -> DzKLabel
+    "isCompoundValue"      -> DzKLabel
+    "isSymbolicCompoundValue"      -> DzKLabel
+    "#symCompoundValue"      -> DzKLabel
+    "is#LtlFormula"      -> DzKLabel
+    "isSymbolic#LtlFormula"      -> DzKLabel
+    "#sym#LtlFormula"      -> DzKLabel
+    "isNonStrictComparisonOp"      -> DzKLabel
+    "isSymbolicNonStrictComparisonOp"      -> DzKLabel
+    "#symNonStrictComparisonOp"      -> DzKLabel
+    "isLtlFormula"      -> DzKLabel
+    "isSymbolicLtlFormula"      -> DzKLabel
+    "#symLtlFormula"      -> DzKLabel
+    "isArray"      -> DzKLabel
+    "isSymbolicArray"      -> DzKLabel
+    "#symArray"      -> DzKLabel
+    "isTCPError"      -> DzKLabel
+    "isSymbolicTCPError"      -> DzKLabel
+    "#symTCPError"      -> DzKLabel
+    "isClassProp"      -> DzKLabel
+    "isSymbolicClassProp"      -> DzKLabel
+    "#symClassProp"      -> DzKLabel
+    "isKResult"      -> DzKLabel
+    "isSymbolicKResult"      -> DzKLabel
+    "#symKResult"      -> DzKLabel
+    "isArrayItemVisibility"      -> DzKLabel
+    "isSymbolicArrayItemVisibility"      -> DzKLabel
+    "#symArrayItemVisibility"      -> DzKLabel
+    "is#Float"      -> DzKLabel
+    "isTCPAnswer"      -> DzKLabel
+    "isSymbolicTCPAnswer"      -> DzKLabel
+    "#symTCPAnswer"      -> DzKLabel
+    "is#String"      -> DzKLabel
+    "isBasicRef"      -> DzKLabel
+    "isSymbolicBasicRef"      -> DzKLabel
+    "#symBasicRef"      -> DzKLabel
+    "isProp"      -> DzKLabel
+    "isSymbolicProp"      -> DzKLabel
+    "#symProp"      -> DzKLabel
+    "is#ModelCheckerState"      -> DzKLabel
+    "isOptionId"      -> DzKLabel
+    "isSymbolicOptionId"      -> DzKLabel
+    "#symOptionId"      -> DzKLabel
+    "isKeyList"      -> DzKLabel
+    "isSymbolicKeyList"      -> DzKLabel
+    "#symKeyList"      -> DzKLabel
+    "isInternal"      -> DzKLabel
+    "isSymbolicInternal"      -> DzKLabel
+    "#symInternal"      -> DzKLabel
+    "isMyMap"      -> DzKLabel
+    "isSymbolicMyMap"      -> DzKLabel
+    "#symMyMap"      -> DzKLabel
+    "is#ModelCheckResult"      -> DzKLabel
+    "isInt"      -> DzKLabel
+    "isSymbolicInt"      -> DzKLabel
+    "#symInt"      -> DzKLabel
+    "is#Bool"      -> DzKLabel
+    "is#Prop"      -> DzKLabel
+    "isOptionArrayCrntElem"      -> DzKLabel
+    "isSymbolicOptionArrayCrntElem"      -> DzKLabel
+    "#symOptionArrayCrntElem"      -> DzKLabel
+    "isModelCheckerState"      -> DzKLabel
+    "isSymbolicModelCheckerState"      -> DzKLabel
+    "#symModelCheckerState"      -> DzKLabel
+    "isArrayItem"      -> DzKLabel
+    "isSymbolicArrayItem"      -> DzKLabel
+    "#symArrayItem"      -> DzKLabel
+    "isValue"      -> DzKLabel
+    "isSymbolicValue"      -> DzKLabel
+    "#symValue"      -> DzKLabel
+    "isVariable"      -> DzKLabel
+    "isSymbolicVariable"      -> DzKLabel
+    "#symVariable"      -> DzKLabel
+    "isConvertibleToLoc"      -> DzKLabel
+    "isSymbolicConvertibleToLoc"      -> DzKLabel
+    "#symConvertibleToLoc"      -> DzKLabel
+    "isChar"      -> DzKLabel
+    "isSymbolicChar"      -> DzKLabel
+    "#symChar"      -> DzKLabel
+    "isOptionConversionMode"      -> DzKLabel
+    "isSymbolicOptionConversionMode"      -> DzKLabel
+    "#symOptionConversionMode"      -> DzKLabel
+    "isMyBag"      -> DzKLabel
+    "isSymbolicMyBag"      -> DzKLabel
+    "#symMyBag"      -> DzKLabel
+    "isSpecialValue"      -> DzKLabel
+    "isSymbolicSpecialValue"      -> DzKLabel
+    "#symSpecialValue"      -> DzKLabel
+    "isConvertibleToLanguageValue"      -> DzKLabel
+    "isSymbolicConvertibleToLanguageValue"      -> DzKLabel
+    "#symConvertibleToLanguageValue"      -> DzKLabel
+    "isString"      -> DzKLabel
+    "isSymbolicString"      -> DzKLabel
+    "#symString"      -> DzKLabel
+    "isStream"      -> DzKLabel
+    "isSymbolicStream"      -> DzKLabel
+    "#symStream"      -> DzKLabel
+    "isReturnable"      -> DzKLabel
+    "isSymbolicReturnable"      -> DzKLabel
+    "#symReturnable"      -> DzKLabel
+    "isMyList"      -> DzKLabel
+    "isSymbolicMyList"      -> DzKLabel
+    "#symMyList"      -> DzKLabel
+    "isId"      -> DzKLabel
+    "isSymbolicId"      -> DzKLabel
+    "#symId"      -> DzKLabel
+    "isRefType"      -> DzKLabel
+    "isSymbolicRefType"      -> DzKLabel
+    "#symRefType"      -> DzKLabel
+    "isScalarValue"      -> DzKLabel
+    "isSymbolicScalarValue"      -> DzKLabel
+    "#symScalarValue"      -> DzKLabel
+    "isLiteralValue"      -> DzKLabel
+    "isSymbolicLiteralValue"      -> DzKLabel
+    "#symLiteralValue"      -> DzKLabel
+    "isNull"      -> DzKLabel
+    "isSymbolicNull"      -> DzKLabel
+    "#symNull"      -> DzKLabel
+    "isOptionForeachArrayPair"      -> DzKLabel
+    "isSymbolicOptionForeachArrayPair"      -> DzKLabel
+    "#symOptionForeachArrayPair"      -> DzKLabel
+    "isForeachArrayPair"      -> DzKLabel
+    "isSymbolicForeachArrayPair"      -> DzKLabel
+    "#symForeachArrayPair"      -> DzKLabel
+    "isBool"      -> DzKLabel
+    "isSymbolicBool"      -> DzKLabel
+    "#symBool"      -> DzKLabel
+    "isType"      -> DzKLabel
+    "isSymbolicType"      -> DzKLabel
+    "#symType"      -> DzKLabel
+    "isModelCheckResult"      -> DzKLabel
+    "isSymbolicModelCheckResult"      -> DzKLabel
+    "#symModelCheckResult"      -> DzKLabel
+    "isComparisonOp"      -> DzKLabel
+    "isSymbolicComparisonOp"      -> DzKLabel
+    "#symComparisonOp"      -> DzKLabel
+    "isThisTag"      -> DzKLabel
+    "isSymbolicThisTag"      -> DzKLabel
+    "#symThisTag"      -> DzKLabel
+    "isSymbolicK"      -> DzKLabel
+    "#symK"      -> DzKLabel
+    "isExp"      -> DzKLabel
+    "isSymbolicExp"      -> DzKLabel
+    "#symExp"      -> DzKLabel
+    "is#Int"      -> DzKLabel
+    "isStrictComparisonOp"      -> DzKLabel
+    "isSymbolicStrictComparisonOp"      -> DzKLabel
+    "#symStrictComparisonOp"      -> DzKLabel
+    "isZvalField"      -> DzKLabel
+    "isSymbolicZvalField"      -> DzKLabel
+    "#symZvalField"      -> DzKLabel
+    "isOptionArrayItem"      -> DzKLabel
+    "isSymbolicOptionArrayItem"      -> DzKLabel
+    "#symOptionArrayItem"      -> DzKLabel
+    "isOptionLoc"      -> DzKLabel
+    "isSymbolicOptionLoc"      -> DzKLabel
+    "#symOptionLoc"      -> DzKLabel
+    "isLoc"      -> DzKLabel
+    "isSymbolicLoc"      -> DzKLabel
+    "#symLoc"      -> DzKLabel
+    "isOptionString"      -> DzKLabel
+    "isSymbolicOptionString"      -> DzKLabel
+    "#symOptionString"      -> DzKLabel
+    "isArrayCrntElem"      -> DzKLabel
+    "isSymbolicArrayCrntElem"      -> DzKLabel
+    "#symArrayCrntElem"      -> DzKLabel
+    "isMySet"      -> DzKLabel
+    "isSymbolicMySet"      -> DzKLabel
+    "#symMySet"      -> DzKLabel
+    "isNone"      -> DzKLabel
+    "isSymbolicNone"      -> DzKLabel
+    "#symNone"      -> DzKLabel
+    "isOptionInt"      -> DzKLabel
+    "isSymbolicOptionInt"      -> DzKLabel
+    "#symOptionInt"      -> DzKLabel
+    "isLanguageValue"      -> DzKLabel
+    "isSymbolicLanguageValue"      -> DzKLabel
+    "#symLanguageValue"      -> DzKLabel
+    "isBinaryOp"      -> DzKLabel
+    "isSymbolicBinaryOp"      -> DzKLabel
+    "#symBinaryOp"      -> DzKLabel
+    "isObject"      -> DzKLabel
+    "isSymbolicObject"      -> DzKLabel
+    "#symObject"      -> DzKLabel
+    "isClassMethod"      -> DzKLabel
+    "isSymbolicClassMethod"      -> DzKLabel
+    "#symClassMethod"      -> DzKLabel
+    "isFloat"      -> DzKLabel
+    "isSymbolicFloat"      -> DzKLabel
+    "#symFloat"      -> DzKLabel
+    "isRef"      -> DzKLabel
+    "isSymbolicRef"      -> DzKLabel
+    "#symRef"      -> DzKLabel
+    "isNat"      -> DzKLabel
+    "isSymbolicNat"      -> DzKLabel
+    "#symNat"      -> DzKLabel
+    "isLanguageValueOrType"      -> DzKLabel
+    "isSymbolicLanguageValueOrType"      -> DzKLabel
+    "#symLanguageValueOrType"      -> DzKLabel
+    "isZval"      -> DzKLabel
+    "isSymbolicZval"      -> DzKLabel
+    "#symZval"      -> DzKLabel
+    "isClassDef"      -> DzKLabel
+    "isSymbolicClassDef"      -> DzKLabel
+    "#symClassDef"      -> DzKLabel
+    "isLRef"      -> DzKLabel
+    "isSymbolicLRef"      -> DzKLabel
+    "#symLRef"      -> DzKLabel
+    "isStackFrame"      -> DzKLabel
+    "isSymbolicStackFrame"      -> DzKLabel
+    "#symStackFrame"      -> DzKLabel
+    "isBoolOrNull"      -> DzKLabel
+    "isSymbolicBoolOrNull"      -> DzKLabel
+    "#symBoolOrNull"      -> DzKLabel
+    "isSymbolicKItem"      -> DzKLabel
+    "#symKItem"      -> DzKLabel
+    "isThisOrLiteral"      -> DzKLabel
+    "isSymbolicThisOrLiteral"      -> DzKLabel
+    "#symThisOrLiteral"      -> DzKLabel
+    "isSemanticValue"      -> DzKLabel
+    "isSymbolicSemanticValue"      -> DzKLabel
+    "#symSemanticValue"      -> DzKLabel
+    "isFunReturnType"      -> DzKLabel
+    "isSymbolicFunReturnType"      -> DzKLabel
+    "#symFunReturnType"      -> DzKLabel
+    "isConversionMode"      -> DzKLabel
+    "isSymbolicConversionMode"      -> DzKLabel
+    "#symConversionMode"      -> DzKLabel
+    "isVar"      -> DzKLabel
+    "isSymbolicVar"      -> DzKLabel
+    "#symVar"      -> DzKLabel
+    "isFunDef"      -> DzKLabel
+    "isSymbolicFunDef"      -> DzKLabel
+    "#symFunDef"      -> DzKLabel
+    "isPlainLanguageValue"      -> DzKLabel
+    "isSymbolicPlainLanguageValue"      -> DzKLabel
+    "#symPlainLanguageValue"      -> DzKLabel
+    "isLoopFrame"      -> DzKLabel
+    "isSymbolicLoopFrame"      -> DzKLabel
+    "#symLoopFrame"      -> DzKLabel
+
+
+
+%% terminals reject
+    "String2Char" -> VARID {reject}
+    "WLtl" -> VARID {reject}
+    "Lget" -> VARID {reject}
+    "Vars2SMTLib" -> VARID {reject}
+    "LError" -> VARID {reject}
+    "String2DotK" -> VARID {reject}
+    "LgetRef" -> VARID {reject}
+    "OID" -> VARID {reject}
+    "String2Bool" -> VARID {reject}
+    "ArrayCreateEmpty" -> VARID {reject}
+    "WARNING" -> VARID {reject}
+    "Id2String" -> VARID {reject}
+    "CellLabel2KLabel" -> VARID {reject}
+    "RgetRef" -> VARID {reject}
+    "MethodNotFound" -> VARID {reject}
+    "ROOT" -> VARID {reject}
+    "MyListItem" -> VARID {reject}
+    "String2Bag" -> VARID {reject}
+    "K2Sort" -> VARID {reject}
+    "FalseLtl" -> VARID {reject}
+    "K2SMTLib" -> VARID {reject}
+    "Int2String" -> VARID {reject}
+    "SMTLibQuery" -> VARID {reject}
+    "MakeStaticDecl" -> VARID {reject}
+    "String2Float" -> VARID {reject}
+    "String2K" -> VARID {reject}
+    "String2Id" -> VARID {reject}
+    "ArrayInitProps" -> VARID {reject}
+    "Float2String" -> VARID {reject}
+    "CopyFunctionArgs" -> VARID {reject}
+    "ArrayWriteCrnt" -> VARID {reject}
+    "ArrayInitProp" -> VARID {reject}
+    "SMTCall" -> VARID {reject}
+    "MySetItem" -> VARID {reject}
+    "Int2Float" -> VARID {reject}
+    "RLtl" -> VARID {reject}
+    "Set2KLabel" -> VARID {reject}
+    "OLtl" -> VARID {reject}
+    "K2String" -> VARID {reject}
+    "Float2Int" -> VARID {reject}
+    "ArrayGetElemAtIndex" -> VARID {reject}
+    "Set2KTerm" -> VARID {reject}
+    "KList2KLabel" -> VARID {reject}
+    "Consts2SMTLib" -> VARID {reject}
+    "String2Int" -> VARID {reject}
+    "ArrayCreateElem" -> VARID {reject}
+    "Map2KLabel" -> VARID {reject}
+    "ArrayInitCrnt" -> VARID {reject}
+    "KLabel2String" -> VARID {reject}
+    "NULL" -> VARID {reject}
+    "Bag2KLabel" -> VARID {reject}
+    "ERROR" -> VARID {reject}
+    "KLabel2KLabel" -> VARID {reject}
+    "Set2KTermAcc" -> VARID {reject}
+    "Map" -> VARID {reject}
+    "MyMapOf" -> VARID {reject}
+    "Array" -> VARID {reject}
+    "ArrayUpdateElem" -> VARID {reject}
+    "DEPRECATED" -> VARID {reject}
+    "String2KLabel" -> VARID {reject}
+    "NOTICE" -> VARID {reject}
+    "Bag2String" -> VARID {reject}
+    "ULtl" -> VARID {reject}
+    "BinOp" -> VARID {reject}
+    "Char2String" -> VARID {reject}
+    "Literal" -> VARID {reject}
+    "TrueLtl" -> VARID {reject}
+    "ArrayCrnt2None" -> VARID {reject}
+    "List2KLabel" -> VARID {reject}
+    "Rget" -> VARID {reject}
+    "MyBagItem" -> VARID {reject}
+    "MakeDeprecatedWarning" -> VARID {reject}
+    "ArrayIndexOf" -> VARID {reject}
+
+lexical restrictions
+    %% follow restrictions
+    "substr" -/- [S].[t].[r].[i].[n].[g]
+    "=K" -/- [L].[a].[b].[e].[l]
+    "mod" -/- [I].[n].[t]
+    "'Mod" -/- [A].[s].[s].[i].[g].[n]
+    "this" -/- [T].[a].[g]
+    "'InterfaceFunction" -/- [R].[e].[f]
+    "#" -/- [E].[L].[O].[O].[P]
+    "#freeVars" -/- [S].[e].[t]
+    "'Hexa" -/- [C].[h].[a].[r]
+    "method" -/- [I].[n].[f].[o]
+    "Array" -/- [G].[e].[t].[E].[l].[e].[m].[A].[t].[I].[n].[d].[e].[x]
+    "run" -/- [S].[c].[r].[i].[p].[t]
+    "'Variable" -/- [B].[r].[a].[c].[e].[d]
+    "'Min" -/- [A].[s].[s].[i].[g].[n]
+    "'For" -/- [E].[a].[c].[h]
+    "current" -/- [O].[v].[e].[r].[f].[l].[o].[w]
+    "write" -/- [C].[l].[a].[s].[s].[S].[t].[a].[t].[i].[c].[M].[e].[m].[b].[e].[r].[s]
+    "'Default" -/- [C].[a].[s].[e]
+    "'Braced" -/- [A].[r].[r].[a].[y].[A].[c].[c].[e].[s].[s]
+    "'FunctionDecl" -/- [R].[e].[f]
+    "'List" -/- [A].[s].[s].[i].[g].[n]
+    "'Concat" -/- [A].[s].[s].[i].[g].[n]
+    "decRefCount" -/- [C].[o].[m].[p].[o].[u].[n].[d]
+    "#parse" -/- [T].[o].[k].[e].[n]
+    "less" -/- [E].[q].[u].[a].[l]
+    "Lget" -/- [R].[e].[f]
+    "=K" -/- [L].[i].[s].[t]
+    "replace" -/- [F].[i].[r].[s].[t]
+    "write" -/- [C].[l].[a].[s].[s].[I].[n].[s].[t].[a].[n].[c].[e].[M].[e].[m].[b].[e].[r].[s]
+    "Array" -/- [C].[r].[e].[a].[t].[e].[E].[m].[p].[t].[y]
+    "Array" -/- [W].[r].[i].[t].[e].[C].[r].[n].[t]
+    "/" -/- [I].[n].[t]
+    "min" -/- [I].[n].[t]
+    "#" -/- [E].[I].[S].[D].[I].[R]
+    "#getVars" -/- [F].[r].[o].[m].[K]
+    "ref" -/- [N].[u].[l].[l]
+    "'Abstract" -/- [C].[l].[a].[s].[s]
+    "'Div" -/- [A].[s].[s].[i].[g].[n]
+    "#freeVars" -/- [B].[i].[n].[d].[e].[r].[\2]
+    "#" -/- [E].[S].[P].[I].[P].[E]
+    "'Ref" -/- [V].[a].[l].[u].[e]
+    "#freeVars" -/- [B].[i].[n].[d].[e].[r].[\1]
+    "'Param" -/- [D].[e].[f].[a].[u].[l].[t]
+    "#" -/- [E].[N].[A].[M].[E].[T].[O].[O].[L].[O].[N].[G]
+    "|->" -/- [L].[t].[l]
+    "#" -/- [E].[I].[N].[V].[A].[L]
+    "'Param" -/- [C].[o].[n].[s].[t].[a].[n].[t]
+    "=/=K" -/- [L].[i].[s].[t]
+    "#" -/- [E].[O].[F]
+    "'Include" -/- [O].[n].[c].[e]
+    "'Echo" -/- [O].[p].[e].[n].[T].[a].[g]
+    "isEqual" -/- [S].[c].[a].[l].[a].[r]
+    "count" -/- [A].[l].[l].[O].[c].[c].[u].[r].[e].[n].[c].[e].[s]
+    "in" -/- [V].[a].[r].[s]
+    "'Declare" -/- [S].[t].[a].[t].[i].[c]
+    "'Less" -/- [E].[q].[u].[a].[l]
+    "#parse" -/- [I].[n].[p].[u].[t]
+    "'Final" -/- [C].[l].[a].[s].[s]
+    "'OldFunctionDecl" -/- [R].[e].[f]
+    "decRefCount" -/- [A].[r].[r].[a].[y].[E].[l].[e].[m].[s]
+    "String2K" -/- [L].[a].[b].[e].[l]
+    "zval" -/- [R].[e].[a].[d]
+    "'Static" -/- [V].[a].[r].[i].[a].[b].[l].[e]
+    "in" -/- [F].[u].[n]
+    "'Or" -/- [A].[s].[s].[i].[g].[n]
+    "'Null" -/- [C].[a].[s].[t]
+    "'Require" -/- [O].[n].[c].[e]
+    "#" -/- [E].[N].[O].[T].[D].[I].[R]
+    "replace" -/- [A].[l].[l]
+    "Array" -/- [I].[n].[i].[t].[C].[r].[n].[t]
+    "zval" -/- [C].[r].[e].[a].[t].[e]
+    "'Param" -/- [R].[e].[f]
+    "'Octa" -/- [C].[h].[a].[r]
+    "Array" -/- [I].[n].[i].[t].[P].[r].[o].[p]
+    "'Array" -/- [A].[c].[c].[e].[s].[s]
+    "#" -/- [E].[B].[A].[D].[F]
+    "method" -/- [L].[o].[o].[k].[u].[p]
+    "." -/- [M].[y].[S].[e].[t]
+    "'List" -/- [W].[r].[a].[p]
+    "#stat" -/- [T].[y].[p].[e].[s]
+    "#" -/- [E].[A].[C].[C].[E].[S]
+    "#freshSymSort" -/- [N]
+    "'ClassConstantDecl" -/- [L].[i].[s].[t]
+    "zval" -/- [W].[r].[i].[t].[e]
+    "run" -/- [F].[u].[n].[c].[t].[i].[o].[n]
+    "'And" -/- [A].[s].[s].[i].[g].[n]
+    "#token" -/- [T].[o].[S].[t].[r].[i].[n].[g]
+    "greater" -/- [E].[q].[u].[a].[l]
+    "geq" -/- [V].[a].[l]
+    "Set2KTerm" -/- [A].[c].[c]
+    "#freshSym" -/- [S].[o].[r].[t].[N]
+    "foreach" -/- [A].[r].[r].[a].[y].[P].[a].[i].[r]
+    "isNumeric" -/- [S].[t].[r].[i].[n].[g]
+    "Array" -/- [U].[p].[d].[a].[t].[e].[E].[l].[e].[m]
+    "array" -/- [C].[u].[r].[r].[e].[n].[t].[O].[v].[e].[r].[f].[l].[o].[w]
+    "#eval" -/- [H].[e].[l].[p].[e].[r]
+    "type" -/- [O].[f]
+    "object" -/- [I].[n].[i].[t]
+    "'Array" -/- [C].[a].[s].[t]
+    "expEval" -/- [L].[o].[c]
+    "'Greater" -/- [E].[q].[u].[a].[l]
+    "read" -/- [B].[a].[s].[i].[c].[R].[e].[f]
+    "Rget" -/- [R].[e].[f]
+    "." -/- [M].[y].[M].[a].[p]
+    "initClass" -/- [M].[e].[m].[b].[e].[r].[D].[e].[c].[l]
+    "'Static" -/- [F].[u].[n].[c].[t].[i].[o].[n].[C].[a].[l].[l]
+    "write" -/- [C].[l].[a].[s].[s].[M].[e].[t].[h].[o].[d]
+    "max" -/- [I].[n].[t]
+    "Array" -/- [C].[r].[e].[a].[t].[e].[E].[l].[e].[m]
+    "#freshSym" -/- [S].[o].[r].[t]
+    "Array" -/- [I].[n].[i].[t].[P].[r].[o].[p].[s]
+    "==K" -/- [L].[i].[s].[t]
+    "div" -/- [I].[n].[t]
+    "Array" -/- [I].[n].[d].[e].[x].[O].[f]
+    "'Class" -/- [N].[a].[m].[e]
+    "=/=K" -/- [L].[a].[b].[e].[l]
+    "#freshSym" -/- [N]
+    "'Abstract" -/- [M].[e].[t].[h].[o].[d].[B].[o].[d].[y]
+    "'AltFor" -/- [E].[a].[c].[h]
+    "in" -/- [K].[L].[i].[s].[t]
+    "/" -/- [F].[l].[o].[a].[t]
+    "'Plus" -/- [A].[s].[s].[i].[g].[n]
+    "#" -/- [E].[N].[O].[E].[N].[T]
+    "." -/- [M].[y].[L].[i].[s].[t]
+    "'Mul" -/- [A].[s].[s].[i].[g].[n]
+    "'ClassConstant" -/- [D].[e].[c].[l]
+    "'HereDoc" -/- [S].[t].[a].[r].[t]
+    "zval" -/- [D].[e].[s].[t].[r].[o].[y]
+    "'ClassConstant" -/- [D].[e].[c].[l].[L].[i].[s].[t]
+    "leq" -/- [V].[a].[l]
+    "'HereDoc" -/- [C].[o].[n].[t].[e].[n].[t]
+    "#freeVars" -/- [B].[i].[n].[d].[e].[r]
+    "run" -/- [R].[e].[m].[a].[i].[n].[i].[n].[g].[S].[w].[i].[t].[c].[h].[C].[l].[a].[u].[s].[e].[s]
+    "'Declare" -/- [G].[l].[o].[b].[a].[l]
+    "Array" -/- [C].[r].[n].[t].[\2].[N].[o].[n].[e]
+    "." -/- [M].[y].[B].[a].[g]
+    "'Class" -/- [C].[o].[n].[s].[t].[a].[n].[t].[D].[e].[c].[l]
+    "'Class" -/- [C].[o].[n].[s].[t].[a].[n].[t].[D].[e].[c].[l].[L].[i].[s].[t]
+    "==K" -/- [L].[a].[b].[e].[l]
+    "'Class" -/- [C].[o].[n].[s].[t].[a].[n].[t]
+lexical restrictions
+%% some restrictions to ensure greedy matching for user defined constants
+    DzDzInt -/- [0-9]
+    "is" -/- [\#A-Z]
+
+lexical syntax
+context-free syntax
+
+
+context-free restrictions
+    "#" -/- [s].[y].[m]

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><T>
+	<sentence filename="Command line pattern" loc="(1,1,1,94)">
+		
+		<body>
+			<Bag filename="Command line pattern" loc="(1,1,1,94)" sort="Bag">
+					<cell endLabel="kphp" filename="Command line pattern" label="kphp" loc="(1,1,1,87)" sort="BagItem">
+						<Bag filename="Command line pattern" loc="(1,8,1,79)" sort="Bag">
+								<cell endLabel="instrumentation" filename="Command line pattern" label="instrumentation" loc="(1,8,1,73)" sort="BagItem">
+									<Bag filename="Command line pattern" loc="(1,26,1,54)" sort="Bag">
+											<cell endLabel="label" filename="Command line pattern" label="label" loc="(1,26,1,48)" sort="BagItem">
+												<const filename="Command line pattern" loc="(1,34,1,39)" sort="#String" value="&quot;aba&quot;"/>
+												
+											</cell>
+											<var filename="Command line pattern" loc="(1,49,1,54)" name="I" sort="Bag" userTyped="true"/>
+											
+									</Bag>
+									
+								</cell>
+								<var filename="Command line pattern" loc="(1,74,1,79)" name="T" sort="Bag" userTyped="true"/>
+								
+						</Bag>
+						
+					</cell>
+					<var filename="Command line pattern" loc="(1,88,1,94)" name="PC" sort="Bag" userTyped="true"/>
+					
+			</Bag>
+			
+		</body>
+		
+	</sentence>
+	
+</T>

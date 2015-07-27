@@ -1,0 +1,21 @@
+<testResults><passed><test><fileName>tests/handwritten/foreach//1.phpt</fileName><outcome>pass</outcome><result>1,2,true</result><expected>1,2,true</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//2.phpt</fileName><outcome>pass</outcome><result>1,3,4,true</result><expected>1,3,4,true</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//3.phpt</fileName><outcome>pass</outcome><result>1,2,true</result><expected>1,2,true</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//4.phpt</fileName><outcome>pass</outcome><result>1,2,true</result><expected>1,2,true</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//5.phpt</fileName><outcome>pass</outcome><result>1,2,true</result><expected>1,2,true</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//7.phpt</fileName><outcome>pass</outcome><result>1,2,true</result><expected>1,2,true</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//break-foreach-1.phpt</fileName><outcome>pass</outcome><result>1,int(2)</result><expected>1,int(2)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//break-foreach-2.phpt</fileName><outcome>pass</outcome><result>1,int(2)</result><expected>1,int(2)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//foreach-false-elem.phpt</fileName><outcome>pass</outcome><result>1234</result><expected>1234</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>tests/handwritten/foreach//foreach-next.phpt</fileName><outcome>pass</outcome><result>1234</result><expected>1234</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test></passed><failed /><not-supported /><manual-review /><no-expected-result /><parser-issue /><regressions /><tot-passed>10</tot-passed><tot-failed>0</tot-failed><tot-not-supported>0</tot-not-supported><tot-manual-review>0</tot-manual-review><tot-no-result-file>0</tot-no-result-file><tot-parser-issue>0</tot-parser-issue><tot-regressions>0</tot-regressions></testResults>

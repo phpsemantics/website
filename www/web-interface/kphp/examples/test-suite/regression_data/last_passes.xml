@@ -1,0 +1,15 @@
+<testResults><passed><test><fileName>examples/test-suite//classes-misc.phpt</fileName><outcome>pass</outcome><result>foo</result><expected>foo</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>examples/test-suite//is-scalar.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(true)
+bool(true)
+bool(true)</result><expected>bool(false)
+bool(true)
+bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test></passed><failed><test><fileName>examples/test-suite//comparison-ac.phpt</fileName><outcome>fail</outcome><result>bool(false)
+bool(false)</result><expected>bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test></failed><not-supported /><manual-review /><no-expected-result /><parser-issue /><regressions /><tot-passed>2</tot-passed><tot-failed>1</tot-failed><tot-not-supported>0</tot-not-supported><tot-manual-review>0</tot-manual-review><tot-no-result-file>0</tot-no-result-file><tot-parser-issue>0</tot-parser-issue><tot-regressions>0</tot-regressions></testResults>

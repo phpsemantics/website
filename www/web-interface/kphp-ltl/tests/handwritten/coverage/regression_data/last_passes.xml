@@ -1,0 +1,626 @@
+<testResults><passed><test><fileName>testcov//arith-assign.phpt</fileName><outcome>pass</outcome><result>int(6)
+int(4)
+int(2)
+int(0)</result><expected>int(6)
+int(4)
+int(2)
+int(0)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//array-comparison.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(true)</result><expected>bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//array-init-prop-key-ref.phpt</fileName><outcome>pass</outcome><result>array(1) {
+  ["foo"]=&gt;
+  &amp;int(0)
+}</result><expected>array(1) {
+  ["foo"]=&gt;
+  &amp;int(0)
+}</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//array-key-cast.phpt</fileName><outcome>pass</outcome><result>array(1) {
+  [3]=&gt;
+  int(1)
+}</result><expected>array(1) {
+  [3]=&gt;
+  int(1)
+}</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//array-key-exists.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)</result><expected>bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//assign-cornercase.phpt</fileName><outcome>pass</outcome><result>Notice: Undefined variable: %s in %s on line %d</result><expected>Notice: Undefined variable: %s in %s on line %d</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//binop-plus.phpt</fileName><outcome>pass</outcome><result>6
+6.5
+6.5
+6.5</result><expected>6
+6.5
+6.5
+6.5</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//break.phpt</fileName><outcome>pass</outcome><result>**********
+**********
+*</result><expected>**********
+**********
+*</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//class-constant-error.phpt</fileName><outcome>pass</outcome><result>int(123)
+
+Fatal error: Cannot access protected property A::$b in %s on line %d</result><expected>int(123)
+
+Fatal error: Cannot access protected property A::$b in %s on line %d</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//class-name-self.phpt</fileName><outcome>pass</outcome><result>Hi!</result><expected>Hi!</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//classConst-parent.phpt</fileName><outcome>pass</outcome><result>string(1) "A"</result><expected>string(1) "A"</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//classes-misc.phpt</fileName><outcome>pass</outcome><result>foo</result><expected>foo</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//comparison-ac.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(false)</result><expected>bool(false)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//compound-types-comparison-ptimisation.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(true)</result><expected>bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//concat.phpt</fileName><outcome>pass</outcome><result>hello world!</result><expected>hello world!</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//continue.phpt</fileName><outcome>pass</outcome><result>0
+1
+2
+3
+4
+5
+6
+7
+8
+9</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//count.phpt</fileName><outcome>pass</outcome><result>int(1)
+int(1)
+int(1)</result><expected>int(1)
+int(1)
+int(1)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//define-defined.phpt</fileName><outcome>pass</outcome><result>string(1) "c"
+bool(true)
+bool(false)</result><expected>string(1) "c"
+bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//die-exit.phpt</fileName><outcome>pass</outcome><result>This program terminates here!</result><expected>This program terminates here!</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//doublequoted-empty.phpt</fileName><outcome>pass</outcome><result /><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//each-scalar.phpt</fileName><outcome>pass</outcome><result>Warning: Only variables should be assigned by reference in %s on line %d
+NULL</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//echo-unroll.phpt</fileName><outcome>pass</outcome><result>123</result><expected>123</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//exception.phpt</fileName><outcome>pass</outcome><result>first line
+Exception!</result><expected>first line
+Exception!</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//foreach-bug.phpt</fileName><outcome>pass</outcome><result>23NULL</result><expected>23NULL</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//foreach-scalar.phpt</fileName><outcome>pass</outcome><result>Warning: Warning: Invalid argument supplied for foreach() in %s on line %d
+
+Warning: Warning: Invalid argument supplied for foreach() in %s on line %d
+
+Notice: Undefined variable: %s in %s on line %d
+
+Warning: Warning: Invalid argument supplied for foreach() in %s on line %d</result><expected>Warning: Warning: Invalid argument supplied for foreach() in %s on line %d
+
+Warning: Warning: Invalid argument supplied for foreach() in %s on line %d
+
+Notice: Undefined variable: %s in %s on line %d
+
+Warning: Warning: Invalid argument supplied for foreach() in %s on line %d</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//fun-arg-with-default.phpt</fileName><outcome>pass</outcome><result>5</result><expected>5</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//greater-bool.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(false)
+bool(true)
+bool(false)</result><expected>bool(false)
+bool(false)
+bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//greaterEqual-bool.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)
+bool(true)
+bool(true)</result><expected>bool(true)
+bool(false)
+bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//greaterEqual-misc.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(true)
+bool(false)
+bool(true)</result><expected>bool(false)
+bool(true)
+bool(false)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//inline-echo.phpt</fileName><outcome>pass</outcome><result>hello</result><expected>hello</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//is-array.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)</result><expected>bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//is-numeric-string.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)</result><expected>bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//is-scalar.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(true)
+bool(true)
+bool(true)</result><expected>bool(false)
+bool(true)
+bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//is-string.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)</result><expected>bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isEqual-null-LHS.phpt</fileName><outcome>pass</outcome><result>Notice: Undefined variable: %s in %s on line %d
+bool(true)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+bool(false)</result><expected>Notice: Undefined variable: %s in %s on line %d
+bool(true)
+bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+bool(true)
+bool(false)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isEqual-same-loc.phpt</fileName><outcome>pass</outcome><result>bool(true)</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isEqual-type-juggling.phpt</fileName><outcome>pass</outcome><result>Notice: Undefined variable: %s in %s on line %d
+bool(false)
+
+Notice: Undefined variable: %s in %s on line %d
+bool(false)
+bool(false)
+bool(false)</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isIdentical.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+bool(true)</result><expected>bool(true)
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isNotEqual.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(true)</result><expected>bool(false)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isnumeric.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(true)
+bool(true)
+bool(true)
+bool(false)</result><expected>bool(true)
+bool(true)
+bool(true)
+bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//isset-corner-cases.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(false)</result><expected>bool(false)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//key-arg2loc.phpt</fileName><outcome>pass</outcome><result>0</result><expected>0</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//key.phpt</fileName><outcome>pass</outcome><result>Warning: Only variables should be assigned by reference in %s on line %d
+NULL</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//less-misc.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(true)
+bool(false)
+bool(true)
+bool(false)</result><expected>bool(true)
+bool(true)
+bool(false)
+bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//lessEqual-misc.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)
+bool(true)
+bool(false)</result><expected>bool(true)
+bool(false)
+bool(true)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//lget-error-case.phpt</fileName><outcome>pass</outcome><result>Warning: Cannot use a scalar value as an array in %s on line %d
+int(0)
+NULL</result><expected>Warning: Cannot use a scalar value as an array in %s on line %d
+int(0)
+NULL</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//meth-call-name2langvalue.phpt</fileName><outcome>pass</outcome><result>Hello!</result><expected>Hello!</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//meth-lookpu-not-found.phpt</fileName><outcome>pass</outcome><result>Fatal error: Call to undefined method ROOT::$foo in %s on line %d</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//min.phpt</fileName><outcome>pass</outcome><result>0
+0.0
+-2
+2
+-2.0</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//mod.phpt</fileName><outcome>pass</outcome><result>int(0)
+int(0)
+int(0)
+int(0)</result><expected>int(0)
+int(0)
+int(0)
+int(0)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//next-arg-2-loc.phpt</fileName><outcome>pass</outcome><result>bool(false)</result><expected>bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//next-scalar.phpt</fileName><outcome>pass</outcome><result>Warning: Only variables should be assigned by reference in %s on line %d</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//not.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)
+bool(false)
+bool(true)
+bool(true)</result><expected>bool(true)
+bool(false)
+bool(false)
+bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//obj-comparison-different-class.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)</result><expected>bool(false)
+bool(false)
+bool(false)
+bool(false)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//obj-comparison-same-class.phpt</fileName><outcome>pass</outcome><result>bool(true)
+bool(false)
+bool(true)
+bool(true)
+bool(false)
+bool(false)</result><expected>bool(true)
+bool(false)
+bool(true)
+bool(true)
+bool(false)
+bool(false)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//preDec.phpt</fileName><outcome>pass</outcome><result>int(1)</result><expected>int(1)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//ref-assign-func-returning-value.phpt</fileName><outcome>pass</outcome><result>Warning: Only variables should be assigned by reference in %s on line %d
+int(123)</result><expected>Warning: Only variables should be assigned by reference in %s on line %d
+int(123)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//string-cast-arg-2-lang-value.phpt</fileName><outcome>pass</outcome><result>string(1) "0"</result><expected>string(1) "0"</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//string2Number-corner-cases.phpt</fileName><outcome>pass</outcome><result>int(0)
+int(0)</result><expected>int(0)
+int(0)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//string2Number.phpt</fileName><outcome>pass</outcome><result>123
+123
+123
+123
+0
+1.23e+2
+1.235e+2
+1.23e+2
+1.235e+2
+0.0</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//stringCast.phpt</fileName><outcome>pass</outcome><result>string(3) "123"
+string(5) "Array"
+string(1) "1"
+string(0) ""</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//substr.phpt</fileName><outcome>pass</outcome><result>e</result><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//template-doc-literal.phpt</fileName><outcome>pass</outcome><result>Hello I am a literal!</result><expected>Hello I am a literal!</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//template-document-echo.phpt</fileName><outcome>pass</outcome><result>hey</result><expected>hey</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//toArray.phpt</fileName><outcome>pass</outcome><result>array(2) {
+  [0]=&gt;
+  int(1)
+  [1]=&gt;
+  int(2)
+}
+array(1) {
+  [0]=&gt;
+  int(0)
+}
+array(1) {
+  ["a"]=&gt;
+  int(1)
+}</result><expected>array(2) {
+  [0]=&gt;
+  int(1)
+  [1]=&gt;
+  int(2)
+}
+array(1) {
+  [0]=&gt;
+  int(0)
+}
+array(1) {
+  ["a"]=&gt;
+  int(1)
+}</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//toBoolean.phpt</fileName><outcome>pass</outcome><result>bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+bool(true)</result><expected>bool(false)
+bool(false)
+bool(false)
+bool(true)
+bool(false)
+bool(true)
+bool(false)
+bool(false)
+bool(true)
+bool(true)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//toObject.phpt</fileName><outcome>pass</outcome><result>object(stdClass)#%d (2) {
+  [0]=&gt;
+  int(1)
+  [1]=&gt;
+  int(2)
+}
+array(1) {
+  [0]=&gt;
+  int(0)
+}
+object(stdClass)#%d (1) {
+  ["a"]=&gt;
+  int(1)
+}</result><expected>object(stdClass)#%d (2) {
+  [0]=&gt;
+  int(1)
+  [1]=&gt;
+  int(2)
+}
+array(1) {
+  [0]=&gt;
+  int(0)
+}
+object(stdClass)#%d (1) {
+  ["a"]=&gt;
+  int(1)
+}</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//tostring-bool.phpt</fileName><outcome>pass</outcome><result>string(1) "1"
+string(0) ""</result><expected>string(1) "1"
+string(0) ""</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//toString-misc.phpt</fileName><outcome>pass</outcome><result>string(5) "Array"
+string(3) "7.5"</result><expected>string(5) "Array"
+string(3) "7.5"</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//unset-corner-cases.phpt</fileName><outcome>pass</outcome><result /><expected /><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test></passed><failed><test><fileName>testcov//and.phpt</fileName><outcome>fail</outcome><result>no
+yes
+bool(true)</result><expected>no
+yes
+int(1)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//binop-type-juggling.phpt</fileName><outcome>fail</outcome><result>int(6)
+double(6.5)</result><expected>int(6)
+float(6.5)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//braced.phpt</fileName><outcome>fail</outcome><result /><expected>hello Daniele Filaretti!</expected><k>&lt;k&gt;
+            'VariableBraced(&amp;quot;z&amp;quot;) ~&amp;gt; 'DQContent(HOLE,, 'Some('Literal(&amp;quot; hello &amp;quot;
+              )),, 'Braced('ArrayAccess('Variable('Simple(&amp;quot;x&amp;quot;)),, 'Some(
+              'LNumber('Deci(&amp;quot;0&amp;quot;)))))) ~&amp;gt; 'DQContent(HOLE,, 'Some('Literal(&amp;quot; &amp;quot;
+              )),, 'Braced('ObjectAccess('Variable('Simple(&amp;quot;y&amp;quot;)),, 
+              'ObjectProperty('Simple(&amp;quot;name&amp;quot;))))) ~&amp;gt; 'DQContent(HOLE,, 'Some(
+              'Literal(&amp;quot;!&amp;quot;)),, 'Escape(110)) ~&amp;gt; 'DQContent('None(.KList),, 
+              HOLE,, 'None(.KList)) ~&amp;gt; 'DoubleQuoted(HOLE) ~&amp;gt; 
+              'ConstantEncapsedString(HOLE) ~&amp;gt; 'Echo('ListWrap(HOLE)) ~&amp;gt; 'Echo
+              ('ListWrap('Literal(&amp;quot;\n&amp;quot;)))
+        &lt;/k&gt;</k></test><test><fileName>testcov//classes-misc2.phpt</fileName><outcome>fail</outcome><result /><expected>foo</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//div.phpt</fileName><outcome>fail</outcome><result>int(4)
+double(2.0)</result><expected>int(4)
+float(2)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//each-object.phpt</fileName><outcome>fail</outcome><result>array(4) {
+  [0]=&gt;
+  string(1) "a"
+  [1]=&gt;
+  int(0)
+  ["key"]=&gt;
+  string(1) "a"
+  ["value"]=&gt;
+  int(0)
+}
+int(1)</result><expected>array(4) {
+  [1]=&gt;
+  int(0)
+  ["value"]=&gt;
+  int(0)
+  [0]=&gt;
+  string(1) "a"
+  ["key"]=&gt;
+  string(1) "a"
+}
+int(1)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//empty.phpt</fileName><outcome>fail</outcome><result>bool(true)
+bool(false)
+bool(true)</result><expected>bool(false)
+bool(false)
+bool(true)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//gettype.phpt</fileName><outcome>fail</outcome><result>int
+double
+string
+boolean
+array
+object
+NULL</result><expected>integer
+double
+string
+boolean
+array
+object
+NULL</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//object-cast.phpt</fileName><outcome>fail</outcome><result /><expected>object(stdClass)#%d (1) {
+  ["scalar"]=&gt;
+  int(123)
+}</expected><k>&lt;k&gt;
+            arrayCurrentOverflow ( (Literal ( 'Array('ListWrap('Pair('Some(
+              'Key(&amp;quot;scalar&amp;quot;)),, 'Value(123)))) )) ) ~&amp;gt; *Cond ( HOLE , 'Expr(
+              reset ( #symLoc(14) )) , .K ) ~&amp;gt; OID ( #symLoc(14) , stdClass , 
+              0 ) ~&amp;gt; 'Assign(ref ( #symLoc(3) , &amp;quot;y&amp;quot; ),, HOLE) ~&amp;gt; 'Expr(HOLE)
+               ~&amp;gt; 'Expr('FunctionCall('FunctionName(&amp;quot;var_dump&amp;quot;),, 'ListWrap(
+              'Param('Variable('Simple(&amp;quot;y&amp;quot;)))))) ~&amp;gt; 'Echo('ListWrap('Literal(
+              &amp;quot;\n&amp;quot;)))
+        &lt;/k&gt;</k></test><test><fileName>testcov//or.phpt</fileName><outcome>fail</outcome><result>no
+yes
+bool(true)</result><expected>no
+yes
+int(1)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//printr.phpt</fileName><outcome>fail</outcome><result>0
+5.0e-1
+1
+hello
+Array
+(
+  [0]=&gt; 0
+)
+A Object
+(
+  ["a"]=&gt; a
+    ["b":protected]=&gt; b
+    ["c":"A":private]=&gt; c
+)</result><expected>00.51helloArray
+(
+    [0] =&gt; 0
+)
+A Object
+(
+    [a] =&gt; a
+    [b:protected] =&gt; b
+    [c:A:private] =&gt; c
+)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//static-fun-call-arg2langvalue.phpt</fileName><outcome>fail</outcome><result>foo</result><expected>fun</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//string-access.phpt</fileName><outcome>fail</outcome><result>string(1) "h"
+NULL</result><expected>string(1) "h"
+string(1) "h"</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//this.phpt</fileName><outcome>fail</outcome><result /><expected /><k>&lt;k&gt;
+            read ( NULL ) ~&amp;gt; 'Echo('ListWrap(HOLE)) ~&amp;gt; 'Echo('ListWrap(
+              'Literal(&amp;quot;\n&amp;quot;)))
+        &lt;/k&gt;</k></test><test><fileName>testcov//tofloat-bool.phpt</fileName><outcome>fail</outcome><result>double(1.0)
+double(0.0)</result><expected>float(1)
+float(0)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//vardump.phpt</fileName><outcome>fail</outcome><result>int(0)
+double(5.0e-1)
+bool(true)
+string(5) "hello"
+array(1) {
+  [0]=&gt;
+  int(0)
+}
+object(A)#%d (3) {
+  ["a"]=&gt;
+  string(1) "a"
+  ["b":protected]=&gt;
+  string(1) "b"
+  ["c":"A":private]=&gt;
+  string(1) "c"
+}
+NULL</result><expected>int(0)
+float(0.5)
+bool(true)
+string(5) "hello"
+array(1) {
+  [0]=&gt;
+  int(0)
+}
+object(A)#%d (3) {
+  ["a"]=&gt;
+  string(1) "a"
+  ["b":protected]=&gt;
+  string(1) "b"
+  ["c":"A":private]=&gt;
+  string(1) "c"
+}
+NULL</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//xor.phpt</fileName><outcome>fail</outcome><result>bool(false)
+bool(true)
+bool(true)
+bool(false)
+bool(true)</result><expected>bool(false)
+bool(true)
+bool(true)
+bool(false)
+int(1)</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test></failed><not-supported /><manual-review><test><fileName>testcov//foreach-invalid-pattern.phpt</fileName><outcome>output_needs_manual_review</outcome><result>Fatal error: Key element cannot be a reference in %s on line $d</result><expected>Fatal error: Key element cannot be a reference in %s on line %d</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//ref-assign.phpt</fileName><outcome>output_needs_manual_review</outcome><result>Warning: Only variables should be assigned by reference in %s on line %d
+int(0)
+object(stdClass)#%d (1) {
+  ["a"]=&gt;
+  &amp;int(0)
+}</result><expected>Warning: Only variables should be assigned by reference in %s on line %d
+int(0)
+object(stdClass)#1 (1) {
+  ["a"]=&gt;
+  &amp;int(0)
+}</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test><test><fileName>testcov//reset-scalar.phpt</fileName><outcome>output_needs_manual_review</outcome><result>Warning: Only variables should be assigned by reference in %s on line %d</result><expected>Fatal error: Only variables can be passed by reference in %s on line %d</expected><k>&lt;k&gt;
+            .K
+        &lt;/k&gt;</k></test></manual-review><no-expected-result /><parser-issue><test><fileName>testcov//constants.phpt</fileName><outcome>parsing_issue</outcome><result>Parsing problem. Probably due to outdated parser.</result><expected>-</expected><k>-</k></test><test><fileName>testcov//switch.phpt</fileName><outcome>parsing_issue</outcome><result>Parsing problem. Probably due to outdated parser.</result><expected>-</expected><k>-</k></test></parser-issue><regressions /><tot-passed>70</tot-passed><tot-failed>17</tot-failed><tot-not-supported>0</tot-not-supported><tot-manual-review>3</tot-manual-review><tot-no-result-file>0</tot-no-result-file><tot-parser-issue>2</tot-parser-issue><tot-regressions>0</tot-regressions></testResults>

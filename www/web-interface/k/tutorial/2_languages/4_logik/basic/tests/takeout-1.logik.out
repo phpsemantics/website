@@ -1,0 +1,2 @@
+\Q"L" |-> cons ( a (  ), cons ( b (  ), nil (  ) ) )\E
+\Q"L" |-> cons ( b (  ), cons ( a (  ), nil (  ) ) )\E

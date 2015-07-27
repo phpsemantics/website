@@ -1,0 +1,183 @@
+digraph G {
+subgraph cluster_mem {
+style=filled;
+color=lightgrey;
+node [shape = record];
+label = "mem"; 
+17[label = "true|bool|1|false"];
+18[label = "123|int|1|false"];
+15
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+<tr><td port="x" COLSPAN="3" bgcolor="red">(["x",none,#symLoc(16)])</td></tr>
+<tr><td port="y" COLSPAN="3" >(["y",(pri(Foo)),#symLoc(17)])</td></tr>
+<tr><td port="z" COLSPAN="3" >(["z",pro,#symLoc(18)])</td></tr>
+</table>>
+]
+15:x -> 16;
+15:y -> 17;
+15:z -> 18;
+16[label = "false|bool|1|false"];
+13
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+14[label = "(OID(#symLoc(15),Foo,0))|object|1|false"];
+14 -> 15;
+11
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+12
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+3
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+<tr><td port="obj" COLSPAN="3" bgcolor="red">(["obj",none,#symLoc(14)])</td></tr>
+</table>>
+]
+3:obj -> 14;
+2
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+<tr><td port="_GET" COLSPAN="3" bgcolor="red">(["_GET",none,#symLoc(9)])</td></tr>
+<tr><td port="_COOKIE" COLSPAN="3" >(["_COOKIE",none,#symLoc(10)])</td></tr>
+<tr><td port="_POST" COLSPAN="3" >(["_POST",none,#symLoc(11)])</td></tr>
+<tr><td port="GLOBALS" COLSPAN="3" >(["GLOBALS",none,#symLoc(3)])</td></tr>
+</table>>
+]
+2:_GET -> 9;
+2:_COOKIE -> 10;
+2:_POST -> 11;
+2:GLOBALS -> 3;
+1
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+10
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+7
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+6
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+5
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+4
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+9
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+8
+[
+shape=none
+label = <<table>
+<tr><td>array</td><td>1</td><td>false</td></tr>
+</table>>
+]
+}
+subgraph cluster_functions {
+style=filled;
+color=lightpink;
+label = "functions"; 
+node [style=filled,color=yellow];
+"\"array_key_exists\"";
+"\"count\"";
+"\"current\"";
+"\"define\"";
+"\"defined\"";
+"\"each\"";
+"\"gettype\"";
+"\"isEqualArray\"";
+"\"is_array\"";
+"\"is_float\"";
+"\"key\"";
+"\"label\"";
+"\"next\"";
+"\"print_r\"";
+"\"reset\"";
+"\"strlen\"";
+"\"user_input\"";
+"\"var_dump\"";
+}
+"\"array_key_exists\"" -> 4;
+"\"count\"" -> 4;
+"\"current\"" -> 4;
+"\"define\"" -> 4;
+"\"defined\"" -> 4;
+"\"each\"" -> 4;
+"\"gettype\"" -> 4;
+"\"isEqualArray\"" -> 12;
+"\"is_array\"" -> 4;
+"\"is_float\"" -> 4;
+"\"key\"" -> 4;
+"\"label\"" -> 4;
+"\"next\"" -> 4;
+"\"print_r\"" -> 4;
+"\"reset\"" -> 4;
+"\"strlen\"" -> 4;
+"\"user_input\"" -> 4;
+"\"var_dump\"" -> 4;
+node [shape=diamond, peripheries=2, style=filled,color=lightblue];
+Exception;
+Exception -> stdClass;
+node [shape=ellipse, peripheries=2, style=filled,color=yellow];
+Exception -> "\"Exception\"";
+"\"Exception\"" ->6;
+Exception -> "\"getMessage\"";
+"\"getMessage\"" ->7;
+Exception -> 5;
+node [shape=diamond, peripheries=2, style=filled,color=lightblue];
+Foo;
+Foo -> stdClass;
+node [shape=ellipse, peripheries=2, style=filled,color=yellow];
+Foo -> 8;
+}

@@ -1,0 +1,12 @@
+<?php
+	// increments a number
+	function inc($x) {
+		if (is_numeric($x))
+			return $x + 1;
+		else
+			return "This function can only be applied to numbers!";
+	}
+
+	echo inc(0);
+	echo inc(true);
+?>

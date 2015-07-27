@@ -1,0 +1,4357 @@
+module Program
+
+imports Common
+imports KBuiltinsBasic
+exports
+
+context-free syntax
+context-free priorities
+{
+    K "visitedL(~>)" K -> K {cons("K1458Syn")}
+} > {
+    K "visitedL(,,)" K -> K {cons("K1459Syn")}
+}
+
+context-free priorities
+{
+    "~Ltl" LtlFormula -> LtlFormula {cons("LtlFormula1727Syn")}
+    "OLtl" LtlFormula -> LtlFormula {cons("LtlFormula1728Syn")}
+    "<>Ltl" LtlFormula -> LtlFormula {cons("LtlFormula1729Syn")}
+    "[]Ltl" LtlFormula -> LtlFormula {cons("LtlFormula1730Syn")}
+} > {
+    LtlFormula "/\\Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1732Syn")}
+} > {
+    LtlFormula "\\/Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1733Syn")}
+} > { left:
+    LtlFormula "ULtl" LtlFormula -> LtlFormula {left, cons("LtlFormula1734Syn")}
+    LtlFormula "RLtl" LtlFormula -> LtlFormula {left, cons("LtlFormula1735Syn")}
+    LtlFormula "WLtl" LtlFormula -> LtlFormula {left, cons("LtlFormula1736Syn")}
+    LtlFormula "|->Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1737Syn")}
+} > { left:
+    LtlFormula "->Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1738Syn")}
+    LtlFormula "<->Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1739Syn")}
+    LtlFormula "=>Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1740Syn")}
+    LtlFormula "<=>Ltl" LtlFormula -> LtlFormula {left, cons("LtlFormula1742Syn")}
+}
+
+context-free priorities
+{ left:
+    K "==K" K -> Bool {left, cons("Bool1427Syn")}
+    K "=/=K" K -> Bool {left, cons("Bool1428Syn")}
+}
+
+context-free priorities
+{
+    K "==K" K -> Bool {left, cons("Bool1427Syn")}
+    K "=/=K" K -> Bool {left, cons("Bool1428Syn")}
+} > {
+    "notBool" Bool -> Bool {cons("Bool1252Syn")}
+    Bool "impliesBool" Bool -> Bool {left, cons("Bool1258Syn")}
+    Bool "andThenBool" Bool -> Bool {left, cons("Bool1254Syn")}
+    Bool "orBool" Bool -> Bool {left, cons("Bool1256Syn")}
+    Bool "xorBool" Bool -> Bool {left, cons("Bool1255Syn")}
+    Bool "orElseBool" Bool -> Bool {left, cons("Bool1257Syn")}
+    Bool "andBool" Bool -> Bool {left, cons("Bool1253Syn")}
+}
+
+context-free priorities
+{
+    "notBool" Bool -> Bool {cons("Bool1252Syn")}
+} > {
+    Bool "andBool" Bool -> Bool {left, cons("Bool1253Syn")}
+    Bool "andThenBool" Bool -> Bool {left, cons("Bool1254Syn")}
+} > {
+    Bool "xorBool" Bool -> Bool {left, cons("Bool1255Syn")}
+} > {
+    Bool "orBool" Bool -> Bool {left, cons("Bool1256Syn")}
+    Bool "orElseBool" Bool -> Bool {left, cons("Bool1257Syn")}
+} > {
+    Bool "impliesBool" Bool -> Bool {left, cons("Bool1258Syn")}
+} > { left:
+    Bool "==Bool" Bool -> Bool {left, cons("Bool1259Syn")}
+    Bool "=/=Bool" Bool -> Bool {left, cons("Bool1260Syn")}
+}
+
+context-free priorities
+{
+    "~Int" Int -> Int {cons("Int1262Syn")}
+} > { left:
+    Int "^Int" Int -> Int {left, cons("Int1263Syn")}
+} > { left:
+    Int "*Int" Int -> Int {left, cons("Int1264Syn")}
+    Int "/Int" Int -> Int {left, cons("Int1265Syn")}
+    Int "%Int" Int -> Int {left, cons("Int1266Syn")}
+    Int "divInt" Int -> Int {left, cons("Int1267Syn")}
+    Int "modInt" Int -> Int {left, cons("Int1268Syn")}
+} > { left:
+    Int "+Int" Int -> Int {left, cons("Int1PlusSyn")}
+    Int "-Int" Int -> Int {left, cons("Int1269Syn")}
+} > { left:
+    Int ">>Int" Int -> Int {left, cons("Int1270Syn")}
+    Int "<<Int" Int -> Int {left, cons("Int1272Syn")}
+} > { left:
+    Int "&Int" Int -> Int {left, cons("Int1273Syn")}
+} > { left:
+    Int "xorInt" Int -> Int {left, cons("Int1274Syn")}
+} > { left:
+    Int "|Int" Int -> Int {left, cons("Int1275Syn")}
+}
+
+context-free priorities
+{
+    "--Float" Float -> Float {cons("Float1288Syn")}
+} > {
+    Float "^Float" Float -> Float {left, cons("Float1289Syn")}
+} > { left:
+    Float "*Float" Float -> Float {left, cons("Float1290Syn")}
+    Float "/Float" Float -> Float {left, cons("Float1292Syn")}
+    Float "%Float" Float -> Float {left, cons("Float1293Syn")}
+} > { left:
+    Float "+Float" Float -> Float {left, cons("Float1294Syn")}
+    Float "-Float" Float -> Float {left, cons("Float1295Syn")}
+}
+
+context-free priorities
+{ left:
+    Float "<=Float" Float -> Bool {left, cons("Bool1296Syn")}
+    Float "<Float" Float -> Bool {left, cons("Bool1297Syn")}
+    Float ">=Float" Float -> Bool {left, cons("Bool1298Syn")}
+    Float ">Float" Float -> Bool {left, cons("Bool1299Syn")}
+    Float "==Float" Float -> Bool {left, cons("Bool1300Syn")}
+    Float "=/=Float" Float -> Bool {left, cons("Bool1302Syn")}
+} > {
+    Float "<=Float" InsertDzFloat "<=Float" Float -> Bool {cons("Bool1303Syn")}
+}
+
+context-free start-symbols
+Key CompoundValue DzLtlFormula NonStrictComparisonOp TCPError Array LtlFormula ClassProp KResult TCPAnswer ArrayItemVisibility DzFloat DzString BasicRef Prop OptionId DzModelCheckerState KeyList Internal Set DzModelCheckResult Int DzBool OptionArrayCrntElem DzProp ModelCheckerState ArrayItem Value KList Variable Map ConvertibleToLoc Char OptionConversionMode SpecialValue ConvertibleToLanguageValue Stream String KLabel Returnable MyList Id RefType ScalarValue LiteralValue Null OptionForeachArrayPair ForeachArrayPair Bag Bool Type ModelCheckResult ComparisonOp K ThisTag Exp DzInt ZvalField OptionArrayItem StrictComparisonOp OptionLoc Loc OptionString ArrayCrntElem None OptionInt LanguageValue BinaryOp Object ClassMethod Float Ref LanguageValueOrType Zval ClassDdef LRef StackFrame BoolOrNull KItem ThisOrLiteral SemanticValue FunReturnType ConversionMode Var FunDdef PlainLanguageValue LoopFrame K
+context-free syntax
+    "#parse" "(" InsertDzString "," InsertDzString ")" -> KItem {cons("KItem179Syn")}
+    "#" K -> KLabel {cons("KLabel1423Syn")}
+    "#string2Int" "(" InsertDzK ")" -> K {cons("K186Syn")}
+    Map "=/=Map" Map -> Bool {cons("Bool1439Syn")}
+    "switch" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1800Syn")}
+    "greater" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1785Syn")}
+    "decRefCountCompound" "(" InsertDzLoc ")" -> K {cons("K1679Syn")}
+    "#isTCPError" "(" InsertDzString ")" -> Bool {cons("Bool1375Syn")}
+    "#putc" "(" InsertDzInt "," InsertDzInt ")" -> K {cons("K173Syn")}
+    "declareGlobal" "(" InsertDzK ")" -> K {cons("K1562Syn")}
+    "print_r_array" "(" InsertDzLoc "," InsertDzInt ")" -> K {cons("K1497Syn")}
+    "array" -> Type {cons("Type1647Syn")}
+    "lengthString" "(" InsertDzString ")" -> Int {cons("Int1308Syn")}
+    LiteralValue -> ThisOrLiteral {}
+    "#stdout" -> Int {cons("Int184Syn")}
+    None -> OptionInt {}
+    None -> OptionConversionMode {}
+    "isNumericString" "(" InsertDzString ")" -> Bool {cons("Bool1534Syn")}
+    "Set2KTerm" "(" InsertDzSet ")" -> K {cons("K1400Syn")}
+    "nul" -> RefType {cons("RefType1632Syn")}
+    "isRetValueLoc" "(" InsertDzReturnable ")" -> Bool {cons("Bool1560Syn")}
+    "deprecatedIdiomFound" "(" InsertDzK ")" -> Bool {cons("Bool1473Syn")}
+    "hasType" "(" InsertDzExp "," InsertDzType ")" -> Prop {cons("Prop1756Syn")}
+    "isset" "(" InsertDzK ")" -> K {cons("K1529Syn")}
+    "thisTag" "(" InsertDzK ")" -> ThisTag {cons("ThisTag1240Syn")}
+    "#if" InsertDzBool "#then" InsertDzK "#else" InsertDzK "#fi" -> K {cons("K1429Syn")}
+    "is_numeric" "(" InsertDzK ")" -> K {cons("K1505Syn")}
+    KLabel "=KLabel" KLabel -> Bool {cons("Bool1455Syn")}
+    "#write" "(" InsertDzInt "," InsertDzString ")" -> K {cons("K174Syn")}
+    "ArrayInitProp" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1608Syn")}
+    "Set2KLabel" Set -> KLabel {cons("KLabel1408Syn")}
+    "##tcpRequest" "(" InsertDzString ")" -> String {cons("String1373Syn")}
+    "@Value" -> ZvalField {cons("ZvalField1668Syn")}
+    Loc -> OptionLoc {}
+    ThisOrLiteral -> ConvertibleToLoc {}
+    Map "=Map" Map -> Bool {cons("Bool1453Syn")}
+    "#string2klist" "(" InsertDzString ")" -> KList {cons("KList187Syn")}
+    "var" "(" InsertDzId ")" -> Var {cons("Var1525Syn")}
+    "String2Char" "(" InsertDzString ")" -> Char {cons("Char1349Syn")}
+    "inFun" "(" InsertDzString ")" -> Prop {cons("Prop1759Syn")}
+    "isLiteral" "(" InsertDzConvertibleToLoc ")" -> Bool {cons("Bool1663Syn")}
+    DzBool -> Bool {}
+    "KList2KLabel" KList -> KLabel {cons("KLabel1406Syn")}
+    "toBasicRef" "(" InsertDzLRef ")" -> BasicRef {cons("BasicRef1245Syn")}
+    "#eval" Map -> Bag {cons("Bag1EvalSyn")}
+    "#isMapInK" "(" InsertDzK ")" -> Bool {cons("Bool1392Syn")}
+    "mod" -> BinaryOp {cons("BinaryOp1779Syn")}
+    "Map" "(" InsertDzKList "|->" InsertDzKList ")" -> Map {cons("Map1384Syn")}
+    "#open" "(" InsertDzString "," InsertDzString ")" -> KItem {cons("KItem166Syn")}
+    "setCrntScope" "(" InsertDzLoc ")" -> K {cons("K1563Syn")}
+    "typeOf" "(" InsertDzValue ")" -> Type {cons("Type1657Syn")}
+    Int ">=Int" Int -> Bool {left, cons("Bool1282Syn")}
+    "fv" "(" InsertDzString "," InsertDzVariable ")" -> Exp {cons("Exp1746Syn")}
+    KLabel "==KLabel" KLabel -> Bool {cons("Bool1444Syn")}
+    "array" "(" InsertDzKeyList ")" -> Variable {cons("Variable1750Syn")}
+    "expEvalLoc" "(" InsertDzBag "," InsertDzExp ")" -> Loc {cons("Loc1765Syn")}
+    "convertToLanguageValue" "(" InsertDzConvertibleToLanguageValue ")" -> LanguageValue {cons("LanguageValue1247Syn")}
+    Int "<=Int" Int -> Bool {left, cons("Bool1279Syn")}
+    "#tcpError" "(" InsertDzString ")" -> TCPError {cons("TCPError1358Syn")}
+    "quotedCode" "(" InsertDzK ")" -> K {cons("K1470Syn")}
+    K "in" Set -> Bool {cons("Bool1395Syn")}
+    "min" -> BinaryOp {cons("BinaryOp1776Syn")}
+    "isEmptySet" "(" InsertDzSet ")" -> Bool {cons("Bool1399Syn")}
+    "ArrayWriteCrnt" "(" InsertDzLoc "," InsertDzOptionArrayCrntElem ")" -> K {cons("K1689Syn")}
+    DzFloat -> Float {}
+    "#parseToken" "(" InsertDzString "," InsertDzString ")" -> K {cons("K1353Syn")}
+    Bag "|=Ltl" K -> Bool {cons("Bool1743Syn")}
+    "object" -> Type {cons("Type1648Syn")}
+    "String2Bool" "(" InsertDzTCPAnswer ")" -> Bool {cons("Bool182Syn")}
+    Loc -> SemanticValue {}
+    Value -> KResult {}
+    LanguageValue -> LanguageValueOrType {}
+    ThisTag -> ThisOrLiteral {}
+    "refactor" "(" InsertDzK ")" -> K {cons("K1468Syn")}
+    "#ESPIPE" -> TCPError {cons("TCPError1367Syn")}
+    "[" InsertDzKey "," InsertDzArrayItemVisibility "," InsertDzLoc "]" -> ArrayItem {cons("ArrayItem1623Syn")}
+    List "==List" List -> Bool {cons("Bool1446Syn")}
+    "String2K" "(" InsertDzString ")" -> K {cons("K190Syn")}
+    Set "=Set" Set -> Bool {cons("Bool1450Syn")}
+    "ArrayGetElemAtIndex" "(" InsertDzInt "," InsertDzList ")" -> OptionArrayCrntElem {cons("OptionArrayCrntElem1686Syn")}
+    PlainLanguageValue -> LanguageValue {}
+    "class" "(" InsertDzId "," InsertDzList "," InsertDzMap "," InsertDzLoc ")" -> ClassDdef {cons("ClassDdef1576Syn")}
+    "fresh" "(" InsertDzK ")" -> Bool {cons("Bool1FreshSyn")}
+    "#noparse" -> TCPError {cons("TCPError1359Syn")}
+    "*toInteger" "(" InsertDzLanguageValue ")" -> K {cons("K1533Syn")}
+    Int -> ScalarValue {}
+    "lessEqual" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1784Syn")}
+    KList "=/=KList" KList -> Bool {cons("Bool1443Syn")}
+    Map "==Map" Map -> Bool {cons("Bool1438Syn")}
+    "#EISDIR" -> TCPError {cons("TCPError1368Syn")}
+    "keys" Map -> Set {cons("Set1386Syn")}
+    "isVisible" "(" InsertDzK "," InsertDzK "," InsertDzArrayItemVisibility ")" -> K {cons("K1602Syn")}
+    "greater" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1794Syn")}
+    "#ELOOP" -> TCPError {cons("TCPError1364Syn")}
+    "#evalHelper" Map -> Bag {cons("Bag1EvalHelperSyn")}
+    LiteralValue -> LanguageValue {}
+    "stdClass" -> Id {cons("Id1574Syn")}
+    "lab" "(" InsertDzString ")" -> Prop {cons("Prop1754Syn")}
+    "BinOp" "(" InsertDzBinaryOp "," InsertDzK "," InsertDzK ")" -> K {cons("K1780Syn")}
+    "createEmptyClass" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1582Syn")}
+    "intersectSet" "(" InsertDzSet "," InsertDzSet ")" -> Set {cons("Set1398Syn")}
+    "#ENOENT" -> TCPError {cons("TCPError1360Syn")}
+    "NOT-SUPPORTED" "(" InsertDzString ")" -> K {cons("K1554Syn")}
+    "each" "(" InsertDzK ")" -> K {cons("K1484Syn")}
+    "MyListItem" "(" InsertDzK ")" -> MyList {cons("MyList1233Syn")}
+    "ArrayInitCrnt" "(" InsertDzLoc "," InsertDzInt ")" -> K {cons("K1688Syn")}
+    "copyArrayMembers" "(" InsertDzLoc "," InsertDzList ")" -> K {cons("K1702Syn")}
+    "makeExceptionClass" -> K {cons("K1725Syn")}
+    "for" "(" InsertDzK "," InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1798Syn")}
+    "buildArrayCompareFun" -> K {cons("K1726Syn")}
+    "bool" -> Type {cons("Type1640Syn")}
+    ThisTag -> ConvertibleToLoc {}
+    "variable" "(" InsertDzKey ")" -> Variable {cons("Variable1749Syn")}
+    "isStrictComparison" "(" InsertDzComparisonOp ")" -> Bool {cons("Bool1788Syn")}
+    DzLtlFormula -> LtlFormula {}
+    "String2Id" "(" InsertDzString ")" -> Id {cons("Id1356Syn")}
+    "makeStaticDecl" "(" InsertDzString "," InsertDzLoc ")" -> K {cons("K1467Syn")}
+    "div" -> BinaryOp {cons("BinaryOp1778Syn")}
+    "lessEqual" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1795Syn")}
+    DzProp -> Prop {}
+    "mark" "(" InsertDzMap ")" -> K {cons("K1828Syn")}
+    "RgetRef" "(" InsertDzRef "," InsertDzRefType ")" -> K {cons("K1704Syn")}
+    Type -> LanguageValueOrType {}
+    "isSubclass" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1604Syn")}
+    "#EOF" -> TCPError {cons("TCPError1357Syn")}
+    "MakeDeprecatedWarning" "(" InsertDzK ")" -> K {cons("K1474Syn")}
+    "type" "(" InsertDzLanguageValue ")" -> Type {cons("Type1752Syn")}
+    "myStrlen" "(" InsertDzBag "," InsertDzLoc ")" -> Int {cons("Int1764Syn")}
+    Bag "=Bag" Bag -> Bool {cons("Bool1452Syn")}
+    "setCrntObj" "(" InsertDzK ")" -> K {cons("K1564Syn")}
+    "#EACCES" -> TCPError {cons("TCPError1363Syn")}
+    "*toFloat" "(" InsertDzLanguageValue ")" -> K {cons("K1532Syn")}
+    "@Type" -> ZvalField {cons("ZvalField1669Syn")}
+    "visit" InsertDzKList "applying" InsertDzKLabel "if" KLabel -> K {cons("K1456Syn")}
+    "#parseInput" "(" InsertDzString "," InsertDzString ")" -> Stream {cons("Stream1ParseSyn")}
+    "is_type" "(" InsertDzK "," InsertDzString ")" -> K {cons("K1506Syn")}
+    "mul" -> BinaryOp {cons("BinaryOp1777Syn")}
+    "Set2KTermAcc" "(" InsertDzSet "," InsertDzK ")" -> K {cons("K1402Syn")}
+    Map "[" "undef" "/" InsertDzKList "]" -> Map {cons("Map1383Syn")}
+    "WARNING" "(" InsertDzString ")" -> K {cons("K1549Syn")}
+    Array -> CompoundValue {}
+    "locsHoldSameCompound" "(" InsertDzMap "," InsertDzLoc "," InsertDzLoc ")" -> Bool {cons("Bool1666Syn")}
+    SpecialValue -> PlainLanguageValue {}
+    "zvalCreate" "(" InsertDzLoc "," InsertDzValue "," InsertDzType "," InsertDzInt "," InsertDzBool ")" -> K {cons("K1675Syn")}
+    K "in" MyList -> Bool {cons("Bool1234Syn")}
+    "sf" "(" InsertDzString "," InsertDzK "," InsertDzLoc "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzK ")" -> StackFrame {cons("StackFrame1558Syn")}
+    BasicRef -> Ref {}
+    "allocValue" "(" InsertDzValue ")" -> K {cons("K1699Syn")}
+    "#getc" "(" InsertDzInt ")" -> KItem {cons("KItem168Syn")}
+    "makeArrayLiteral" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1606Syn")}
+    "K2String" "(" InsertDzK ")" -> String {cons("String193Syn")}
+    "var_dump" "(" InsertDzK ")" -> K {cons("K1486Syn")}
+    "emptyArray" -> Array {cons("Array1682Syn")}
+    "float" -> Type {cons("Type1643Syn")}
+    "List2KLabel" List -> KLabel {cons("KLabel1409Syn")}
+    "indentDec" -> K {cons("K1490Syn")}
+    "protected" -> ArrayItemVisibility {cons("ArrayItemVisibility1626Syn")}
+    "Rget" "(" InsertDzRef ")" -> K {cons("K1703Syn")}
+    "CellLabel2KLabel" CellLabel -> KLabel {cons("KLabel1405Syn")}
+    "myCurrent" "(" InsertDzK ")" -> K {cons("K1478Syn")}
+    "#if" InsertDzBool "#then" InsertDzKList "#else" InsertDzKList "#fi" -> KList {cons("KList1432Syn")}
+    "makeObjectFromArray" "(" InsertDzArray ")" -> K {cons("K1542Syn")}
+    "rfindChar" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1326Syn")}
+    "#freezer" K -> KLabel {cons("KLabel1424Syn")}
+    "DEPRECATED" "(" InsertDzString ")" -> K {cons("K1550Syn")}
+    "syncArrayCurrent" "(" InsertDzLoc "," InsertDzOptionLoc ")" -> K {cons("K1809Syn")}
+    SpecialValue -> Key {}
+    NonStrictComparisonOp -> ComparisonOp {}
+    "hasNoDecimalPart" "(" InsertDzFloat ")" -> Bool {cons("Bool1547Syn")}
+    "hasSameType" "(" InsertDzValue "," InsertDzValue ")" -> Bool {cons("Bool1662Syn")}
+    ArrayCrntElem -> OptionArrayCrntElem {}
+    "print_r_indent" "(" InsertDzInt ")" -> K {cons("K1496Syn")}
+    "getKLabel" K -> KLabel {cons("KLabel1422Syn")}
+    "writeClassStaticMembers" "(" InsertDzId "," InsertDzK "," InsertDzArrayItemVisibility ")" -> K {cons("K1587Syn")}
+    "readBasicRef" "(" InsertDzLRef ")" -> BasicRef {cons("BasicRef1246Syn")}
+    Set "<=Set" Set -> Bool {cons("Bool1434Syn")}
+    "Float2Int" "(" InsertDzFloat ")" -> Int {cons("Int1305Syn")}
+    "initIterationVars" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1805Syn")}
+    "this" -> Id {cons("Id1573Syn")}
+    "*Cond" "(" InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1238Syn")}
+    "Bag2String" "(" InsertDzBag ")" -> String {cons("String194Syn")}
+    "categoryChar" "(" InsertDzString ")" -> String {cons("String1346Syn")}
+    Float -> ScalarValue {}
+    "extractIntSubstring" "(" InsertDzString "," InsertDzString "," InsertDzInt "," InsertDzType ")" -> K {cons("K1538Syn")}
+    "ArrayCreateElem" "(" InsertDzLoc "," InsertDzKey "," InsertDzArrayItemVisibility "," InsertDzLoc ")" -> K {cons("K1684Syn")}
+    "ROOT" -> Id {cons("Id1575Syn")}
+    "comparison" "(" InsertDzComparisonOp "," InsertDzK "," InsertDzK ")" -> K {cons("K1789Syn")}
+    "count" "(" InsertDzK ")" -> K {cons("K1476Syn")}
+    Int "dividesInt" Int -> Bool {cons("Bool1287Syn")}
+    "#ENOTDIR" -> TCPError {cons("TCPError1362Syn")}
+    List "hasPrivateProperty" InsertDzK "for" K -> Bool {cons("Bool1692Syn")}
+    None -> OptionString {}
+    MyList "," MyList -> MyList {left, cons("MyList1230Syn")}
+    "#retrieveTCPError" "(" InsertDzString ")" -> String {cons("String1374Syn")}
+    "#read" "(" InsertDzInt "," InsertDzInt ")" -> KItem {cons("KItem169Syn")}
+    "#checkTCPAnswer" "(" InsertDzString ")" -> TCPAnswer {cons("TCPAnswer1372Syn")}
+    "size" "(" InsertDzMyList ")" -> Int {cons("Int1235Syn")}
+    "isBoolType" "(" InsertDzValue ")" -> Bool {cons("Bool1654Syn")}
+    "OID" "(" InsertDzLoc "," InsertDzId "," InsertDzInt ")" -> Object {cons("Object1620Syn")}
+    "runFunction" "(" InsertDzString "," InsertDzFunDdef "," InsertDzK "," InsertDzOptionId "," InsertDzOptionLoc "," InsertDzBool ")" -> K {cons("K1570Syn")}
+    String -> TCPAnswer {}
+    String "<String" String -> Bool {cons("Bool1342Syn")}
+    "MethodNotFound" -> K {cons("K1596Syn")}
+    "#isDigit" "(" InsertDzString ")" -> Bool {cons("Bool1352Syn")}
+    DzModelCheckResult -> ModelCheckResult {}
+    "NOTICE" "(" InsertDzString ")" -> K {cons("K1552Syn")}
+    "isFloatString" "(" InsertDzString ")" -> Bool {cons("Bool1536Syn")}
+    "key" "(" InsertDzK ")" -> K {cons("K1479Syn")}
+    "initBuiltinClasses" -> Internal {cons("Internal1722Syn")}
+    "label" "(" InsertDzK ")" -> K {cons("K1508Syn")}
+    BoolOrNull -> LanguageValue {}
+    "initClass" "(" InsertDzId "," InsertDzK ")" -> K {cons("K1583Syn")}
+    "ltrim" "(" InsertDzString ")" -> String {cons("String1338Syn")}
+    String "<=String" String -> Bool {cons("Bool1343Syn")}
+    "countAllOccurences" "(" InsertDzString "," InsertDzString ")" -> Int {cons("Int1336Syn")}
+    KList "=KList" KList -> Bool {cons("Bool1454Syn")}
+    "makeForInit" "(" InsertDzK ")" -> K {cons("K1799Syn")}
+    "dummy" "(" InsertDzKList ")" -> K {cons("K1442Syn")}
+    "Lget" "(" InsertDzRef ")" -> K {cons("K1705Syn")}
+    "#tokenToString" "(" InsertDzK ")" -> String {cons("String1354Syn")}
+    LRef -> Ref {}
+    String ">=String" String -> Bool {cons("Bool1345Syn")}
+    "array_key_exists" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1475Syn")}
+    "(" InsertDzId "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzBag ")" -> K {cons("K1823Syn")}
+    "ordChar" "(" InsertDzString ")" -> Int {cons("Int1320Syn")}
+    "randomRandom" "(" InsertDzInt ")" -> Int {cons("Int1376Syn")}
+    "KLabel2KLabel" KLabel -> KLabel {cons("KLabel1404Syn")}
+    "lvalue" "(" InsertDzBag "," InsertDzLoc "," InsertDzVariable ")" -> Loc {cons("Loc1772Syn")}
+    "dump_content" "(" InsertDzList ")" -> K {cons("K1487Syn")}
+    "ref" "(" InsertDzLoc "," InsertDzKey ")" -> BasicRef {cons("BasicRef1634Syn")}
+    "zvalWrite" "(" InsertDzLoc "," InsertDzZvalField "," InsertDzLanguageValueOrType ")" -> K {cons("K1674Syn")}
+    "user_input" -> K {cons("K1507Syn")}
+    "len" "(" InsertDzExp ")" -> Exp {cons("Exp1748Syn")}
+    "locHoldsArray" "(" InsertDzMap "," InsertDzLoc ")" -> Bool {cons("Bool1664Syn")}
+    CompoundValue -> PlainLanguageValue {}
+    "LError" -> Loc {cons("Loc1707Syn")}
+    "write" "(" InsertDzValue "," InsertDzLoc ")" -> K {cons("K1698Syn")}
+    "String2Float" "(" InsertDzString ")" -> Float {cons("Float1328Syn")}
+    "visitedL" "(" InsertDzKLabel ")" -> KLabel {cons("KLabel1462Syn")}
+    "string2Number" "(" InsertDzString ")" -> K {cons("K1537Syn")}
+    "equal" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1782Syn")}
+    ConvertibleToLoc -> ConvertibleToLanguageValue {}
+    "isEqualScalar" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1248Syn")}
+    SetItem "in" Set -> Bool {cons("Bool1396Syn")}
+    ".MyList" -> MyList {cons("MyList1232Syn")}
+    "popLoopContext" -> K {cons("K1808Syn")}
+    Map "[" InsertDzKList "/" InsertDzKList "]" -> Map {cons("Map1385Syn")}
+    KResult -> K {}
+    ScalarValue -> PlainLanguageValue {}
+    "@byRef" -> FunReturnType {cons("FunReturnType1556Syn")}
+    "replace" "(" InsertDzString "," InsertDzString "," InsertDzString "," InsertDzInt ")" -> String {cons("String1334Syn")}
+    "String2Bag" "(" InsertDzString ")" -> Bag {cons("Bag192Syn")}
+    "initClassMemberDecl" "(" InsertDzId "," InsertDzK ")" -> K {cons("K1584Syn")}
+    "KLabel2String" "(" InsertDzKLabel ")" -> String {cons("String1332Syn")}
+    "strlen" "(" InsertDzK ")" -> K {cons("K1485Syn")}
+    "foreachArrayPair" "(" InsertDzLoc "," InsertDzOptionLoc ")" -> ForeachArrayPair {cons("ForeachArrayPair1237Syn")}
+    "getVisibility" "(" InsertDzK "," InsertDzId ")" -> ArrayItemVisibility {cons("ArrayItemVisibility1580Syn")}
+    "makeArrayFromScalar" "(" InsertDzScalarValue "," InsertDzKey ")" -> K {cons("K1543Syn")}
+    "gc" -> K {cons("K1827Syn")}
+    "methExecute" "(" InsertDzId "," InsertDzString "," InsertDzK "," InsertDzOptionLoc ")" -> K {cons("K1599Syn")}
+    "ArrayIndexOf" "(" InsertDzOptionArrayCrntElem "," InsertDzList ")" -> Int {cons("Int1687Syn")}
+    "allocCrntObj" "(" InsertDzOptionLoc ")" -> K {cons("K1565Syn")}
+    "#stdin" -> Int {cons("Int183Syn")}
+    "methodInfo" "(" InsertDzId "," InsertDzString "," InsertDzK "," InsertDzBool ")" -> K {cons("K1595Syn")}
+    "isSuperGlobal" "(" InsertDzId ")" -> Bool {cons("Bool1526Syn")}
+    "rtrim" "(" InsertDzString ")" -> String {cons("String1339Syn")}
+    "f" "(" InsertDzK "," InsertDzK "," InsertDzFunReturnType "," InsertDzLoc ")" -> FunDdef {cons("FunDdef1557Syn")}
+    "while" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1797Syn")}
+    "real" -> Type {cons("Type1645Syn")}
+    "String2Int" "(" InsertDzString ")" -> Int {cons("Int1329Syn")}
+    Int "=/=Int" Int -> Bool {left, cons("Bool1285Syn")}
+    "read" "(" InsertDzK ")" -> K {cons("K1697Syn")}
+    "initStatic" -> K {cons("K1523Syn")}
+    String ">String" String -> Bool {cons("Bool1344Syn")}
+    "processFunArgs" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1569Syn")}
+    "isArrayType" "(" InsertDzValue ")" -> Bool {cons("Bool1650Syn")}
+    "run" -> K {cons("K1469Syn")}
+    "foreach" "(" InsertDzLoc "," InsertDzK "," InsertDzK ")" -> K {cons("K1803Syn")}
+    "leqVal" "(" InsertDzLanguageValue "," InsertDzLanguageValue ")" -> Bool {cons("Bool1762Syn")}
+    "loopFrame" "(" InsertDzK "," InsertDzOptionForeachArrayPair ")" -> LoopFrame {cons("LoopFrame1236Syn")}
+    "endVisit" K -> K {cons("K1463Syn")}
+    "initSuperGlobals" -> Internal {cons("Internal1723Syn")}
+    "arr" -> RefType {cons("RefType1629Syn")}
+    "*toBoolean" "(" InsertDzLanguageValue ")" -> K {cons("K1530Syn")}
+    String "==String" String -> Bool {left, cons("Bool1307Syn")}
+    "detectDeprecated" -> K {cons("K1522Syn")}
+    "#tell" "(" InsertDzInt ")" -> KItem {cons("KItem167Syn")}
+    None -> OptionForeachArrayPair {}
+    "is_array" "(" InsertDzK ")" -> K {cons("K1503Syn")}
+    "isCrntVisib" "(" InsertDzLoc ")" -> K {cons("K1820Syn")}
+    "buildInitState" -> Internal {cons("Internal1708Syn")}
+    "print_r" "(" InsertDzK ")" -> K {cons("K1494Syn")}
+    "less" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1783Syn")}
+    "#tcpRequest" "(" InsertDzString ")" -> TCPAnswer {cons("TCPAnswer1370Syn")}
+    "lookup_fun" "(" InsertDzBag "," InsertDzString "," InsertDzVariable ")" -> Loc {cons("Loc1767Syn")}
+    "#buffer" "(" InsertDzK ")" -> Stream {cons("Stream1IOBufferSyn")}
+    "@byValue" -> FunReturnType {cons("FunReturnType1555Syn")}
+    Int "==Int" Int -> Bool {left, cons("Bool1284Syn")}
+    "#EINVAL" -> TCPError {cons("TCPError1369Syn")}
+    "expEval" "(" InsertDzBag "," InsertDzExp ")" -> LanguageValue {cons("LanguageValue1763Syn")}
+    None -> OptionLoc {}
+    "reset" "(" InsertDzK ")" -> K {cons("K1483Syn")}
+    List "hasMember" K -> Bool {cons("Bool1585Syn")}
+    "minInt" "(" InsertDzInt "," InsertDzInt ")" -> Int {cons("Int1276Syn")}
+    "Int2String" "(" InsertDzInt ")" -> String {cons("String1330Syn")}
+    "@IsRef" -> ZvalField {cons("ZvalField1672Syn")}
+    "stdclass" -> Id {cons("Id1589Syn")}
+    "makeNewObject" "(" InsertDzLoc "," InsertDzId "," InsertDzK ")" -> K {cons("K1590Syn")}
+    "ERROR" "(" InsertDzString ")" -> K {cons("K1553Syn")}
+    "makeFunction" "(" InsertDzString "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzLoc ")" -> K {cons("K1559Syn")}
+    {Key ","}* -> KeyList {cons("KeyList1ListSyn")}
+    "isBuiltin" "(" InsertDzK ")" -> Bool {cons("Bool1426Syn")}
+    Id -> OptionId {}
+    "getGlobalScope" "(" InsertDzBag ")" -> Loc {cons("Loc1768Syn")}
+    "(" InsertDzLtlFormula ")" -> LtlFormula {cons("LtlFormula1Bracket")}
+    "convertToLoc" "(" InsertDzConvertibleToLoc "," InsertDzOptionConversionMode ")" -> Loc {cons("Loc1244Syn")}
+    "rfindString" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1324Syn")}
+    LanguageValue -> Value {}
+    Loc -> Returnable {}
+    "*toArray" "(" InsertDzLanguageValue ")" -> K {cons("K1545Syn")}
+    "decRefCount" "(" InsertDzLoc ")" -> K {cons("K1678Syn")}
+    List "=/=List" List -> Bool {cons("Bool1447Syn")}
+    "lengthList" List -> Int {cons("Int1403Syn")}
+    "geqVal" "(" InsertDzLanguageValue "," InsertDzLanguageValue ")" -> Bool {cons("Bool1760Syn")}
+    "less" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1793Syn")}
+    "greaterEqual" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1796Syn")}
+    Prop -> LtlFormula {}
+    Null -> SpecialValue {}
+    Int "<Int" Int -> Bool {left, cons("Bool1280Syn")}
+    "isFloatType" "(" InsertDzValue ")" -> Bool {cons("Bool1652Syn")}
+    "isEqual" "(" InsertDzValue "," InsertDzValue ")" -> K {cons("K1790Syn")}
+    Map "(" InsertDzK ")" -> K {cons("K1382Syn")}
+    "alias" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1755Syn")}
+    "getFunScope" "(" InsertDzBag "," InsertDzString ")" -> Loc {cons("Loc1769Syn")}
+    "get_config_label" "(" InsertDzBag ")" -> String {cons("String1774Syn")}
+    "myNext" "(" InsertDzK ")" -> K {cons("K1482Syn")}
+    "obj" -> RefType {cons("RefType1630Syn")}
+    StrictComparisonOp -> ComparisonOp {}
+    "#ioError" "(" InsertDzString ")" -> K {cons("K175Syn")}
+    "String2DotK" "(" InsertDzTCPAnswer ")" -> K {cons("K180Syn")}
+    "#isWhiteSpace" "(" InsertDzString ")" -> Bool {cons("Bool1350Syn")}
+    "public" -> ArrayItemVisibility {cons("ArrayItemVisibility1625Syn")}
+    "is_string" "(" InsertDzK ")" -> K {cons("K1502Syn")}
+    "isIdentical" "(" InsertDzValue "," InsertDzValue ")" -> K {cons("K1792Syn")}
+    "writeClassInstanceMembers" "(" InsertDzId "," InsertDzK "," InsertDzArrayItemVisibility ")" -> K {cons("K1586Syn")}
+    "print_r_content" "(" InsertDzList ")" -> K {cons("K1495Syn")}
+    K "=K" K -> Bool {cons("Bool1448Syn")}
+    "initScopes" -> Internal {cons("Internal1709Syn")}
+    Set "=/=Set" Set -> Bool {cons("Bool1436Syn")}
+    "incRefCount" "(" InsertDzLoc ")" -> K {cons("K1677Syn")}
+    "@RefCount" -> ZvalField {cons("ZvalField1670Syn")}
+    "absInt" "(" InsertDzInt ")" -> Int {cons("Int1278Syn")}
+    "detectDeprecated" "(" InsertDzK ")" -> K {cons("K1472Syn")}
+    "ArrayInitProps" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1607Syn")}
+    "Array" "(" InsertDzOptionArrayCrntElem "," InsertDzList ")" -> Array {cons("Array1622Syn")}
+    "#if" InsertDzBool "#then" InsertDzInt "#else" InsertDzInt "#fi" -> Int {cons("Int1433Syn")}
+    K "#inKList" KList -> Bool {cons("Bool1380Syn")}
+    List "=List" List -> Bool {cons("Bool1449Syn")}
+    Int -> Key {}
+    "ArrayUpdateElem" "(" InsertDzLoc "," InsertDzKey "," InsertDzLoc ")" -> K {cons("K1685Syn")}
+    "read" "(" InsertDzBag "," InsertDzLoc ")" -> LanguageValue {cons("LanguageValue1773Syn")}
+    "findChar" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1325Syn")}
+    "objectInit" "(" InsertDzLoc "," InsertDzId ")" -> K {cons("K1592Syn")}
+    "locHoldsObject" "(" InsertDzMap "," InsertDzLoc ")" -> Bool {cons("Bool1665Syn")}
+    "directionalityChar" "(" InsertDzString ")" -> String {cons("String1347Syn")}
+    "lookup_glob" "(" InsertDzBag "," InsertDzVariable ")" -> Loc {cons("Loc1766Syn")}
+    "runScript" "(" InsertDzK ")" -> K {cons("K1520Syn")}
+    Loc -> ConvertibleToLanguageValue {}
+    LiteralValue -> ConvertibleToLoc {}
+    "defined" "(" InsertDzK ")" -> K {cons("K1499Syn")}
+    "substr" "(" InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1509Syn")}
+    Int -> OptionInt {}
+    ForeachArrayPair -> OptionForeachArrayPair {}
+    "Int2Float" "(" InsertDzInt ")" -> Float {cons("Float1304Syn")}
+    "normalizeFloat" "(" InsertDzFloat ")" -> K {cons("K1546Syn")}
+    "geq" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1757Syn")}
+    "chrChar" "(" InsertDzInt ")" -> String {cons("String1309Syn")}
+    "[" InsertDzKey "," InsertDzArrayItemVisibility "]" -> ArrayCrntElem {cons("ArrayCrntElem1624Syn")}
+    "String2KLabel" "(" InsertDzString ")" -> KLabel {cons("KLabel1String2KLabelSyn")}
+    "isSuperclass" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1605Syn")}
+    Object -> CompoundValue {}
+    "#stderr" -> Int {cons("Int185Syn")}
+    "assignSeqOfIds" "(" InsertDzK "," InsertDzLoc "," InsertDzInt ")" -> K {cons("K1528Syn")}
+    "define" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1493Syn")}
+    "modelCheck" "(" InsertDzModelCheckerState "," InsertDzLtlFormula ")" -> ModelCheckResult {cons("ModelCheckResult1744Syn")}
+    Set "==Set" Set -> Bool {cons("Bool1435Syn")}
+    "Float2String" "(" InsertDzFloat ")" -> String {cons("String1327Syn")}
+    "isStringType" "(" InsertDzValue ")" -> Bool {cons("Bool1655Syn")}
+    ArrayItem -> OptionArrayItem {}
+    "get_crnt_fun" "(" InsertDzBag ")" -> String {cons("String1770Syn")}
+    "zvalDestroy" "(" InsertDzLoc ")" -> K {cons("K1676Syn")}
+    "isIntType" "(" InsertDzValue ")" -> Bool {cons("Bool1653Syn")}
+    "Map2KLabel" Map -> KLabel {cons("KLabel1420Syn")}
+    "Char2String" "(" InsertDzChar ")" -> String {cons("String1348Syn")}
+    "leq" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1758Syn")}
+    Value "isCompoundValue" -> Bool {cons("Bool1659Syn")}
+    Ref -> SemanticValue {}
+    "isStatic" "(" InsertDzK ")" -> Bool {cons("Bool1579Syn")}
+    "makeStaticDecls" "(" InsertDzK "," InsertDzLoc ")" -> K {cons("K1464Syn")}
+    "is_float" "(" InsertDzK ")" -> K {cons("K1500Syn")}
+    "isToken" "(" InsertDzK ")" -> Bool {cons("Bool1425Syn")}
+    "decRefCountArrayElems" "(" InsertDzLoc "," InsertDzList ")" -> K {cons("K1680Syn")}
+    "greaterEqual" -> NonStrictComparisonOp {cons("NonStrictComparisonOp1786Syn")}
+    "makeStdClass" -> K {cons("K1724Syn")}
+    "l" -> ConversionMode {cons("ConversionMode1242Syn")}
+    "private" "(" InsertDzId ")" -> ArrayItemVisibility {cons("ArrayItemVisibility1627Syn")}
+    String "+String" String -> String {left, cons("String1306Syn")}
+    "isInPath" "(" InsertDzId "," InsertDzId ")" -> K {cons("K1603Syn")}
+    "Bag2KLabel" Bag -> KLabel {cons("KLabel1407Syn")}
+    "lref" "(" InsertDzRef "," InsertDzKey "," InsertDzRefType ")" -> LRef {cons("LRef1635Syn")}
+    Int ">Int" Int -> Bool {left, cons("Bool1283Syn")}
+    "r" -> ConversionMode {cons("ConversionMode1243Syn")}
+    "len" "(" InsertDzList ")" -> Int {cons("Int1694Syn")}
+    "#lstat" "(" InsertDzString ")" -> KList {cons("KList177Syn")}
+    "#statTypes" "(" InsertDzKList ")" -> KList {cons("KList188Syn")}
+    "method" "(" InsertDzFunDdef "," InsertDzArrayItemVisibility "," InsertDzBool ")" -> ClassMethod {cons("ClassMethod1578Syn")}
+    "cleanTrace" -> K {cons("K1826Syn")}
+    ConversionMode -> OptionConversionMode {}
+    "#EBADF" -> TCPError {cons("TCPError1366Syn")}
+    DzString -> String {}
+    "popStackFrame" -> K {cons("K1568Syn")}
+    "val" "(" InsertDzLanguageValue ")" -> Exp {cons("Exp1747Syn")}
+    "unset" -> Type {cons("Type1649Syn")}
+    "is_scalar" "(" InsertDzK ")" -> K {cons("K1504Syn")}
+    "#open" "(" InsertDzString ")" -> KItem {cons("KItem165Syn")}
+    "makeAccess2NonDefinedClassMethodErrorMsg" "(" InsertDzId "," InsertDzString ")" -> String {cons("String1597Syn")}
+    "#counter" -> Int {cons("Int1378Syn")}
+    "#hasMapping" "(" InsertDzMap "," InsertDzK ")" -> Bool {cons("Bool1389Syn")}
+    Key "isStringKey" -> Bool {cons("Bool1488Syn")}
+    "terminated" -> K {cons("K1825Syn")}
+    "visiting" InsertDzKList "applying" InsertDzKLabel "if" KLabel -> K {cons("K1457Syn")}
+    Map "<=Map" Map -> Bool {cons("Bool1437Syn")}
+    "max" "(" InsertDzInt "," InsertDzInt ")" -> Int {cons("Int1696Syn")}
+    "identical" -> StrictComparisonOp {cons("StrictComparisonOp1787Syn")}
+    "#seek" "(" InsertDzInt "," InsertDzInt ")" -> K {cons("K172Syn")}
+    "eqTo" "(" InsertDzExp "," InsertDzExp ")" -> Prop {cons("Prop1753Syn")}
+    "popx" -> K {cons("K1824Syn")}
+    "boolean" -> Type {cons("Type1642Syn")}
+    None -> OptionArrayCrntElem {}
+    "substrString" "(" InsertDzString "," InsertDzInt "," InsertDzInt ")" -> String {cons("String1322Syn")}
+    "visibility2String" "(" InsertDzArrayItemVisibility ")" -> String {cons("String1250Syn")}
+    "double" -> Type {cons("Type1644Syn")}
+    "gv" "(" InsertDzVariable ")" -> Exp {cons("Exp1745Syn")}
+    None -> OptionArrayItem {}
+    "maxInt" "(" InsertDzInt "," InsertDzInt ")" -> Int {cons("Int1277Syn")}
+    "CopyFunctionArgs" -> K {cons("K1572Syn")}
+    "ArrayCrnt2None" "(" InsertDzLoc ")" -> K {cons("K1804Syn")}
+    "#ostream" "(" InsertDzInt ")" -> Stream {cons("Stream1OutputStreamSyn")}
+    Set "-Set" Set -> Set {cons("Set1394Syn")}
+    "isSpecialVar" "(" InsertDzId ")" -> Bool {cons("Bool1527Syn")}
+    "NULL" -> Null {cons("Null1609Syn")}
+    "staticDeclFound" "(" InsertDzK ")" -> Bool {cons("Bool1465Syn")}
+    "sweep" -> K {cons("K1829Syn")}
+    DzInt -> Int {}
+    "integer" -> Type {cons("Type1639Syn")}
+    Bool -> ScalarValue {}
+    "head" "(" InsertDzList ")" -> OptionArrayCrntElem {cons("OptionArrayCrntElem1693Syn")}
+    "runRemainingSwitchClauses" "(" InsertDzK ")" -> K {cons("K1802Syn")}
+    "copyValueToLoc" "(" InsertDzValue "," InsertDzLoc ")" -> K {cons("K1700Syn")}
+    "*or" "(" InsertDzK "," InsertDzK ")" -> K {cons("K1239Syn")}
+    "current" "(" InsertDzK ")" -> K {cons("K1477Syn")}
+    String "=/=String" String -> Bool {left, cons("Bool1340Syn")}
+    "arrayCurrentOverflow" "(" InsertDzArray ")" -> Bool {cons("Bool1544Syn")}
+    "methodLookup" "(" InsertDzId "," InsertDzString ")" -> K {cons("K1594Syn")}
+    Null -> BoolOrNull {}
+    "int" -> Type {cons("Type1638Syn")}
+    SemanticValue -> Value {}
+    String -> Key {}
+    "writeClassMethod" "(" InsertDzId "," InsertDzString "," InsertDzK "," InsertDzK "," InsertDzArrayItemVisibility "," InsertDzBool "," InsertDzK "," InsertDzLoc ")" -> K {cons("K1588Syn")}
+    "#if" InsertDzBool "#then" InsertDzKItem "#else" InsertDzKItem "#fi" -> KItem {cons("KItem1430Syn")}
+    "next" "(" InsertDzK ")" -> K {cons("K1480Syn")}
+    "Id2String" "(" InsertDzId ")" -> String {cons("String1355Syn")}
+    "#distinctCounter" "(" InsertDzInt ")" -> Int {cons("Int1377Syn")}
+    "*toObject" "(" InsertDzLanguageValue ")" -> K {cons("K1540Syn")}
+    "initBuiltinFunctions" -> Internal {cons("Internal1720Syn")}
+    "zval" "(" InsertDzValue "," InsertDzType "," InsertDzInt "," InsertDzBool ")" -> Zval {cons("Zval1667Syn")}
+    "pushStackFrame" "(" InsertDzString "," InsertDzK "," InsertDzLoc "," InsertDzK "," InsertDzK "," InsertDzK "," InsertDzK ")" -> K {cons("K1567Syn")}
+    "string" -> Type {cons("Type1646Syn")}
+    "refNull" -> Ref {cons("Ref1633Syn")}
+    "zvalRead" "(" InsertDzLoc "," InsertDzZvalField ")" -> K {cons("K1673Syn")}
+    "methRunIfVisible" "(" InsertDzK "," InsertDzK "," InsertDzOptionLoc ")" -> K {cons("K1598Syn")}
+    "#istream" "(" InsertDzInt ")" -> Stream {cons("Stream1InputStreamSyn")}
+    "pushLoopContext" "(" InsertDzK ")" -> K {cons("K1807Syn")}
+    Ref -> ConvertibleToLoc {}
+    DzModelCheckerState -> ModelCheckerState {}
+    None -> OptionId {}
+    "replaceFirst" "(" InsertDzString "," InsertDzString "," InsertDzString ")" -> String {cons("String1335Syn")}
+    "buildObjElemList" "(" InsertDzLoc "," InsertDzId "," InsertDzList ")" -> K {cons("K1593Syn")}
+    KLabel "=/=KLabel" KLabel -> Bool {cons("Bool1445Syn")}
+    "trim" "(" InsertDzString ")" -> String {cons("String1337Syn")}
+    String -> ScalarValue {}
+    "#getMapFromK" "(" InsertDzK ")" -> Map {cons("Map1393Syn")}
+    "visitedK" "(" InsertDzKList ")" -> KResult {cons("KResult1460Syn")}
+    "#map" "(" InsertDzMap ")" -> K {cons("K1390Syn")}
+    "*toString" "(" InsertDzLanguageValue ")" -> K {cons("K1539Syn")}
+    Bool -> BoolOrNull {}
+    "ArrayCreateEmpty" "(" InsertDzLoc ")" -> K {cons("K1683Syn")}
+    "#close" "(" InsertDzInt ")" -> K {cons("K170Syn")}
+    Map "[" InsertDzMap "]" -> Map {cons("Map1UpdateMapWithMapSyn")}
+    LtlFormula -> K {}
+    "allocAndRunConstructor" "(" InsertDzLoc "," InsertDzK ")" -> K {cons("K1600Syn")}
+    "makeAccess2NonVisibleClassConstantErrorMsg" "(" InsertDzId "," InsertDzString "," InsertDzArrayItemVisibility ")" -> String {cons("String1822Syn")}
+    "var_dump_indent" "(" InsertDzInt ")" -> K {cons("K1492Syn")}
+    "isIntString" "(" InsertDzString ")" -> Bool {cons("Bool1535Syn")}
+    "none" -> None {cons("None1637Syn")}
+    "biggestIntKey" "(" InsertDzList ")" -> Int {cons("Int1695Syn")}
+    "Literal" "(" InsertDzK ")" -> LiteralValue {cons("LiteralValue1636Syn")}
+    TCPError -> TCPAnswer {}
+    LanguageValue -> Returnable {}
+    "gettype" "(" InsertDzK ")" -> K {cons("K1498Syn")}
+    "#stat" "(" InsertDzString ")" -> KList {cons("KList176Syn")}
+    Int "=Int" Int -> Bool {cons("Bool1286Syn")}
+    "currentOverflow" "(" InsertDzMap "," InsertDzLoc ")" -> Bool {cons("Bool1249Syn")}
+    "#opendir" "(" InsertDzString ")" -> KList {cons("KList178Syn")}
+    "values" Map -> Set {cons("Set1387Syn")}
+    Value "isScalar" -> Bool {cons("Bool1660Syn")}
+    "#noIO" -> Stream {cons("Stream189Syn")}
+    List "hasProperty" K -> Bool {cons("Bool1690Syn")}
+    "LgetRef" "(" InsertDzRef "," InsertDzRefType ")" -> K {cons("K1706Syn")}
+    "locHoldsCompoundValue" "(" InsertDzLoc ")" -> K {cons("K1806Syn")}
+    "locNull" -> Loc {cons("Loc1628Syn")}
+    KList "==KList" KList -> Bool {cons("Bool1440Syn")}
+    String -> OptionString {}
+    "prop" "(" InsertDzString "," InsertDzArrayItemVisibility "," InsertDzK ")" -> ClassProp {cons("ClassProp1577Syn")}
+    "MakeStaticDecl" "(" InsertDzK ")" -> K {cons("K1466Syn")}
+    K "#inSet" Set -> Bool {cons("Bool1397Syn")}
+    "#ENAMETOOLONG" -> TCPError {cons("TCPError1365Syn")}
+    Value "isNumeric" -> Bool {cons("Bool1658Syn")}
+    "replaceAll" "(" InsertDzString "," InsertDzString "," InsertDzString ")" -> String {cons("String1333Syn")}
+    "plus" -> BinaryOp {cons("BinaryOp1775Syn")}
+    K "inKList" KList -> Bool {cons("Bool1379Syn")}
+    "setCrntClass" "(" InsertDzOptionId ")" -> K {cons("K1566Syn")}
+    "start" -> K {cons("K1524Syn")}
+    "isObjectType" "(" InsertDzValue ")" -> Bool {cons("Bool1656Syn")}
+    "findString" "(" InsertDzString "," InsertDzString "," InsertDzInt ")" -> Int {cons("Int1323Syn")}
+    "indentInc" -> K {cons("K1489Syn")}
+    "$hasMapping" "(" InsertDzMap "," InsertDzK ")" -> Bool {cons("Bool1388Syn")}
+    Bag -> InsertDzBag
+    Bool -> InsertDzBool
+    Key -> InsertDzKey
+    Type -> InsertDzType
+    LtlFormula -> InsertDzLtlFormula
+    Array -> InsertDzArray
+    ComparisonOp -> InsertDzComparisonOp
+    K -> InsertDzK
+    TCPAnswer -> InsertDzTCPAnswer
+    ArrayItemVisibility -> InsertDzArrayItemVisibility
+    Exp -> InsertDzExp
+    ZvalField -> InsertDzZvalField
+    OptionLoc -> InsertDzOptionLoc
+    Loc -> InsertDzLoc
+    OptionId -> InsertDzOptionId
+    KeyList -> InsertDzKeyList
+    Set -> InsertDzSet
+    LanguageValue -> InsertDzLanguageValue
+    Int -> InsertDzInt
+    List -> InsertDzList
+    BinaryOp -> InsertDzBinaryOp
+    OptionArrayCrntElem -> InsertDzOptionArrayCrntElem
+    ModelCheckerState -> InsertDzModelCheckerState
+    Float -> InsertDzFloat
+    Ref -> InsertDzRef
+    LanguageValueOrType -> InsertDzLanguageValueOrType
+    Value -> InsertDzValue
+    KList -> InsertDzKList
+    Variable -> InsertDzVariable
+    Map -> InsertDzMap
+    ConvertibleToLoc -> InsertDzConvertibleToLoc
+    Char -> InsertDzChar
+    OptionConversionMode -> InsertDzOptionConversionMode
+    LRef -> InsertDzLRef
+    KItem -> InsertDzKItem
+    ConvertibleToLanguageValue -> InsertDzConvertibleToLanguageValue
+    String -> InsertDzString
+    KLabel -> InsertDzKLabel
+    FunReturnType -> InsertDzFunReturnType
+    Returnable -> InsertDzReturnable
+    MyList -> InsertDzMyList
+    Id -> InsertDzId
+    ScalarValue -> InsertDzScalarValue
+    RefType -> InsertDzRefType
+    FunDdef -> InsertDzFunDdef
+    OptionForeachArrayPair -> InsertDzOptionForeachArrayPair
+
+
+    DzDzString        -> DzString    {cons("DzString1Const")}
+    DzDzInt        -> DzInt    {cons("DzInt1Const")}
+    DzDzLtlFormula        -> DzLtlFormula    {cons("DzLtlFormula1Const")}
+    DzDzId        -> DzId    {cons("DzId1Const")}
+    DzKLabel        -> KLabel    {cons("KLabel1Const")}
+    DzDzBool        -> DzBool    {cons("DzBool1Const")}
+    DzDzFloat        -> DzFloat    {cons("DzFloat1Const")}
+
+
+
+%% start symbols subsorts
+    KItem        -> K
+    Key        -> K
+    CompoundValue        -> K
+    DzLtlFormula        -> K
+    NonStrictComparisonOp        -> K
+    TCPError        -> K
+    Array        -> K
+    LtlFormula        -> K
+    ClassProp        -> K
+    TCPAnswer        -> K
+    ArrayItemVisibility        -> K
+    DzFloat        -> K
+    DzString        -> K
+    BasicRef        -> K
+    Prop        -> K
+    OptionId        -> K
+    DzModelCheckerState        -> K
+    Internal        -> K
+    DzModelCheckResult        -> K
+    Int        -> K
+    DzBool        -> K
+    OptionArrayCrntElem        -> K
+    DzProp        -> K
+    ModelCheckerState        -> K
+    ArrayItem        -> K
+    Value        -> K
+    Variable        -> K
+    ConvertibleToLoc        -> K
+    Char        -> K
+    OptionConversionMode        -> K
+    SpecialValue        -> K
+    ConvertibleToLanguageValue        -> K
+    Stream        -> K
+    String        -> K
+    Returnable        -> K
+    MyList        -> K
+    Id        -> K
+    RefType        -> K
+    ScalarValue        -> K
+    LiteralValue        -> K
+    Null        -> K
+    OptionForeachArrayPair        -> K
+    ForeachArrayPair        -> K
+    Bool        -> K
+    Type        -> K
+    ModelCheckResult        -> K
+    ComparisonOp        -> K
+    ThisTag        -> K
+    Exp        -> K
+    DzInt        -> K
+    ZvalField        -> K
+    OptionArrayItem        -> K
+    StrictComparisonOp        -> K
+    OptionLoc        -> K
+    Loc        -> K
+    OptionString        -> K
+    ArrayCrntElem        -> K
+    None        -> K
+    OptionInt        -> K
+    LanguageValue        -> K
+    BinaryOp        -> K
+    Object        -> K
+    ClassMethod        -> K
+    Float        -> K
+    Ref        -> K
+    LanguageValueOrType        -> K
+    Zval        -> K
+    ClassDdef        -> K
+    LRef        -> K
+    StackFrame        -> K
+    BoolOrNull        -> K
+    ThisOrLiteral        -> K
+    SemanticValue        -> K
+    FunReturnType        -> K
+    ConversionMode        -> K
+    Var        -> K
+    FunDdef        -> K
+    PlainLanguageValue        -> K
+    LoopFrame        -> K
+lexical syntax
+    "'Positive" -> DzKLabel
+    "'XorAssign" -> DzKLabel
+    "'IsIdentical" -> DzKLabel
+    "'#andBool" -> DzKLabel
+    "'Block" -> DzKLabel
+    "'InterfaceExtends" -> DzKLabel
+    "'FullOpenTag" -> DzKLabel
+    "'Concat" -> DzKLabel
+    "'LOr" -> DzKLabel
+    "'Pattern" -> DzKLabel
+    "'ASPCloseTag" -> DzKLabel
+    "'HereDocStart" -> DzKLabel
+    "'InlineHTML" -> DzKLabel
+    "'ShellCommand" -> DzKLabel
+    "true" -> DzDzBool
+    "'InterfaceFunction" -> DzKLabel
+    "'ObjectAccess" -> DzKLabel
+    "heated" -> DzKLabel
+    "'SRAssign" -> DzKLabel
+    "'EmbeddedArrayVariable" -> DzKLabel
+    "cool" -> DzKLabel
+    "'IsNotIdentical" -> DzKLabel
+    "#token" -> DzKLabel
+    "'Unset" -> DzKLabel
+    "'Mul" -> DzKLabel
+    "'Implements" -> DzKLabel
+    "'Pair" -> DzKLabel
+    "'ModAssign" -> DzKLabel
+    "'Body" -> DzKLabel
+    "FalseLtl" -> DzDzLtlFormula
+    "'FunctionDeclRef" -> DzKLabel
+    "'While" -> DzKLabel
+    "'PostDec" -> DzKLabel
+    "'ObjectCast" -> DzKLabel
+    "'PlusAssign" -> DzKLabel
+    "'True" -> DzKLabel
+    "'ObjectProperty" -> DzKLabel
+    "'Variable" -> DzKLabel
+    "'DQContent" -> DzKLabel
+    "'PreDec" -> DzKLabel
+    "'ASPOpenTag" -> DzKLabel
+    "'LessEqual" -> DzKLabel
+    "'SLAssign" -> DzKLabel
+    "redex" -> DzKLabel
+    "'Expr" -> DzKLabel
+    "'FinalClass" -> DzKLabel
+    "'ObjectCreation" -> DzKLabel
+    "'ConstantVariable" -> DzKLabel
+    "'Modifiers" -> DzKLabel
+    "'Echo" -> DzKLabel
+    "'BoolCast" -> DzKLabel
+    "'AltWhile" -> DzKLabel
+    "TrueLtl" -> DzDzLtlFormula
+    "wrap-with" -> DzKLabel
+    "'HereDocContent" -> DzKLabel
+    "'AbstractClass" -> DzKLabel
+    "'OrAssign" -> DzKLabel
+    "'ConcatAssign" -> DzKLabel
+    "'ForEach" -> DzKLabel
+    "'Ternary" -> DzKLabel
+    "'And" -> DzKLabel
+    "'AbstractMethodBody" -> DzKLabel
+    "'InterfaceFunctionRef" -> DzKLabel
+    "'Private" -> DzKLabel
+    "'LNumber" -> DzKLabel
+    "'InternalFunction" -> DzKLabel
+    "'ParamRef" -> DzKLabel
+    "'BracedArrayAccess" -> DzKLabel
+    "'HexaChar" -> DzKLabel
+    "'ClassConstant" -> DzKLabel
+    "'OctaChar" -> DzKLabel
+    "'Return" -> DzKLabel
+    "'ListAssign" -> DzKLabel
+    "'DoWhile" -> DzKLabel
+    "'Not" -> DzKLabel
+    "'StaticFunctionCall" -> DzKLabel
+    "'MulAssign" -> DzKLabel
+    "'ReferenceAssign" -> DzKLabel
+    "'List" -> DzKLabel
+    "'AltSwitch" -> DzKLabel
+    "'Ref" -> DzKLabel
+    "'FunctionCall" -> DzKLabel
+    "'DeclareStatic" -> DzKLabel
+    "'TemplateDocument" -> DzKLabel
+    "'Break" -> DzKLabel
+    "'Final" -> DzKLabel
+    "false" -> DzDzBool
+    "'FloatCast" -> DzKLabel
+    "'For" -> DzKLabel
+    "'Document" -> DzKLabel
+    "'Less" -> DzKLabel
+    "'AltElseIf" -> DzKLabel
+    "'IsEqual" -> DzKLabel
+    "'IncludeOnce" -> DzKLabel
+    "'Normal" -> DzKLabel
+    "'Eval" -> DzKLabel
+    "'DNumber" -> DzKLabel
+    "'Or" -> DzKLabel
+    "'ClassName" -> DzKLabel
+    "'ClassConstantDeclList" -> DzKLabel
+    "'AndAssign" -> DzKLabel
+    "'False" -> DzKLabel
+    "'AltFor" -> DzKLabel
+    "'VariableBraced" -> DzKLabel
+    "'MethodBody" -> DzKLabel
+    "'Key" -> DzKLabel
+    "'ErrorFree" -> DzKLabel
+    "isSet" -> DzKLabel
+    "'Isset" -> DzKLabel
+    "'OldFunctionDecl" -> DzKLabel
+    "'IndirectReference" -> DzKLabel
+    "'IsNotEqual" -> DzKLabel
+    "'Throw" -> DzKLabel
+    "'Protected" -> DzKLabel
+    "'Public" -> DzKLabel
+    "'Extends" -> DzKLabel
+    "'InlineEcho" -> DzKLabel
+    "'InstanceVariable" -> DzKLabel
+    "'Deci" -> DzKLabel
+    "'DoubleQuoted" -> DzKLabel
+    "'Continue" -> DzKLabel
+    "'Neg" -> DzKLabel
+    "isKResult" -> DzKLabel
+    "'Assign" -> DzKLabel
+    "'DefaultCase" -> DzKLabel
+    "'GreaterEqual" -> DzKLabel
+    "'MagicConstant" -> DzKLabel
+    "'InterfaceDecl" -> DzKLabel
+    "'LAnd" -> DzKLabel
+    "'PreInc" -> DzKLabel
+    "'HereDoc" -> DzKLabel
+    "'DivAssign" -> DzKLabel
+    "'Require" -> DzKLabel
+    "'Param" -> DzKLabel
+    "'None" -> DzKLabel
+    "'Directive" -> DzKLabel
+    "'Mod" -> DzKLabel
+    "'ShortOpenTag" -> DzKLabel
+    "'Abstract" -> DzKLabel
+    "'EchoOpenTag" -> DzKLabel
+    "'ClassConstantDecl" -> DzKLabel
+    "'Try" -> DzKLabel
+    "'ListWrap" -> DzKLabel
+    "'NullCast" -> DzKLabel
+    "heat" -> DzKLabel
+    "'Name" -> DzKLabel
+    "'AltForEach" -> DzKLabel
+    "'Clone" -> DzKLabel
+    "'Null" -> DzKLabel
+    "'Case" -> DzKLabel
+    "'RefValue" -> DzKLabel
+    "'Literal" -> DzKLabel
+    "'ParamDefault" -> DzKLabel
+    "'AltIf" -> DzKLabel
+    "'RequireOnce" -> DzKLabel
+    "'SingleQuoted" -> DzKLabel
+    "'Octa" -> DzKLabel
+    "'Div" -> DzKLabel
+    "'IntCast" -> DzKLabel
+    "'StringAccess" -> DzKLabel
+    "'EmbeddedString" -> DzKLabel
+    "#set" -> DzKLabel
+    "'DeclareGlobal" -> DzKLabel
+    "'Catch" -> DzKLabel
+    "'CloseTag" -> DzKLabel
+    "'FunctionDecl" -> DzKLabel
+    "'ArrayAccess" -> DzKLabel
+    "'MinAssign" -> DzKLabel
+    "'Min" -> DzKLabel
+    "'FunctionName" -> DzKLabel
+    "'Print" -> DzKLabel
+    "'Array" -> DzKLabel
+    "'StringCast" -> DzKLabel
+    "'StaticVariable" -> DzKLabel
+    "'Hexa" -> DzKLabel
+    "'Braced" -> DzKLabel
+    "'ConstantEncapsedString" -> DzKLabel
+    "'Some" -> DzKLabel
+    "'PostInc" -> DzKLabel
+    "'Include" -> DzKLabel
+    "'Static" -> DzKLabel
+    "'Switch" -> DzKLabel
+    "'If" -> DzKLabel
+    "'Empty" -> DzKLabel
+    "'OldFunctionDeclRef" -> DzKLabel
+    "'ArrayCast" -> DzKLabel
+    "'BinAnd" -> DzKLabel
+    "'Value" -> DzKLabel
+    "'Negative" -> DzKLabel
+    "'Escape" -> DzKLabel
+    "'Simple" -> DzKLabel
+    "'Declare" -> DzKLabel
+    "'Class" -> DzKLabel
+    "'Plus" -> DzKLabel
+    "'ElseIf" -> DzKLabel
+    "'LXor" -> DzKLabel
+    "'Default" -> DzKLabel
+    "'ParamConstant" -> DzKLabel
+    "'Greater" -> DzKLabel
+
+
+    "chrChar" -> IdDz {reject}
+    "fv" -> IdDz {reject}
+    "gc" -> IdDz {reject}
+    "heated" -> IdDz {reject}
+    "visit" -> IdDz {reject}
+    "zvalWrite" -> IdDz {reject}
+    "float" -> IdDz {reject}
+    "makeAccess2NonVisibleClassConstantErrorMsg" -> IdDz {reject}
+    "myCurrent" -> IdDz {reject}
+    "OLtl" -> IdDz {reject}
+    "substr" -> IdDz {reject}
+    "countAllOccurences" -> IdDz {reject}
+    "hasNoDecimalPart" -> IdDz {reject}
+    "zvalCreate" -> IdDz {reject}
+    "K2String" -> IdDz {reject}
+    "orBool" -> IdDz {reject}
+    "thisTag" -> IdDz {reject}
+    "Float2Int" -> IdDz {reject}
+    "unset" -> IdDz {reject}
+    "gv" -> IdDz {reject}
+    "makeStaticDecls" -> IdDz {reject}
+    "myStrlen" -> IdDz {reject}
+    "findChar" -> IdDz {reject}
+    "each" -> IdDz {reject}
+    "buildArrayCompareFun" -> IdDz {reject}
+    "array" -> IdDz {reject}
+    "String2Char" -> IdDz {reject}
+    "getVisibility" -> IdDz {reject}
+    "print_r_indent" -> IdDz {reject}
+    "stdClass" -> IdDz {reject}
+    "directionalityChar" -> IdDz {reject}
+    "initIterationVars" -> IdDz {reject}
+    "write" -> IdDz {reject}
+    "current" -> IdDz {reject}
+    "replaceFirst" -> IdDz {reject}
+    "WLtl" -> IdDz {reject}
+    "quotedCode" -> IdDz {reject}
+    "gettype" -> IdDz {reject}
+    "f" -> IdDz {reject}
+    "define" -> IdDz {reject}
+    "max" -> IdDz {reject}
+    "integer" -> IdDz {reject}
+    "keys" -> IdDz {reject}
+    "Lget" -> IdDz {reject}
+    "runRemainingSwitchClauses" -> IdDz {reject}
+    "ArrayGetElemAtIndex" -> IdDz {reject}
+    "l" -> IdDz {reject}
+    "eqTo" -> IdDz {reject}
+    "allocCrntObj" -> IdDz {reject}
+    "leqVal" -> IdDz {reject}
+    "ref" -> IdDz {reject}
+    "r" -> IdDz {reject}
+    "allocValue" -> IdDz {reject}
+    "Set2KTerm" -> IdDz {reject}
+    "isIntType" -> IdDz {reject}
+    "public" -> IdDz {reject}
+    "KList2KLabel" -> IdDz {reject}
+    "hasPrivateProperty" -> IdDz {reject}
+    "convertToLanguageValue" -> IdDz {reject}
+    "LError" -> IdDz {reject}
+    "orElseBool" -> IdDz {reject}
+    "readBasicRef" -> IdDz {reject}
+    "incRefCount" -> IdDz {reject}
+    "locsHoldSameCompound" -> IdDz {reject}
+    "locNull" -> IdDz {reject}
+    "String2DotK" -> IdDz {reject}
+    "strlen" -> IdDz {reject}
+    "stdclass" -> IdDz {reject}
+    "key" -> IdDz {reject}
+    "geq" -> IdDz {reject}
+    "isSet" -> IdDz {reject}
+    "LgetRef" -> IdDz {reject}
+    "extractIntSubstring" -> IdDz {reject}
+    "buildObjElemList" -> IdDz {reject}
+    "locHoldsCompoundValue" -> IdDz {reject}
+    "label" -> IdDz {reject}
+    "double" -> IdDz {reject}
+    "hasType" -> IdDz {reject}
+    "isArrayType" -> IdDz {reject}
+    "foreachArrayPair" -> IdDz {reject}
+    "var_dump_indent" -> IdDz {reject}
+    "toBasicRef" -> IdDz {reject}
+    "String2Int" -> IdDz {reject}
+    "val" -> IdDz {reject}
+    "OID" -> IdDz {reject}
+    "ArrayCreateElem" -> IdDz {reject}
+    "Map2KLabel" -> IdDz {reject}
+    "var" -> IdDz {reject}
+    "lab" -> IdDz {reject}
+    "makeFunction" -> IdDz {reject}
+    "trim" -> IdDz {reject}
+    "runFunction" -> IdDz {reject}
+    "lengthList" -> IdDz {reject}
+    "divInt" -> IdDz {reject}
+    "equal" -> IdDz {reject}
+    "rfindString" -> IdDz {reject}
+    "hasMember" -> IdDz {reject}
+    "makeNewObject" -> IdDz {reject}
+    "ArrayInitCrnt" -> IdDz {reject}
+    "is_numeric" -> IdDz {reject}
+    "writeClassInstanceMembers" -> IdDz {reject}
+    "isBuiltin" -> IdDz {reject}
+    "getKLabel" -> IdDz {reject}
+    "String2Bool" -> IdDz {reject}
+    "isNumericString" -> IdDz {reject}
+    "get_config_label" -> IdDz {reject}
+    "isset" -> IdDz {reject}
+    "reset" -> IdDz {reject}
+    "getFunScope" -> IdDz {reject}
+    "redex" -> IdDz {reject}
+    "isStringType" -> IdDz {reject}
+    "popLoopContext" -> IdDz {reject}
+    "ArrayCreateEmpty" -> IdDz {reject}
+    "isSubclass" -> IdDz {reject}
+    "lvalue" -> IdDz {reject}
+    "lookup_glob" -> IdDz {reject}
+    "arrayCurrentOverflow" -> IdDz {reject}
+    "initBuiltinFunctions" -> IdDz {reject}
+    "KLabel2String" -> IdDz {reject}
+    "maxInt" -> IdDz {reject}
+    "user_input" -> IdDz {reject}
+    "NULL" -> IdDz {reject}
+    "locHoldsObject" -> IdDz {reject}
+    "visiting" -> IdDz {reject}
+    "Bag2KLabel" -> IdDz {reject}
+    "ERROR" -> IdDz {reject}
+    "processFunArgs" -> IdDz {reject}
+    "isIdentical" -> IdDz {reject}
+    "hasProperty" -> IdDz {reject}
+    "true" -> IdDz {reject}
+    "isStatic" -> IdDz {reject}
+    "initSuperGlobals" -> IdDz {reject}
+    "WARNING" -> IdDz {reject}
+    "obj" -> IdDz {reject}
+    "method" -> IdDz {reject}
+    "greaterEqual" -> IdDz {reject}
+    "refNull" -> IdDz {reject}
+    "count" -> IdDz {reject}
+    "runScript" -> IdDz {reject}
+    "buildInitState" -> IdDz {reject}
+    "type" -> IdDz {reject}
+    "setCrntScope" -> IdDz {reject}
+    "KLabel2KLabel" -> IdDz {reject}
+    "objectInit" -> IdDz {reject}
+    "none" -> IdDz {reject}
+    "dividesInt" -> IdDz {reject}
+    "Set2KTermAcc" -> IdDz {reject}
+    "Id2String" -> IdDz {reject}
+    "dump_content" -> IdDz {reject}
+    "initClassMemberDecl" -> IdDz {reject}
+    "int" -> IdDz {reject}
+    "Map" -> IdDz {reject}
+    "comparison" -> IdDz {reject}
+    "isStrictComparison" -> IdDz {reject}
+    "isScalar" -> IdDz {reject}
+    "CellLabel2KLabel" -> IdDz {reject}
+    "RgetRef" -> IdDz {reject}
+    "this" -> IdDz {reject}
+    "isNumeric" -> IdDz {reject}
+    "initScopes" -> IdDz {reject}
+    "MethodNotFound" -> IdDz {reject}
+    "var_dump" -> IdDz {reject}
+    "categoryChar" -> IdDz {reject}
+    "while" -> IdDz {reject}
+    "real" -> IdDz {reject}
+    "findString" -> IdDz {reject}
+    "if" -> IdDz {reject}
+    "read" -> IdDz {reject}
+    "ROOT" -> IdDz {reject}
+    "zvalRead" -> IdDz {reject}
+    "less" -> IdDz {reject}
+    "MyListItem" -> IdDz {reject}
+    "alias" -> IdDz {reject}
+    "rtrim" -> IdDz {reject}
+    "normalizeFloat" -> IdDz {reject}
+    "geqVal" -> IdDz {reject}
+    "in" -> IdDz {reject}
+    "createEmptyClass" -> IdDz {reject}
+    "print_r" -> IdDz {reject}
+    "greater" -> IdDz {reject}
+    "lookup_fun" -> IdDz {reject}
+    "lengthString" -> IdDz {reject}
+    "methExecute" -> IdDz {reject}
+    "Array" -> IdDz {reject}
+    "is_scalar" -> IdDz {reject}
+    "String2Bag" -> IdDz {reject}
+    "ArrayUpdateElem" -> IdDz {reject}
+    "DEPRECATED" -> IdDz {reject}
+    "String2KLabel" -> IdDz {reject}
+    "andThenBool" -> IdDz {reject}
+    "makeArrayFromScalar" -> IdDz {reject}
+    "boolean" -> IdDz {reject}
+    "cool" -> IdDz {reject}
+    "copyArrayMembers" -> IdDz {reject}
+    "staticDeclFound" -> IdDz {reject}
+    "defined" -> IdDz {reject}
+    "mod" -> IdDz {reject}
+    "intersectSet" -> IdDz {reject}
+    "locHoldsArray" -> IdDz {reject}
+    "inKList" -> IdDz {reject}
+    "dummy" -> IdDz {reject}
+    "replaceAll" -> IdDz {reject}
+    "FalseLtl" -> IdDz {reject}
+    "undef" -> IdDz {reject}
+    "expEvalLoc" -> IdDz {reject}
+    "next" -> IdDz {reject}
+    "isLiteral" -> IdDz {reject}
+    "run" -> IdDz {reject}
+    "copyValueToLoc" -> IdDz {reject}
+    "pushStackFrame" -> IdDz {reject}
+    "assignSeqOfIds" -> IdDz {reject}
+    "xorBool" -> IdDz {reject}
+    "isStringKey" -> IdDz {reject}
+    "NOTICE" -> IdDz {reject}
+    "visitedK" -> IdDz {reject}
+    "isToken" -> IdDz {reject}
+    "visitedL" -> IdDz {reject}
+    "Bag2String" -> IdDz {reject}
+    "replace" -> IdDz {reject}
+    "nul" -> IdDz {reject}
+    "zval" -> IdDz {reject}
+    "string" -> IdDz {reject}
+    "BinOp" -> IdDz {reject}
+    "ULtl" -> IdDz {reject}
+    "writeClassStaticMembers" -> IdDz {reject}
+    "Char2String" -> IdDz {reject}
+    "inFun" -> IdDz {reject}
+    "initStatic" -> IdDz {reject}
+    "variable" -> IdDz {reject}
+    "popStackFrame" -> IdDz {reject}
+    "rfindChar" -> IdDz {reject}
+    "setCrntObj" -> IdDz {reject}
+    "values" -> IdDz {reject}
+    "pushLoopContext" -> IdDz {reject}
+    "Literal" -> IdDz {reject}
+    "sf" -> IdDz {reject}
+    "isKResult" -> IdDz {reject}
+    "sweep" -> IdDz {reject}
+    "size" -> IdDz {reject}
+    "decRefCount" -> IdDz {reject}
+    "syncArrayCurrent" -> IdDz {reject}
+    "Int2String" -> IdDz {reject}
+    "deprecatedIdiomFound" -> IdDz {reject}
+    "makeAccess2NonDefinedClassMethodErrorMsg" -> IdDz {reject}
+    "MakeStaticDecl" -> IdDz {reject}
+    "is_array" -> IdDz {reject}
+    "String2Float" -> IdDz {reject}
+    "endVisit" -> IdDz {reject}
+    "makeForInit" -> IdDz {reject}
+    "isSuperclass" -> IdDz {reject}
+    "minInt" -> IdDz {reject}
+    "TrueLtl" -> IdDz {reject}
+    "mul" -> IdDz {reject}
+    "ArrayCrnt2None" -> IdDz {reject}
+    "isSuperGlobal" -> IdDz {reject}
+    "isFloatType" -> IdDz {reject}
+    "String2K" -> IdDz {reject}
+    "indentDec" -> IdDz {reject}
+    "writeClassMethod" -> IdDz {reject}
+    "methodLookup" -> IdDz {reject}
+    "for" -> IdDz {reject}
+    "absInt" -> IdDz {reject}
+    "List2KLabel" -> IdDz {reject}
+    "String2Id" -> IdDz {reject}
+    "allocAndRunConstructor" -> IdDz {reject}
+    "lref" -> IdDz {reject}
+    "visibility2String" -> IdDz {reject}
+    "substrString" -> IdDz {reject}
+    "declareGlobal" -> IdDz {reject}
+    "false" -> IdDz {reject}
+    "print_r_array" -> IdDz {reject}
+    "ArrayInitProps" -> IdDz {reject}
+    "plus" -> IdDz {reject}
+    "makeExceptionClass" -> IdDz {reject}
+    "arr" -> IdDz {reject}
+    "emptyArray" -> IdDz {reject}
+    "modelCheck" -> IdDz {reject}
+    "start" -> IdDz {reject}
+    "Float2String" -> IdDz {reject}
+    "methRunIfVisible" -> IdDz {reject}
+    "isIntString" -> IdDz {reject}
+    "CopyFunctionArgs" -> IdDz {reject}
+    "initBuiltinClasses" -> IdDz {reject}
+    "makeStaticDecl" -> IdDz {reject}
+    "makeStdClass" -> IdDz {reject}
+    "isEqualScalar" -> IdDz {reject}
+    "loopFrame" -> IdDz {reject}
+    "switch" -> IdDz {reject}
+    "typeOf" -> IdDz {reject}
+    "get_crnt_fun" -> IdDz {reject}
+    "private" -> IdDz {reject}
+    "currentOverflow" -> IdDz {reject}
+    "is_type" -> IdDz {reject}
+    "methodInfo" -> IdDz {reject}
+    "ArrayWriteCrnt" -> IdDz {reject}
+    "ArrayInitProp" -> IdDz {reject}
+    "getGlobalScope" -> IdDz {reject}
+    "min" -> IdDz {reject}
+    "array_key_exists" -> IdDz {reject}
+    "applying" -> IdDz {reject}
+    "impliesBool" -> IdDz {reject}
+    "leq" -> IdDz {reject}
+    "prop" -> IdDz {reject}
+    "expEval" -> IdDz {reject}
+    "len" -> IdDz {reject}
+    "decRefCountCompound" -> IdDz {reject}
+    "terminated" -> IdDz {reject}
+    "makeObjectFromArray" -> IdDz {reject}
+    "isObjectType" -> IdDz {reject}
+    "Rget" -> IdDz {reject}
+    "zvalDestroy" -> IdDz {reject}
+    "detectDeprecated" -> IdDz {reject}
+    "isInPath" -> IdDz {reject}
+    "popx" -> IdDz {reject}
+    "heat" -> IdDz {reject}
+    "decRefCountArrayElems" -> IdDz {reject}
+    "cleanTrace" -> IdDz {reject}
+    "head" -> IdDz {reject}
+    "myNext" -> IdDz {reject}
+    "lessEqual" -> IdDz {reject}
+    "isCrntVisib" -> IdDz {reject}
+    "Int2Float" -> IdDz {reject}
+    "class" -> IdDz {reject}
+    "isFloatString" -> IdDz {reject}
+    "hasSameType" -> IdDz {reject}
+    "mark" -> IdDz {reject}
+    "notBool" -> IdDz {reject}
+    "convertToLoc" -> IdDz {reject}
+    "RLtl" -> IdDz {reject}
+    "setCrntClass" -> IdDz {reject}
+    "indentInc" -> IdDz {reject}
+    "isEqual" -> IdDz {reject}
+    "identical" -> IdDz {reject}
+    "ordChar" -> IdDz {reject}
+    "modInt" -> IdDz {reject}
+    "isCompoundValue" -> IdDz {reject}
+    "foreach" -> IdDz {reject}
+    "isSpecialVar" -> IdDz {reject}
+    "andBool" -> IdDz {reject}
+    "div" -> IdDz {reject}
+    "object" -> IdDz {reject}
+    "isEmptySet" -> IdDz {reject}
+    "isRetValueLoc" -> IdDz {reject}
+    "MakeDeprecatedWarning" -> IdDz {reject}
+    "protected" -> IdDz {reject}
+    "isVisible" -> IdDz {reject}
+    "fresh" -> IdDz {reject}
+    "ltrim" -> IdDz {reject}
+    "is_string" -> IdDz {reject}
+    "print_r_content" -> IdDz {reject}
+    "is_float" -> IdDz {reject}
+    "isBoolType" -> IdDz {reject}
+    "ArrayIndexOf" -> IdDz {reject}
+    "xorInt" -> IdDz {reject}
+    "Set2KLabel" -> IdDz {reject}
+    "makeArrayLiteral" -> IdDz {reject}
+    "string2Number" -> IdDz {reject}
+    "refactor" -> IdDz {reject}
+    "bool" -> IdDz {reject}
+    "initClass" -> IdDz {reject}
+    "biggestIntKey" -> IdDz {reject}
+    "randomRandom" -> IdDz {reject}
+
+lexical restrictions
+    %% follow restrictions
+    "substr" -/- [S].[t].[r].[i].[n].[g]
+    "=K" -/- [L].[a].[b].[e].[l]
+    "mod" -/- [I].[n].[t]
+    "'Mod" -/- [A].[s].[s].[i].[g].[n]
+    "this" -/- [T].[a].[g]
+    "#" -/- [E].[L].[O].[O].[P]
+    "'InterfaceFunction" -/- [R].[e].[f]
+    "'Hexa" -/- [C].[h].[a].[r]
+    "method" -/- [I].[n].[f].[o]
+    "Array" -/- [G].[e].[t].[E].[l].[e].[m].[A].[t].[I].[n].[d].[e].[x]
+    "run" -/- [S].[c].[r].[i].[p].[t]
+    "'Variable" -/- [B].[r].[a].[c].[e].[d]
+    "current" -/- [O].[v].[e].[r].[f].[l].[o].[w]
+    "'For" -/- [E].[a].[c].[h]
+    "'Min" -/- [A].[s].[s].[i].[g].[n]
+    "write" -/- [C].[l].[a].[s].[s].[S].[t].[a].[t].[i].[c].[M].[e].[m].[b].[e].[r].[s]
+    "'Default" -/- [C].[a].[s].[e]
+    "'FunctionDecl" -/- [R].[e].[f]
+    "'Braced" -/- [A].[r].[r].[a].[y].[A].[c].[c].[e].[s].[s]
+    "'List" -/- [A].[s].[s].[i].[g].[n]
+    "'Concat" -/- [A].[s].[s].[i].[g].[n]
+    "decRefCount" -/- [C].[o].[m].[p].[o].[u].[n].[d]
+    "less" -/- [E].[q].[u].[a].[l]
+    "#parse" -/- [T].[o].[k].[e].[n]
+    "Lget" -/- [R].[e].[f]
+    "=K" -/- [L].[i].[s].[t]
+    "replace" -/- [F].[i].[r].[s].[t]
+    "write" -/- [C].[l].[a].[s].[s].[I].[n].[s].[t].[a].[n].[c].[e].[M].[e].[m].[b].[e].[r].[s]
+    "Array" -/- [W].[r].[i].[t].[e].[C].[r].[n].[t]
+    "Array" -/- [C].[r].[e].[a].[t].[e].[E].[m].[p].[t].[y]
+    "/" -/- [I].[n].[t]
+    "min" -/- [I].[n].[t]
+    "#" -/- [E].[I].[S].[D].[I].[R]
+    "ref" -/- [N].[u].[l].[l]
+    "'Abstract" -/- [C].[l].[a].[s].[s]
+    "'Div" -/- [A].[s].[s].[i].[g].[n]
+    "#" -/- [E].[S].[P].[I].[P].[E]
+    "'Ref" -/- [V].[a].[l].[u].[e]
+    "'Param" -/- [D].[e].[f].[a].[u].[l].[t]
+    "#" -/- [E].[N].[A].[M].[E].[T].[O].[O].[L].[O].[N].[G]
+    "|->" -/- [L].[t].[l]
+    "#" -/- [E].[I].[N].[V].[A].[L]
+    "=/=K" -/- [L].[i].[s].[t]
+    "'Param" -/- [C].[o].[n].[s].[t].[a].[n].[t]
+    "#" -/- [E].[O].[F]
+    "'Echo" -/- [O].[p].[e].[n].[T].[a].[g]
+    "'Include" -/- [O].[n].[c].[e]
+    "isEqual" -/- [S].[c].[a].[l].[a].[r]
+    "count" -/- [A].[l].[l].[O].[c].[c].[u].[r].[e].[n].[c].[e].[s]
+    "'Declare" -/- [S].[t].[a].[t].[i].[c]
+    "'Less" -/- [E].[q].[u].[a].[l]
+    "'OldFunctionDecl" -/- [R].[e].[f]
+    "'Final" -/- [C].[l].[a].[s].[s]
+    "#parse" -/- [I].[n].[p].[u].[t]
+    "decRefCount" -/- [A].[r].[r].[a].[y].[E].[l].[e].[m].[s]
+    "String2K" -/- [L].[a].[b].[e].[l]
+    "zval" -/- [R].[e].[a].[d]
+    "'Static" -/- [V].[a].[r].[i].[a].[b].[l].[e]
+    "in" -/- [F].[u].[n]
+    "'Or" -/- [A].[s].[s].[i].[g].[n]
+    "'Null" -/- [C].[a].[s].[t]
+    "'Require" -/- [O].[n].[c].[e]
+    "#" -/- [E].[N].[O].[T].[D].[I].[R]
+    "replace" -/- [A].[l].[l]
+    "Array" -/- [I].[n].[i].[t].[C].[r].[n].[t]
+    "zval" -/- [C].[r].[e].[a].[t].[e]
+    "'Param" -/- [R].[e].[f]
+    "Array" -/- [I].[n].[i].[t].[P].[r].[o].[p]
+    "'Octa" -/- [C].[h].[a].[r]
+    "'Array" -/- [A].[c].[c].[e].[s].[s]
+    "#" -/- [E].[B].[A].[D].[F]
+    "method" -/- [L].[o].[o].[k].[u].[p]
+    "'List" -/- [W].[r].[a].[p]
+    "#" -/- [E].[A].[C].[C].[E].[S]
+    "#stat" -/- [T].[y].[p].[e].[s]
+    "'ClassConstantDecl" -/- [L].[i].[s].[t]
+    "run" -/- [F].[u].[n].[c].[t].[i].[o].[n]
+    "zval" -/- [W].[r].[i].[t].[e]
+    "'And" -/- [A].[s].[s].[i].[g].[n]
+    "#token" -/- [T].[o].[S].[t].[r].[i].[n].[g]
+    "greater" -/- [E].[q].[u].[a].[l]
+    "geq" -/- [V].[a].[l]
+    "Set2KTerm" -/- [A].[c].[c]
+    "foreach" -/- [A].[r].[r].[a].[y].[P].[a].[i].[r]
+    "isNumeric" -/- [S].[t].[r].[i].[n].[g]
+    "Array" -/- [U].[p].[d].[a].[t].[e].[E].[l].[e].[m]
+    "array" -/- [C].[u].[r].[r].[e].[n].[t].[O].[v].[e].[r].[f].[l].[o].[w]
+    "type" -/- [O].[f]
+    "#eval" -/- [H].[e].[l].[p].[e].[r]
+    "'Array" -/- [C].[a].[s].[t]
+    "object" -/- [I].[n].[i].[t]
+    "expEval" -/- [L].[o].[c]
+    "'Greater" -/- [E].[q].[u].[a].[l]
+    "read" -/- [B].[a].[s].[i].[c].[R].[e].[f]
+    "Rget" -/- [R].[e].[f]
+    "initClass" -/- [M].[e].[m].[b].[e].[r].[D].[e].[c].[l]
+    "'Static" -/- [F].[u].[n].[c].[t].[i].[o].[n].[C].[a].[l].[l]
+    "write" -/- [C].[l].[a].[s].[s].[M].[e].[t].[h].[o].[d]
+    "max" -/- [I].[n].[t]
+    "Array" -/- [C].[r].[e].[a].[t].[e].[E].[l].[e].[m]
+    "Array" -/- [I].[n].[i].[t].[P].[r].[o].[p].[s]
+    "div" -/- [I].[n].[t]
+    "==K" -/- [L].[i].[s].[t]
+    "Array" -/- [I].[n].[d].[e].[x].[O].[f]
+    "'Class" -/- [N].[a].[m].[e]
+    "=/=K" -/- [L].[a].[b].[e].[l]
+    "'AltFor" -/- [E].[a].[c].[h]
+    "'Abstract" -/- [M].[e].[t].[h].[o].[d].[B].[o].[d].[y]
+    "in" -/- [K].[L].[i].[s].[t]
+    "/" -/- [F].[l].[o].[a].[t]
+    "'Plus" -/- [A].[s].[s].[i].[g].[n]
+    "#" -/- [E].[N].[O].[E].[N].[T]
+    "'Mul" -/- [A].[s].[s].[i].[g].[n]
+    "'ClassConstant" -/- [D].[e].[c].[l]
+    "'HereDoc" -/- [S].[t].[a].[r].[t]
+    "zval" -/- [D].[e].[s].[t].[r].[o].[y]
+    "'ClassConstant" -/- [D].[e].[c].[l].[L].[i].[s].[t]
+    "leq" -/- [V].[a].[l]
+    "'HereDoc" -/- [C].[o].[n].[t].[e].[n].[t]
+    "run" -/- [R].[e].[m].[a].[i].[n].[i].[n].[g].[S].[w].[i].[t].[c].[h].[C].[l].[a].[u].[s].[e].[s]
+    "'Declare" -/- [G].[l].[o].[b].[a].[l]
+    "Array" -/- [C].[r].[n].[t].[\2].[N].[o].[n].[e]
+    "'Class" -/- [C].[o].[n].[s].[t].[a].[n].[t].[D].[e].[c].[l]
+    "'Class" -/- [C].[o].[n].[s].[t].[a].[n].[t].[D].[e].[c].[l].[L].[i].[s].[t]
+    "'Class" -/- [C].[o].[n].[s].[t].[a].[n].[t]
+    "==K" -/- [L].[a].[b].[e].[l]
+
+
+lexical syntax
+    "\"" ((~[\"\n\r\\])|(((([\\][nrtf\"\\])|([\\][x][0-9a-fA-F][0-9a-fA-F]))|([\\][u][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]))|([\\][U][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])))*"\"" -> DzStringDz
+    [A-Za-z\_][A-Za-z0-9\_]* -> IdDz
+    [\+\-]?[0-9]+"."[0-9]+([eE][\+\-]?[0-9]+)?[fFdD]? -> DzFloatDz
+    [\-\+]?[0-9]+ -> DzIntDz
+    "chrChar" -> DzStringDz {reject}
+    "%Float" -> DzStringDz {reject}
+    "'Literal" -> DzStringDz {reject}
+    "'Print" -> DzStringDz {reject}
+    "fv" -> DzStringDz {reject}
+    "gc" -> DzStringDz {reject}
+    "heated" -> DzStringDz {reject}
+    "visit" -> DzStringDz {reject}
+    "<Float" -> DzStringDz {reject}
+    "zvalWrite" -> DzStringDz {reject}
+    "float" -> DzStringDz {reject}
+    "#fi" -> DzStringDz {reject}
+    "'Clone" -> DzStringDz {reject}
+    "makeAccess2NonVisibleClassConstantErrorMsg" -> DzStringDz {reject}
+    "myCurrent" -> DzStringDz {reject}
+    "'Default" -> DzStringDz {reject}
+    "#putc" -> DzStringDz {reject}
+    "+Float" -> DzStringDz {reject}
+    "==Bool" -> DzStringDz {reject}
+    "OLtl" -> DzStringDz {reject}
+    "substr" -> DzStringDz {reject}
+    "countAllOccurences" -> DzStringDz {reject}
+    "#" -> DzStringDz {reject}
+    "hasNoDecimalPart" -> DzStringDz {reject}
+    "zvalCreate" -> DzStringDz {reject}
+    "'IsIdentical" -> DzStringDz {reject}
+    "(" -> DzStringDz {reject}
+    ")" -> DzStringDz {reject}
+    "K2String" -> DzStringDz {reject}
+    "/" -> DzStringDz {reject}
+    "==Map" -> DzStringDz {reject}
+    "," -> DzStringDz {reject}
+    "orBool" -> DzStringDz {reject}
+    "thisTag" -> DzStringDz {reject}
+    "Float2Int" -> DzStringDz {reject}
+    "unset" -> DzStringDz {reject}
+    "gv" -> DzStringDz {reject}
+    "makeStaticDecls" -> DzStringDz {reject}
+    "myStrlen" -> DzStringDz {reject}
+    "findChar" -> DzStringDz {reject}
+    "each" -> DzStringDz {reject}
+    "'BoolCast" -> DzStringDz {reject}
+    "'DeclareGlobal" -> DzStringDz {reject}
+    "buildArrayCompareFun" -> DzStringDz {reject}
+    "array" -> DzStringDz {reject}
+    "'ModAssign" -> DzStringDz {reject}
+    "String2Char" -> DzStringDz {reject}
+    "getVisibility" -> DzStringDz {reject}
+    "print_r_indent" -> DzStringDz {reject}
+    "stdClass" -> DzStringDz {reject}
+    "<=Int" -> DzStringDz {reject}
+    "'LAnd" -> DzStringDz {reject}
+    "'FinalClass" -> DzStringDz {reject}
+    "'HereDoc" -> DzStringDz {reject}
+    "'Variable" -> DzStringDz {reject}
+    "directionalityChar" -> DzStringDz {reject}
+    "initIterationVars" -> DzStringDz {reject}
+    "'AbstractClass" -> DzStringDz {reject}
+    "'Mul" -> DzStringDz {reject}
+    "'AltWhile" -> DzStringDz {reject}
+    "write" -> DzStringDz {reject}
+    "current" -> DzStringDz {reject}
+    "'Protected" -> DzStringDz {reject}
+    "]" -> DzStringDz {reject}
+    "replaceFirst" -> DzStringDz {reject}
+    "WLtl" -> DzStringDz {reject}
+    "quotedCode" -> DzStringDz {reject}
+    "gettype" -> DzStringDz {reject}
+    "[" -> DzStringDz {reject}
+    "f" -> DzStringDz {reject}
+    "define" -> DzStringDz {reject}
+    "max" -> DzStringDz {reject}
+    "'AltIf" -> DzStringDz {reject}
+    "integer" -> DzStringDz {reject}
+    "'ArrayCast" -> DzStringDz {reject}
+    "keys" -> DzStringDz {reject}
+    "Lget" -> DzStringDz {reject}
+    "*or" -> DzStringDz {reject}
+    "runRemainingSwitchClauses" -> DzStringDz {reject}
+    "ArrayGetElemAtIndex" -> DzStringDz {reject}
+    "l" -> DzStringDz {reject}
+    "eqTo" -> DzStringDz {reject}
+    "'Assign" -> DzStringDz {reject}
+    "'Abstract" -> DzStringDz {reject}
+    "allocCrntObj" -> DzStringDz {reject}
+    "leqVal" -> DzStringDz {reject}
+    "'Negative" -> DzStringDz {reject}
+    "'Require" -> DzStringDz {reject}
+    "ref" -> DzStringDz {reject}
+    "r" -> DzStringDz {reject}
+    "#read" -> DzStringDz {reject}
+    "allocValue" -> DzStringDz {reject}
+    ">=Float" -> DzStringDz {reject}
+    "Set2KTerm" -> DzStringDz {reject}
+    "isIntType" -> DzStringDz {reject}
+    "public" -> DzStringDz {reject}
+    "%Int" -> DzStringDz {reject}
+    "KList2KLabel" -> DzStringDz {reject}
+    "#stdin" -> DzStringDz {reject}
+    "'Pattern" -> DzStringDz {reject}
+    "hasPrivateProperty" -> DzStringDz {reject}
+    "convertToLanguageValue" -> DzStringDz {reject}
+    "'ForEach" -> DzStringDz {reject}
+    "LError" -> DzStringDz {reject}
+    "orElseBool" -> DzStringDz {reject}
+    "readBasicRef" -> DzStringDz {reject}
+    "'SingleQuoted" -> DzStringDz {reject}
+    "'VariableBraced" -> DzStringDz {reject}
+    "incRefCount" -> DzStringDz {reject}
+    "locsHoldSameCompound" -> DzStringDz {reject}
+    "'Array" -> DzStringDz {reject}
+    "locNull" -> DzStringDz {reject}
+    "'FunctionCall" -> DzStringDz {reject}
+    "String2DotK" -> DzStringDz {reject}
+    "'Private" -> DzStringDz {reject}
+    "strlen" -> DzStringDz {reject}
+    "'Extends" -> DzStringDz {reject}
+    "stdclass" -> DzStringDz {reject}
+    "'Octa" -> DzStringDz {reject}
+    "'Or" -> DzStringDz {reject}
+    "#parseToken" -> DzStringDz {reject}
+    "key" -> DzStringDz {reject}
+    "#if" -> DzStringDz {reject}
+    "geq" -> DzStringDz {reject}
+    "isSet" -> DzStringDz {reject}
+    "'HereDocContent" -> DzStringDz {reject}
+    "LgetRef" -> DzStringDz {reject}
+    "'StringCast" -> DzStringDz {reject}
+    "extractIntSubstring" -> DzStringDz {reject}
+    "buildObjElemList" -> DzStringDz {reject}
+    "locHoldsCompoundValue" -> DzStringDz {reject}
+    "label" -> DzStringDz {reject}
+    "'Throw" -> DzStringDz {reject}
+    "#map" -> DzStringDz {reject}
+    "double" -> DzStringDz {reject}
+    "hasType" -> DzStringDz {reject}
+    "'DefaultCase" -> DzStringDz {reject}
+    "isArrayType" -> DzStringDz {reject}
+    "foreachArrayPair" -> DzStringDz {reject}
+    "var_dump_indent" -> DzStringDz {reject}
+    "'OldFunctionDecl" -> DzStringDz {reject}
+    "toBasicRef" -> DzStringDz {reject}
+    "==Set" -> DzStringDz {reject}
+    "<<Int" -> DzStringDz {reject}
+    "'ReferenceAssign" -> DzStringDz {reject}
+    "'StaticVariable" -> DzStringDz {reject}
+    "String2Int" -> DzStringDz {reject}
+    "val" -> DzStringDz {reject}
+    "#ioError" -> DzStringDz {reject}
+    "OID" -> DzStringDz {reject}
+    "ArrayCreateElem" -> DzStringDz {reject}
+    "Map2KLabel" -> DzStringDz {reject}
+    "@RefCount" -> DzStringDz {reject}
+    "var" -> DzStringDz {reject}
+    "'Braced" -> DzStringDz {reject}
+    "'ShellCommand" -> DzStringDz {reject}
+    "#write" -> DzStringDz {reject}
+    "=KList" -> DzStringDz {reject}
+    "lab" -> DzStringDz {reject}
+    "'Include" -> DzStringDz {reject}
+    "=/=K" -> DzStringDz {reject}
+    "makeFunction" -> DzStringDz {reject}
+    "'AltFor" -> DzStringDz {reject}
+    "#buffer" -> DzStringDz {reject}
+    "trim" -> DzStringDz {reject}
+    "runFunction" -> DzStringDz {reject}
+    "'FloatCast" -> DzStringDz {reject}
+    ">String" -> DzStringDz {reject}
+    "lengthList" -> DzStringDz {reject}
+    "'Catch" -> DzStringDz {reject}
+    "divInt" -> DzStringDz {reject}
+    "'ShortOpenTag" -> DzStringDz {reject}
+    "#inKList" -> DzStringDz {reject}
+    "'StaticFunctionCall" -> DzStringDz {reject}
+    "equal" -> DzStringDz {reject}
+    "'Name" -> DzStringDz {reject}
+    "*toObject" -> DzStringDz {reject}
+    "'DoubleQuoted" -> DzStringDz {reject}
+    "@Value" -> DzStringDz {reject}
+    "'PostInc" -> DzStringDz {reject}
+    "rfindString" -> DzStringDz {reject}
+    "'ElseIf" -> DzStringDz {reject}
+    "hasMember" -> DzStringDz {reject}
+    "<String" -> DzStringDz {reject}
+    "<>Ltl" -> DzStringDz {reject}
+    "'DQContent" -> DzStringDz {reject}
+    "makeNewObject" -> DzStringDz {reject}
+    "'FullOpenTag" -> DzStringDz {reject}
+    "ArrayInitCrnt" -> DzStringDz {reject}
+    "is_numeric" -> DzStringDz {reject}
+    "writeClassInstanceMembers" -> DzStringDz {reject}
+    "'ObjectCreation" -> DzStringDz {reject}
+    "isBuiltin" -> DzStringDz {reject}
+    "getKLabel" -> DzStringDz {reject}
+    "'Class" -> DzStringDz {reject}
+    "String2Bool" -> DzStringDz {reject}
+    "NOT-SUPPORTED" -> DzStringDz {reject}
+    "'DeclareStatic" -> DzStringDz {reject}
+    "isNumericString" -> DzStringDz {reject}
+    "#ESPIPE" -> DzStringDz {reject}
+    "get_config_label" -> DzStringDz {reject}
+    "#token" -> DzStringDz {reject}
+    "'LessEqual" -> DzStringDz {reject}
+    "<=Float" -> DzStringDz {reject}
+    "isset" -> DzStringDz {reject}
+    "reset" -> DzStringDz {reject}
+    "=/=Bool" -> DzStringDz {reject}
+    "getFunScope" -> DzStringDz {reject}
+    "redex" -> DzStringDz {reject}
+    "'GreaterEqual" -> DzStringDz {reject}
+    "'Hexa" -> DzStringDz {reject}
+    "#EISDIR" -> DzStringDz {reject}
+    "isStringType" -> DzStringDz {reject}
+    "'HexaChar" -> DzStringDz {reject}
+    "popLoopContext" -> DzStringDz {reject}
+    "=Set" -> DzStringDz {reject}
+    "*Int" -> DzStringDz {reject}
+    "ArrayCreateEmpty" -> DzStringDz {reject}
+    "'Less" -> DzStringDz {reject}
+    "isSubclass" -> DzStringDz {reject}
+    "lvalue" -> DzStringDz {reject}
+    "lookup_glob" -> DzStringDz {reject}
+    "'InlineHTML" -> DzStringDz {reject}
+    "arrayCurrentOverflow" -> DzStringDz {reject}
+    "#stat" -> DzStringDz {reject}
+    "'ObjectAccess" -> DzStringDz {reject}
+    "'AltSwitch" -> DzStringDz {reject}
+    "initBuiltinFunctions" -> DzStringDz {reject}
+    "#inSet" -> DzStringDz {reject}
+    "-Set" -> DzStringDz {reject}
+    "KLabel2String" -> DzStringDz {reject}
+    "#set" -> DzStringDz {reject}
+    "'Isset" -> DzStringDz {reject}
+    "maxInt" -> DzStringDz {reject}
+    "user_input" -> DzStringDz {reject}
+    "NULL" -> DzStringDz {reject}
+    "locHoldsObject" -> DzStringDz {reject}
+    "'Return" -> DzStringDz {reject}
+    "##tcpRequest" -> DzStringDz {reject}
+    "visiting" -> DzStringDz {reject}
+    "'Expr" -> DzStringDz {reject}
+    "Bag2KLabel" -> DzStringDz {reject}
+    "#ENOTDIR" -> DzStringDz {reject}
+    "ERROR" -> DzStringDz {reject}
+    "'EmbeddedString" -> DzStringDz {reject}
+    "processFunArgs" -> DzStringDz {reject}
+    "isIdentical" -> DzStringDz {reject}
+    "'Pair" -> DzStringDz {reject}
+    "hasProperty" -> DzStringDz {reject}
+    "<Int" -> DzStringDz {reject}
+    "'EchoOpenTag" -> DzStringDz {reject}
+    "true" -> DzStringDz {reject}
+    "[]Ltl" -> DzStringDz {reject}
+    "#ENAMETOOLONG" -> DzStringDz {reject}
+    ">Int" -> DzStringDz {reject}
+    "'Switch" -> DzStringDz {reject}
+    "|->Ltl" -> DzStringDz {reject}
+    "isStatic" -> DzStringDz {reject}
+    "+Int" -> DzStringDz {reject}
+    "#istream" -> DzStringDz {reject}
+    "initSuperGlobals" -> DzStringDz {reject}
+    "'ErrorFree" -> DzStringDz {reject}
+    "'Some" -> DzStringDz {reject}
+    "WARNING" -> DzStringDz {reject}
+    "#string2Int" -> DzStringDz {reject}
+    "'HereDocStart" -> DzStringDz {reject}
+    "obj" -> DzStringDz {reject}
+    "method" -> DzStringDz {reject}
+    "@byValue" -> DzStringDz {reject}
+    "greaterEqual" -> DzStringDz {reject}
+    "'ConstantVariable" -> DzStringDz {reject}
+    "refNull" -> DzStringDz {reject}
+    "'Continue" -> DzStringDz {reject}
+    "count" -> DzStringDz {reject}
+    "<->Ltl" -> DzStringDz {reject}
+    "'CloseTag" -> DzStringDz {reject}
+    "runScript" -> DzStringDz {reject}
+    "'Ref" -> DzStringDz {reject}
+    "buildInitState" -> DzStringDz {reject}
+    "type" -> DzStringDz {reject}
+    "setCrntScope" -> DzStringDz {reject}
+    "'RequireOnce" -> DzStringDz {reject}
+    "'ClassConstantDecl" -> DzStringDz {reject}
+    "KLabel2KLabel" -> DzStringDz {reject}
+    "objectInit" -> DzStringDz {reject}
+    "none" -> DzStringDz {reject}
+    "dividesInt" -> DzStringDz {reject}
+    "Set2KTermAcc" -> DzStringDz {reject}
+    "'DNumber" -> DzStringDz {reject}
+    "Id2String" -> DzStringDz {reject}
+    "dump_content" -> DzStringDz {reject}
+    "'MulAssign" -> DzStringDz {reject}
+    "initClassMemberDecl" -> DzStringDz {reject}
+    "int" -> DzStringDz {reject}
+    "Map" -> DzStringDz {reject}
+    "'AbstractMethodBody" -> DzStringDz {reject}
+    "<=Set" -> DzStringDz {reject}
+    "comparison" -> DzStringDz {reject}
+    ">>Int" -> DzStringDz {reject}
+    "isStrictComparison" -> DzStringDz {reject}
+    "'IntCast" -> DzStringDz {reject}
+    "isScalar" -> DzStringDz {reject}
+    ">=Int" -> DzStringDz {reject}
+    "'True" -> DzStringDz {reject}
+    "CellLabel2KLabel" -> DzStringDz {reject}
+    "RgetRef" -> DzStringDz {reject}
+    "this" -> DzStringDz {reject}
+    "=Map" -> DzStringDz {reject}
+    "'ASPOpenTag" -> DzStringDz {reject}
+    "|=Ltl" -> DzStringDz {reject}
+    "'Null" -> DzStringDz {reject}
+    "'Neg" -> DzStringDz {reject}
+    "*toFloat" -> DzStringDz {reject}
+    "isNumeric" -> DzStringDz {reject}
+    "'Simple" -> DzStringDz {reject}
+    "'MinAssign" -> DzStringDz {reject}
+    "initScopes" -> DzStringDz {reject}
+    "'Eval" -> DzStringDz {reject}
+    "#isTCPError" -> DzStringDz {reject}
+    "MethodNotFound" -> DzStringDz {reject}
+    "var_dump" -> DzStringDz {reject}
+    "categoryChar" -> DzStringDz {reject}
+    "=Bag" -> DzStringDz {reject}
+    "while" -> DzStringDz {reject}
+    "real" -> DzStringDz {reject}
+    "+String" -> DzStringDz {reject}
+    "'Positive" -> DzStringDz {reject}
+    "findString" -> DzStringDz {reject}
+    "if" -> DzStringDz {reject}
+    "#else" -> DzStringDz {reject}
+    "read" -> DzStringDz {reject}
+    "ROOT" -> DzStringDz {reject}
+    "zvalRead" -> DzStringDz {reject}
+    "less" -> DzStringDz {reject}
+    "MyListItem" -> DzStringDz {reject}
+    "alias" -> DzStringDz {reject}
+    "rtrim" -> DzStringDz {reject}
+    "'Document" -> DzStringDz {reject}
+    "normalizeFloat" -> DzStringDz {reject}
+    "geqVal" -> DzStringDz {reject}
+    "'ListAssign" -> DzStringDz {reject}
+    "in" -> DzStringDz {reject}
+    "'BracedArrayAccess" -> DzStringDz {reject}
+    "|->" -> DzStringDz {reject}
+    "=/=Int" -> DzStringDz {reject}
+    "'Directive" -> DzStringDz {reject}
+    "createEmptyClass" -> DzStringDz {reject}
+    "'RefValue" -> DzStringDz {reject}
+    "==String" -> DzStringDz {reject}
+    "<=Map" -> DzStringDz {reject}
+    "print_r" -> DzStringDz {reject}
+    "'ParamConstant" -> DzStringDz {reject}
+    "'Modifiers" -> DzStringDz {reject}
+    "greater" -> DzStringDz {reject}
+    "lookup_fun" -> DzStringDz {reject}
+    "lengthString" -> DzStringDz {reject}
+    "methExecute" -> DzStringDz {reject}
+    "Array" -> DzStringDz {reject}
+    "is_scalar" -> DzStringDz {reject}
+    "String2Bag" -> DzStringDz {reject}
+    "'SLAssign" -> DzStringDz {reject}
+    "'MethodBody" -> DzStringDz {reject}
+    "ArrayUpdateElem" -> DzStringDz {reject}
+    "#lstat" -> DzStringDz {reject}
+    "wrap-with" -> DzStringDz {reject}
+    "DEPRECATED" -> DzStringDz {reject}
+    "String2KLabel" -> DzStringDz {reject}
+    "andThenBool" -> DzStringDz {reject}
+    "makeArrayFromScalar" -> DzStringDz {reject}
+    "#tcpError" -> DzStringDz {reject}
+    "boolean" -> DzStringDz {reject}
+    "'Value" -> DzStringDz {reject}
+    "*toString" -> DzStringDz {reject}
+    "'StringAccess" -> DzStringDz {reject}
+    "cool" -> DzStringDz {reject}
+    "copyArrayMembers" -> DzStringDz {reject}
+    ">Float" -> DzStringDz {reject}
+    "staticDeclFound" -> DzStringDz {reject}
+    "defined" -> DzStringDz {reject}
+    "#close" -> DzStringDz {reject}
+    "mod" -> DzStringDz {reject}
+    "/Float" -> DzStringDz {reject}
+    "intersectSet" -> DzStringDz {reject}
+    "locHoldsArray" -> DzStringDz {reject}
+    "-Float" -> DzStringDz {reject}
+    "'OctaChar" -> DzStringDz {reject}
+    "==Float" -> DzStringDz {reject}
+    "'BinAnd" -> DzStringDz {reject}
+    "'Div" -> DzStringDz {reject}
+    "inKList" -> DzStringDz {reject}
+    "'InstanceVariable" -> DzStringDz {reject}
+    "dummy" -> DzStringDz {reject}
+    "replaceAll" -> DzStringDz {reject}
+    "FalseLtl" -> DzStringDz {reject}
+    "undef" -> DzStringDz {reject}
+    "^Int" -> DzStringDz {reject}
+    "=List" -> DzStringDz {reject}
+    "/\\Ltl" -> DzStringDz {reject}
+    "'ListWrap" -> DzStringDz {reject}
+    "expEvalLoc" -> DzStringDz {reject}
+    "next" -> DzStringDz {reject}
+    "*toBoolean" -> DzStringDz {reject}
+    "isLiteral" -> DzStringDz {reject}
+    "&Int" -> DzStringDz {reject}
+    "run" -> DzStringDz {reject}
+    "'Key" -> DzStringDz {reject}
+    "copyValueToLoc" -> DzStringDz {reject}
+    "=/=String" -> DzStringDz {reject}
+    "'OrAssign" -> DzStringDz {reject}
+    "pushStackFrame" -> DzStringDz {reject}
+    "assignSeqOfIds" -> DzStringDz {reject}
+    "xorBool" -> DzStringDz {reject}
+    "isStringKey" -> DzStringDz {reject}
+    "NOTICE" -> DzStringDz {reject}
+    "\\/Ltl" -> DzStringDz {reject}
+    "#isWhiteSpace" -> DzStringDz {reject}
+    "'InterfaceFunctionRef" -> DzStringDz {reject}
+    "'IsNotEqual" -> DzStringDz {reject}
+    "visitedK" -> DzStringDz {reject}
+    "isToken" -> DzStringDz {reject}
+    "visitedL" -> DzStringDz {reject}
+    "Bag2String" -> DzStringDz {reject}
+    "==List" -> DzStringDz {reject}
+    "replace" -> DzStringDz {reject}
+    "nul" -> DzStringDz {reject}
+    "#EOF" -> DzStringDz {reject}
+    "'Implements" -> DzStringDz {reject}
+    "'While" -> DzStringDz {reject}
+    "zval" -> DzStringDz {reject}
+    "string" -> DzStringDz {reject}
+    "==KList" -> DzStringDz {reject}
+    "BinOp" -> DzStringDz {reject}
+    "'FunctionName" -> DzStringDz {reject}
+    "ULtl" -> DzStringDz {reject}
+    "writeClassStaticMembers" -> DzStringDz {reject}
+    "#string2klist" -> DzStringDz {reject}
+    "Char2String" -> DzStringDz {reject}
+    "inFun" -> DzStringDz {reject}
+    "initStatic" -> DzStringDz {reject}
+    "=/=Float" -> DzStringDz {reject}
+    "variable" -> DzStringDz {reject}
+    "popStackFrame" -> DzStringDz {reject}
+    "'AndAssign" -> DzStringDz {reject}
+    "'IncludeOnce" -> DzStringDz {reject}
+    "#parseInput" -> DzStringDz {reject}
+    "#statTypes" -> DzStringDz {reject}
+    "<=>Ltl" -> DzStringDz {reject}
+    "'ParamRef" -> DzStringDz {reject}
+    "=>Ltl" -> DzStringDz {reject}
+    "*Cond" -> DzStringDz {reject}
+    "rfindChar" -> DzStringDz {reject}
+    "setCrntObj" -> DzStringDz {reject}
+    "'ParamDefault" -> DzStringDz {reject}
+    "values" -> DzStringDz {reject}
+    "'Greater" -> DzStringDz {reject}
+    "pushLoopContext" -> DzStringDz {reject}
+    "#checkTCPAnswer" -> DzStringDz {reject}
+    "Literal" -> DzStringDz {reject}
+    "sf" -> DzStringDz {reject}
+    "isKResult" -> DzStringDz {reject}
+    "sweep" -> DzStringDz {reject}
+    "size" -> DzStringDz {reject}
+    "decRefCount" -> DzStringDz {reject}
+    "'Body" -> DzStringDz {reject}
+    "'Concat" -> DzStringDz {reject}
+    "'Plus" -> DzStringDz {reject}
+    "'IndirectReference" -> DzStringDz {reject}
+    "'PlusAssign" -> DzStringDz {reject}
+    "#EINVAL" -> DzStringDz {reject}
+    "syncArrayCurrent" -> DzStringDz {reject}
+    "'Case" -> DzStringDz {reject}
+    "#tcpRequest" -> DzStringDz {reject}
+    "'IsEqual" -> DzStringDz {reject}
+    "'ObjectCast" -> DzStringDz {reject}
+    "#ENOENT" -> DzStringDz {reject}
+    "Int2String" -> DzStringDz {reject}
+    "'LXor" -> DzStringDz {reject}
+    "@byRef" -> DzStringDz {reject}
+    "deprecatedIdiomFound" -> DzStringDz {reject}
+    "'PreInc" -> DzStringDz {reject}
+    "#hasMapping" -> DzStringDz {reject}
+    "makeAccess2NonDefinedClassMethodErrorMsg" -> DzStringDz {reject}
+    "=/=KLabel" -> DzStringDz {reject}
+    "'False" -> DzStringDz {reject}
+    "#stderr" -> DzStringDz {reject}
+    "'Min" -> DzStringDz {reject}
+    "MakeStaticDecl" -> DzStringDz {reject}
+    "is_array" -> DzStringDz {reject}
+    "~Ltl" -> DzStringDz {reject}
+    "String2Float" -> DzStringDz {reject}
+    "'Final" -> DzStringDz {reject}
+    "->Ltl" -> DzStringDz {reject}
+    "#noIO" -> DzStringDz {reject}
+    "endVisit" -> DzStringDz {reject}
+    "#evalHelper" -> DzStringDz {reject}
+    "makeForInit" -> DzStringDz {reject}
+    "#counter" -> DzStringDz {reject}
+    "isSuperclass" -> DzStringDz {reject}
+    "minInt" -> DzStringDz {reject}
+    "'Block" -> DzStringDz {reject}
+    "TrueLtl" -> DzStringDz {reject}
+    "#opendir" -> DzStringDz {reject}
+    "#isMapInK" -> DzStringDz {reject}
+    "mul" -> DzStringDz {reject}
+    "=/=List" -> DzStringDz {reject}
+    "ArrayCrnt2None" -> DzStringDz {reject}
+    "isSuperGlobal" -> DzStringDz {reject}
+    "isFloatType" -> DzStringDz {reject}
+    "String2K" -> DzStringDz {reject}
+    "#freezer" -> DzStringDz {reject}
+    "indentDec" -> DzStringDz {reject}
+    "'Escape" -> DzStringDz {reject}
+    "writeClassMethod" -> DzStringDz {reject}
+    "methodLookup" -> DzStringDz {reject}
+    "for" -> DzStringDz {reject}
+    "absInt" -> DzStringDz {reject}
+    "#isDigit" -> DzStringDz {reject}
+    "List2KLabel" -> DzStringDz {reject}
+    "'ClassName" -> DzStringDz {reject}
+    "String2Id" -> DzStringDz {reject}
+    "allocAndRunConstructor" -> DzStringDz {reject}
+    "'Static" -> DzStringDz {reject}
+    "$hasMapping" -> DzStringDz {reject}
+    "lref" -> DzStringDz {reject}
+    ">=String" -> DzStringDz {reject}
+    "visibility2String" -> DzStringDz {reject}
+    "#tokenToString" -> DzStringDz {reject}
+    "substrString" -> DzStringDz {reject}
+    "declareGlobal" -> DzStringDz {reject}
+    "'PreDec" -> DzStringDz {reject}
+    "false" -> DzStringDz {reject}
+    "print_r_array" -> DzStringDz {reject}
+    "'Not" -> DzStringDz {reject}
+    "/Int" -> DzStringDz {reject}
+    "'ASPCloseTag" -> DzStringDz {reject}
+    "ArrayInitProps" -> DzStringDz {reject}
+    "=/=KList" -> DzStringDz {reject}
+    "'If" -> DzStringDz {reject}
+    "==Int" -> DzStringDz {reject}
+    "plus" -> DzStringDz {reject}
+    "makeExceptionClass" -> DzStringDz {reject}
+    "'Mod" -> DzStringDz {reject}
+    "arr" -> DzStringDz {reject}
+    "emptyArray" -> DzStringDz {reject}
+    "'LOr" -> DzStringDz {reject}
+    "'InlineEcho" -> DzStringDz {reject}
+    "modelCheck" -> DzStringDz {reject}
+    "#eval" -> DzStringDz {reject}
+    "*toArray" -> DzStringDz {reject}
+    "start" -> DzStringDz {reject}
+    "Float2String" -> DzStringDz {reject}
+    "#distinctCounter" -> DzStringDz {reject}
+    "#seek" -> DzStringDz {reject}
+    "methRunIfVisible" -> DzStringDz {reject}
+    "'List" -> DzStringDz {reject}
+    "isIntString" -> DzStringDz {reject}
+    "CopyFunctionArgs" -> DzStringDz {reject}
+    "'IsNotIdentical" -> DzStringDz {reject}
+    "initBuiltinClasses" -> DzStringDz {reject}
+    "makeStaticDecl" -> DzStringDz {reject}
+    "'ArrayAccess" -> DzStringDz {reject}
+    "'XorAssign" -> DzStringDz {reject}
+    "makeStdClass" -> DzStringDz {reject}
+    "isEqualScalar" -> DzStringDz {reject}
+    "loopFrame" -> DzStringDz {reject}
+    "switch" -> DzStringDz {reject}
+    "typeOf" -> DzStringDz {reject}
+    "'TemplateDocument" -> DzStringDz {reject}
+    "'InterfaceExtends" -> DzStringDz {reject}
+    "'MagicConstant" -> DzStringDz {reject}
+    "get_crnt_fun" -> DzStringDz {reject}
+    "private" -> DzStringDz {reject}
+    "currentOverflow" -> DzStringDz {reject}
+    "=/=Map" -> DzStringDz {reject}
+    "*Float" -> DzStringDz {reject}
+    "is_type" -> DzStringDz {reject}
+    "methodInfo" -> DzStringDz {reject}
+    "ArrayWriteCrnt" -> DzStringDz {reject}
+    "==KLabel" -> DzStringDz {reject}
+    "@Type" -> DzStringDz {reject}
+    "ArrayInitProp" -> DzStringDz {reject}
+    "getGlobalScope" -> DzStringDz {reject}
+    "'FunctionDeclRef" -> DzStringDz {reject}
+    "|Int" -> DzStringDz {reject}
+    "min" -> DzStringDz {reject}
+    "'None" -> DzStringDz {reject}
+    "'ClassConstant" -> DzStringDz {reject}
+    "array_key_exists" -> DzStringDz {reject}
+    "applying" -> DzStringDz {reject}
+    "#ELOOP" -> DzStringDz {reject}
+    "impliesBool" -> DzStringDz {reject}
+    "leq" -> DzStringDz {reject}
+    "^Float" -> DzStringDz {reject}
+    "prop" -> DzStringDz {reject}
+    "'Echo" -> DzStringDz {reject}
+    "expEval" -> DzStringDz {reject}
+    "'InternalFunction" -> DzStringDz {reject}
+    "len" -> DzStringDz {reject}
+    "'Ternary" -> DzStringDz {reject}
+    "#noparse" -> DzStringDz {reject}
+    "decRefCountCompound" -> DzStringDz {reject}
+    "'For" -> DzStringDz {reject}
+    "#stdout" -> DzStringDz {reject}
+    "#tell" -> DzStringDz {reject}
+    "@IsRef" -> DzStringDz {reject}
+    "#retrieveTCPError" -> DzStringDz {reject}
+    "terminated" -> DzStringDz {reject}
+    "makeObjectFromArray" -> DzStringDz {reject}
+    "'Deci" -> DzStringDz {reject}
+    "isObjectType" -> DzStringDz {reject}
+    "'Try" -> DzStringDz {reject}
+    "Rget" -> DzStringDz {reject}
+    "zvalDestroy" -> DzStringDz {reject}
+    "detectDeprecated" -> DzStringDz {reject}
+    "'ObjectProperty" -> DzStringDz {reject}
+    "'PostDec" -> DzStringDz {reject}
+    "isInPath" -> DzStringDz {reject}
+    "'DoWhile" -> DzStringDz {reject}
+    ".MyList" -> DzStringDz {reject}
+    "visitedL(~>)" -> DzStringDz {reject}
+    "'#andBool" -> DzStringDz {reject}
+    "popx" -> DzStringDz {reject}
+    "'ConstantEncapsedString" -> DzStringDz {reject}
+    "=/=Set" -> DzStringDz {reject}
+    "heat" -> DzStringDz {reject}
+    "decRefCountArrayElems" -> DzStringDz {reject}
+    "cleanTrace" -> DzStringDz {reject}
+    "head" -> DzStringDz {reject}
+    "'EmbeddedArrayVariable" -> DzStringDz {reject}
+    "'Break" -> DzStringDz {reject}
+    "myNext" -> DzStringDz {reject}
+    "lessEqual" -> DzStringDz {reject}
+    "'ClassConstantDeclList" -> DzStringDz {reject}
+    "isCrntVisib" -> DzStringDz {reject}
+    "#parse" -> DzStringDz {reject}
+    "'Param" -> DzStringDz {reject}
+    "'Empty" -> DzStringDz {reject}
+    "Int2Float" -> DzStringDz {reject}
+    "class" -> DzStringDz {reject}
+    "#EACCES" -> DzStringDz {reject}
+    "isFloatString" -> DzStringDz {reject}
+    "hasSameType" -> DzStringDz {reject}
+    "mark" -> DzStringDz {reject}
+    "'Public" -> DzStringDz {reject}
+    "-Int" -> DzStringDz {reject}
+    "~Int" -> DzStringDz {reject}
+    "notBool" -> DzStringDz {reject}
+    "#getMapFromK" -> DzStringDz {reject}
+    "convertToLoc" -> DzStringDz {reject}
+    "'And" -> DzStringDz {reject}
+    "=Int" -> DzStringDz {reject}
+    "'Unset" -> DzStringDz {reject}
+    "RLtl" -> DzStringDz {reject}
+    "--Float" -> DzStringDz {reject}
+    "setCrntClass" -> DzStringDz {reject}
+    "indentInc" -> DzStringDz {reject}
+    "isEqual" -> DzStringDz {reject}
+    "==K" -> DzStringDz {reject}
+    "#EBADF" -> DzStringDz {reject}
+    "identical" -> DzStringDz {reject}
+    "ordChar" -> DzStringDz {reject}
+    "modInt" -> DzStringDz {reject}
+    "'InterfaceDecl" -> DzStringDz {reject}
+    "isCompoundValue" -> DzStringDz {reject}
+    "'Normal" -> DzStringDz {reject}
+    "*toInteger" -> DzStringDz {reject}
+    "visitedL(,,)" -> DzStringDz {reject}
+    "foreach" -> DzStringDz {reject}
+    "<=String" -> DzStringDz {reject}
+    "isSpecialVar" -> DzStringDz {reject}
+    "'SRAssign" -> DzStringDz {reject}
+    "andBool" -> DzStringDz {reject}
+    "'Declare" -> DzStringDz {reject}
+    "div" -> DzStringDz {reject}
+    "#open" -> DzStringDz {reject}
+    "object" -> DzStringDz {reject}
+    "isEmptySet" -> DzStringDz {reject}
+    "isRetValueLoc" -> DzStringDz {reject}
+    "'NullCast" -> DzStringDz {reject}
+    "'AltElseIf" -> DzStringDz {reject}
+    "'FunctionDecl" -> DzStringDz {reject}
+    "'ConcatAssign" -> DzStringDz {reject}
+    "MakeDeprecatedWarning" -> DzStringDz {reject}
+    "#ostream" -> DzStringDz {reject}
+    "protected" -> DzStringDz {reject}
+    "isVisible" -> DzStringDz {reject}
+    "fresh" -> DzStringDz {reject}
+    "'DivAssign" -> DzStringDz {reject}
+    "ltrim" -> DzStringDz {reject}
+    "#getc" -> DzStringDz {reject}
+    "=K" -> DzStringDz {reject}
+    "is_string" -> DzStringDz {reject}
+    "=KLabel" -> DzStringDz {reject}
+    "'OldFunctionDeclRef" -> DzStringDz {reject}
+    "print_r_content" -> DzStringDz {reject}
+    "is_float" -> DzStringDz {reject}
+    "'AltForEach" -> DzStringDz {reject}
+    "isBoolType" -> DzStringDz {reject}
+    "ArrayIndexOf" -> DzStringDz {reject}
+    "xorInt" -> DzStringDz {reject}
+    "'LNumber" -> DzStringDz {reject}
+    "Set2KLabel" -> DzStringDz {reject}
+    "'InterfaceFunction" -> DzStringDz {reject}
+    "makeArrayLiteral" -> DzStringDz {reject}
+    "string2Number" -> DzStringDz {reject}
+    "refactor" -> DzStringDz {reject}
+    "#then" -> DzStringDz {reject}
+    "bool" -> DzStringDz {reject}
+    "initClass" -> DzStringDz {reject}
+    "biggestIntKey" -> DzStringDz {reject}
+    "randomRandom" -> DzStringDz {reject}
+    "chrChar" -> DzIntDz {reject}
+    "%Float" -> DzIntDz {reject}
+    "'Literal" -> DzIntDz {reject}
+    "'Print" -> DzIntDz {reject}
+    "fv" -> DzIntDz {reject}
+    "gc" -> DzIntDz {reject}
+    "heated" -> DzIntDz {reject}
+    "visit" -> DzIntDz {reject}
+    "<Float" -> DzIntDz {reject}
+    "zvalWrite" -> DzIntDz {reject}
+    "float" -> DzIntDz {reject}
+    "#fi" -> DzIntDz {reject}
+    "'Clone" -> DzIntDz {reject}
+    "makeAccess2NonVisibleClassConstantErrorMsg" -> DzIntDz {reject}
+    "myCurrent" -> DzIntDz {reject}
+    "'Default" -> DzIntDz {reject}
+    "#putc" -> DzIntDz {reject}
+    "+Float" -> DzIntDz {reject}
+    "==Bool" -> DzIntDz {reject}
+    "OLtl" -> DzIntDz {reject}
+    "substr" -> DzIntDz {reject}
+    "countAllOccurences" -> DzIntDz {reject}
+    "#" -> DzIntDz {reject}
+    "hasNoDecimalPart" -> DzIntDz {reject}
+    "zvalCreate" -> DzIntDz {reject}
+    "'IsIdentical" -> DzIntDz {reject}
+    "(" -> DzIntDz {reject}
+    ")" -> DzIntDz {reject}
+    "K2String" -> DzIntDz {reject}
+    "/" -> DzIntDz {reject}
+    "==Map" -> DzIntDz {reject}
+    "," -> DzIntDz {reject}
+    "orBool" -> DzIntDz {reject}
+    "thisTag" -> DzIntDz {reject}
+    "Float2Int" -> DzIntDz {reject}
+    "unset" -> DzIntDz {reject}
+    "gv" -> DzIntDz {reject}
+    "makeStaticDecls" -> DzIntDz {reject}
+    "myStrlen" -> DzIntDz {reject}
+    "findChar" -> DzIntDz {reject}
+    "each" -> DzIntDz {reject}
+    "'BoolCast" -> DzIntDz {reject}
+    "'DeclareGlobal" -> DzIntDz {reject}
+    "buildArrayCompareFun" -> DzIntDz {reject}
+    "array" -> DzIntDz {reject}
+    "'ModAssign" -> DzIntDz {reject}
+    "String2Char" -> DzIntDz {reject}
+    "getVisibility" -> DzIntDz {reject}
+    "print_r_indent" -> DzIntDz {reject}
+    "stdClass" -> DzIntDz {reject}
+    "<=Int" -> DzIntDz {reject}
+    "'LAnd" -> DzIntDz {reject}
+    "'FinalClass" -> DzIntDz {reject}
+    "'HereDoc" -> DzIntDz {reject}
+    "'Variable" -> DzIntDz {reject}
+    "directionalityChar" -> DzIntDz {reject}
+    "initIterationVars" -> DzIntDz {reject}
+    "'AbstractClass" -> DzIntDz {reject}
+    "'Mul" -> DzIntDz {reject}
+    "'AltWhile" -> DzIntDz {reject}
+    "write" -> DzIntDz {reject}
+    "current" -> DzIntDz {reject}
+    "'Protected" -> DzIntDz {reject}
+    "]" -> DzIntDz {reject}
+    "replaceFirst" -> DzIntDz {reject}
+    "WLtl" -> DzIntDz {reject}
+    "quotedCode" -> DzIntDz {reject}
+    "gettype" -> DzIntDz {reject}
+    "[" -> DzIntDz {reject}
+    "f" -> DzIntDz {reject}
+    "define" -> DzIntDz {reject}
+    "max" -> DzIntDz {reject}
+    "'AltIf" -> DzIntDz {reject}
+    "integer" -> DzIntDz {reject}
+    "'ArrayCast" -> DzIntDz {reject}
+    "keys" -> DzIntDz {reject}
+    "Lget" -> DzIntDz {reject}
+    "*or" -> DzIntDz {reject}
+    "runRemainingSwitchClauses" -> DzIntDz {reject}
+    "ArrayGetElemAtIndex" -> DzIntDz {reject}
+    "l" -> DzIntDz {reject}
+    "eqTo" -> DzIntDz {reject}
+    "'Assign" -> DzIntDz {reject}
+    "'Abstract" -> DzIntDz {reject}
+    "allocCrntObj" -> DzIntDz {reject}
+    "leqVal" -> DzIntDz {reject}
+    "'Negative" -> DzIntDz {reject}
+    "'Require" -> DzIntDz {reject}
+    "ref" -> DzIntDz {reject}
+    "r" -> DzIntDz {reject}
+    "#read" -> DzIntDz {reject}
+    "allocValue" -> DzIntDz {reject}
+    ">=Float" -> DzIntDz {reject}
+    "Set2KTerm" -> DzIntDz {reject}
+    "isIntType" -> DzIntDz {reject}
+    "public" -> DzIntDz {reject}
+    "%Int" -> DzIntDz {reject}
+    "KList2KLabel" -> DzIntDz {reject}
+    "#stdin" -> DzIntDz {reject}
+    "'Pattern" -> DzIntDz {reject}
+    "hasPrivateProperty" -> DzIntDz {reject}
+    "convertToLanguageValue" -> DzIntDz {reject}
+    "'ForEach" -> DzIntDz {reject}
+    "LError" -> DzIntDz {reject}
+    "orElseBool" -> DzIntDz {reject}
+    "readBasicRef" -> DzIntDz {reject}
+    "'SingleQuoted" -> DzIntDz {reject}
+    "'VariableBraced" -> DzIntDz {reject}
+    "incRefCount" -> DzIntDz {reject}
+    "locsHoldSameCompound" -> DzIntDz {reject}
+    "'Array" -> DzIntDz {reject}
+    "locNull" -> DzIntDz {reject}
+    "'FunctionCall" -> DzIntDz {reject}
+    "String2DotK" -> DzIntDz {reject}
+    "'Private" -> DzIntDz {reject}
+    "strlen" -> DzIntDz {reject}
+    "'Extends" -> DzIntDz {reject}
+    "stdclass" -> DzIntDz {reject}
+    "'Octa" -> DzIntDz {reject}
+    "'Or" -> DzIntDz {reject}
+    "#parseToken" -> DzIntDz {reject}
+    "key" -> DzIntDz {reject}
+    "#if" -> DzIntDz {reject}
+    "geq" -> DzIntDz {reject}
+    "isSet" -> DzIntDz {reject}
+    "'HereDocContent" -> DzIntDz {reject}
+    "LgetRef" -> DzIntDz {reject}
+    "'StringCast" -> DzIntDz {reject}
+    "extractIntSubstring" -> DzIntDz {reject}
+    "buildObjElemList" -> DzIntDz {reject}
+    "locHoldsCompoundValue" -> DzIntDz {reject}
+    "label" -> DzIntDz {reject}
+    "'Throw" -> DzIntDz {reject}
+    "#map" -> DzIntDz {reject}
+    "double" -> DzIntDz {reject}
+    "hasType" -> DzIntDz {reject}
+    "'DefaultCase" -> DzIntDz {reject}
+    "isArrayType" -> DzIntDz {reject}
+    "foreachArrayPair" -> DzIntDz {reject}
+    "var_dump_indent" -> DzIntDz {reject}
+    "'OldFunctionDecl" -> DzIntDz {reject}
+    "toBasicRef" -> DzIntDz {reject}
+    "==Set" -> DzIntDz {reject}
+    "<<Int" -> DzIntDz {reject}
+    "'ReferenceAssign" -> DzIntDz {reject}
+    "'StaticVariable" -> DzIntDz {reject}
+    "String2Int" -> DzIntDz {reject}
+    "val" -> DzIntDz {reject}
+    "#ioError" -> DzIntDz {reject}
+    "OID" -> DzIntDz {reject}
+    "ArrayCreateElem" -> DzIntDz {reject}
+    "Map2KLabel" -> DzIntDz {reject}
+    "@RefCount" -> DzIntDz {reject}
+    "var" -> DzIntDz {reject}
+    "'Braced" -> DzIntDz {reject}
+    "'ShellCommand" -> DzIntDz {reject}
+    "#write" -> DzIntDz {reject}
+    "=KList" -> DzIntDz {reject}
+    "lab" -> DzIntDz {reject}
+    "'Include" -> DzIntDz {reject}
+    "=/=K" -> DzIntDz {reject}
+    "makeFunction" -> DzIntDz {reject}
+    "'AltFor" -> DzIntDz {reject}
+    "#buffer" -> DzIntDz {reject}
+    "trim" -> DzIntDz {reject}
+    "runFunction" -> DzIntDz {reject}
+    "'FloatCast" -> DzIntDz {reject}
+    ">String" -> DzIntDz {reject}
+    "lengthList" -> DzIntDz {reject}
+    "'Catch" -> DzIntDz {reject}
+    "divInt" -> DzIntDz {reject}
+    "'ShortOpenTag" -> DzIntDz {reject}
+    "#inKList" -> DzIntDz {reject}
+    "'StaticFunctionCall" -> DzIntDz {reject}
+    "equal" -> DzIntDz {reject}
+    "'Name" -> DzIntDz {reject}
+    "*toObject" -> DzIntDz {reject}
+    "'DoubleQuoted" -> DzIntDz {reject}
+    "@Value" -> DzIntDz {reject}
+    "'PostInc" -> DzIntDz {reject}
+    "rfindString" -> DzIntDz {reject}
+    "'ElseIf" -> DzIntDz {reject}
+    "hasMember" -> DzIntDz {reject}
+    "<String" -> DzIntDz {reject}
+    "<>Ltl" -> DzIntDz {reject}
+    "'DQContent" -> DzIntDz {reject}
+    "makeNewObject" -> DzIntDz {reject}
+    "'FullOpenTag" -> DzIntDz {reject}
+    "ArrayInitCrnt" -> DzIntDz {reject}
+    "is_numeric" -> DzIntDz {reject}
+    "writeClassInstanceMembers" -> DzIntDz {reject}
+    "'ObjectCreation" -> DzIntDz {reject}
+    "isBuiltin" -> DzIntDz {reject}
+    "getKLabel" -> DzIntDz {reject}
+    "'Class" -> DzIntDz {reject}
+    "String2Bool" -> DzIntDz {reject}
+    "NOT-SUPPORTED" -> DzIntDz {reject}
+    "'DeclareStatic" -> DzIntDz {reject}
+    "isNumericString" -> DzIntDz {reject}
+    "#ESPIPE" -> DzIntDz {reject}
+    "get_config_label" -> DzIntDz {reject}
+    "#token" -> DzIntDz {reject}
+    "'LessEqual" -> DzIntDz {reject}
+    "<=Float" -> DzIntDz {reject}
+    "isset" -> DzIntDz {reject}
+    "reset" -> DzIntDz {reject}
+    "=/=Bool" -> DzIntDz {reject}
+    "getFunScope" -> DzIntDz {reject}
+    "redex" -> DzIntDz {reject}
+    "'GreaterEqual" -> DzIntDz {reject}
+    "'Hexa" -> DzIntDz {reject}
+    "#EISDIR" -> DzIntDz {reject}
+    "isStringType" -> DzIntDz {reject}
+    "'HexaChar" -> DzIntDz {reject}
+    "popLoopContext" -> DzIntDz {reject}
+    "=Set" -> DzIntDz {reject}
+    "*Int" -> DzIntDz {reject}
+    "ArrayCreateEmpty" -> DzIntDz {reject}
+    "'Less" -> DzIntDz {reject}
+    "isSubclass" -> DzIntDz {reject}
+    "lvalue" -> DzIntDz {reject}
+    "lookup_glob" -> DzIntDz {reject}
+    "'InlineHTML" -> DzIntDz {reject}
+    "arrayCurrentOverflow" -> DzIntDz {reject}
+    "#stat" -> DzIntDz {reject}
+    "'ObjectAccess" -> DzIntDz {reject}
+    "'AltSwitch" -> DzIntDz {reject}
+    "initBuiltinFunctions" -> DzIntDz {reject}
+    "#inSet" -> DzIntDz {reject}
+    "-Set" -> DzIntDz {reject}
+    "KLabel2String" -> DzIntDz {reject}
+    "#set" -> DzIntDz {reject}
+    "'Isset" -> DzIntDz {reject}
+    "maxInt" -> DzIntDz {reject}
+    "user_input" -> DzIntDz {reject}
+    "NULL" -> DzIntDz {reject}
+    "locHoldsObject" -> DzIntDz {reject}
+    "'Return" -> DzIntDz {reject}
+    "##tcpRequest" -> DzIntDz {reject}
+    "visiting" -> DzIntDz {reject}
+    "'Expr" -> DzIntDz {reject}
+    "Bag2KLabel" -> DzIntDz {reject}
+    "#ENOTDIR" -> DzIntDz {reject}
+    "ERROR" -> DzIntDz {reject}
+    "'EmbeddedString" -> DzIntDz {reject}
+    "processFunArgs" -> DzIntDz {reject}
+    "isIdentical" -> DzIntDz {reject}
+    "'Pair" -> DzIntDz {reject}
+    "hasProperty" -> DzIntDz {reject}
+    "<Int" -> DzIntDz {reject}
+    "'EchoOpenTag" -> DzIntDz {reject}
+    "true" -> DzIntDz {reject}
+    "[]Ltl" -> DzIntDz {reject}
+    "#ENAMETOOLONG" -> DzIntDz {reject}
+    ">Int" -> DzIntDz {reject}
+    "'Switch" -> DzIntDz {reject}
+    "|->Ltl" -> DzIntDz {reject}
+    "isStatic" -> DzIntDz {reject}
+    "+Int" -> DzIntDz {reject}
+    "#istream" -> DzIntDz {reject}
+    "initSuperGlobals" -> DzIntDz {reject}
+    "'ErrorFree" -> DzIntDz {reject}
+    "'Some" -> DzIntDz {reject}
+    "WARNING" -> DzIntDz {reject}
+    "#string2Int" -> DzIntDz {reject}
+    "'HereDocStart" -> DzIntDz {reject}
+    "obj" -> DzIntDz {reject}
+    "method" -> DzIntDz {reject}
+    "@byValue" -> DzIntDz {reject}
+    "greaterEqual" -> DzIntDz {reject}
+    "'ConstantVariable" -> DzIntDz {reject}
+    "refNull" -> DzIntDz {reject}
+    "'Continue" -> DzIntDz {reject}
+    "count" -> DzIntDz {reject}
+    "<->Ltl" -> DzIntDz {reject}
+    "'CloseTag" -> DzIntDz {reject}
+    "runScript" -> DzIntDz {reject}
+    "'Ref" -> DzIntDz {reject}
+    "buildInitState" -> DzIntDz {reject}
+    "type" -> DzIntDz {reject}
+    "setCrntScope" -> DzIntDz {reject}
+    "'RequireOnce" -> DzIntDz {reject}
+    "'ClassConstantDecl" -> DzIntDz {reject}
+    "KLabel2KLabel" -> DzIntDz {reject}
+    "objectInit" -> DzIntDz {reject}
+    "none" -> DzIntDz {reject}
+    "dividesInt" -> DzIntDz {reject}
+    "Set2KTermAcc" -> DzIntDz {reject}
+    "'DNumber" -> DzIntDz {reject}
+    "Id2String" -> DzIntDz {reject}
+    "dump_content" -> DzIntDz {reject}
+    "'MulAssign" -> DzIntDz {reject}
+    "initClassMemberDecl" -> DzIntDz {reject}
+    "int" -> DzIntDz {reject}
+    "Map" -> DzIntDz {reject}
+    "'AbstractMethodBody" -> DzIntDz {reject}
+    "<=Set" -> DzIntDz {reject}
+    "comparison" -> DzIntDz {reject}
+    ">>Int" -> DzIntDz {reject}
+    "isStrictComparison" -> DzIntDz {reject}
+    "'IntCast" -> DzIntDz {reject}
+    "isScalar" -> DzIntDz {reject}
+    ">=Int" -> DzIntDz {reject}
+    "'True" -> DzIntDz {reject}
+    "CellLabel2KLabel" -> DzIntDz {reject}
+    "RgetRef" -> DzIntDz {reject}
+    "this" -> DzIntDz {reject}
+    "=Map" -> DzIntDz {reject}
+    "'ASPOpenTag" -> DzIntDz {reject}
+    "|=Ltl" -> DzIntDz {reject}
+    "'Null" -> DzIntDz {reject}
+    "'Neg" -> DzIntDz {reject}
+    "*toFloat" -> DzIntDz {reject}
+    "isNumeric" -> DzIntDz {reject}
+    "'Simple" -> DzIntDz {reject}
+    "'MinAssign" -> DzIntDz {reject}
+    "initScopes" -> DzIntDz {reject}
+    "'Eval" -> DzIntDz {reject}
+    "#isTCPError" -> DzIntDz {reject}
+    "MethodNotFound" -> DzIntDz {reject}
+    "var_dump" -> DzIntDz {reject}
+    "categoryChar" -> DzIntDz {reject}
+    "=Bag" -> DzIntDz {reject}
+    "while" -> DzIntDz {reject}
+    "real" -> DzIntDz {reject}
+    "+String" -> DzIntDz {reject}
+    "'Positive" -> DzIntDz {reject}
+    "findString" -> DzIntDz {reject}
+    "if" -> DzIntDz {reject}
+    "#else" -> DzIntDz {reject}
+    "read" -> DzIntDz {reject}
+    "ROOT" -> DzIntDz {reject}
+    "zvalRead" -> DzIntDz {reject}
+    "less" -> DzIntDz {reject}
+    "MyListItem" -> DzIntDz {reject}
+    "alias" -> DzIntDz {reject}
+    "rtrim" -> DzIntDz {reject}
+    "'Document" -> DzIntDz {reject}
+    "normalizeFloat" -> DzIntDz {reject}
+    "geqVal" -> DzIntDz {reject}
+    "'ListAssign" -> DzIntDz {reject}
+    "in" -> DzIntDz {reject}
+    "'BracedArrayAccess" -> DzIntDz {reject}
+    "|->" -> DzIntDz {reject}
+    "=/=Int" -> DzIntDz {reject}
+    "'Directive" -> DzIntDz {reject}
+    "createEmptyClass" -> DzIntDz {reject}
+    "'RefValue" -> DzIntDz {reject}
+    "==String" -> DzIntDz {reject}
+    "<=Map" -> DzIntDz {reject}
+    "print_r" -> DzIntDz {reject}
+    "'ParamConstant" -> DzIntDz {reject}
+    "'Modifiers" -> DzIntDz {reject}
+    "greater" -> DzIntDz {reject}
+    "lookup_fun" -> DzIntDz {reject}
+    "lengthString" -> DzIntDz {reject}
+    "methExecute" -> DzIntDz {reject}
+    "Array" -> DzIntDz {reject}
+    "is_scalar" -> DzIntDz {reject}
+    "String2Bag" -> DzIntDz {reject}
+    "'SLAssign" -> DzIntDz {reject}
+    "'MethodBody" -> DzIntDz {reject}
+    "ArrayUpdateElem" -> DzIntDz {reject}
+    "#lstat" -> DzIntDz {reject}
+    "wrap-with" -> DzIntDz {reject}
+    "DEPRECATED" -> DzIntDz {reject}
+    "String2KLabel" -> DzIntDz {reject}
+    "andThenBool" -> DzIntDz {reject}
+    "makeArrayFromScalar" -> DzIntDz {reject}
+    "#tcpError" -> DzIntDz {reject}
+    "boolean" -> DzIntDz {reject}
+    "'Value" -> DzIntDz {reject}
+    "*toString" -> DzIntDz {reject}
+    "'StringAccess" -> DzIntDz {reject}
+    "cool" -> DzIntDz {reject}
+    "copyArrayMembers" -> DzIntDz {reject}
+    ">Float" -> DzIntDz {reject}
+    "staticDeclFound" -> DzIntDz {reject}
+    "defined" -> DzIntDz {reject}
+    "#close" -> DzIntDz {reject}
+    "mod" -> DzIntDz {reject}
+    "/Float" -> DzIntDz {reject}
+    "intersectSet" -> DzIntDz {reject}
+    "locHoldsArray" -> DzIntDz {reject}
+    "-Float" -> DzIntDz {reject}
+    "'OctaChar" -> DzIntDz {reject}
+    "==Float" -> DzIntDz {reject}
+    "'BinAnd" -> DzIntDz {reject}
+    "'Div" -> DzIntDz {reject}
+    "inKList" -> DzIntDz {reject}
+    "'InstanceVariable" -> DzIntDz {reject}
+    "dummy" -> DzIntDz {reject}
+    "replaceAll" -> DzIntDz {reject}
+    "FalseLtl" -> DzIntDz {reject}
+    "undef" -> DzIntDz {reject}
+    "^Int" -> DzIntDz {reject}
+    "=List" -> DzIntDz {reject}
+    "/\\Ltl" -> DzIntDz {reject}
+    "'ListWrap" -> DzIntDz {reject}
+    "expEvalLoc" -> DzIntDz {reject}
+    "next" -> DzIntDz {reject}
+    "*toBoolean" -> DzIntDz {reject}
+    "isLiteral" -> DzIntDz {reject}
+    "&Int" -> DzIntDz {reject}
+    "run" -> DzIntDz {reject}
+    "'Key" -> DzIntDz {reject}
+    "copyValueToLoc" -> DzIntDz {reject}
+    "=/=String" -> DzIntDz {reject}
+    "'OrAssign" -> DzIntDz {reject}
+    "pushStackFrame" -> DzIntDz {reject}
+    "assignSeqOfIds" -> DzIntDz {reject}
+    "xorBool" -> DzIntDz {reject}
+    "isStringKey" -> DzIntDz {reject}
+    "NOTICE" -> DzIntDz {reject}
+    "\\/Ltl" -> DzIntDz {reject}
+    "#isWhiteSpace" -> DzIntDz {reject}
+    "'InterfaceFunctionRef" -> DzIntDz {reject}
+    "'IsNotEqual" -> DzIntDz {reject}
+    "visitedK" -> DzIntDz {reject}
+    "isToken" -> DzIntDz {reject}
+    "visitedL" -> DzIntDz {reject}
+    "Bag2String" -> DzIntDz {reject}
+    "==List" -> DzIntDz {reject}
+    "replace" -> DzIntDz {reject}
+    "nul" -> DzIntDz {reject}
+    "#EOF" -> DzIntDz {reject}
+    "'Implements" -> DzIntDz {reject}
+    "'While" -> DzIntDz {reject}
+    "zval" -> DzIntDz {reject}
+    "string" -> DzIntDz {reject}
+    "==KList" -> DzIntDz {reject}
+    "BinOp" -> DzIntDz {reject}
+    "'FunctionName" -> DzIntDz {reject}
+    "ULtl" -> DzIntDz {reject}
+    "writeClassStaticMembers" -> DzIntDz {reject}
+    "#string2klist" -> DzIntDz {reject}
+    "Char2String" -> DzIntDz {reject}
+    "inFun" -> DzIntDz {reject}
+    "initStatic" -> DzIntDz {reject}
+    "=/=Float" -> DzIntDz {reject}
+    "variable" -> DzIntDz {reject}
+    "popStackFrame" -> DzIntDz {reject}
+    "'AndAssign" -> DzIntDz {reject}
+    "'IncludeOnce" -> DzIntDz {reject}
+    "#parseInput" -> DzIntDz {reject}
+    "#statTypes" -> DzIntDz {reject}
+    "<=>Ltl" -> DzIntDz {reject}
+    "'ParamRef" -> DzIntDz {reject}
+    "=>Ltl" -> DzIntDz {reject}
+    "*Cond" -> DzIntDz {reject}
+    "rfindChar" -> DzIntDz {reject}
+    "setCrntObj" -> DzIntDz {reject}
+    "'ParamDefault" -> DzIntDz {reject}
+    "values" -> DzIntDz {reject}
+    "'Greater" -> DzIntDz {reject}
+    "pushLoopContext" -> DzIntDz {reject}
+    "#checkTCPAnswer" -> DzIntDz {reject}
+    "Literal" -> DzIntDz {reject}
+    "sf" -> DzIntDz {reject}
+    "isKResult" -> DzIntDz {reject}
+    "sweep" -> DzIntDz {reject}
+    "size" -> DzIntDz {reject}
+    "decRefCount" -> DzIntDz {reject}
+    "'Body" -> DzIntDz {reject}
+    "'Concat" -> DzIntDz {reject}
+    "'Plus" -> DzIntDz {reject}
+    "'IndirectReference" -> DzIntDz {reject}
+    "'PlusAssign" -> DzIntDz {reject}
+    "#EINVAL" -> DzIntDz {reject}
+    "syncArrayCurrent" -> DzIntDz {reject}
+    "'Case" -> DzIntDz {reject}
+    "#tcpRequest" -> DzIntDz {reject}
+    "'IsEqual" -> DzIntDz {reject}
+    "'ObjectCast" -> DzIntDz {reject}
+    "#ENOENT" -> DzIntDz {reject}
+    "Int2String" -> DzIntDz {reject}
+    "'LXor" -> DzIntDz {reject}
+    "@byRef" -> DzIntDz {reject}
+    "deprecatedIdiomFound" -> DzIntDz {reject}
+    "'PreInc" -> DzIntDz {reject}
+    "#hasMapping" -> DzIntDz {reject}
+    "makeAccess2NonDefinedClassMethodErrorMsg" -> DzIntDz {reject}
+    "=/=KLabel" -> DzIntDz {reject}
+    "'False" -> DzIntDz {reject}
+    "#stderr" -> DzIntDz {reject}
+    "'Min" -> DzIntDz {reject}
+    "MakeStaticDecl" -> DzIntDz {reject}
+    "is_array" -> DzIntDz {reject}
+    "~Ltl" -> DzIntDz {reject}
+    "String2Float" -> DzIntDz {reject}
+    "'Final" -> DzIntDz {reject}
+    "->Ltl" -> DzIntDz {reject}
+    "#noIO" -> DzIntDz {reject}
+    "endVisit" -> DzIntDz {reject}
+    "#evalHelper" -> DzIntDz {reject}
+    "makeForInit" -> DzIntDz {reject}
+    "#counter" -> DzIntDz {reject}
+    "isSuperclass" -> DzIntDz {reject}
+    "minInt" -> DzIntDz {reject}
+    "'Block" -> DzIntDz {reject}
+    "TrueLtl" -> DzIntDz {reject}
+    "#opendir" -> DzIntDz {reject}
+    "#isMapInK" -> DzIntDz {reject}
+    "mul" -> DzIntDz {reject}
+    "=/=List" -> DzIntDz {reject}
+    "ArrayCrnt2None" -> DzIntDz {reject}
+    "isSuperGlobal" -> DzIntDz {reject}
+    "isFloatType" -> DzIntDz {reject}
+    "String2K" -> DzIntDz {reject}
+    "#freezer" -> DzIntDz {reject}
+    "indentDec" -> DzIntDz {reject}
+    "'Escape" -> DzIntDz {reject}
+    "writeClassMethod" -> DzIntDz {reject}
+    "methodLookup" -> DzIntDz {reject}
+    "for" -> DzIntDz {reject}
+    "absInt" -> DzIntDz {reject}
+    "#isDigit" -> DzIntDz {reject}
+    "List2KLabel" -> DzIntDz {reject}
+    "'ClassName" -> DzIntDz {reject}
+    "String2Id" -> DzIntDz {reject}
+    "allocAndRunConstructor" -> DzIntDz {reject}
+    "'Static" -> DzIntDz {reject}
+    "$hasMapping" -> DzIntDz {reject}
+    "lref" -> DzIntDz {reject}
+    ">=String" -> DzIntDz {reject}
+    "visibility2String" -> DzIntDz {reject}
+    "#tokenToString" -> DzIntDz {reject}
+    "substrString" -> DzIntDz {reject}
+    "declareGlobal" -> DzIntDz {reject}
+    "'PreDec" -> DzIntDz {reject}
+    "false" -> DzIntDz {reject}
+    "print_r_array" -> DzIntDz {reject}
+    "'Not" -> DzIntDz {reject}
+    "/Int" -> DzIntDz {reject}
+    "'ASPCloseTag" -> DzIntDz {reject}
+    "ArrayInitProps" -> DzIntDz {reject}
+    "=/=KList" -> DzIntDz {reject}
+    "'If" -> DzIntDz {reject}
+    "==Int" -> DzIntDz {reject}
+    "plus" -> DzIntDz {reject}
+    "makeExceptionClass" -> DzIntDz {reject}
+    "'Mod" -> DzIntDz {reject}
+    "arr" -> DzIntDz {reject}
+    "emptyArray" -> DzIntDz {reject}
+    "'LOr" -> DzIntDz {reject}
+    "'InlineEcho" -> DzIntDz {reject}
+    "modelCheck" -> DzIntDz {reject}
+    "#eval" -> DzIntDz {reject}
+    "*toArray" -> DzIntDz {reject}
+    "start" -> DzIntDz {reject}
+    "Float2String" -> DzIntDz {reject}
+    "#distinctCounter" -> DzIntDz {reject}
+    "#seek" -> DzIntDz {reject}
+    "methRunIfVisible" -> DzIntDz {reject}
+    "'List" -> DzIntDz {reject}
+    "isIntString" -> DzIntDz {reject}
+    "CopyFunctionArgs" -> DzIntDz {reject}
+    "'IsNotIdentical" -> DzIntDz {reject}
+    "initBuiltinClasses" -> DzIntDz {reject}
+    "makeStaticDecl" -> DzIntDz {reject}
+    "'ArrayAccess" -> DzIntDz {reject}
+    "'XorAssign" -> DzIntDz {reject}
+    "makeStdClass" -> DzIntDz {reject}
+    "isEqualScalar" -> DzIntDz {reject}
+    "loopFrame" -> DzIntDz {reject}
+    "switch" -> DzIntDz {reject}
+    "typeOf" -> DzIntDz {reject}
+    "'TemplateDocument" -> DzIntDz {reject}
+    "'InterfaceExtends" -> DzIntDz {reject}
+    "'MagicConstant" -> DzIntDz {reject}
+    "get_crnt_fun" -> DzIntDz {reject}
+    "private" -> DzIntDz {reject}
+    "currentOverflow" -> DzIntDz {reject}
+    "=/=Map" -> DzIntDz {reject}
+    "*Float" -> DzIntDz {reject}
+    "is_type" -> DzIntDz {reject}
+    "methodInfo" -> DzIntDz {reject}
+    "ArrayWriteCrnt" -> DzIntDz {reject}
+    "==KLabel" -> DzIntDz {reject}
+    "@Type" -> DzIntDz {reject}
+    "ArrayInitProp" -> DzIntDz {reject}
+    "getGlobalScope" -> DzIntDz {reject}
+    "'FunctionDeclRef" -> DzIntDz {reject}
+    "|Int" -> DzIntDz {reject}
+    "min" -> DzIntDz {reject}
+    "'None" -> DzIntDz {reject}
+    "'ClassConstant" -> DzIntDz {reject}
+    "array_key_exists" -> DzIntDz {reject}
+    "applying" -> DzIntDz {reject}
+    "#ELOOP" -> DzIntDz {reject}
+    "impliesBool" -> DzIntDz {reject}
+    "leq" -> DzIntDz {reject}
+    "^Float" -> DzIntDz {reject}
+    "prop" -> DzIntDz {reject}
+    "'Echo" -> DzIntDz {reject}
+    "expEval" -> DzIntDz {reject}
+    "'InternalFunction" -> DzIntDz {reject}
+    "len" -> DzIntDz {reject}
+    "'Ternary" -> DzIntDz {reject}
+    "#noparse" -> DzIntDz {reject}
+    "decRefCountCompound" -> DzIntDz {reject}
+    "'For" -> DzIntDz {reject}
+    "#stdout" -> DzIntDz {reject}
+    "#tell" -> DzIntDz {reject}
+    "@IsRef" -> DzIntDz {reject}
+    "#retrieveTCPError" -> DzIntDz {reject}
+    "terminated" -> DzIntDz {reject}
+    "makeObjectFromArray" -> DzIntDz {reject}
+    "'Deci" -> DzIntDz {reject}
+    "isObjectType" -> DzIntDz {reject}
+    "'Try" -> DzIntDz {reject}
+    "Rget" -> DzIntDz {reject}
+    "zvalDestroy" -> DzIntDz {reject}
+    "detectDeprecated" -> DzIntDz {reject}
+    "'ObjectProperty" -> DzIntDz {reject}
+    "'PostDec" -> DzIntDz {reject}
+    "isInPath" -> DzIntDz {reject}
+    "'DoWhile" -> DzIntDz {reject}
+    ".MyList" -> DzIntDz {reject}
+    "visitedL(~>)" -> DzIntDz {reject}
+    "'#andBool" -> DzIntDz {reject}
+    "popx" -> DzIntDz {reject}
+    "'ConstantEncapsedString" -> DzIntDz {reject}
+    "=/=Set" -> DzIntDz {reject}
+    "heat" -> DzIntDz {reject}
+    "decRefCountArrayElems" -> DzIntDz {reject}
+    "cleanTrace" -> DzIntDz {reject}
+    "head" -> DzIntDz {reject}
+    "'EmbeddedArrayVariable" -> DzIntDz {reject}
+    "'Break" -> DzIntDz {reject}
+    "myNext" -> DzIntDz {reject}
+    "lessEqual" -> DzIntDz {reject}
+    "'ClassConstantDeclList" -> DzIntDz {reject}
+    "isCrntVisib" -> DzIntDz {reject}
+    "#parse" -> DzIntDz {reject}
+    "'Param" -> DzIntDz {reject}
+    "'Empty" -> DzIntDz {reject}
+    "Int2Float" -> DzIntDz {reject}
+    "class" -> DzIntDz {reject}
+    "#EACCES" -> DzIntDz {reject}
+    "isFloatString" -> DzIntDz {reject}
+    "hasSameType" -> DzIntDz {reject}
+    "mark" -> DzIntDz {reject}
+    "'Public" -> DzIntDz {reject}
+    "-Int" -> DzIntDz {reject}
+    "~Int" -> DzIntDz {reject}
+    "notBool" -> DzIntDz {reject}
+    "#getMapFromK" -> DzIntDz {reject}
+    "convertToLoc" -> DzIntDz {reject}
+    "'And" -> DzIntDz {reject}
+    "=Int" -> DzIntDz {reject}
+    "'Unset" -> DzIntDz {reject}
+    "RLtl" -> DzIntDz {reject}
+    "--Float" -> DzIntDz {reject}
+    "setCrntClass" -> DzIntDz {reject}
+    "indentInc" -> DzIntDz {reject}
+    "isEqual" -> DzIntDz {reject}
+    "==K" -> DzIntDz {reject}
+    "#EBADF" -> DzIntDz {reject}
+    "identical" -> DzIntDz {reject}
+    "ordChar" -> DzIntDz {reject}
+    "modInt" -> DzIntDz {reject}
+    "'InterfaceDecl" -> DzIntDz {reject}
+    "isCompoundValue" -> DzIntDz {reject}
+    "'Normal" -> DzIntDz {reject}
+    "*toInteger" -> DzIntDz {reject}
+    "visitedL(,,)" -> DzIntDz {reject}
+    "foreach" -> DzIntDz {reject}
+    "<=String" -> DzIntDz {reject}
+    "isSpecialVar" -> DzIntDz {reject}
+    "'SRAssign" -> DzIntDz {reject}
+    "andBool" -> DzIntDz {reject}
+    "'Declare" -> DzIntDz {reject}
+    "div" -> DzIntDz {reject}
+    "#open" -> DzIntDz {reject}
+    "object" -> DzIntDz {reject}
+    "isEmptySet" -> DzIntDz {reject}
+    "isRetValueLoc" -> DzIntDz {reject}
+    "'NullCast" -> DzIntDz {reject}
+    "'AltElseIf" -> DzIntDz {reject}
+    "'FunctionDecl" -> DzIntDz {reject}
+    "'ConcatAssign" -> DzIntDz {reject}
+    "MakeDeprecatedWarning" -> DzIntDz {reject}
+    "#ostream" -> DzIntDz {reject}
+    "protected" -> DzIntDz {reject}
+    "isVisible" -> DzIntDz {reject}
+    "fresh" -> DzIntDz {reject}
+    "'DivAssign" -> DzIntDz {reject}
+    "ltrim" -> DzIntDz {reject}
+    "#getc" -> DzIntDz {reject}
+    "=K" -> DzIntDz {reject}
+    "is_string" -> DzIntDz {reject}
+    "=KLabel" -> DzIntDz {reject}
+    "'OldFunctionDeclRef" -> DzIntDz {reject}
+    "print_r_content" -> DzIntDz {reject}
+    "is_float" -> DzIntDz {reject}
+    "'AltForEach" -> DzIntDz {reject}
+    "isBoolType" -> DzIntDz {reject}
+    "ArrayIndexOf" -> DzIntDz {reject}
+    "xorInt" -> DzIntDz {reject}
+    "'LNumber" -> DzIntDz {reject}
+    "Set2KLabel" -> DzIntDz {reject}
+    "'InterfaceFunction" -> DzIntDz {reject}
+    "makeArrayLiteral" -> DzIntDz {reject}
+    "string2Number" -> DzIntDz {reject}
+    "refactor" -> DzIntDz {reject}
+    "#then" -> DzIntDz {reject}
+    "bool" -> DzIntDz {reject}
+    "initClass" -> DzIntDz {reject}
+    "biggestIntKey" -> DzIntDz {reject}
+    "randomRandom" -> DzIntDz {reject}
+    "chrChar" -> IdDz {reject}
+    "%Float" -> IdDz {reject}
+    "'Literal" -> IdDz {reject}
+    "'Print" -> IdDz {reject}
+    "fv" -> IdDz {reject}
+    "gc" -> IdDz {reject}
+    "heated" -> IdDz {reject}
+    "visit" -> IdDz {reject}
+    "<Float" -> IdDz {reject}
+    "zvalWrite" -> IdDz {reject}
+    "float" -> IdDz {reject}
+    "#fi" -> IdDz {reject}
+    "'Clone" -> IdDz {reject}
+    "makeAccess2NonVisibleClassConstantErrorMsg" -> IdDz {reject}
+    "myCurrent" -> IdDz {reject}
+    "'Default" -> IdDz {reject}
+    "#putc" -> IdDz {reject}
+    "+Float" -> IdDz {reject}
+    "==Bool" -> IdDz {reject}
+    "OLtl" -> IdDz {reject}
+    "substr" -> IdDz {reject}
+    "countAllOccurences" -> IdDz {reject}
+    "#" -> IdDz {reject}
+    "hasNoDecimalPart" -> IdDz {reject}
+    "zvalCreate" -> IdDz {reject}
+    "'IsIdentical" -> IdDz {reject}
+    "(" -> IdDz {reject}
+    ")" -> IdDz {reject}
+    "K2String" -> IdDz {reject}
+    "/" -> IdDz {reject}
+    "==Map" -> IdDz {reject}
+    "," -> IdDz {reject}
+    "orBool" -> IdDz {reject}
+    "thisTag" -> IdDz {reject}
+    "Float2Int" -> IdDz {reject}
+    "unset" -> IdDz {reject}
+    "gv" -> IdDz {reject}
+    "makeStaticDecls" -> IdDz {reject}
+    "myStrlen" -> IdDz {reject}
+    "findChar" -> IdDz {reject}
+    "each" -> IdDz {reject}
+    "'BoolCast" -> IdDz {reject}
+    "'DeclareGlobal" -> IdDz {reject}
+    "buildArrayCompareFun" -> IdDz {reject}
+    "array" -> IdDz {reject}
+    "'ModAssign" -> IdDz {reject}
+    "String2Char" -> IdDz {reject}
+    "getVisibility" -> IdDz {reject}
+    "print_r_indent" -> IdDz {reject}
+    "stdClass" -> IdDz {reject}
+    "<=Int" -> IdDz {reject}
+    "'LAnd" -> IdDz {reject}
+    "'FinalClass" -> IdDz {reject}
+    "'HereDoc" -> IdDz {reject}
+    "'Variable" -> IdDz {reject}
+    "directionalityChar" -> IdDz {reject}
+    "initIterationVars" -> IdDz {reject}
+    "'AbstractClass" -> IdDz {reject}
+    "'Mul" -> IdDz {reject}
+    "'AltWhile" -> IdDz {reject}
+    "write" -> IdDz {reject}
+    "current" -> IdDz {reject}
+    "'Protected" -> IdDz {reject}
+    "]" -> IdDz {reject}
+    "replaceFirst" -> IdDz {reject}
+    "WLtl" -> IdDz {reject}
+    "quotedCode" -> IdDz {reject}
+    "gettype" -> IdDz {reject}
+    "[" -> IdDz {reject}
+    "f" -> IdDz {reject}
+    "define" -> IdDz {reject}
+    "max" -> IdDz {reject}
+    "'AltIf" -> IdDz {reject}
+    "integer" -> IdDz {reject}
+    "'ArrayCast" -> IdDz {reject}
+    "keys" -> IdDz {reject}
+    "Lget" -> IdDz {reject}
+    "*or" -> IdDz {reject}
+    "runRemainingSwitchClauses" -> IdDz {reject}
+    "ArrayGetElemAtIndex" -> IdDz {reject}
+    "l" -> IdDz {reject}
+    "eqTo" -> IdDz {reject}
+    "'Assign" -> IdDz {reject}
+    "'Abstract" -> IdDz {reject}
+    "allocCrntObj" -> IdDz {reject}
+    "leqVal" -> IdDz {reject}
+    "'Negative" -> IdDz {reject}
+    "'Require" -> IdDz {reject}
+    "ref" -> IdDz {reject}
+    "r" -> IdDz {reject}
+    "#read" -> IdDz {reject}
+    "allocValue" -> IdDz {reject}
+    ">=Float" -> IdDz {reject}
+    "Set2KTerm" -> IdDz {reject}
+    "isIntType" -> IdDz {reject}
+    "public" -> IdDz {reject}
+    "%Int" -> IdDz {reject}
+    "KList2KLabel" -> IdDz {reject}
+    "#stdin" -> IdDz {reject}
+    "'Pattern" -> IdDz {reject}
+    "hasPrivateProperty" -> IdDz {reject}
+    "convertToLanguageValue" -> IdDz {reject}
+    "'ForEach" -> IdDz {reject}
+    "LError" -> IdDz {reject}
+    "orElseBool" -> IdDz {reject}
+    "readBasicRef" -> IdDz {reject}
+    "'SingleQuoted" -> IdDz {reject}
+    "'VariableBraced" -> IdDz {reject}
+    "incRefCount" -> IdDz {reject}
+    "locsHoldSameCompound" -> IdDz {reject}
+    "'Array" -> IdDz {reject}
+    "locNull" -> IdDz {reject}
+    "'FunctionCall" -> IdDz {reject}
+    "String2DotK" -> IdDz {reject}
+    "'Private" -> IdDz {reject}
+    "strlen" -> IdDz {reject}
+    "'Extends" -> IdDz {reject}
+    "stdclass" -> IdDz {reject}
+    "'Octa" -> IdDz {reject}
+    "'Or" -> IdDz {reject}
+    "#parseToken" -> IdDz {reject}
+    "key" -> IdDz {reject}
+    "#if" -> IdDz {reject}
+    "geq" -> IdDz {reject}
+    "isSet" -> IdDz {reject}
+    "'HereDocContent" -> IdDz {reject}
+    "LgetRef" -> IdDz {reject}
+    "'StringCast" -> IdDz {reject}
+    "extractIntSubstring" -> IdDz {reject}
+    "buildObjElemList" -> IdDz {reject}
+    "locHoldsCompoundValue" -> IdDz {reject}
+    "label" -> IdDz {reject}
+    "'Throw" -> IdDz {reject}
+    "#map" -> IdDz {reject}
+    "double" -> IdDz {reject}
+    "hasType" -> IdDz {reject}
+    "'DefaultCase" -> IdDz {reject}
+    "isArrayType" -> IdDz {reject}
+    "foreachArrayPair" -> IdDz {reject}
+    "var_dump_indent" -> IdDz {reject}
+    "'OldFunctionDecl" -> IdDz {reject}
+    "toBasicRef" -> IdDz {reject}
+    "==Set" -> IdDz {reject}
+    "<<Int" -> IdDz {reject}
+    "'ReferenceAssign" -> IdDz {reject}
+    "'StaticVariable" -> IdDz {reject}
+    "String2Int" -> IdDz {reject}
+    "val" -> IdDz {reject}
+    "#ioError" -> IdDz {reject}
+    "OID" -> IdDz {reject}
+    "ArrayCreateElem" -> IdDz {reject}
+    "Map2KLabel" -> IdDz {reject}
+    "@RefCount" -> IdDz {reject}
+    "var" -> IdDz {reject}
+    "'Braced" -> IdDz {reject}
+    "'ShellCommand" -> IdDz {reject}
+    "#write" -> IdDz {reject}
+    "=KList" -> IdDz {reject}
+    "lab" -> IdDz {reject}
+    "'Include" -> IdDz {reject}
+    "=/=K" -> IdDz {reject}
+    "makeFunction" -> IdDz {reject}
+    "'AltFor" -> IdDz {reject}
+    "#buffer" -> IdDz {reject}
+    "trim" -> IdDz {reject}
+    "runFunction" -> IdDz {reject}
+    "'FloatCast" -> IdDz {reject}
+    ">String" -> IdDz {reject}
+    "lengthList" -> IdDz {reject}
+    "'Catch" -> IdDz {reject}
+    "divInt" -> IdDz {reject}
+    "'ShortOpenTag" -> IdDz {reject}
+    "#inKList" -> IdDz {reject}
+    "'StaticFunctionCall" -> IdDz {reject}
+    "equal" -> IdDz {reject}
+    "'Name" -> IdDz {reject}
+    "*toObject" -> IdDz {reject}
+    "'DoubleQuoted" -> IdDz {reject}
+    "@Value" -> IdDz {reject}
+    "'PostInc" -> IdDz {reject}
+    "rfindString" -> IdDz {reject}
+    "'ElseIf" -> IdDz {reject}
+    "hasMember" -> IdDz {reject}
+    "<String" -> IdDz {reject}
+    "<>Ltl" -> IdDz {reject}
+    "'DQContent" -> IdDz {reject}
+    "makeNewObject" -> IdDz {reject}
+    "'FullOpenTag" -> IdDz {reject}
+    "ArrayInitCrnt" -> IdDz {reject}
+    "is_numeric" -> IdDz {reject}
+    "writeClassInstanceMembers" -> IdDz {reject}
+    "'ObjectCreation" -> IdDz {reject}
+    "isBuiltin" -> IdDz {reject}
+    "getKLabel" -> IdDz {reject}
+    "'Class" -> IdDz {reject}
+    "String2Bool" -> IdDz {reject}
+    "NOT-SUPPORTED" -> IdDz {reject}
+    "'DeclareStatic" -> IdDz {reject}
+    "isNumericString" -> IdDz {reject}
+    "#ESPIPE" -> IdDz {reject}
+    "get_config_label" -> IdDz {reject}
+    "#token" -> IdDz {reject}
+    "'LessEqual" -> IdDz {reject}
+    "<=Float" -> IdDz {reject}
+    "isset" -> IdDz {reject}
+    "reset" -> IdDz {reject}
+    "=/=Bool" -> IdDz {reject}
+    "getFunScope" -> IdDz {reject}
+    "redex" -> IdDz {reject}
+    "'GreaterEqual" -> IdDz {reject}
+    "'Hexa" -> IdDz {reject}
+    "#EISDIR" -> IdDz {reject}
+    "isStringType" -> IdDz {reject}
+    "'HexaChar" -> IdDz {reject}
+    "popLoopContext" -> IdDz {reject}
+    "=Set" -> IdDz {reject}
+    "*Int" -> IdDz {reject}
+    "ArrayCreateEmpty" -> IdDz {reject}
+    "'Less" -> IdDz {reject}
+    "isSubclass" -> IdDz {reject}
+    "lvalue" -> IdDz {reject}
+    "lookup_glob" -> IdDz {reject}
+    "'InlineHTML" -> IdDz {reject}
+    "arrayCurrentOverflow" -> IdDz {reject}
+    "#stat" -> IdDz {reject}
+    "'ObjectAccess" -> IdDz {reject}
+    "'AltSwitch" -> IdDz {reject}
+    "initBuiltinFunctions" -> IdDz {reject}
+    "#inSet" -> IdDz {reject}
+    "-Set" -> IdDz {reject}
+    "KLabel2String" -> IdDz {reject}
+    "#set" -> IdDz {reject}
+    "'Isset" -> IdDz {reject}
+    "maxInt" -> IdDz {reject}
+    "user_input" -> IdDz {reject}
+    "NULL" -> IdDz {reject}
+    "locHoldsObject" -> IdDz {reject}
+    "'Return" -> IdDz {reject}
+    "##tcpRequest" -> IdDz {reject}
+    "visiting" -> IdDz {reject}
+    "'Expr" -> IdDz {reject}
+    "Bag2KLabel" -> IdDz {reject}
+    "#ENOTDIR" -> IdDz {reject}
+    "ERROR" -> IdDz {reject}
+    "'EmbeddedString" -> IdDz {reject}
+    "processFunArgs" -> IdDz {reject}
+    "isIdentical" -> IdDz {reject}
+    "'Pair" -> IdDz {reject}
+    "hasProperty" -> IdDz {reject}
+    "<Int" -> IdDz {reject}
+    "'EchoOpenTag" -> IdDz {reject}
+    "true" -> IdDz {reject}
+    "[]Ltl" -> IdDz {reject}
+    "#ENAMETOOLONG" -> IdDz {reject}
+    ">Int" -> IdDz {reject}
+    "'Switch" -> IdDz {reject}
+    "|->Ltl" -> IdDz {reject}
+    "isStatic" -> IdDz {reject}
+    "+Int" -> IdDz {reject}
+    "#istream" -> IdDz {reject}
+    "initSuperGlobals" -> IdDz {reject}
+    "'ErrorFree" -> IdDz {reject}
+    "'Some" -> IdDz {reject}
+    "WARNING" -> IdDz {reject}
+    "#string2Int" -> IdDz {reject}
+    "'HereDocStart" -> IdDz {reject}
+    "obj" -> IdDz {reject}
+    "method" -> IdDz {reject}
+    "@byValue" -> IdDz {reject}
+    "greaterEqual" -> IdDz {reject}
+    "'ConstantVariable" -> IdDz {reject}
+    "refNull" -> IdDz {reject}
+    "'Continue" -> IdDz {reject}
+    "count" -> IdDz {reject}
+    "<->Ltl" -> IdDz {reject}
+    "'CloseTag" -> IdDz {reject}
+    "runScript" -> IdDz {reject}
+    "'Ref" -> IdDz {reject}
+    "buildInitState" -> IdDz {reject}
+    "type" -> IdDz {reject}
+    "setCrntScope" -> IdDz {reject}
+    "'RequireOnce" -> IdDz {reject}
+    "'ClassConstantDecl" -> IdDz {reject}
+    "KLabel2KLabel" -> IdDz {reject}
+    "objectInit" -> IdDz {reject}
+    "none" -> IdDz {reject}
+    "dividesInt" -> IdDz {reject}
+    "Set2KTermAcc" -> IdDz {reject}
+    "'DNumber" -> IdDz {reject}
+    "Id2String" -> IdDz {reject}
+    "dump_content" -> IdDz {reject}
+    "'MulAssign" -> IdDz {reject}
+    "initClassMemberDecl" -> IdDz {reject}
+    "int" -> IdDz {reject}
+    "Map" -> IdDz {reject}
+    "'AbstractMethodBody" -> IdDz {reject}
+    "<=Set" -> IdDz {reject}
+    "comparison" -> IdDz {reject}
+    ">>Int" -> IdDz {reject}
+    "isStrictComparison" -> IdDz {reject}
+    "'IntCast" -> IdDz {reject}
+    "isScalar" -> IdDz {reject}
+    ">=Int" -> IdDz {reject}
+    "'True" -> IdDz {reject}
+    "CellLabel2KLabel" -> IdDz {reject}
+    "RgetRef" -> IdDz {reject}
+    "this" -> IdDz {reject}
+    "=Map" -> IdDz {reject}
+    "'ASPOpenTag" -> IdDz {reject}
+    "|=Ltl" -> IdDz {reject}
+    "'Null" -> IdDz {reject}
+    "'Neg" -> IdDz {reject}
+    "*toFloat" -> IdDz {reject}
+    "isNumeric" -> IdDz {reject}
+    "'Simple" -> IdDz {reject}
+    "'MinAssign" -> IdDz {reject}
+    "initScopes" -> IdDz {reject}
+    "'Eval" -> IdDz {reject}
+    "#isTCPError" -> IdDz {reject}
+    "MethodNotFound" -> IdDz {reject}
+    "var_dump" -> IdDz {reject}
+    "categoryChar" -> IdDz {reject}
+    "=Bag" -> IdDz {reject}
+    "while" -> IdDz {reject}
+    "real" -> IdDz {reject}
+    "+String" -> IdDz {reject}
+    "'Positive" -> IdDz {reject}
+    "findString" -> IdDz {reject}
+    "if" -> IdDz {reject}
+    "#else" -> IdDz {reject}
+    "read" -> IdDz {reject}
+    "ROOT" -> IdDz {reject}
+    "zvalRead" -> IdDz {reject}
+    "less" -> IdDz {reject}
+    "MyListItem" -> IdDz {reject}
+    "alias" -> IdDz {reject}
+    "rtrim" -> IdDz {reject}
+    "'Document" -> IdDz {reject}
+    "normalizeFloat" -> IdDz {reject}
+    "geqVal" -> IdDz {reject}
+    "'ListAssign" -> IdDz {reject}
+    "in" -> IdDz {reject}
+    "'BracedArrayAccess" -> IdDz {reject}
+    "|->" -> IdDz {reject}
+    "=/=Int" -> IdDz {reject}
+    "'Directive" -> IdDz {reject}
+    "createEmptyClass" -> IdDz {reject}
+    "'RefValue" -> IdDz {reject}
+    "==String" -> IdDz {reject}
+    "<=Map" -> IdDz {reject}
+    "print_r" -> IdDz {reject}
+    "'ParamConstant" -> IdDz {reject}
+    "'Modifiers" -> IdDz {reject}
+    "greater" -> IdDz {reject}
+    "lookup_fun" -> IdDz {reject}
+    "lengthString" -> IdDz {reject}
+    "methExecute" -> IdDz {reject}
+    "Array" -> IdDz {reject}
+    "is_scalar" -> IdDz {reject}
+    "String2Bag" -> IdDz {reject}
+    "'SLAssign" -> IdDz {reject}
+    "'MethodBody" -> IdDz {reject}
+    "ArrayUpdateElem" -> IdDz {reject}
+    "#lstat" -> IdDz {reject}
+    "wrap-with" -> IdDz {reject}
+    "DEPRECATED" -> IdDz {reject}
+    "String2KLabel" -> IdDz {reject}
+    "andThenBool" -> IdDz {reject}
+    "makeArrayFromScalar" -> IdDz {reject}
+    "#tcpError" -> IdDz {reject}
+    "boolean" -> IdDz {reject}
+    "'Value" -> IdDz {reject}
+    "*toString" -> IdDz {reject}
+    "'StringAccess" -> IdDz {reject}
+    "cool" -> IdDz {reject}
+    "copyArrayMembers" -> IdDz {reject}
+    ">Float" -> IdDz {reject}
+    "staticDeclFound" -> IdDz {reject}
+    "defined" -> IdDz {reject}
+    "#close" -> IdDz {reject}
+    "mod" -> IdDz {reject}
+    "/Float" -> IdDz {reject}
+    "intersectSet" -> IdDz {reject}
+    "locHoldsArray" -> IdDz {reject}
+    "-Float" -> IdDz {reject}
+    "'OctaChar" -> IdDz {reject}
+    "==Float" -> IdDz {reject}
+    "'BinAnd" -> IdDz {reject}
+    "'Div" -> IdDz {reject}
+    "inKList" -> IdDz {reject}
+    "'InstanceVariable" -> IdDz {reject}
+    "dummy" -> IdDz {reject}
+    "replaceAll" -> IdDz {reject}
+    "FalseLtl" -> IdDz {reject}
+    "undef" -> IdDz {reject}
+    "^Int" -> IdDz {reject}
+    "=List" -> IdDz {reject}
+    "/\\Ltl" -> IdDz {reject}
+    "'ListWrap" -> IdDz {reject}
+    "expEvalLoc" -> IdDz {reject}
+    "next" -> IdDz {reject}
+    "*toBoolean" -> IdDz {reject}
+    "isLiteral" -> IdDz {reject}
+    "&Int" -> IdDz {reject}
+    "run" -> IdDz {reject}
+    "'Key" -> IdDz {reject}
+    "copyValueToLoc" -> IdDz {reject}
+    "=/=String" -> IdDz {reject}
+    "'OrAssign" -> IdDz {reject}
+    "pushStackFrame" -> IdDz {reject}
+    "assignSeqOfIds" -> IdDz {reject}
+    "xorBool" -> IdDz {reject}
+    "isStringKey" -> IdDz {reject}
+    "NOTICE" -> IdDz {reject}
+    "\\/Ltl" -> IdDz {reject}
+    "#isWhiteSpace" -> IdDz {reject}
+    "'InterfaceFunctionRef" -> IdDz {reject}
+    "'IsNotEqual" -> IdDz {reject}
+    "visitedK" -> IdDz {reject}
+    "isToken" -> IdDz {reject}
+    "visitedL" -> IdDz {reject}
+    "Bag2String" -> IdDz {reject}
+    "==List" -> IdDz {reject}
+    "replace" -> IdDz {reject}
+    "nul" -> IdDz {reject}
+    "#EOF" -> IdDz {reject}
+    "'Implements" -> IdDz {reject}
+    "'While" -> IdDz {reject}
+    "zval" -> IdDz {reject}
+    "string" -> IdDz {reject}
+    "==KList" -> IdDz {reject}
+    "BinOp" -> IdDz {reject}
+    "'FunctionName" -> IdDz {reject}
+    "ULtl" -> IdDz {reject}
+    "writeClassStaticMembers" -> IdDz {reject}
+    "#string2klist" -> IdDz {reject}
+    "Char2String" -> IdDz {reject}
+    "inFun" -> IdDz {reject}
+    "initStatic" -> IdDz {reject}
+    "=/=Float" -> IdDz {reject}
+    "variable" -> IdDz {reject}
+    "popStackFrame" -> IdDz {reject}
+    "'AndAssign" -> IdDz {reject}
+    "'IncludeOnce" -> IdDz {reject}
+    "#parseInput" -> IdDz {reject}
+    "#statTypes" -> IdDz {reject}
+    "<=>Ltl" -> IdDz {reject}
+    "'ParamRef" -> IdDz {reject}
+    "=>Ltl" -> IdDz {reject}
+    "*Cond" -> IdDz {reject}
+    "rfindChar" -> IdDz {reject}
+    "setCrntObj" -> IdDz {reject}
+    "'ParamDefault" -> IdDz {reject}
+    "values" -> IdDz {reject}
+    "'Greater" -> IdDz {reject}
+    "pushLoopContext" -> IdDz {reject}
+    "#checkTCPAnswer" -> IdDz {reject}
+    "Literal" -> IdDz {reject}
+    "sf" -> IdDz {reject}
+    "isKResult" -> IdDz {reject}
+    "sweep" -> IdDz {reject}
+    "size" -> IdDz {reject}
+    "decRefCount" -> IdDz {reject}
+    "'Body" -> IdDz {reject}
+    "'Concat" -> IdDz {reject}
+    "'Plus" -> IdDz {reject}
+    "'IndirectReference" -> IdDz {reject}
+    "'PlusAssign" -> IdDz {reject}
+    "#EINVAL" -> IdDz {reject}
+    "syncArrayCurrent" -> IdDz {reject}
+    "'Case" -> IdDz {reject}
+    "#tcpRequest" -> IdDz {reject}
+    "'IsEqual" -> IdDz {reject}
+    "'ObjectCast" -> IdDz {reject}
+    "#ENOENT" -> IdDz {reject}
+    "Int2String" -> IdDz {reject}
+    "'LXor" -> IdDz {reject}
+    "@byRef" -> IdDz {reject}
+    "deprecatedIdiomFound" -> IdDz {reject}
+    "'PreInc" -> IdDz {reject}
+    "#hasMapping" -> IdDz {reject}
+    "makeAccess2NonDefinedClassMethodErrorMsg" -> IdDz {reject}
+    "=/=KLabel" -> IdDz {reject}
+    "'False" -> IdDz {reject}
+    "#stderr" -> IdDz {reject}
+    "'Min" -> IdDz {reject}
+    "MakeStaticDecl" -> IdDz {reject}
+    "is_array" -> IdDz {reject}
+    "~Ltl" -> IdDz {reject}
+    "String2Float" -> IdDz {reject}
+    "'Final" -> IdDz {reject}
+    "->Ltl" -> IdDz {reject}
+    "#noIO" -> IdDz {reject}
+    "endVisit" -> IdDz {reject}
+    "#evalHelper" -> IdDz {reject}
+    "makeForInit" -> IdDz {reject}
+    "#counter" -> IdDz {reject}
+    "isSuperclass" -> IdDz {reject}
+    "minInt" -> IdDz {reject}
+    "'Block" -> IdDz {reject}
+    "TrueLtl" -> IdDz {reject}
+    "#opendir" -> IdDz {reject}
+    "#isMapInK" -> IdDz {reject}
+    "mul" -> IdDz {reject}
+    "=/=List" -> IdDz {reject}
+    "ArrayCrnt2None" -> IdDz {reject}
+    "isSuperGlobal" -> IdDz {reject}
+    "isFloatType" -> IdDz {reject}
+    "String2K" -> IdDz {reject}
+    "#freezer" -> IdDz {reject}
+    "indentDec" -> IdDz {reject}
+    "'Escape" -> IdDz {reject}
+    "writeClassMethod" -> IdDz {reject}
+    "methodLookup" -> IdDz {reject}
+    "for" -> IdDz {reject}
+    "absInt" -> IdDz {reject}
+    "#isDigit" -> IdDz {reject}
+    "List2KLabel" -> IdDz {reject}
+    "'ClassName" -> IdDz {reject}
+    "String2Id" -> IdDz {reject}
+    "allocAndRunConstructor" -> IdDz {reject}
+    "'Static" -> IdDz {reject}
+    "$hasMapping" -> IdDz {reject}
+    "lref" -> IdDz {reject}
+    ">=String" -> IdDz {reject}
+    "visibility2String" -> IdDz {reject}
+    "#tokenToString" -> IdDz {reject}
+    "substrString" -> IdDz {reject}
+    "declareGlobal" -> IdDz {reject}
+    "'PreDec" -> IdDz {reject}
+    "false" -> IdDz {reject}
+    "print_r_array" -> IdDz {reject}
+    "'Not" -> IdDz {reject}
+    "/Int" -> IdDz {reject}
+    "'ASPCloseTag" -> IdDz {reject}
+    "ArrayInitProps" -> IdDz {reject}
+    "=/=KList" -> IdDz {reject}
+    "'If" -> IdDz {reject}
+    "==Int" -> IdDz {reject}
+    "plus" -> IdDz {reject}
+    "makeExceptionClass" -> IdDz {reject}
+    "'Mod" -> IdDz {reject}
+    "arr" -> IdDz {reject}
+    "emptyArray" -> IdDz {reject}
+    "'LOr" -> IdDz {reject}
+    "'InlineEcho" -> IdDz {reject}
+    "modelCheck" -> IdDz {reject}
+    "#eval" -> IdDz {reject}
+    "*toArray" -> IdDz {reject}
+    "start" -> IdDz {reject}
+    "Float2String" -> IdDz {reject}
+    "#distinctCounter" -> IdDz {reject}
+    "#seek" -> IdDz {reject}
+    "methRunIfVisible" -> IdDz {reject}
+    "'List" -> IdDz {reject}
+    "isIntString" -> IdDz {reject}
+    "CopyFunctionArgs" -> IdDz {reject}
+    "'IsNotIdentical" -> IdDz {reject}
+    "initBuiltinClasses" -> IdDz {reject}
+    "makeStaticDecl" -> IdDz {reject}
+    "'ArrayAccess" -> IdDz {reject}
+    "'XorAssign" -> IdDz {reject}
+    "makeStdClass" -> IdDz {reject}
+    "isEqualScalar" -> IdDz {reject}
+    "loopFrame" -> IdDz {reject}
+    "switch" -> IdDz {reject}
+    "typeOf" -> IdDz {reject}
+    "'TemplateDocument" -> IdDz {reject}
+    "'InterfaceExtends" -> IdDz {reject}
+    "'MagicConstant" -> IdDz {reject}
+    "get_crnt_fun" -> IdDz {reject}
+    "private" -> IdDz {reject}
+    "currentOverflow" -> IdDz {reject}
+    "=/=Map" -> IdDz {reject}
+    "*Float" -> IdDz {reject}
+    "is_type" -> IdDz {reject}
+    "methodInfo" -> IdDz {reject}
+    "ArrayWriteCrnt" -> IdDz {reject}
+    "==KLabel" -> IdDz {reject}
+    "@Type" -> IdDz {reject}
+    "ArrayInitProp" -> IdDz {reject}
+    "getGlobalScope" -> IdDz {reject}
+    "'FunctionDeclRef" -> IdDz {reject}
+    "|Int" -> IdDz {reject}
+    "min" -> IdDz {reject}
+    "'None" -> IdDz {reject}
+    "'ClassConstant" -> IdDz {reject}
+    "array_key_exists" -> IdDz {reject}
+    "applying" -> IdDz {reject}
+    "#ELOOP" -> IdDz {reject}
+    "impliesBool" -> IdDz {reject}
+    "leq" -> IdDz {reject}
+    "^Float" -> IdDz {reject}
+    "prop" -> IdDz {reject}
+    "'Echo" -> IdDz {reject}
+    "expEval" -> IdDz {reject}
+    "'InternalFunction" -> IdDz {reject}
+    "len" -> IdDz {reject}
+    "'Ternary" -> IdDz {reject}
+    "#noparse" -> IdDz {reject}
+    "decRefCountCompound" -> IdDz {reject}
+    "'For" -> IdDz {reject}
+    "#stdout" -> IdDz {reject}
+    "#tell" -> IdDz {reject}
+    "@IsRef" -> IdDz {reject}
+    "#retrieveTCPError" -> IdDz {reject}
+    "terminated" -> IdDz {reject}
+    "makeObjectFromArray" -> IdDz {reject}
+    "'Deci" -> IdDz {reject}
+    "isObjectType" -> IdDz {reject}
+    "'Try" -> IdDz {reject}
+    "Rget" -> IdDz {reject}
+    "zvalDestroy" -> IdDz {reject}
+    "detectDeprecated" -> IdDz {reject}
+    "'ObjectProperty" -> IdDz {reject}
+    "'PostDec" -> IdDz {reject}
+    "isInPath" -> IdDz {reject}
+    "'DoWhile" -> IdDz {reject}
+    ".MyList" -> IdDz {reject}
+    "visitedL(~>)" -> IdDz {reject}
+    "'#andBool" -> IdDz {reject}
+    "popx" -> IdDz {reject}
+    "'ConstantEncapsedString" -> IdDz {reject}
+    "=/=Set" -> IdDz {reject}
+    "heat" -> IdDz {reject}
+    "decRefCountArrayElems" -> IdDz {reject}
+    "cleanTrace" -> IdDz {reject}
+    "head" -> IdDz {reject}
+    "'EmbeddedArrayVariable" -> IdDz {reject}
+    "'Break" -> IdDz {reject}
+    "myNext" -> IdDz {reject}
+    "lessEqual" -> IdDz {reject}
+    "'ClassConstantDeclList" -> IdDz {reject}
+    "isCrntVisib" -> IdDz {reject}
+    "#parse" -> IdDz {reject}
+    "'Param" -> IdDz {reject}
+    "'Empty" -> IdDz {reject}
+    "Int2Float" -> IdDz {reject}
+    "class" -> IdDz {reject}
+    "#EACCES" -> IdDz {reject}
+    "isFloatString" -> IdDz {reject}
+    "hasSameType" -> IdDz {reject}
+    "mark" -> IdDz {reject}
+    "'Public" -> IdDz {reject}
+    "-Int" -> IdDz {reject}
+    "~Int" -> IdDz {reject}
+    "notBool" -> IdDz {reject}
+    "#getMapFromK" -> IdDz {reject}
+    "convertToLoc" -> IdDz {reject}
+    "'And" -> IdDz {reject}
+    "=Int" -> IdDz {reject}
+    "'Unset" -> IdDz {reject}
+    "RLtl" -> IdDz {reject}
+    "--Float" -> IdDz {reject}
+    "setCrntClass" -> IdDz {reject}
+    "indentInc" -> IdDz {reject}
+    "isEqual" -> IdDz {reject}
+    "==K" -> IdDz {reject}
+    "#EBADF" -> IdDz {reject}
+    "identical" -> IdDz {reject}
+    "ordChar" -> IdDz {reject}
+    "modInt" -> IdDz {reject}
+    "'InterfaceDecl" -> IdDz {reject}
+    "isCompoundValue" -> IdDz {reject}
+    "'Normal" -> IdDz {reject}
+    "*toInteger" -> IdDz {reject}
+    "visitedL(,,)" -> IdDz {reject}
+    "foreach" -> IdDz {reject}
+    "<=String" -> IdDz {reject}
+    "isSpecialVar" -> IdDz {reject}
+    "'SRAssign" -> IdDz {reject}
+    "andBool" -> IdDz {reject}
+    "'Declare" -> IdDz {reject}
+    "div" -> IdDz {reject}
+    "#open" -> IdDz {reject}
+    "object" -> IdDz {reject}
+    "isEmptySet" -> IdDz {reject}
+    "isRetValueLoc" -> IdDz {reject}
+    "'NullCast" -> IdDz {reject}
+    "'AltElseIf" -> IdDz {reject}
+    "'FunctionDecl" -> IdDz {reject}
+    "'ConcatAssign" -> IdDz {reject}
+    "MakeDeprecatedWarning" -> IdDz {reject}
+    "#ostream" -> IdDz {reject}
+    "protected" -> IdDz {reject}
+    "isVisible" -> IdDz {reject}
+    "fresh" -> IdDz {reject}
+    "'DivAssign" -> IdDz {reject}
+    "ltrim" -> IdDz {reject}
+    "#getc" -> IdDz {reject}
+    "=K" -> IdDz {reject}
+    "is_string" -> IdDz {reject}
+    "=KLabel" -> IdDz {reject}
+    "'OldFunctionDeclRef" -> IdDz {reject}
+    "print_r_content" -> IdDz {reject}
+    "is_float" -> IdDz {reject}
+    "'AltForEach" -> IdDz {reject}
+    "isBoolType" -> IdDz {reject}
+    "ArrayIndexOf" -> IdDz {reject}
+    "xorInt" -> IdDz {reject}
+    "'LNumber" -> IdDz {reject}
+    "Set2KLabel" -> IdDz {reject}
+    "'InterfaceFunction" -> IdDz {reject}
+    "makeArrayLiteral" -> IdDz {reject}
+    "string2Number" -> IdDz {reject}
+    "refactor" -> IdDz {reject}
+    "#then" -> IdDz {reject}
+    "bool" -> IdDz {reject}
+    "initClass" -> IdDz {reject}
+    "biggestIntKey" -> IdDz {reject}
+    "randomRandom" -> IdDz {reject}
+    "chrChar" -> DzFloatDz {reject}
+    "%Float" -> DzFloatDz {reject}
+    "'Literal" -> DzFloatDz {reject}
+    "'Print" -> DzFloatDz {reject}
+    "fv" -> DzFloatDz {reject}
+    "gc" -> DzFloatDz {reject}
+    "heated" -> DzFloatDz {reject}
+    "visit" -> DzFloatDz {reject}
+    "<Float" -> DzFloatDz {reject}
+    "zvalWrite" -> DzFloatDz {reject}
+    "float" -> DzFloatDz {reject}
+    "#fi" -> DzFloatDz {reject}
+    "'Clone" -> DzFloatDz {reject}
+    "makeAccess2NonVisibleClassConstantErrorMsg" -> DzFloatDz {reject}
+    "myCurrent" -> DzFloatDz {reject}
+    "'Default" -> DzFloatDz {reject}
+    "#putc" -> DzFloatDz {reject}
+    "+Float" -> DzFloatDz {reject}
+    "==Bool" -> DzFloatDz {reject}
+    "OLtl" -> DzFloatDz {reject}
+    "substr" -> DzFloatDz {reject}
+    "countAllOccurences" -> DzFloatDz {reject}
+    "#" -> DzFloatDz {reject}
+    "hasNoDecimalPart" -> DzFloatDz {reject}
+    "zvalCreate" -> DzFloatDz {reject}
+    "'IsIdentical" -> DzFloatDz {reject}
+    "(" -> DzFloatDz {reject}
+    ")" -> DzFloatDz {reject}
+    "K2String" -> DzFloatDz {reject}
+    "/" -> DzFloatDz {reject}
+    "==Map" -> DzFloatDz {reject}
+    "," -> DzFloatDz {reject}
+    "orBool" -> DzFloatDz {reject}
+    "thisTag" -> DzFloatDz {reject}
+    "Float2Int" -> DzFloatDz {reject}
+    "unset" -> DzFloatDz {reject}
+    "gv" -> DzFloatDz {reject}
+    "makeStaticDecls" -> DzFloatDz {reject}
+    "myStrlen" -> DzFloatDz {reject}
+    "findChar" -> DzFloatDz {reject}
+    "each" -> DzFloatDz {reject}
+    "'BoolCast" -> DzFloatDz {reject}
+    "'DeclareGlobal" -> DzFloatDz {reject}
+    "buildArrayCompareFun" -> DzFloatDz {reject}
+    "array" -> DzFloatDz {reject}
+    "'ModAssign" -> DzFloatDz {reject}
+    "String2Char" -> DzFloatDz {reject}
+    "getVisibility" -> DzFloatDz {reject}
+    "print_r_indent" -> DzFloatDz {reject}
+    "stdClass" -> DzFloatDz {reject}
+    "<=Int" -> DzFloatDz {reject}
+    "'LAnd" -> DzFloatDz {reject}
+    "'FinalClass" -> DzFloatDz {reject}
+    "'HereDoc" -> DzFloatDz {reject}
+    "'Variable" -> DzFloatDz {reject}
+    "directionalityChar" -> DzFloatDz {reject}
+    "initIterationVars" -> DzFloatDz {reject}
+    "'AbstractClass" -> DzFloatDz {reject}
+    "'Mul" -> DzFloatDz {reject}
+    "'AltWhile" -> DzFloatDz {reject}
+    "write" -> DzFloatDz {reject}
+    "current" -> DzFloatDz {reject}
+    "'Protected" -> DzFloatDz {reject}
+    "]" -> DzFloatDz {reject}
+    "replaceFirst" -> DzFloatDz {reject}
+    "WLtl" -> DzFloatDz {reject}
+    "quotedCode" -> DzFloatDz {reject}
+    "gettype" -> DzFloatDz {reject}
+    "[" -> DzFloatDz {reject}
+    "f" -> DzFloatDz {reject}
+    "define" -> DzFloatDz {reject}
+    "max" -> DzFloatDz {reject}
+    "'AltIf" -> DzFloatDz {reject}
+    "integer" -> DzFloatDz {reject}
+    "'ArrayCast" -> DzFloatDz {reject}
+    "keys" -> DzFloatDz {reject}
+    "Lget" -> DzFloatDz {reject}
+    "*or" -> DzFloatDz {reject}
+    "runRemainingSwitchClauses" -> DzFloatDz {reject}
+    "ArrayGetElemAtIndex" -> DzFloatDz {reject}
+    "l" -> DzFloatDz {reject}
+    "eqTo" -> DzFloatDz {reject}
+    "'Assign" -> DzFloatDz {reject}
+    "'Abstract" -> DzFloatDz {reject}
+    "allocCrntObj" -> DzFloatDz {reject}
+    "leqVal" -> DzFloatDz {reject}
+    "'Negative" -> DzFloatDz {reject}
+    "'Require" -> DzFloatDz {reject}
+    "ref" -> DzFloatDz {reject}
+    "r" -> DzFloatDz {reject}
+    "#read" -> DzFloatDz {reject}
+    "allocValue" -> DzFloatDz {reject}
+    ">=Float" -> DzFloatDz {reject}
+    "Set2KTerm" -> DzFloatDz {reject}
+    "isIntType" -> DzFloatDz {reject}
+    "public" -> DzFloatDz {reject}
+    "%Int" -> DzFloatDz {reject}
+    "KList2KLabel" -> DzFloatDz {reject}
+    "#stdin" -> DzFloatDz {reject}
+    "'Pattern" -> DzFloatDz {reject}
+    "hasPrivateProperty" -> DzFloatDz {reject}
+    "convertToLanguageValue" -> DzFloatDz {reject}
+    "'ForEach" -> DzFloatDz {reject}
+    "LError" -> DzFloatDz {reject}
+    "orElseBool" -> DzFloatDz {reject}
+    "readBasicRef" -> DzFloatDz {reject}
+    "'SingleQuoted" -> DzFloatDz {reject}
+    "'VariableBraced" -> DzFloatDz {reject}
+    "incRefCount" -> DzFloatDz {reject}
+    "locsHoldSameCompound" -> DzFloatDz {reject}
+    "'Array" -> DzFloatDz {reject}
+    "locNull" -> DzFloatDz {reject}
+    "'FunctionCall" -> DzFloatDz {reject}
+    "String2DotK" -> DzFloatDz {reject}
+    "'Private" -> DzFloatDz {reject}
+    "strlen" -> DzFloatDz {reject}
+    "'Extends" -> DzFloatDz {reject}
+    "stdclass" -> DzFloatDz {reject}
+    "'Octa" -> DzFloatDz {reject}
+    "'Or" -> DzFloatDz {reject}
+    "#parseToken" -> DzFloatDz {reject}
+    "key" -> DzFloatDz {reject}
+    "#if" -> DzFloatDz {reject}
+    "geq" -> DzFloatDz {reject}
+    "isSet" -> DzFloatDz {reject}
+    "'HereDocContent" -> DzFloatDz {reject}
+    "LgetRef" -> DzFloatDz {reject}
+    "'StringCast" -> DzFloatDz {reject}
+    "extractIntSubstring" -> DzFloatDz {reject}
+    "buildObjElemList" -> DzFloatDz {reject}
+    "locHoldsCompoundValue" -> DzFloatDz {reject}
+    "label" -> DzFloatDz {reject}
+    "'Throw" -> DzFloatDz {reject}
+    "#map" -> DzFloatDz {reject}
+    "double" -> DzFloatDz {reject}
+    "hasType" -> DzFloatDz {reject}
+    "'DefaultCase" -> DzFloatDz {reject}
+    "isArrayType" -> DzFloatDz {reject}
+    "foreachArrayPair" -> DzFloatDz {reject}
+    "var_dump_indent" -> DzFloatDz {reject}
+    "'OldFunctionDecl" -> DzFloatDz {reject}
+    "toBasicRef" -> DzFloatDz {reject}
+    "==Set" -> DzFloatDz {reject}
+    "<<Int" -> DzFloatDz {reject}
+    "'ReferenceAssign" -> DzFloatDz {reject}
+    "'StaticVariable" -> DzFloatDz {reject}
+    "String2Int" -> DzFloatDz {reject}
+    "val" -> DzFloatDz {reject}
+    "#ioError" -> DzFloatDz {reject}
+    "OID" -> DzFloatDz {reject}
+    "ArrayCreateElem" -> DzFloatDz {reject}
+    "Map2KLabel" -> DzFloatDz {reject}
+    "@RefCount" -> DzFloatDz {reject}
+    "var" -> DzFloatDz {reject}
+    "'Braced" -> DzFloatDz {reject}
+    "'ShellCommand" -> DzFloatDz {reject}
+    "#write" -> DzFloatDz {reject}
+    "=KList" -> DzFloatDz {reject}
+    "lab" -> DzFloatDz {reject}
+    "'Include" -> DzFloatDz {reject}
+    "=/=K" -> DzFloatDz {reject}
+    "makeFunction" -> DzFloatDz {reject}
+    "'AltFor" -> DzFloatDz {reject}
+    "#buffer" -> DzFloatDz {reject}
+    "trim" -> DzFloatDz {reject}
+    "runFunction" -> DzFloatDz {reject}
+    "'FloatCast" -> DzFloatDz {reject}
+    ">String" -> DzFloatDz {reject}
+    "lengthList" -> DzFloatDz {reject}
+    "'Catch" -> DzFloatDz {reject}
+    "divInt" -> DzFloatDz {reject}
+    "'ShortOpenTag" -> DzFloatDz {reject}
+    "#inKList" -> DzFloatDz {reject}
+    "'StaticFunctionCall" -> DzFloatDz {reject}
+    "equal" -> DzFloatDz {reject}
+    "'Name" -> DzFloatDz {reject}
+    "*toObject" -> DzFloatDz {reject}
+    "'DoubleQuoted" -> DzFloatDz {reject}
+    "@Value" -> DzFloatDz {reject}
+    "'PostInc" -> DzFloatDz {reject}
+    "rfindString" -> DzFloatDz {reject}
+    "'ElseIf" -> DzFloatDz {reject}
+    "hasMember" -> DzFloatDz {reject}
+    "<String" -> DzFloatDz {reject}
+    "<>Ltl" -> DzFloatDz {reject}
+    "'DQContent" -> DzFloatDz {reject}
+    "makeNewObject" -> DzFloatDz {reject}
+    "'FullOpenTag" -> DzFloatDz {reject}
+    "ArrayInitCrnt" -> DzFloatDz {reject}
+    "is_numeric" -> DzFloatDz {reject}
+    "writeClassInstanceMembers" -> DzFloatDz {reject}
+    "'ObjectCreation" -> DzFloatDz {reject}
+    "isBuiltin" -> DzFloatDz {reject}
+    "getKLabel" -> DzFloatDz {reject}
+    "'Class" -> DzFloatDz {reject}
+    "String2Bool" -> DzFloatDz {reject}
+    "NOT-SUPPORTED" -> DzFloatDz {reject}
+    "'DeclareStatic" -> DzFloatDz {reject}
+    "isNumericString" -> DzFloatDz {reject}
+    "#ESPIPE" -> DzFloatDz {reject}
+    "get_config_label" -> DzFloatDz {reject}
+    "#token" -> DzFloatDz {reject}
+    "'LessEqual" -> DzFloatDz {reject}
+    "<=Float" -> DzFloatDz {reject}
+    "isset" -> DzFloatDz {reject}
+    "reset" -> DzFloatDz {reject}
+    "=/=Bool" -> DzFloatDz {reject}
+    "getFunScope" -> DzFloatDz {reject}
+    "redex" -> DzFloatDz {reject}
+    "'GreaterEqual" -> DzFloatDz {reject}
+    "'Hexa" -> DzFloatDz {reject}
+    "#EISDIR" -> DzFloatDz {reject}
+    "isStringType" -> DzFloatDz {reject}
+    "'HexaChar" -> DzFloatDz {reject}
+    "popLoopContext" -> DzFloatDz {reject}
+    "=Set" -> DzFloatDz {reject}
+    "*Int" -> DzFloatDz {reject}
+    "ArrayCreateEmpty" -> DzFloatDz {reject}
+    "'Less" -> DzFloatDz {reject}
+    "isSubclass" -> DzFloatDz {reject}
+    "lvalue" -> DzFloatDz {reject}
+    "lookup_glob" -> DzFloatDz {reject}
+    "'InlineHTML" -> DzFloatDz {reject}
+    "arrayCurrentOverflow" -> DzFloatDz {reject}
+    "#stat" -> DzFloatDz {reject}
+    "'ObjectAccess" -> DzFloatDz {reject}
+    "'AltSwitch" -> DzFloatDz {reject}
+    "initBuiltinFunctions" -> DzFloatDz {reject}
+    "#inSet" -> DzFloatDz {reject}
+    "-Set" -> DzFloatDz {reject}
+    "KLabel2String" -> DzFloatDz {reject}
+    "#set" -> DzFloatDz {reject}
+    "'Isset" -> DzFloatDz {reject}
+    "maxInt" -> DzFloatDz {reject}
+    "user_input" -> DzFloatDz {reject}
+    "NULL" -> DzFloatDz {reject}
+    "locHoldsObject" -> DzFloatDz {reject}
+    "'Return" -> DzFloatDz {reject}
+    "##tcpRequest" -> DzFloatDz {reject}
+    "visiting" -> DzFloatDz {reject}
+    "'Expr" -> DzFloatDz {reject}
+    "Bag2KLabel" -> DzFloatDz {reject}
+    "#ENOTDIR" -> DzFloatDz {reject}
+    "ERROR" -> DzFloatDz {reject}
+    "'EmbeddedString" -> DzFloatDz {reject}
+    "processFunArgs" -> DzFloatDz {reject}
+    "isIdentical" -> DzFloatDz {reject}
+    "'Pair" -> DzFloatDz {reject}
+    "hasProperty" -> DzFloatDz {reject}
+    "<Int" -> DzFloatDz {reject}
+    "'EchoOpenTag" -> DzFloatDz {reject}
+    "true" -> DzFloatDz {reject}
+    "[]Ltl" -> DzFloatDz {reject}
+    "#ENAMETOOLONG" -> DzFloatDz {reject}
+    ">Int" -> DzFloatDz {reject}
+    "'Switch" -> DzFloatDz {reject}
+    "|->Ltl" -> DzFloatDz {reject}
+    "isStatic" -> DzFloatDz {reject}
+    "+Int" -> DzFloatDz {reject}
+    "#istream" -> DzFloatDz {reject}
+    "initSuperGlobals" -> DzFloatDz {reject}
+    "'ErrorFree" -> DzFloatDz {reject}
+    "'Some" -> DzFloatDz {reject}
+    "WARNING" -> DzFloatDz {reject}
+    "#string2Int" -> DzFloatDz {reject}
+    "'HereDocStart" -> DzFloatDz {reject}
+    "obj" -> DzFloatDz {reject}
+    "method" -> DzFloatDz {reject}
+    "@byValue" -> DzFloatDz {reject}
+    "greaterEqual" -> DzFloatDz {reject}
+    "'ConstantVariable" -> DzFloatDz {reject}
+    "refNull" -> DzFloatDz {reject}
+    "'Continue" -> DzFloatDz {reject}
+    "count" -> DzFloatDz {reject}
+    "<->Ltl" -> DzFloatDz {reject}
+    "'CloseTag" -> DzFloatDz {reject}
+    "runScript" -> DzFloatDz {reject}
+    "'Ref" -> DzFloatDz {reject}
+    "buildInitState" -> DzFloatDz {reject}
+    "type" -> DzFloatDz {reject}
+    "setCrntScope" -> DzFloatDz {reject}
+    "'RequireOnce" -> DzFloatDz {reject}
+    "'ClassConstantDecl" -> DzFloatDz {reject}
+    "KLabel2KLabel" -> DzFloatDz {reject}
+    "objectInit" -> DzFloatDz {reject}
+    "none" -> DzFloatDz {reject}
+    "dividesInt" -> DzFloatDz {reject}
+    "Set2KTermAcc" -> DzFloatDz {reject}
+    "'DNumber" -> DzFloatDz {reject}
+    "Id2String" -> DzFloatDz {reject}
+    "dump_content" -> DzFloatDz {reject}
+    "'MulAssign" -> DzFloatDz {reject}
+    "initClassMemberDecl" -> DzFloatDz {reject}
+    "int" -> DzFloatDz {reject}
+    "Map" -> DzFloatDz {reject}
+    "'AbstractMethodBody" -> DzFloatDz {reject}
+    "<=Set" -> DzFloatDz {reject}
+    "comparison" -> DzFloatDz {reject}
+    ">>Int" -> DzFloatDz {reject}
+    "isStrictComparison" -> DzFloatDz {reject}
+    "'IntCast" -> DzFloatDz {reject}
+    "isScalar" -> DzFloatDz {reject}
+    ">=Int" -> DzFloatDz {reject}
+    "'True" -> DzFloatDz {reject}
+    "CellLabel2KLabel" -> DzFloatDz {reject}
+    "RgetRef" -> DzFloatDz {reject}
+    "this" -> DzFloatDz {reject}
+    "=Map" -> DzFloatDz {reject}
+    "'ASPOpenTag" -> DzFloatDz {reject}
+    "|=Ltl" -> DzFloatDz {reject}
+    "'Null" -> DzFloatDz {reject}
+    "'Neg" -> DzFloatDz {reject}
+    "*toFloat" -> DzFloatDz {reject}
+    "isNumeric" -> DzFloatDz {reject}
+    "'Simple" -> DzFloatDz {reject}
+    "'MinAssign" -> DzFloatDz {reject}
+    "initScopes" -> DzFloatDz {reject}
+    "'Eval" -> DzFloatDz {reject}
+    "#isTCPError" -> DzFloatDz {reject}
+    "MethodNotFound" -> DzFloatDz {reject}
+    "var_dump" -> DzFloatDz {reject}
+    "categoryChar" -> DzFloatDz {reject}
+    "=Bag" -> DzFloatDz {reject}
+    "while" -> DzFloatDz {reject}
+    "real" -> DzFloatDz {reject}
+    "+String" -> DzFloatDz {reject}
+    "'Positive" -> DzFloatDz {reject}
+    "findString" -> DzFloatDz {reject}
+    "if" -> DzFloatDz {reject}
+    "#else" -> DzFloatDz {reject}
+    "read" -> DzFloatDz {reject}
+    "ROOT" -> DzFloatDz {reject}
+    "zvalRead" -> DzFloatDz {reject}
+    "less" -> DzFloatDz {reject}
+    "MyListItem" -> DzFloatDz {reject}
+    "alias" -> DzFloatDz {reject}
+    "rtrim" -> DzFloatDz {reject}
+    "'Document" -> DzFloatDz {reject}
+    "normalizeFloat" -> DzFloatDz {reject}
+    "geqVal" -> DzFloatDz {reject}
+    "'ListAssign" -> DzFloatDz {reject}
+    "in" -> DzFloatDz {reject}
+    "'BracedArrayAccess" -> DzFloatDz {reject}
+    "|->" -> DzFloatDz {reject}
+    "=/=Int" -> DzFloatDz {reject}
+    "'Directive" -> DzFloatDz {reject}
+    "createEmptyClass" -> DzFloatDz {reject}
+    "'RefValue" -> DzFloatDz {reject}
+    "==String" -> DzFloatDz {reject}
+    "<=Map" -> DzFloatDz {reject}
+    "print_r" -> DzFloatDz {reject}
+    "'ParamConstant" -> DzFloatDz {reject}
+    "'Modifiers" -> DzFloatDz {reject}
+    "greater" -> DzFloatDz {reject}
+    "lookup_fun" -> DzFloatDz {reject}
+    "lengthString" -> DzFloatDz {reject}
+    "methExecute" -> DzFloatDz {reject}
+    "Array" -> DzFloatDz {reject}
+    "is_scalar" -> DzFloatDz {reject}
+    "String2Bag" -> DzFloatDz {reject}
+    "'SLAssign" -> DzFloatDz {reject}
+    "'MethodBody" -> DzFloatDz {reject}
+    "ArrayUpdateElem" -> DzFloatDz {reject}
+    "#lstat" -> DzFloatDz {reject}
+    "wrap-with" -> DzFloatDz {reject}
+    "DEPRECATED" -> DzFloatDz {reject}
+    "String2KLabel" -> DzFloatDz {reject}
+    "andThenBool" -> DzFloatDz {reject}
+    "makeArrayFromScalar" -> DzFloatDz {reject}
+    "#tcpError" -> DzFloatDz {reject}
+    "boolean" -> DzFloatDz {reject}
+    "'Value" -> DzFloatDz {reject}
+    "*toString" -> DzFloatDz {reject}
+    "'StringAccess" -> DzFloatDz {reject}
+    "cool" -> DzFloatDz {reject}
+    "copyArrayMembers" -> DzFloatDz {reject}
+    ">Float" -> DzFloatDz {reject}
+    "staticDeclFound" -> DzFloatDz {reject}
+    "defined" -> DzFloatDz {reject}
+    "#close" -> DzFloatDz {reject}
+    "mod" -> DzFloatDz {reject}
+    "/Float" -> DzFloatDz {reject}
+    "intersectSet" -> DzFloatDz {reject}
+    "locHoldsArray" -> DzFloatDz {reject}
+    "-Float" -> DzFloatDz {reject}
+    "'OctaChar" -> DzFloatDz {reject}
+    "==Float" -> DzFloatDz {reject}
+    "'BinAnd" -> DzFloatDz {reject}
+    "'Div" -> DzFloatDz {reject}
+    "inKList" -> DzFloatDz {reject}
+    "'InstanceVariable" -> DzFloatDz {reject}
+    "dummy" -> DzFloatDz {reject}
+    "replaceAll" -> DzFloatDz {reject}
+    "FalseLtl" -> DzFloatDz {reject}
+    "undef" -> DzFloatDz {reject}
+    "^Int" -> DzFloatDz {reject}
+    "=List" -> DzFloatDz {reject}
+    "/\\Ltl" -> DzFloatDz {reject}
+    "'ListWrap" -> DzFloatDz {reject}
+    "expEvalLoc" -> DzFloatDz {reject}
+    "next" -> DzFloatDz {reject}
+    "*toBoolean" -> DzFloatDz {reject}
+    "isLiteral" -> DzFloatDz {reject}
+    "&Int" -> DzFloatDz {reject}
+    "run" -> DzFloatDz {reject}
+    "'Key" -> DzFloatDz {reject}
+    "copyValueToLoc" -> DzFloatDz {reject}
+    "=/=String" -> DzFloatDz {reject}
+    "'OrAssign" -> DzFloatDz {reject}
+    "pushStackFrame" -> DzFloatDz {reject}
+    "assignSeqOfIds" -> DzFloatDz {reject}
+    "xorBool" -> DzFloatDz {reject}
+    "isStringKey" -> DzFloatDz {reject}
+    "NOTICE" -> DzFloatDz {reject}
+    "\\/Ltl" -> DzFloatDz {reject}
+    "#isWhiteSpace" -> DzFloatDz {reject}
+    "'InterfaceFunctionRef" -> DzFloatDz {reject}
+    "'IsNotEqual" -> DzFloatDz {reject}
+    "visitedK" -> DzFloatDz {reject}
+    "isToken" -> DzFloatDz {reject}
+    "visitedL" -> DzFloatDz {reject}
+    "Bag2String" -> DzFloatDz {reject}
+    "==List" -> DzFloatDz {reject}
+    "replace" -> DzFloatDz {reject}
+    "nul" -> DzFloatDz {reject}
+    "#EOF" -> DzFloatDz {reject}
+    "'Implements" -> DzFloatDz {reject}
+    "'While" -> DzFloatDz {reject}
+    "zval" -> DzFloatDz {reject}
+    "string" -> DzFloatDz {reject}
+    "==KList" -> DzFloatDz {reject}
+    "BinOp" -> DzFloatDz {reject}
+    "'FunctionName" -> DzFloatDz {reject}
+    "ULtl" -> DzFloatDz {reject}
+    "writeClassStaticMembers" -> DzFloatDz {reject}
+    "#string2klist" -> DzFloatDz {reject}
+    "Char2String" -> DzFloatDz {reject}
+    "inFun" -> DzFloatDz {reject}
+    "initStatic" -> DzFloatDz {reject}
+    "=/=Float" -> DzFloatDz {reject}
+    "variable" -> DzFloatDz {reject}
+    "popStackFrame" -> DzFloatDz {reject}
+    "'AndAssign" -> DzFloatDz {reject}
+    "'IncludeOnce" -> DzFloatDz {reject}
+    "#parseInput" -> DzFloatDz {reject}
+    "#statTypes" -> DzFloatDz {reject}
+    "<=>Ltl" -> DzFloatDz {reject}
+    "'ParamRef" -> DzFloatDz {reject}
+    "=>Ltl" -> DzFloatDz {reject}
+    "*Cond" -> DzFloatDz {reject}
+    "rfindChar" -> DzFloatDz {reject}
+    "setCrntObj" -> DzFloatDz {reject}
+    "'ParamDefault" -> DzFloatDz {reject}
+    "values" -> DzFloatDz {reject}
+    "'Greater" -> DzFloatDz {reject}
+    "pushLoopContext" -> DzFloatDz {reject}
+    "#checkTCPAnswer" -> DzFloatDz {reject}
+    "Literal" -> DzFloatDz {reject}
+    "sf" -> DzFloatDz {reject}
+    "isKResult" -> DzFloatDz {reject}
+    "sweep" -> DzFloatDz {reject}
+    "size" -> DzFloatDz {reject}
+    "decRefCount" -> DzFloatDz {reject}
+    "'Body" -> DzFloatDz {reject}
+    "'Concat" -> DzFloatDz {reject}
+    "'Plus" -> DzFloatDz {reject}
+    "'IndirectReference" -> DzFloatDz {reject}
+    "'PlusAssign" -> DzFloatDz {reject}
+    "#EINVAL" -> DzFloatDz {reject}
+    "syncArrayCurrent" -> DzFloatDz {reject}
+    "'Case" -> DzFloatDz {reject}
+    "#tcpRequest" -> DzFloatDz {reject}
+    "'IsEqual" -> DzFloatDz {reject}
+    "'ObjectCast" -> DzFloatDz {reject}
+    "#ENOENT" -> DzFloatDz {reject}
+    "Int2String" -> DzFloatDz {reject}
+    "'LXor" -> DzFloatDz {reject}
+    "@byRef" -> DzFloatDz {reject}
+    "deprecatedIdiomFound" -> DzFloatDz {reject}
+    "'PreInc" -> DzFloatDz {reject}
+    "#hasMapping" -> DzFloatDz {reject}
+    "makeAccess2NonDefinedClassMethodErrorMsg" -> DzFloatDz {reject}
+    "=/=KLabel" -> DzFloatDz {reject}
+    "'False" -> DzFloatDz {reject}
+    "#stderr" -> DzFloatDz {reject}
+    "'Min" -> DzFloatDz {reject}
+    "MakeStaticDecl" -> DzFloatDz {reject}
+    "is_array" -> DzFloatDz {reject}
+    "~Ltl" -> DzFloatDz {reject}
+    "String2Float" -> DzFloatDz {reject}
+    "'Final" -> DzFloatDz {reject}
+    "->Ltl" -> DzFloatDz {reject}
+    "#noIO" -> DzFloatDz {reject}
+    "endVisit" -> DzFloatDz {reject}
+    "#evalHelper" -> DzFloatDz {reject}
+    "makeForInit" -> DzFloatDz {reject}
+    "#counter" -> DzFloatDz {reject}
+    "isSuperclass" -> DzFloatDz {reject}
+    "minInt" -> DzFloatDz {reject}
+    "'Block" -> DzFloatDz {reject}
+    "TrueLtl" -> DzFloatDz {reject}
+    "#opendir" -> DzFloatDz {reject}
+    "#isMapInK" -> DzFloatDz {reject}
+    "mul" -> DzFloatDz {reject}
+    "=/=List" -> DzFloatDz {reject}
+    "ArrayCrnt2None" -> DzFloatDz {reject}
+    "isSuperGlobal" -> DzFloatDz {reject}
+    "isFloatType" -> DzFloatDz {reject}
+    "String2K" -> DzFloatDz {reject}
+    "#freezer" -> DzFloatDz {reject}
+    "indentDec" -> DzFloatDz {reject}
+    "'Escape" -> DzFloatDz {reject}
+    "writeClassMethod" -> DzFloatDz {reject}
+    "methodLookup" -> DzFloatDz {reject}
+    "for" -> DzFloatDz {reject}
+    "absInt" -> DzFloatDz {reject}
+    "#isDigit" -> DzFloatDz {reject}
+    "List2KLabel" -> DzFloatDz {reject}
+    "'ClassName" -> DzFloatDz {reject}
+    "String2Id" -> DzFloatDz {reject}
+    "allocAndRunConstructor" -> DzFloatDz {reject}
+    "'Static" -> DzFloatDz {reject}
+    "$hasMapping" -> DzFloatDz {reject}
+    "lref" -> DzFloatDz {reject}
+    ">=String" -> DzFloatDz {reject}
+    "visibility2String" -> DzFloatDz {reject}
+    "#tokenToString" -> DzFloatDz {reject}
+    "substrString" -> DzFloatDz {reject}
+    "declareGlobal" -> DzFloatDz {reject}
+    "'PreDec" -> DzFloatDz {reject}
+    "false" -> DzFloatDz {reject}
+    "print_r_array" -> DzFloatDz {reject}
+    "'Not" -> DzFloatDz {reject}
+    "/Int" -> DzFloatDz {reject}
+    "'ASPCloseTag" -> DzFloatDz {reject}
+    "ArrayInitProps" -> DzFloatDz {reject}
+    "=/=KList" -> DzFloatDz {reject}
+    "'If" -> DzFloatDz {reject}
+    "==Int" -> DzFloatDz {reject}
+    "plus" -> DzFloatDz {reject}
+    "makeExceptionClass" -> DzFloatDz {reject}
+    "'Mod" -> DzFloatDz {reject}
+    "arr" -> DzFloatDz {reject}
+    "emptyArray" -> DzFloatDz {reject}
+    "'LOr" -> DzFloatDz {reject}
+    "'InlineEcho" -> DzFloatDz {reject}
+    "modelCheck" -> DzFloatDz {reject}
+    "#eval" -> DzFloatDz {reject}
+    "*toArray" -> DzFloatDz {reject}
+    "start" -> DzFloatDz {reject}
+    "Float2String" -> DzFloatDz {reject}
+    "#distinctCounter" -> DzFloatDz {reject}
+    "#seek" -> DzFloatDz {reject}
+    "methRunIfVisible" -> DzFloatDz {reject}
+    "'List" -> DzFloatDz {reject}
+    "isIntString" -> DzFloatDz {reject}
+    "CopyFunctionArgs" -> DzFloatDz {reject}
+    "'IsNotIdentical" -> DzFloatDz {reject}
+    "initBuiltinClasses" -> DzFloatDz {reject}
+    "makeStaticDecl" -> DzFloatDz {reject}
+    "'ArrayAccess" -> DzFloatDz {reject}
+    "'XorAssign" -> DzFloatDz {reject}
+    "makeStdClass" -> DzFloatDz {reject}
+    "isEqualScalar" -> DzFloatDz {reject}
+    "loopFrame" -> DzFloatDz {reject}
+    "switch" -> DzFloatDz {reject}
+    "typeOf" -> DzFloatDz {reject}
+    "'TemplateDocument" -> DzFloatDz {reject}
+    "'InterfaceExtends" -> DzFloatDz {reject}
+    "'MagicConstant" -> DzFloatDz {reject}
+    "get_crnt_fun" -> DzFloatDz {reject}
+    "private" -> DzFloatDz {reject}
+    "currentOverflow" -> DzFloatDz {reject}
+    "=/=Map" -> DzFloatDz {reject}
+    "*Float" -> DzFloatDz {reject}
+    "is_type" -> DzFloatDz {reject}
+    "methodInfo" -> DzFloatDz {reject}
+    "ArrayWriteCrnt" -> DzFloatDz {reject}
+    "==KLabel" -> DzFloatDz {reject}
+    "@Type" -> DzFloatDz {reject}
+    "ArrayInitProp" -> DzFloatDz {reject}
+    "getGlobalScope" -> DzFloatDz {reject}
+    "'FunctionDeclRef" -> DzFloatDz {reject}
+    "|Int" -> DzFloatDz {reject}
+    "min" -> DzFloatDz {reject}
+    "'None" -> DzFloatDz {reject}
+    "'ClassConstant" -> DzFloatDz {reject}
+    "array_key_exists" -> DzFloatDz {reject}
+    "applying" -> DzFloatDz {reject}
+    "#ELOOP" -> DzFloatDz {reject}
+    "impliesBool" -> DzFloatDz {reject}
+    "leq" -> DzFloatDz {reject}
+    "^Float" -> DzFloatDz {reject}
+    "prop" -> DzFloatDz {reject}
+    "'Echo" -> DzFloatDz {reject}
+    "expEval" -> DzFloatDz {reject}
+    "'InternalFunction" -> DzFloatDz {reject}
+    "len" -> DzFloatDz {reject}
+    "'Ternary" -> DzFloatDz {reject}
+    "#noparse" -> DzFloatDz {reject}
+    "decRefCountCompound" -> DzFloatDz {reject}
+    "'For" -> DzFloatDz {reject}
+    "#stdout" -> DzFloatDz {reject}
+    "#tell" -> DzFloatDz {reject}
+    "@IsRef" -> DzFloatDz {reject}
+    "#retrieveTCPError" -> DzFloatDz {reject}
+    "terminated" -> DzFloatDz {reject}
+    "makeObjectFromArray" -> DzFloatDz {reject}
+    "'Deci" -> DzFloatDz {reject}
+    "isObjectType" -> DzFloatDz {reject}
+    "'Try" -> DzFloatDz {reject}
+    "Rget" -> DzFloatDz {reject}
+    "zvalDestroy" -> DzFloatDz {reject}
+    "detectDeprecated" -> DzFloatDz {reject}
+    "'ObjectProperty" -> DzFloatDz {reject}
+    "'PostDec" -> DzFloatDz {reject}
+    "isInPath" -> DzFloatDz {reject}
+    "'DoWhile" -> DzFloatDz {reject}
+    ".MyList" -> DzFloatDz {reject}
+    "visitedL(~>)" -> DzFloatDz {reject}
+    "'#andBool" -> DzFloatDz {reject}
+    "popx" -> DzFloatDz {reject}
+    "'ConstantEncapsedString" -> DzFloatDz {reject}
+    "=/=Set" -> DzFloatDz {reject}
+    "heat" -> DzFloatDz {reject}
+    "decRefCountArrayElems" -> DzFloatDz {reject}
+    "cleanTrace" -> DzFloatDz {reject}
+    "head" -> DzFloatDz {reject}
+    "'EmbeddedArrayVariable" -> DzFloatDz {reject}
+    "'Break" -> DzFloatDz {reject}
+    "myNext" -> DzFloatDz {reject}
+    "lessEqual" -> DzFloatDz {reject}
+    "'ClassConstantDeclList" -> DzFloatDz {reject}
+    "isCrntVisib" -> DzFloatDz {reject}
+    "#parse" -> DzFloatDz {reject}
+    "'Param" -> DzFloatDz {reject}
+    "'Empty" -> DzFloatDz {reject}
+    "Int2Float" -> DzFloatDz {reject}
+    "class" -> DzFloatDz {reject}
+    "#EACCES" -> DzFloatDz {reject}
+    "isFloatString" -> DzFloatDz {reject}
+    "hasSameType" -> DzFloatDz {reject}
+    "mark" -> DzFloatDz {reject}
+    "'Public" -> DzFloatDz {reject}
+    "-Int" -> DzFloatDz {reject}
+    "~Int" -> DzFloatDz {reject}
+    "notBool" -> DzFloatDz {reject}
+    "#getMapFromK" -> DzFloatDz {reject}
+    "convertToLoc" -> DzFloatDz {reject}
+    "'And" -> DzFloatDz {reject}
+    "=Int" -> DzFloatDz {reject}
+    "'Unset" -> DzFloatDz {reject}
+    "RLtl" -> DzFloatDz {reject}
+    "--Float" -> DzFloatDz {reject}
+    "setCrntClass" -> DzFloatDz {reject}
+    "indentInc" -> DzFloatDz {reject}
+    "isEqual" -> DzFloatDz {reject}
+    "==K" -> DzFloatDz {reject}
+    "#EBADF" -> DzFloatDz {reject}
+    "identical" -> DzFloatDz {reject}
+    "ordChar" -> DzFloatDz {reject}
+    "modInt" -> DzFloatDz {reject}
+    "'InterfaceDecl" -> DzFloatDz {reject}
+    "isCompoundValue" -> DzFloatDz {reject}
+    "'Normal" -> DzFloatDz {reject}
+    "*toInteger" -> DzFloatDz {reject}
+    "visitedL(,,)" -> DzFloatDz {reject}
+    "foreach" -> DzFloatDz {reject}
+    "<=String" -> DzFloatDz {reject}
+    "isSpecialVar" -> DzFloatDz {reject}
+    "'SRAssign" -> DzFloatDz {reject}
+    "andBool" -> DzFloatDz {reject}
+    "'Declare" -> DzFloatDz {reject}
+    "div" -> DzFloatDz {reject}
+    "#open" -> DzFloatDz {reject}
+    "object" -> DzFloatDz {reject}
+    "isEmptySet" -> DzFloatDz {reject}
+    "isRetValueLoc" -> DzFloatDz {reject}
+    "'NullCast" -> DzFloatDz {reject}
+    "'AltElseIf" -> DzFloatDz {reject}
+    "'FunctionDecl" -> DzFloatDz {reject}
+    "'ConcatAssign" -> DzFloatDz {reject}
+    "MakeDeprecatedWarning" -> DzFloatDz {reject}
+    "#ostream" -> DzFloatDz {reject}
+    "protected" -> DzFloatDz {reject}
+    "isVisible" -> DzFloatDz {reject}
+    "fresh" -> DzFloatDz {reject}
+    "'DivAssign" -> DzFloatDz {reject}
+    "ltrim" -> DzFloatDz {reject}
+    "#getc" -> DzFloatDz {reject}
+    "=K" -> DzFloatDz {reject}
+    "is_string" -> DzFloatDz {reject}
+    "=KLabel" -> DzFloatDz {reject}
+    "'OldFunctionDeclRef" -> DzFloatDz {reject}
+    "print_r_content" -> DzFloatDz {reject}
+    "is_float" -> DzFloatDz {reject}
+    "'AltForEach" -> DzFloatDz {reject}
+    "isBoolType" -> DzFloatDz {reject}
+    "ArrayIndexOf" -> DzFloatDz {reject}
+    "xorInt" -> DzFloatDz {reject}
+    "'LNumber" -> DzFloatDz {reject}
+    "Set2KLabel" -> DzFloatDz {reject}
+    "'InterfaceFunction" -> DzFloatDz {reject}
+    "makeArrayLiteral" -> DzFloatDz {reject}
+    "string2Number" -> DzFloatDz {reject}
+    "refactor" -> DzFloatDz {reject}
+    "#then" -> DzFloatDz {reject}
+    "bool" -> DzFloatDz {reject}
+    "initClass" -> DzFloatDz {reject}
+    "biggestIntKey" -> DzFloatDz {reject}
+    "randomRandom" -> DzFloatDz {reject}
+context-free syntax
+    DzStringDz -> DzString {cons("DzString1Const")}
+    DzIntDz -> DzInt {cons("DzInt1Const")}
+    IdDz -> Id {cons("Id1Const")}
+    DzFloatDz -> DzFloat {cons("DzFloat1Const")}
+
+
+context-free restrictions
+    Id -/- [A-Za-z0-9\_]
+    DzInt -/- [0-9]

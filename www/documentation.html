@@ -1,0 +1,382 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title> KPHP: An Executable Formal Semantics for PHP </title>
+	
+	<!-- Stylesheets -->
+	
+	<link rel="stylesheet" href="stylesheet/style.css" type="text/css" /> 
+</head>
+
+<body>
+
+<h1> Getting started with KPHP </h1>
+<h3> Preliminary: the K tools </h3>
+		<p>
+		The K framework comes as a bundle of tools. The most important of them are 
+		<code> kompile </code> and <code> krun </code>.		
+		</p>
+		
+		<p>
+		
+		<ul>
+			<li>
+				<code> kompile </code> takes a <code> k </code> definition as input and
+				compiles it into a Maude specification. 
+			</li>
+		
+			<li>
+				<code> krun </code> is then invoked in order to "run" the definition, by providing
+				as input the program to be run, the parser to be used, and many additional 
+				parameters depending on the particular use (which may include an LTL 
+				formula to be model checked, the content of a given cell, a path condition 
+				for symbolic execution and so on).
+			</li>
+		</ul>
+		
+		Since <code> krun </code> can be used in so many scenarios, its usage tends to 
+		become verbose. 
+		For this reason, we are planning to provide wrappers for the most common use-cases.
+		At the moment we only provide the <code> kphp </code> command, which provide 
+		a shortcut for simply running a script. The idea is that a PHP script can be 
+		executed on the command line by writing 
+		
+		</br> </br>
+		<code> kphp myScript.php </code>
+		
+		For all other cases (model checking and symbolic execution) we use the K 
+		toolchain directly.
+		
+		</p>
+		
+	<h3> Step-by-step examples </h3>
+		<p>
+			<b> Preliminary note: </b> All the example commands shown here and in the comments in the examples
+			are meant to be executed in the <code> kphp </code> source folder.
+		</p>
+		
+		<h4> Example 1: Running a PHP program with the KPHP interpreter </h4>
+			<p>
+				The simplest scenario consists in running PHP code with the KPHP
+				interpreter.
+				
+				<ol>
+					<li> 
+						Compile kphp for execution: 
+						<code>
+							kompile php.k
+						</code>
+					</li>
+					<li>
+						Invoke the <code> kphp </code> command: 
+						<code>
+							scripts/kphp helloworld.php
+						</code>
+					</li>
+				</ol>
+					
+				This should output something like:
+				 </br>
+				<code> </br>
+					Hello world! </br>
+					This is kphp </br>
+				</code>
+			</p>	
+						
+			In order to show the final configuration 
+			(i.e. the final state) use the 
+			<code> --config </code> option: 
+			</br></br>
+			<code> scripts/kphp helloworld.php --config</code> </br> </br> 
+				
+			The output, which consists of the program output followed 
+			by the configuration in XML-like notationm, should look like this
+			(note that configurations are verbose and span over multiple pages. 
+			We give some details in the next subsection).
+			
+				
+			</br></br> <img src="img/screen-1.png"> </br>
+				
+		<h5> Understanding configurations </h5>
+			<p>
+				Configurations give a complete representation of the state, by 
+				displaying the contents of all the cells.
+			</p>
+			<p> 
+				While all the cells are of course needed for the semantics, inspecting
+				some, in practice, is done much more often than others.
+				In particular, there are two cells we find very important: the 
+				<code> k </code> cell,  containing the fragment of program to be 
+				executed next,  and the <code> heap </code> cell, containing... 
+				Yes, the heap. 
+			</p>
+				
+			<p>
+				In normal conditions, the <code> k </code> cell should be empty at 
+				the end of the execution. This means that the code didn't get stuck 
+				(note that <code> .K </code> means "empty").
+					
+				</br> </br>
+				<img src="img/screen-2.png"> </br>
+					
+				Some other times, however,  the program may get stuck 
+				(either for a bug in the semantics or because the construct that 
+				is at the top of the <code> k </code> cell doesn't have a semantics yet).
+				This is easily detected by manually inspecting the <code> k </code>
+				cell.
+			</p>
+				
+			<p>
+				Another important cell is the <code> heap </code> cell, which 
+				represent the content of the memory, including the values of all 
+				variables, array members, objects etc. 
+				
+				</br> </br>	
+				<img src="img/screen-3.png"> </br>
+				
+				Note that, in KPHP, the heap not only contains the values of the 
+				variables, but also the scopes (or symbol tables) which are represented
+				as normal arrays (from whose, in principle, are indistinguishable).
+				
+				For example, in the previous screenshot, the memory cell marked 
+				<code> #symLoc(1) </code> contains (a subset of) the superglobals, 
+				while the cell marked <code> #symLoc(3) </code> contains the global 
+				variables (in the example program, there was one global variable called
+				<code> $name </code>.
+				
+				Following the same principle, when calling a function or a method a 
+				new local scope is created (as an array) and stored somewhere in the heap.
+				
+				The <code> scopes </code> cell stores, at any time, the locations of 
+				the scopes. In particular, the <code> currentScope </code>
+				is initially equal to the global scope but is updated to 
+				when entering a function body.
+				
+				</br> </br>	
+				<img src="img/screen-4.png"> </br>
+			</p>
+			
+		<h5> Heap-Pretty-Print: pretty printing configurations </h5>
+			<p>
+			We provide a small tool, <code> HeapPP </code>, to pretty print configurations. It takes an 
+			XML file containing a configuration as input, and outputs a 
+			GraphViz (*.gv) file with the same name, containing a pretty-print 
+			representation of the relevant part of the configuration 
+			(i.e. we currently show only the heap plus defined functions and classses).
+			</p>
+			
+			<p>
+			The utility can be found in the <code> heap-pretty-print </code> folder under
+			the main KPHP source folder.
+			Please refere to the README file there for instructions.
+			</p>
+			
+			<p> 
+			To give an idea of what's the output looks like, 
+			here is a (cropped) screenshot (as configurations tends to be very verbose, 
+			this diagrams tends to be too).
+			</p>
+			
+			</br> </br>	
+			<img src="img/screen-8.png"> </br>
+			
+			
+		<h4> Example 2: simple LTL model checking </h4>
+			<p>
+				<b> NOTE: </b> there is currently an issue with the K tools which 
+				causes an exception to be thrown when checking a false LTL property on a program 
+				which prints some output on <code> stdout </code>. 
+				As a temporary solution, it is necessary to disable printing on <code> stdout </code>. 
+				This is simply done as follow: 
+				<ol>
+					<li> open the <code> configuration.k </code> file </li>
+					<li> 
+						remove/comment the string <code> stream="stdout" </code> which is inside
+				 		the "out" cell. 
+				 	</li>
+				</ol>
+				This will disable printing on <code> stdout </code> (note that the output of the
+				program will still be present in the <code> out </code> cell, which can be manually 
+				inspected in case of necessity.  
+				Decomment the string again to restore normal output.
+			</p>
+		
+			In general, here are the steps to be taken to enable LTL model checking:
+			
+			<ol>
+				<li>
+					<p> 
+						the semantics must be compiled with a 
+						<code> --transition </code> option followed by 
+						one or more tags, specifying the set of rules we 
+						wish to consider transitions.
+						For most immediate uses, we found it pratical to 
+						use the set of rules marked with the 
+						<code> [step] </code> tag as the set of transitions
+						(and so does our examples from the paper): 
+						
+						</br> </br>
+						<code>
+							kompile php.k --transition="step"
+						</code>
+					</p>
+		
+					<p> 
+						However, any number of tags can be used, 
+						each combination of tags identifying a different 
+						set of transition rules and consequently 
+						a different notion of observable program state. 
+						For example, the command 
+						
+						<code>
+							kompile php.k --transition="step internal"
+						</code>
+						will tell the compiler to also consider 
+						<code> [internal] </code> rules as transitions. 
+					</p>
+					
+				</li>
+		
+				<li>
+					Invoke <code> krun </code> with an LTL formula as aditional input:
+					</br> </br>
+					<code>
+						krun --parser="java -jar parser/parser.jar" examples/hello-world-ltl.php --ltlmc="LtlTrue"
+					</code>
+					</br> </br>
+					
+					Alternatively, it is also possible to write the same LTL formula in a file:
+					<code>
+						krun --parser="java -jar parser/parser.jar" examples/hello-world-ltl.php --ltlmc helloLTL.txt
+					</code> </br>
+					<p>
+					The output of this simple example should be <code> True </code>
+					</p>
+				</li>
+			</ol>
+			
+			<p>
+			In general, the outcome can be:
+				<ul>
+					<li> 
+						<code> True </code>, meaning that the property holds
+					</li>
+					<li>
+						A counterexample given as a sequence of configurations 
+						(i.e. the representation of a program execution for which the 
+						property is violated).
+					</li>
+					<li>
+						Non termination 
+					</li>
+				</ul>
+			</p>
+
+			<h4> Symbolic Execution </h4>
+
+				<p>
+				Symbolic execution must be explicitly enabled via the <code> 
+				kompile </code> command:
+				
+				</br> </br>
+				<code>
+					kompile php.k --backend symbolic
+				</code> 
+				</br> </br>
+				
+				It is possible to specify (similarly as when compiling with 
+				<code> --transition </code>) which rules we want to "augment" for 
+				symbolic executions, by using the 
+				<code> --symbolic-rules </code> command. By default (i.e. if the 
+				option is not specified) all rules are compiled for symbolic 
+				execution. 
+				</p>
+				
+				<p>
+				After the semantics have been compiled for symbolic execution, it is 
+				possible to execute programs symbolically via the <code> krun </code> 
+				command. In addition to the program to be run and the parser, we
+				also have to provide
+					
+					<ul>
+						<li>
+							An initial path condition: this is done via the option 
+							<code> -cPC=[PATH CONDITION] </code>
+						</li>
+						
+						<li>
+							<p>
+							some symbolic input: this is done by manually putting some (possibly)
+							symbolic values into the input buffer (i.e. the <code> IN </code> cell):
+							<code> -cIN="ListItem([VALUE 1]) ... ListItem([VALUE n])".  </code>
+							</p>
+							
+							<p>
+							Also, it is also important to make sure that the input programs
+							actually makes use of this symbolic data.
+							For this purpose, we define an utility command called 
+							<code> user_input() </code> which can be used to simulate
+							arbitrary input; it works by reading the first item in the input
+							buffer and returning it. E.g:
+							
+							</br> </br>
+							<code> 
+								$input = user_input();		// simulates arbitrary input 
+							</code>
+							</br> </br>
+														 
+							</p>
+							
+						</li>
+					</ul>
+				
+				Let us see how this works in practice with a simple example
+				(assuming you have already compiled for symbolic execution as shown above):
+				
+				<ol>
+					<li>
+						Running a program symbolically:
+							</br></br>
+							<code>
+								krun --parser="java -jar parser/parser.jar" -cPC="true" 
+						    	-cIN='ListItem(#symInt(x))' examples/hello-world-symbolic.php
+							</code>
+							</br></br>
+							
+							This should produce the program output, " <code> hello </code> ", 
+							following by the confuguration augmented with a <code> PC </code> 
+							cell containing the path condition:
+							
+							</br> </br>	
+								<img src="img/screen-5.png"> </br>
+								
+							Note that when more than one path conditions are possible, 
+							an arbitrary one is chosen unless...		
+												
+					</li>
+						
+					<li>
+						Exploring all paths:
+						it is possible to ask the K tool to explore the different 
+						paths, and return all the possible final states 
+						(according to the different path conditions) by adding 
+						the <code> --search </code> option
+						
+						</br></br>
+							<code>
+								krun --parser="java -jar parser/parser.jar" -cPC="true" 
+						    	-cIN='ListItem(#symInt(x))' --search examples/hello-world-symbolic.php 
+							</code>
+							</br></br>
+							
+							The output should be similar to the previous one, except 
+							for the fact that two final states will be displayed 
+							(i.e. one for <code> $x == 0 </code> and one for its 
+							negation)
+					</li>
+					
+				</ol>
+				
+				</p>
+</body>

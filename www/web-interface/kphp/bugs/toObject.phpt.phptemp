@@ -1,0 +1,8 @@
+<?php
+	$x = array(1,2);
+	$y = (object) $x;
+	var_dump($y);
+	$x = 0;
+	$y = (object) $x;
+	var_dump($y);
+?>

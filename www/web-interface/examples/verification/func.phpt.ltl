@@ -1,0 +1,1 @@
+<>Ltl eqTo(fv("foo",variable("x")),val(4))

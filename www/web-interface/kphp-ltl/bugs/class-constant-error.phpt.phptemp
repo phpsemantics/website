@@ -1,0 +1,8 @@
+<?php
+	class A {
+		public static $a = 123;
+		protected static $b = 123;
+	}
+	var_dump(A::$a);
+	A::$c;
+?>

@@ -1,0 +1,469 @@
+set show command off .
+red setCounter(0) .
+erewrite <_>_</_>(generatedTop, <_>_</_>(kphp, (<_>_</_>(script, (<_>_</_>(declarations, .K, declarations)) (<_>_</_>(commands, .K, commands)) (<_>_</_>(k, _~>_(_`(_`)('buildInitState, .KList), 'Document(
+  'ListWrap(
+    .KList
+  ),,
+  'FullOpenTag(
+    .KList
+  ),,
+  'ListWrap(
+    'FunctionDecl(
+      # "i1"(.KList),,
+      'ListWrap(
+        .KList
+      ),,
+      'ListWrap(
+        'Echo(
+          'ListWrap(
+            'ConstantEncapsedString(
+              'DoubleQuoted(
+                'DQContent(
+                  'Some(
+                    'Literal(
+                      # "i1"(.KList)
+                    )
+                  ),,
+                  'Escape(
+                    # 110(.KList)
+                  ),,
+                  'None(
+                    .KList
+                  )
+                )
+              )
+            )
+          )
+        ),,
+        'Return(
+          'Some(
+            'LNumber(
+              'Deci(
+                # "1"(.KList)
+              )
+            )
+          )
+        )
+      )
+    ),,
+    'FunctionDecl(
+      # "i2"(.KList),,
+      'ListWrap(
+        .KList
+      ),,
+      'ListWrap(
+        'Echo(
+          'ListWrap(
+            'ConstantEncapsedString(
+              'DoubleQuoted(
+                'DQContent(
+                  'Some(
+                    'Literal(
+                      # "i2"(.KList)
+                    )
+                  ),,
+                  'Escape(
+                    # 110(.KList)
+                  ),,
+                  'None(
+                    .KList
+                  )
+                )
+              )
+            )
+          )
+        ),,
+        'Return(
+          'Some(
+            'LNumber(
+              'Deci(
+                # "1"(.KList)
+              )
+            )
+          )
+        )
+      )
+    ),,
+    'FunctionDecl(
+      # "i3"(.KList),,
+      'ListWrap(
+        .KList
+      ),,
+      'ListWrap(
+        'Echo(
+          'ListWrap(
+            'ConstantEncapsedString(
+              'DoubleQuoted(
+                'DQContent(
+                  'Some(
+                    'Literal(
+                      # "i3"(.KList)
+                    )
+                  ),,
+                  'Escape(
+                    # 110(.KList)
+                  ),,
+                  'None(
+                    .KList
+                  )
+                )
+              )
+            )
+          )
+        ),,
+        'Return(
+          'Some(
+            'LNumber(
+              'Deci(
+                # "3"(.KList)
+              )
+            )
+          )
+        )
+      )
+    ),,
+    'FunctionDecl(
+      # "i4"(.KList),,
+      'ListWrap(
+        .KList
+      ),,
+      'ListWrap(
+        'DeclareGlobal(
+          'ListWrap(
+            'Variable(
+              'Simple(
+                # "a"(.KList)
+              )
+            )
+          )
+        ),,
+        'Expr(
+          'Assign(
+            'Variable(
+              'Simple(
+                # "a"(.KList)
+              )
+            ),,
+            'Array(
+              'ListWrap(
+                'Pair(
+                  'None(
+                    .KList
+                  ),,
+                  'Value(
+                    'LNumber(
+                      'Deci(
+                        # "10"(.KList)
+                      )
+                    )
+                  )
+                ),,
+                'Pair(
+                  'None(
+                    .KList
+                  ),,
+                  'Value(
+                    'LNumber(
+                      'Deci(
+                        # "11"(.KList)
+                      )
+                    )
+                  )
+                ),,
+                'Pair(
+                  'None(
+                    .KList
+                  ),,
+                  'Value(
+                    'LNumber(
+                      'Deci(
+                        # "12"(.KList)
+                      )
+                    )
+                  )
+                ),,
+                'Pair(
+                  'None(
+                    .KList
+                  ),,
+                  'Value(
+                    'LNumber(
+                      'Deci(
+                        # "13"(.KList)
+                      )
+                    )
+                  )
+                ),,
+                'Pair(
+                  'None(
+                    .KList
+                  ),,
+                  'Value(
+                    'LNumber(
+                      'Deci(
+                        # "14"(.KList)
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        ),,
+        'Echo(
+          'ListWrap(
+            'ConstantEncapsedString(
+              'DoubleQuoted(
+                'DQContent(
+                  'Some(
+                    'Literal(
+                      # "i4"(.KList)
+                    )
+                  ),,
+                  'Escape(
+                    # 110(.KList)
+                  ),,
+                  'None(
+                    .KList
+                  )
+                )
+              )
+            )
+          )
+        ),,
+        'Return(
+          'Some(
+            'LNumber(
+              'Deci(
+                # "4"(.KList)
+              )
+            )
+          )
+        )
+      )
+    ),,
+    'Expr(
+      'Assign(
+        'Variable(
+          'Simple(
+            # "a"(.KList)
+          )
+        ),,
+        'LNumber(
+          'Deci(
+            # "0"(.KList)
+          )
+        )
+      )
+    ),,
+    'Expr(
+      'ListAssign(
+        'List(
+          'ListWrap(
+            'Some(
+              'ArrayAccess(
+                'Variable(
+                  'Simple(
+                    # "a"(.KList)
+                  )
+                ),,
+                'Some(
+                  'Plus(
+                    'FunctionCall(
+                      'FunctionName(
+                        # "i1"(.KList)
+                      ),,
+                      'ListWrap(
+                        .KList
+                      )
+                    ),,
+                    'FunctionCall(
+                      'FunctionName(
+                        # "i2"(.KList)
+                      ),,
+                      'ListWrap(
+                        .KList
+                      )
+                    )
+                  )
+                )
+              )
+            ),,
+            'None(
+              .KList
+            ),,
+            'Some(
+              'List(
+                'ListWrap(
+                  'Some(
+                    'ArrayAccess(
+                      'Variable(
+                        'Simple(
+                          # "a"(.KList)
+                        )
+                      ),,
+                      'Some(
+                        'FunctionCall(
+                          'FunctionName(
+                            # "i3"(.KList)
+                          ),,
+                          'ListWrap(
+                            .KList
+                          )
+                        )
+                      )
+                    )
+                  ),,
+                  'Some(
+                    'ArrayAccess(
+                      'Variable(
+                        'Simple(
+                          # "a"(.KList)
+                        )
+                      ),,
+                      'Some(
+                        'FunctionCall(
+                          'FunctionName(
+                            # "i4"(.KList)
+                          ),,
+                          'ListWrap(
+                            .KList
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            ),,
+            'Some(
+              'ArrayAccess(
+                'Variable(
+                  'Simple(
+                    # "a"(.KList)
+                  )
+                ),,
+                'None(
+                  .KList
+                )
+              )
+            )
+          )
+        ),,
+        'Array(
+          'ListWrap(
+            'Pair(
+              'None(
+                .KList
+              ),,
+              'Value(
+                'LNumber(
+                  'Deci(
+                    # "0"(.KList)
+                  )
+                )
+              )
+            ),,
+            'Pair(
+              'None(
+                .KList
+              ),,
+              'Value(
+                'LNumber(
+                  'Deci(
+                    # "1"(.KList)
+                  )
+                )
+              )
+            ),,
+            'Pair(
+              'None(
+                .KList
+              ),,
+              'Value(
+                'Array(
+                  'ListWrap(
+                    'Pair(
+                      'None(
+                        .KList
+                      ),,
+                      'Value(
+                        'LNumber(
+                          'Deci(
+                            # "30"(.KList)
+                          )
+                        )
+                      )
+                    ),,
+                    'Pair(
+                      'None(
+                        .KList
+                      ),,
+                      'Value(
+                        'LNumber(
+                          'Deci(
+                            # "40"(.KList)
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            ),,
+            'Pair(
+              'None(
+                .KList
+              ),,
+              'Value(
+                'LNumber(
+                  'Deci(
+                    # "3"(.KList)
+                  )
+                )
+              )
+            ),,
+            'Pair(
+              'None(
+                .KList
+              ),,
+              'Value(
+                'LNumber(
+                  'Deci(
+                    # "4"(.KList)
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    ),,
+    'Expr(
+      'FunctionCall(
+        'FunctionName(
+          # "var_dump"(.KList)
+        ),,
+        'ListWrap(
+          'Param(
+            'Variable(
+              'Simple(
+                # "a"(.KList)
+              )
+            )
+          )
+        )
+      )
+    )
+  ),,
+  'CloseTag(
+    .KList
+  ),,
+  'ListWrap(
+    'Literal(
+      # "\n\n"(.KList)
+    )
+  )
+)
+), k)) , script)) (<_>_</_>(tables, (<_>_</_>(functions, .Map, functions)) (<_>_</_>(classes, .Map, classes)) (<_>_</_>(constants, .Map, constants)) (<_>_</_>(classInstanceCounters, .Map, classInstanceCounters)) , tables)) (<_>_</_>(scopes, (<_>_</_>(currentScope, .K, currentScope)) (<_>_</_>(globalScope, .K, globalScope)) (<_>_</_>(globalStaticScope, .K, globalStaticScope)) (<_>_</_>(superGlobalScope, .K, superGlobalScope)) , scopes)) (<_>_</_>(heap, .Map, heap)) (<_>_</_>(control, (<_>_</_>(functionStack, .List, functionStack)) (<_>_</_>(exceptionStack, .List, exceptionStack)) (<_>_</_>(loopStack, .List, loopStack)) (<_>_</_>(context, (<_>_</_>(currentForeachItem, .K, currentForeachItem)) (<_>_</_>(object, .K, object)) (<_>_</_>(class, .K, class)) (<_>_</_>(function, .K, function)) , context)) (<_>_</_>(functionArgumentsDeclaration, .K, functionArgumentsDeclaration)) (<_>_</_>(processedFunBody, .K, processedFunBody)) (<_>_</_>(processedStaticDeclarations, .K, processedStaticDeclarations)) , control)) (<_>_</_>(IO, (<_>_</_>(in, __(ListItem(_`(_`)(#buffer, _`(_`)(#_(""), .KList))), .List, ListItem(_`(_`)('#istream`(_`), _`(_`)(#_(0), .KList)))), in)) (<_>_</_>(out, __(ListItem(_`(_`)('#ostream`(_`), _`(_`)(#_(1), .KList))), .List, ListItem(_`(_`)(#buffer, _`(_`)(#_(""), .KList)))), out)) (<_>_</_>(exitStatus, _`(_`)(#_(0), .KList), exitStatus)) (<_>_</_>(errorManagement, _`(_`)(#_(0), .KList), errorManagement)) (<_>_</_>(varDumpLevel, _`(_`)(#_(0), .KList), varDumpLevel)) , IO)) (<_>_</_>(instrumentation, (<_>_</_>(cleanTraceOnTermination, _`(_`)(#_(true), .KList), cleanTraceOnTermination)) (<_>_</_>(isTerminated, _`(_`)(#_(false), .KList), isTerminated)) (<_>_</_>(label, _`(_`)(#_("@"), .KList), label)) , instrumentation)) (<_>_</_>(gc, (<_>_</_>(locationsToCollect, .List, locationsToCollect)) (<_>_</_>(gcEnabled, _`(_`)(#_(false), .KList), gcEnabled)) , gc)) (<_>_</_>(trace, .List, trace)) , kphp), generatedTop) .
+red counter .

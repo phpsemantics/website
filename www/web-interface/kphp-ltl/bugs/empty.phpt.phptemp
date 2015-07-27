@@ -1,0 +1,8 @@
+<?php
+	$x = "hello";
+	var_dump(empty($x));
+	$x = array(1);
+	var_dump(empty($x));
+	$x = array();
+	var_dump(empty($x));
+?>

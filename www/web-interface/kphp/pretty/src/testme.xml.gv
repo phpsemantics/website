@@ -1,0 +1,165 @@
+digraph G {
+subgraph cluster_mem {
+style=filled;
+color=lightgrey;
+label = "mem"; 
+19
+[
+shape=none
+label = <<table>
+<tr><td>true</td></tr>
+</table>>
+]
+17
+[
+shape=none
+label = <<table>
+<tr><td>true</td></tr>
+</table>>
+]
+14
+[
+shape=none
+label = <<table>
+<tr><td>1</td></tr>
+</table>>
+]
+11
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+12
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+2
+[
+shape=none
+color=green
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+10
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+7
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+6
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+5
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+4
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+9
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+8
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+}
+subgraph cluster_functions {
+style=filled;
+color=lightpink;
+label = "functions"; 
+node [style=filled,color=yellow];
+"\"array_key_exists\"";
+"\"count\"";
+"\"current\"";
+"\"define\"";
+"\"defined\"";
+"\"each\"";
+"\"gettype\"";
+"\"isEqualArray\"";
+"\"is_array\"";
+"\"is_float\"";
+"\"is_numeric\"";
+"\"is_scalar\"";
+"\"is_string\"";
+"\"key\"";
+"\"label\"";
+"\"next\"";
+"\"print_r\"";
+"\"reset\"";
+"\"strlen\"";
+"\"substr\"";
+"\"user_input\"";
+"\"var_dump\"";
+"\"array_key_exists\"" -> 4;
+"\"count\"" -> 4;
+"\"current\"" -> 4;
+"\"define\"" -> 4;
+"\"defined\"" -> 4;
+"\"each\"" -> 4;
+"\"gettype\"" -> 4;
+"\"isEqualArray\"" -> 12;
+"\"is_array\"" -> 4;
+"\"is_float\"" -> 4;
+"\"is_numeric\"" -> 4;
+"\"is_scalar\"" -> 4;
+"\"is_string\"" -> 4;
+"\"key\"" -> 4;
+"\"label\"" -> 4;
+"\"next\"" -> 4;
+"\"print_r\"" -> 4;
+"\"reset\"" -> 4;
+"\"strlen\"" -> 4;
+"\"substr\"" -> 4;
+"\"user_input\"" -> 4;
+"\"var_dump\"" -> 4;
+}
+subgraph cluster_classes {
+style=filled;
+color=darkgreen;
+label = "classes";
+node [shape=diamond, peripheries=2, style=filled,color=lightblue];
+Exception -> stdClass;
+Exception -> 5;
+stdClass -> ROOT;
+stdClass -> 8;
+}
+subgraph cluster_methods {
+style=filled;
+color=purple;
+label = "methods";
+node [shape=ellipse, peripheries=2, style=filled,color=yellow];
+}
+}

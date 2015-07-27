@@ -1,0 +1,300 @@
+digraph G {
+subgraph cluster_mem {
+style=filled;
+color=lightgrey;
+label = "mem"; 
+19
+[
+shape=none
+label = <<table>
+<tr><td>2</td></tr>
+</table>>
+]
+17
+[
+shape=none
+label = <<table>
+<tr><td port="0" bgcolor="red">(public) 0</td></tr>
+<tr><td port="1">(public) 1</td></tr>
+<tr><td port="2">(public) 2</td></tr>
+</table>>
+]
+17:0 -> 18;
+17:1 -> 19;
+17:2 -> 20;
+18
+[
+shape=none
+label = <<table>
+<tr><td>1</td></tr>
+</table>>
+]
+15
+[
+shape=none
+label = <<table>
+<tr><td>""</td></tr>
+</table>>
+]
+16
+[
+shape=none
+label = <<table>
+<tr><td>2</td></tr>
+</table>>
+]
+13
+[
+shape=none
+style=filled
+fillcolor=orange
+label = <<table>
+<tr><td>3</td></tr>
+</table>>
+]
+14
+[
+shape=none
+label = <<table>
+<tr><td port="t" bgcolor="red">(public) "t"</td></tr>
+</table>>
+]
+14:t -> 15;
+11
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+12
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+21
+[
+shape=none
+label = <<table>
+<tr><td port="t" bgcolor="red">(public) "t"</td></tr>
+</table>>
+]
+21:t -> 15;
+20
+[
+shape=none
+label = <<table>
+<tr><td>3</td></tr>
+</table>>
+]
+23
+[
+shape=none
+label = <<table>
+<tr><td port="my_static" bgcolor="red">(public) "my_static"</td></tr>
+</table>>
+]
+23:my_static -> 24;
+24
+[
+shape=none
+label = <<table>
+<tr><td>"foo"</td></tr>
+</table>>
+]
+25
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+26
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+27
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+28
+[
+shape=none
+label = <<table>
+<tr><td>object of class Bar</td></tr>
+</table>>
+]
+28 -> 29;
+29
+[
+shape=none
+style=filled
+fillcolor=orange
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+3
+[
+shape=none
+color=green
+label = <<table>
+<tr><td port="x" bgcolor="red">(public) "x"</td></tr>
+<tr><td port="y">(public) "y"</td></tr>
+<tr><td port="z">(public) "z"</td></tr>
+<tr><td port="o">(public) "o"</td></tr>
+</table>>
+]
+3:x -> 16;
+3:y -> 13;
+3:z -> 17;
+3:o -> 28;
+2
+[
+shape=none
+color=green
+label = <<table>
+<tr><td port="_GET" bgcolor="red">(public) "_GET"</td></tr>
+<tr><td port="_COOKIE">(public) "_COOKIE"</td></tr>
+<tr><td port="_POST">(public) "_POST"</td></tr>
+<tr><td port="GLOBALS">(public) "GLOBALS"</td></tr>
+</table>>
+]
+2:_GET -> 9;
+2:_COOKIE -> 10;
+2:_POST -> 11;
+2:GLOBALS -> 3;
+10
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+1
+[
+shape=none
+color=green
+label = <<table>
+<tr><td port="y" bgcolor="red">(public) "y"</td></tr>
+</table>>
+]
+1:y -> 13;
+7
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+6
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+5
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+4
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+9
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+8
+[
+shape=none
+label = <<table>
+<tr><td>   </td></tr>
+</table>>
+]
+}
+subgraph cluster_functions {
+style=filled;
+color=lightpink;
+label = "functions"; 
+node [style=filled,color=yellow];
+"\"array_key_exists\"";
+"\"count\"";
+"\"current\"";
+"\"define\"";
+"\"defined\"";
+"\"each\"";
+"\"gettype\"";
+"\"isEqualArray\"";
+"\"is_float\"";
+"\"key\"";
+"\"next\"";
+"\"print_r\"";
+"\"reset\"";
+"\"strlen\"";
+"\"var_dump\"";
+"\"writeMsg\"";
+"\"array_key_exists\"" -> 4;
+"\"count\"" -> 4;
+"\"current\"" -> 4;
+"\"define\"" -> 4;
+"\"defined\"" -> 4;
+"\"each\"" -> 4;
+"\"gettype\"" -> 4;
+"\"isEqualArray\"" -> 12;
+"\"is_float\"" -> 4;
+"\"key\"" -> 4;
+"\"next\"" -> 4;
+"\"print_r\"" -> 4;
+"\"reset\"" -> 4;
+"\"strlen\"" -> 4;
+"\"var_dump\"" -> 4;
+"\"writeMsg\"" -> 14;
+}
+subgraph cluster_classes {
+style=filled;
+color=darkgreen;
+label = "classes";
+node [shape=diamond, peripheries=2, style=filled,color=lightblue];
+Bar -> Foo;
+Bar -> 26;
+Exception -> stdClass;
+Exception -> 5;
+Foo -> stdClass;
+Foo -> 23;
+stdClass -> ROOT;
+stdClass -> 8;
+}
+subgraph cluster_methods {
+style=filled;
+color=purple;
+label = "methods";
+node [shape=ellipse, peripheries=2, style=filled,color=yellow];
+Exception -> "\"Exception\"";
+"\"Exception\"" ->6;
+Exception -> "\"getMessage\"";
+"\"getMessage\"" ->7;
+Foo -> "\"staticValue\"";
+"\"staticValue\"" ->25;
+Bar -> "\"fooStatic\"";
+"\"fooStatic\"" ->27;
+}
+}

@@ -1,0 +1,827 @@
+<kphp>
+    <trace>
+        ListItem("built-init-state")
+        ListItem("init-scopes")
+        ListItem("init-builtin-functions")
+        ListItem("init-builtin-classes")
+        ListItem("make-exception")
+        ListItem("class-no-extends")
+        ListItem("class")
+        ListItem("create-empty-class")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("init-class-cons")
+        ListItem("init-class-member-decl-static")
+        ListItem("write-class-instance-members-no-default")
+        ListItem("write-class-instance-members")
+        ListItem("write-class-instance-members-nil")
+        ListItem("init-class-cons")
+        ListItem("init-class-member-decl-meth-no-modifiers")
+        ListItem("init-class-member-decl-meth")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("write-class-method")
+        ListItem("init-class-cons")
+        ListItem("init-class-member-decl-meth-no-modifiers")
+        ListItem("init-class-member-decl-meth")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("write-class-method")
+        ListItem("init-class-nil")
+        ListItem("make-stdClass")
+        ListItem("class-stdClass")
+        ListItem("class")
+        ListItem("create-empty-class")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("init-class-nil")
+        ListItem("init-superglobals")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem-update-crnt")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("ref-assign-fresh-array-elem")
+        ListItem("array-update-elem-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("expr")
+        ListItem("build-array-compare")
+        ListItem("function-decl-ret-value")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("make-function")
+        ListItem("document-3")
+        ListItem("echo-nil")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-cons-no-fun")
+        ListItem("refactor-nil")
+        ListItem("run")
+        ListItem("detect-deprecated")
+        ListItem("make-static-decls")
+        ListItem("make-static-decl-2")
+        ListItem("function-decl-ret-value")
+        ListItem("array-create-empty")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("make-static-decls")
+        ListItem("make-function")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("array-literal")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem-update-crnt")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-array-literal")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("literal-string")
+        ListItem("dq-content")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("make-array-literal")
+        ListItem("array-create-empty")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-init-props-cons")
+        ListItem("array-init-prop-def-key")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem-update-crnt")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("array-init-props-cons")
+        ListItem("array-init-prop-def-key")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("array-init-props-cons")
+        ListItem("array-init-prop-def-key")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("array-init-props-nil")
+        ListItem("expr")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("list-assign-RHS2Loc")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("list-assign")
+        ListItem("assign-seq-some-non-list")
+        ListItem("assign-seq-skip")
+        ListItem("assign-seq-some-non-list")
+        ListItem("assign-seq-nil")
+        ListItem("array-access-simple")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign-RHS2Loc-NonLiteral")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign-RHS2LangValue-no-overflow")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("array-access-simple")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign-RHS2Loc-NonLiteral")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign-RHS2LangValue-no-overflow")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("expr")
+        ListItem("expr")
+        ListItem("literal-string")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-string")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("dq-content-arg2LangValue-1")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("dq-content-arg2LangValue-3")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("read-loc")
+        ListItem("zval-read-value")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("escape-110")
+        ListItem("dq-content-arg-none-2")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("dq-content-arg-none-3")
+        ListItem("dq-content-concat")
+        ListItem("toString-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("toString-string")
+        ListItem("concat-string")
+        ListItem("double-quoted")
+        ListItem("constant-encapsed-string")
+        ListItem("echo-cons")
+        ListItem("internal-print")
+        ListItem("echo-nil")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("var2Id")
+        ListItem("cond-false")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-not-found-init-null")
+        ListItem("alloc-value")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-undef")
+        ListItem("zval-create")
+        ListItem("array-create-elem")
+        ListItem("inc-refCount-1")
+        ListItem("zval-write-refCount")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+        ListItem("write-loc-exists")
+        ListItem("zval-write-value")
+        ListItem("zval-write-type")
+        ListItem("array-access-nested")
+        ListItem("literal-int")
+        ListItem("assign-LHS2Loc")
+        ListItem("lget-default")
+        ListItem("lget-propagate")
+        ListItem("lget-found-array")
+        ListItem("rget-default")
+        ListItem("rget-array-prop")
+        ListItem("lget-error-1")
+        ListItem("warning")
+        ListItem("internal-print")
+        ListItem("internal-print")
+        ListItem("assign")
+        ListItem("copy-value-to-loc-scalar")
+    </trace>
+    <gc>
+        <gcEnabled>
+            false
+        </gcEnabled>
+        <locationsToCollect>
+            .List
+        </locationsToCollect>
+    </gc>
+    <instrumentation>
+        <isTerminated>
+            false
+        </isTerminated>
+        <cleanTraceOnTermination>
+            false
+        </cleanTraceOnTermination>
+        <label>
+            "@"
+        </label>
+    </instrumentation>
+    <scopes>
+        <superGlobalScope>
+            #symLoc(1)
+        </superGlobalScope>
+        <globalStaticScope>
+            #symLoc(2)
+        </globalStaticScope>
+        <currentScope>
+            #symLoc(3)
+        </currentScope>
+        <globalScope>
+            #symLoc(3)
+        </globalScope>
+    </scopes>
+    <control>
+        <functionArgumentsDeclaration>
+            .K
+        </functionArgumentsDeclaration>
+        <processedStaticDeclarations>
+            .K
+        </processedStaticDeclarations>
+        <processedFunBody>
+            .K
+        </processedFunBody>
+        <loopStack>
+            .List
+        </loopStack>
+        <functionStack>
+            .List
+        </functionStack>
+        <exceptionStack>
+            .List
+        </exceptionStack>
+        <context>
+            <object>
+                .K
+            </object>
+            <function>
+                #symLoc(13)
+            </function>
+            <currentForeachItem>
+                .K
+            </currentForeachItem>
+            <class>
+                .K
+            </class>
+        </context>
+    </control>
+    <IO>
+        <exitStatus>
+            0
+        </exitStatus>
+        <errorManagement>
+            1
+        </errorManagement>
+        <varDumpLevel>
+            0
+        </varDumpLevel>
+        <in>
+            ListItem(#buffer ( "" ))
+            ListItem(#istream ( 0 ))
+        </in>
+        <out>
+            ListItem(#ostream ( 1 ))
+            ListItem(#buffer ( "" ))
+        </out>
+    </IO>
+    <script>
+        <k>
+            write ( 1 , locNull ) ~> 1 ~> 'Expr(HOLE) ~> 'Expr('Assign(
+              'Variable('Simple("d")),, 'Array('ListWrap('Pair('None(.KList)
+              ,, 'Value('LNumber('Deci("0")))),, 'Pair('None(.KList),, 'Value(
+              'LNumber('Deci("10")))))))) ~> 'Expr('Assign('Variable('Simple(
+              "i")),, 'LNumber('Deci("0")))) ~> 'Expr('Assign('ArrayAccess(
+              'Variable('Simple("d")),, 'Some('PostInc('Variable('Simple("i"))
+              ))),, 'Mul('Variable('Simple("i")),, 'LNumber('Deci("10")))))
+               ~> 'Expr('FunctionCall('FunctionName("var_dump"),, 'ListWrap(
+              'Param('Variable('Simple("d")))))) ~> 'Expr('Assign('Variable(
+              'Simple("e")),, 'Array('ListWrap('Pair('None(.KList),, 'Value(
+              'LNumber('Deci("0")))),, 'Pair('None(.KList),, 'Value('LNumber(
+              'Deci("0")))))))) ~> 'Expr('Assign('Variable('Simple("f")),, 
+              'LNumber('Deci("0")))) ~> 'Expr('Assign('Variable('Simple("g1"))
+              ,, 'Array('ListWrap('Pair('None(.KList),, 'Value('LNumber('Deci(
+              "10")))),, 'Pair('None(.KList),, 'Value('LNumber('Deci("10")))))
+              ))) ~> 'Expr('Assign('Variable('Simple("g2")),, 'Array('ListWrap
+              ('Pair('None(.KList),, 'Value('LNumber('Deci("20")))),, 'Pair(
+              'None(.KList),, 'Value('LNumber('Deci("20")))))))) ~> 'Expr(
+              'Assign('Variable('Simple("g3")),, 'Array('ListWrap('Pair('None(
+              .KList),, 'Value('LNumber('Deci("30")))),, 'Pair('None(.KList)
+              ,, 'Value('LNumber('Deci("30")))))))) ~> 'Expr('Assign('Variable
+              ('Simple("g")),, 'Array('ListWrap('Pair('None(.KList),, 'Value(
+              'Variable('Simple("g1")))),, 'Pair('None(.KList),, 'Value(
+              'Variable('Simple("g2")))),, 'Pair('None(.KList),, 'Value(
+              'Variable('Simple("g3")))))))) ~> 'Expr('ListAssign('List(
+              'ListWrap('Some('ArrayAccess('Variable('Simple("e")),, 'Some(
+              'PostInc('Variable('Simple("f")))))),, 'Some('ArrayAccess(
+              'Variable('Simple("e")),, 'Some('PostInc('Variable('Simple("f"))
+              )))))),, 'ArrayAccess('Variable('Simple("g")),, 'Some('Variable(
+              'Simple("f")))))) ~> 'Expr('FunctionCall('FunctionName(
+              "var_dump"),, 'ListWrap('Param('Variable('Simple("e")))))) ~> 
+              'Expr('Assign('Variable('Simple("i1")),, 'Array('ListWrap('Pair(
+              'None(.KList),, 'Value('LNumber('Deci("1")))),, 'Pair('None(
+              .KList),, 'Value('LNumber('Deci("2")))))))) ~> 'Expr('Assign(
+              'Variable('Simple("i2")),, 'Array('ListWrap('Pair('None(.KList)
+              ,, 'Value('LNumber('Deci("10")))),, 'Pair('None(.KList),, 'Value
+              ('LNumber('Deci("20")))))))) ~> 'Expr('Assign('Variable('Simple(
+              "i3")),, 'Array('ListWrap('Pair('None(.KList),, 'Value('LNumber(
+              'Deci("100")))),, 'Pair('None(.KList),, 'Value('LNumber('Deci(
+              "200")))))))) ~> 'Expr('Assign('Variable('Simple("i4")),, 'Array
+              ('ListWrap('Pair('None(.KList),, 'Value('Array('ListWrap('Pair(
+              'None(.KList),, 'Value('LNumber('Deci("1000")))),, 'Pair('None(
+              .KList),, 'Value('LNumber('Deci("2000")))))))),, 'Pair('None(
+              .KList),, 'Value('LNumber('Deci("3000")))))))) ~> 'Expr('Assign(
+              'Variable('Simple("i")),, 'Array('ListWrap('Pair('None(.KList)
+              ,, 'Value('Variable('Simple("i1")))),, 'Pair('None(.KList),, 
+              'Value('Variable('Simple("i2")))),, 'Pair('None(.KList),, 'Value
+              ('Variable('Simple("i3")))),, 'Pair('None(.KList),, 'Value(
+              'Variable('Simple("i4")))))))) ~> 'Expr('Assign('Variable(
+              'Simple("j")),, 'Array('ListWrap('Pair('None(.KList),, 'Value(
+              'LNumber('Deci("0")))),, 'Pair('None(.KList),, 'Value('LNumber(
+              'Deci("0")))),, 'Pair('None(.KList),, 'Value('LNumber('Deci("0")
+              ))))))) ~> 'Expr('Assign('Variable('Simple("h")),, 'LNumber(
+              'Deci("0")))) ~> 'Expr('ListAssign('List('ListWrap('Some('List(
+              'ListWrap('Some('ArrayAccess('Variable('Simple("j")),, 'Some(
+              'PostInc('Variable('Simple("h")))))),, 'Some('ArrayAccess(
+              'Variable('Simple("j")),, 'Some('PostInc('Variable('Simple("h"))
+              ))))))),, 'Some('ArrayAccess('Variable('Simple("j")),, 'Some(
+              'PostInc('Variable('Simple("h")))))))),, 'ArrayAccess('Variable(
+              'Simple("i")),, 'Some('Variable('Simple("h")))))) ~> 'Expr(
+              'FunctionCall('FunctionName("var_dump"),, 'ListWrap('Param(
+              'Variable('Simple("j")))))) ~> 'Expr('Assign('Variable('Simple(
+              "k3")),, 'Array('ListWrap('Pair('None(.KList),, 'Value('LNumber(
+              'Deci("100")))),, 'Pair('None(.KList),, 'Value('LNumber('Deci(
+              "200")))))))) ~> 'Expr('Assign('Variable('Simple("k")),, 'Array(
+              'ListWrap('Pair('None(.KList),, 'Value('Variable('Simple("k3")))
+              ),, 'Pair('None(.KList),, 'Value('LNumber('Deci("300"))))))))
+               ~> 'Expr('ListAssign('List('ListWrap('Some('List('ListWrap(
+              'Some('Variable('Simple("l"))),, 'Some('Variable('Simple("m"))))
+              )),, 'Some('Variable('Simple("n"))))),, 'Variable('Simple("k")))
+              ) ~> 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("L=")),, 'DQContent('DQContent(
+              'DQContent('Variable('Simple("l")),, 'Some('Literal(" M=")),, 
+              'Variable('Simple("m"))),, 'Some('Literal(" N=")),, 'Variable(
+              'Simple("n"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))
+              ))) ~> 'Expr('ListAssign('List('ListWrap('Some('Variable('Simple
+              ("o"))),, 'Some('Variable('Simple("p"))))),, 'LNumber('Deci("20"
+              )))) ~> 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("O=")),, 'DQContent('DQContent(
+              'Variable('Simple("o")),, 'Some('Literal(" and P=")),, 'Variable
+              ('Simple("p"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList))
+              )))) ~> 'Expr('Assign('Variable('Simple("q1")),, 'Array(
+              'ListWrap('Pair('None(.KList),, 'Value('LNumber('Deci("10"))))
+              ,, 'Pair('None(.KList),, 'Value('LNumber('Deci("20")))),, 'Pair(
+              'None(.KList),, 'Value('LNumber('Deci("30")))),, 'Pair('None(
+              .KList),, 'Value('LNumber('Deci("40")))))))) ~> 'Expr('Assign(
+              'Variable('Simple("q2")),, 'Array('ListWrap('Pair('None(.KList)
+              ,, 'Value('LNumber('Deci("50")))),, 'Pair('None(.KList),, 'Value
+              ('LNumber('Deci("60")))))))) ~> 'Expr('Assign('Variable('Simple(
+              "q3")),, 'Array('ListWrap('Pair('None(.KList),, 'Value('Variable
+              ('Simple("q1")))),, 'Pair('None(.KList),, 'Value('Variable(
+              'Simple("q2")))),, 'Pair('None(.KList),, 'Value('Null(.KList)))
+              ,, 'Pair('None(.KList),, 'Value('LNumber('Deci("70")))))))) ~> 
+              'Expr('Assign('Variable('Simple("q4")),, 'Array('ListWrap('Pair(
+              'None(.KList),, 'Value('Variable('Simple("q3")))),, 'Pair('None(
+              .KList),, 'Value('Null(.KList))),, 'Pair('None(.KList),, 'Value(
+              'LNumber('Deci("80")))))))) ~> 'Expr('ListAssign('List('ListWrap
+              ('Some('List('ListWrap('Some('List('ListWrap('Some('Variable(
+              'Simple("r"))),, 'Some('Variable('Simple("s"))),, 'None(.KList)
+              ,, 'Some('Variable('Simple("t")))))),, 'Some('List('ListWrap(
+              'Some('Variable('Simple("u"))),, 'Some('Variable('Simple("v"))))
+              )),, 'None(.KList),, 'Some('Variable('Simple("w")))))),, 'None(
+              .KList),, 'Some('Variable('Simple("x"))))),, 'Variable('Simple(
+              "q4")))) ~> 'Echo('ListWrap('ConstantEncapsedString(
+              'DoubleQuoted('DQContent('None(.KList),, 'DQContent('DQContent(
+              'DQContent('DQContent('DQContent('DQContent('DQContent('Variable
+              ('Simple("r")),, 'Some('Literal(" ")),, 'Variable('Simple("s")))
+              ,, 'Some('Literal(" ")),, 'Variable('Simple("t"))),, 'Some(
+              'Literal(" ")),, 'Variable('Simple("u"))),, 'Some('Literal(" "))
+              ,, 'Variable('Simple("v"))),, 'Some('Literal(" ")),, 'Variable(
+              'Simple("w"))),, 'Some('Literal(" ")),, 'Variable('Simple("x")))
+              ,, 'None(.KList),, 'Escape(110)),, 'None(.KList)))))) ~> 'Expr(
+              'ListAssign('List('ListWrap('Some('Variable('Simple("y"))),, 
+              'Some('Variable('Simple("z"))))),, 'Array('ListWrap(.KList))))
+               ~> 'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted(
+              'DQContent('Some('Literal("Y=")),, 'DQContent('DQContent(
+              'Variable('Simple("y")),, 'Some('Literal(",Z=")),, 'Variable(
+              'Simple("z"))),, 'None(.KList),, 'Escape(110)),, 'None(.KList)))
+              ))) ~> 'Expr('ListAssign('List('ListWrap('Some('Variable('Simple
+              ("aa"))),, 'Some('Variable('Simple("bb"))))),, 'Array('ListWrap(
+              'Pair('None(.KList),, 'Value('LNumber('Deci("10")))))))) ~> 
+              'Echo('ListWrap('ConstantEncapsedString('DoubleQuoted('DQContent
+              ('Some('Literal("AA=")),, 'DQContent('Variable('Simple("aa")),, 
+              'None(.KList),, 'Escape(110)),, 'None(.KList)))))) ~> 'Expr(
+              'ListAssign('List('ListWrap('Some('Variable('Simple("cc"))),, 
+              'None(.KList),, 'Some('Variable('Simple("dd"))))),, 'Array(
+              'ListWrap('Pair('None(.KList),, 'Value('LNumber('Deci("10"))))
+              ,, 'Pair('None(.KList),, 'Value('LNumber('Deci("20")))),, 'Pair(
+              'None(.KList),, 'Value('LNumber('Deci("30")))),, 'Pair('None(
+              .KList),, 'Value('LNumber('Deci("40")))))))) ~> 'Echo('ListWrap(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "CC=")),, 'DQContent('DQContent('Variable('Simple("cc")),, 'Some
+              ('Literal(" DD=")),, 'Variable('Simple("dd"))),, 'None(.KList)
+              ,, 'Escape(110)),, 'None(.KList)))))) ~> 'Expr('Assign('Variable
+              ('Simple("ee")),, 'Array('ListWrap('Pair('None(.KList),, 'Value(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "original array"))))))))))) ~> 'Expr('Assign('ArrayAccess(
+              'ArrayAccess('Variable('Simple("ee")),, 'Some(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "array entry created after f()"))))))),, 'Some('FunctionCall(
+              'FunctionName("f"),, 'ListWrap(.KList)))),, 
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "hello"))))))) ~> 'Expr('FunctionCall('FunctionName("print_r")
+              ,, 'ListWrap('Param('Variable('Simple("ee")))))) ~> 'Echo(
+              'ListWrap('Literal("\n")))
+        </k>
+        <commands>
+            .K
+        </commands>
+        <declarations>
+            .K
+        </declarations>
+    </script>
+    <tables>
+        <classes>
+            Exception |-> class ( stdClass , ListItem(prop ( "errorMsg" , 
+              public , NULL )) , "Exception" |-> method ( (f ( 'ListWrap(
+              'Param('Variable('Simple("msg")))) , 'ListWrap('Expr('Assign(
+              'ObjectAccess('Variable('Simple("this")),, 'ObjectProperty(
+              'Simple("errorMsg"))),, 'Variable('Simple("msg"))))) , @byValue 
+              , #symLoc(6) )) , public , false ) "getMessage" |-> method ( (f 
+              ( 'ListWrap(.KList) , 'ListWrap('Return('Some('ObjectAccess(
+              'Variable('Simple("this")),, 'ObjectProperty('Simple("errorMsg")
+              ))))) , @byValue , #symLoc(7) )) , public , false ) , #symLoc(5)
+               )
+            stdClass |-> class ( ROOT , .List , .Map , #symLoc(8) )
+        </classes>
+        <functions>
+            "array_key_exists" |-> f ( 'ListWrap('Param('Variable('Simple("k")
+              )),, 'ParamRef('Variable('Simple("x")))) , 'ListWrap('Return(
+              array_key_exists ( 'Variable('Simple("k")) , 'Variable('Simple(
+              "x")) ))) , @byValue , #symLoc(4) )
+            "count" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(count ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "current" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(current ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "define" |-> f ( 'ListWrap('Param('Variable('Simple("name"))),, 
+              'Param('Variable('Simple("value")))) , 'ListWrap('Return(define 
+              ( 'Variable('Simple("name")) , 'Variable('Simple("value")) ))) ,
+               @byValue , #symLoc(4) )
+            "defined" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(defined ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "each" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(each ( 'Variable('Simple("x")) ))) , @byValue 
+              , #symLoc(4) )
+            "f" |-> f ( 'ListWrap(.KList) , 'ListWrap('DeclareGlobal('ListWrap
+              ('Variable('Simple("ee")))),, 'Expr('Assign('Variable('Simple(
+              "ee")),, 'Array('ListWrap('Pair('None(.KList),, 'Value(
+              'ConstantEncapsedString('DoubleQuoted('DQContent('Some('Literal(
+              "array created in f()"))))))))))),, 'Return('Some('LNumber('Deci
+              ("1"))))) , @byValue , #symLoc(13) )
+            "gettype" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(gettype ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "isEqualArray" |-> f ( 'ListWrap('Param('Variable('Simple("op1")))
+              ,, 'Param('Variable('Simple("op2")))) , 'ListWrap('If('Less(
+              'FunctionCall('FunctionName("count"),, 'ListWrap('Param(
+              'Variable('Simple("op1"))))),, 'FunctionCall('FunctionName(
+              "count"),, 'ListWrap('Param('Variable('Simple("op2")))))),, 
+              'Block('ListWrap('Return('Some('Negative('LNumber('Deci("1")))))
+              )),, 'ListWrap('ElseIf('Greater('FunctionCall('FunctionName(
+              "count"),, 'ListWrap('Param('Variable('Simple("op1"))))),, 
+              'FunctionCall('FunctionName("count"),, 'ListWrap('Param(
+              'Variable('Simple("op2")))))),, 'Block('ListWrap('Return('Some(
+              'LNumber('Deci("1"))))))))),, 'ForEach('Variable('Simple("op1"))
+              ,, 'Pattern('Some('Key('Variable('Simple("key")))),, 'Variable(
+              'Simple("val"))),, 'Block('ListWrap('If('Not('FunctionCall(
+              'FunctionName("array_key_exists"),, 'ListWrap('Param('Variable(
+              'Simple("key"))),, 'Param('Variable('Simple("op2")))))),, 'Block
+              ('ListWrap('Return('Some('Null(.KList))))),, 'ListWrap('ElseIf(
+              'Less('Variable('Simple("val")),, 'ArrayAccess('Variable('Simple
+              ("op2")),, 'Some('Variable('Simple("key"))))),, 'Block('ListWrap
+              ('Return('Some('Negative('LNumber('Deci("1")))))))),, 'ElseIf(
+              'Greater('Variable('Simple("val")),, 'ArrayAccess('Variable(
+              'Simple("op2")),, 'Some('Variable('Simple("key"))))),, 'Block(
+              'ListWrap('Return('Some('LNumber('Deci("1")))))))))))),, 'Return
+              ('Some('LNumber('Deci("0"))))) , @byValue , #symLoc(12) )
+            "is_array" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_array ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_float" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_float ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_numeric" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_numeric ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_scalar" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_scalar ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "is_string" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(is_string ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "key" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(key ( 'Variable('Simple("x")) ))) , @byValue ,
+               #symLoc(4) )
+            "label" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(label ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "next" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(next ( 'Variable('Simple("x")) ))) , @byValue 
+              , #symLoc(4) )
+            "print_r" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap(print_r ( 'Variable('Simple("x")) )) , @byValue , 
+              #symLoc(4) )
+            "reset" |-> f ( 'ListWrap('ParamRef('Variable('Simple("x")))) , 
+              'ListWrap('Return(reset ( 'Variable('Simple("x")) ))) , @byValue
+               , #symLoc(4) )
+            "strlen" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap('Return(strlen ( 'Variable('Simple("x")) ))) , 
+              @byValue , #symLoc(4) )
+            "substr" |-> f ( 'ListWrap('Param('Variable('Simple("str"))),, 
+              'Param('Variable('Simple("start"))),, 'ParamDefault('Variable(
+              'Simple("len")),, 999)) , 'ListWrap('Return(substr ( 'Variable(
+              'Simple("str")) , 'Variable('Simple("start")) , 'Variable(
+              'Simple("len")) ))) , @byValue , #symLoc(4) )
+            "user_input" |-> f ( 'ListWrap(.KList) , 'ListWrap('Return(
+              user_input)) , @byValue , #symLoc(4) )
+            "var_dump" |-> f ( 'ListWrap('Param('Variable('Simple("x")))) , 
+              'ListWrap(var_dump ( 'Variable('Simple("x")) )) , @byValue , 
+              #symLoc(4) )
+        </functions>
+        <constants>
+            .Map
+        </constants>
+        <classInstanceCounters>
+            Exception |-> 0
+            stdClass |-> 0
+        </classInstanceCounters>
+    </tables>
+    <heap>
+        #symLoc(1) |-> zval ( (Array ( ([ "_GET" , public ]) , ListItem([ 
+          "_GET" , public , #symLoc(9) ]) ListItem([ "_COOKIE" , public , 
+          #symLoc(10) ]) ListItem([ "_POST" , public , #symLoc(11) ]) 
+          ListItem([ "GLOBALS" , public , #symLoc(3) ]) )) , array , 1 , false
+           )
+        #symLoc(2) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(3) |-> zval ( (Array ( ([ "f" , public ]) , ListItem([ "f" , 
+          public , #symLoc(14) ]) ListItem([ "b" , public , #symLoc(18) ]) 
+          ListItem([ "a" , public , #symLoc(19) ]) ListItem([ "c" , public , 
+          #symLoc(21) ]) )) , array , 1 , false )
+        #symLoc(4) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(5) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(6) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(7) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(8) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(9) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(10) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(11) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(12) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(13) |-> zval ( (Array ( none , .List )) , array , 1 , false )
+        #symLoc(14) |-> zval ( (Array ( ([ 0 , public ]) , ListItem([ 0 , 
+          public , #symLoc(15) ]) ListItem([ 1 , public , #symLoc(16) ]) 
+          ListItem([ 2 , public , #symLoc(17) ]) )) , array , 1 , false )
+        #symLoc(15) |-> zval ( "hello" , string , 1 , false )
+        #symLoc(16) |-> zval ( "item2" , string , 1 , false )
+        #symLoc(17) |-> zval ( "bye" , string , 1 , false )
+        #symLoc(18) |-> zval ( "bye" , string , 1 , false )
+        #symLoc(19) |-> zval ( "hello" , string , 1 , false )
+        #symLoc(21) |-> zval ( 1 , int , 1 , false )
+    </heap>
+</kphp>

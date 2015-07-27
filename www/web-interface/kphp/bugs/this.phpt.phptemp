@@ -1,0 +1,11 @@
+<?php
+	class Foo {
+		public function sayHi() {
+			var_dump($this);
+		} 
+	}
+	
+	$o = new Foo;
+	$o -> sayHi();
+	
+?>
